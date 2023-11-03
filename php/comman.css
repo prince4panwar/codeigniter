@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color:#020A43;
+    font-size: 3.5vw;
+    margin-bottom: 2vw;
+}
+h3{
+    color:#020A43;
+    font-size: 2vw;
+    margin-bottom: 1.5vw;
+    line-height: 40px;
+}
+h2{
+    color:#020A43;
+    margin-top: 5%;
+    margin-bottom: 1.5vw;
+}
+p{
+    font-size: 1.9vw;
+    margin-bottom: 1vw;
+}
+
+.source_code{
+    width: 70vw;
+    /* height: 1000px; */
+    padding: 1vw 2vw;
+    background-color: black;
+    color: green;
+    line-height: 35px;
+    font-size: 1.7vw;
+    margin-bottom: 10vw;
+    border-radius: 1vw;
+}
+.Output{
+    width: 70vw;
+    /* height: 1000px; */
+    padding: 1vw 2vw;
+    background-color: black;
+    color: white;
+    line-height: 35px;
+    font-size: 1.7vw;
+    margin-bottom: 10vw;
+    border-radius: 1vw;
+}
+
+.code-snippet {
+ position: relative;
+}
+
+/* Style for the copy button */
+.copy-button {
+position: absolute;
+top: 5px;
+right: 5px;
+padding: 5px 10px;
+background-color: #f5f6f7;
+color: #040000;
+border: none;
+cursor: pointer;
+}
+
+img{
+    width: 30vw;
+    height: 30vw;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Forms - Here we discuss about super global variables by making a form</h1>
+     
+    <h3>In PHP, superglobal variables are special predefined variables that are accessible from anywhere within a script and are built into the language. They are commonly used to access various types of data, such as form input, server information, and session data, making them essential for web development. Here are some of the most commonly used superglobal variables in PHP :-</h3>
+    
+    <h3>Html code</h3>
+    <div class="source_code">
+        <form action="p10_forms.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+    
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" required></textarea><br><br>
+    
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </form>
+    
+        </div>
+
+        <h3>p10_forms.php</h3>
+        <div class="source_code">
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {<br>
+            // Handle POST request<br>
+            $name = $_POST["name"];<br>
+            $email = $_POST["email"];<br>
+            $phone = $_POST["phone"];<br>
+            $address = $_POST["address"];<br>
+    
+            // You can process the form data here or display it as needed.<br>
+            echo "<h2>Posted Data</h2>";<br>
+            echo "Name: " . $name . "";<br>
+            echo "Email: " . $email . "";<br>
+            echo "Phone: " . $phone . "";<br>
+            echo "Address: " . $address . "";<br>
+        } elseif ($_SERVER["REQUEST_METHOD"] == "GET") {<br>
+            // Handle GET request<br>
+            if (isset($_GET["name"]) && isset($_GET["email"]) && isset($_GET["phone"]) && isset($_GET["address"])) {<br>
+                $name = $_GET["name"];<br>
+                $email = $_GET["email"];<br>
+                $phone = $_GET["phone"];<br>
+                $address = $_GET["address"];<br>
+    
+                // You can process the form data here or display it as needed.<br>
+                echo "<h2>GET Data</h2>";<br>
+                echo "Name: " . $name . "";<br>
+                echo "Email: " . $email . "";<br>
+                echo "Phone: " . $phone . "";<br>
+                echo "Address: " . $address . "";<br>
+            }
+        }
+    </div>
+    <h3>Output :- </h3>
+    
+        <img src="content_image/form.png" alt="">
+    
+    
+</body>
+</html>

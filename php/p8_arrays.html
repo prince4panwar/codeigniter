@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Arrays</h1>
+     
+    <h3>In PHP, an array is a data structure that can hold multiple values. Arrays are one of the most versatile and commonly used data structures in PHP. They allow you to store and manipulate collections of data efficiently. PHP supports several types of arrays, including indexed arrays, associative arrays, and multidimensional arrays. Here's an overview of arrays in PHP:-</h3>
+
+    <h3>One Dimensional Array</h3>
+    <div class="source_code">
+        $colors = array("Red", "Green", "Blue");//1D array<br>
+        // or<br>
+        $colors = ["Red", "Green", "Blue"];//1D array
+        echo $colors[0];
+        echo $colors[1]; <br>
+    </div>
+
+    <h3>Assosiative array</h3>
+    <div class="source_code">
+        $person = array(//Assosiative array<br>
+            "first_name" => "ram",<br>
+            "last_name" => "anuj",<br>
+            "age" => 30<br>
+        );<br>
+        // or<br>
+        $person = [//Assosiative array<br>
+            "first_name" => "rohan",<br>
+            "last_name" => "mohan",<br>
+            "age" => 30<br>
+        ];<br>
+
+        echo $person["first_name"]; <br>
+        echo $person["last_name"]; <br>
+        </div>
+
+        <h3>Two Dimensional Array</h3>
+    <div class="source_code">
+        $employees = array(//2D array<br>
+            array("John", "rohan", 30),<br>
+            array("Jane", "Smith", 25),<br>
+            array("Bob", "mohan", 40)<br>
+        );<br>
+        // or<br>
+        $employees = [//2D array<br>
+            ["John", "Doe", 30],<br>
+            ["Jane", "Smith", 25],<br>
+            ["Bob", "Johnson", 40]<br>
+        ];<br>
+
+        echo $employees[0][0];<br>
+        echo $employees[1][2];<br>
+        </div>
+
+        <h3>Functions of array :-</h3>
+        <div class="source_code">
+        $fruits = [];<br>
+        $fruits[] = "Apple"; // Adds "Apple" to the end of the array<br>
+        array_push($fruits, "Banana"); // Adds "Banana" to the end of the array<br>
+        sort($colors);//sort in ascending order according<br>
+        asort($person);//sort in ascending order according to the value<br>
+        echo "";<br>
+        foreach ($colors as $color)<br>
+        {<br>
+        echo "$color";<br>
+        }<br>
+        echo "";<br>
+        foreach ($person as $key => $value) {<br>
+            echo "$key -- $value";<br>
+        }
+        echo "";<br>
+        foreach($employees as $employee)<br>
+        {<br>
+            foreach($employee as $person)<br>
+            {<br>
+                echo "$person";<br>
+            }
+            echo "";<br>
+        }<br>
+
+        unset($fruits[0]); // Removes the element at index 0<br>
+
+
+
+        // Create an indexed array<br>
+        $fruits = ["Apple", "Banana", "Cherry", "Date", "Fig"];<br>
+
+        // Use current() to get the current element<br>
+        echo "Current Element: " . current($fruits) . "";<br>
+
+        // Use next() to move the internal pointer to the next element<br>
+        next($fruits);
+        echo "Next Element: " . current($fruits) . "";<br>
+
+        // Use end() to move the internal pointer to the last element<br>
+        end($fruits);<br>
+        echo "Last Element: " . current($fruits) . "";<br>
+
+        // Use prev() to move the internal pointer to the previous element<br>
+        prev($fruits);<br>
+        echo "Previous Element: " . current($fruits) . "";<br>
+
+        // Use reset() to move the internal pointer to the first element<br>
+        reset($fruits);<br>
+        echo "First Element: " . current($fruits) . "";<br>
+
+        // Reset the pointer again<br>
+        reset($fruits);<br>
+        echo "After Reset: " . current($fruits) . "";<br>
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        RedGreenrohanmohanJohn25<br>
+
+        Blue<br>
+        Green<br>
+        Red<br>
+
+
+        age -- 30<br>
+        last_name -- mohan<br>
+        first_name -- rohan<br>
+
+        JohnDoe30<br>
+        JaneSmith25<br>
+        BobJohnson40<br>
+
+        Current Element: Apple<br>
+        Next Element: Banana<br>
+        Last Element: Fig<br>
+        Previous Element: Date<br>
+        First Element: Apple<br>
+        After Reset: Apple<br>
+    </div>
+    <script>
+        function copyCode() {
+        var code = document.querySelector("pre code");
+        var textArea = document.createElement("textarea");
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Code copied to clipboard");
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Displaying data of the database</h1>
+     
+    <h3>To display data from a MySQL table using PHP, you'll need to execute a SELECT query and then iterate through the result set to output the data. Here's a step-by-step guide on how to display data from a MySQL table using PHP :-</h3>
+
+    <h2>Prerequisites:</h2>
+    <p>1. You need a web server with PHP installed.</p>
+    <p>2. You should have a MySQL database set up and the necessary credentials (username and password) to access it.</p>
+
+    <h2>Steps to Create a Database in MySQL :</h2>
+    <h3>1. Connect to MySQL:</h3>
+    <p>First, you need to connect to your MySQL server. You can do this using a MySQL client, phpMyAdmin, or the MySQL command-line client.</p>
+
+    <h3>2. Fetch and Display Data :</h3>
+    <p>Use a SQL SELECT statement to retrieve data from your table. Execute the query and iterate through the result set to display the data.</h3>
+    
+    <h3>3. Execute SQL Queries:</h3>
+    <p>With the connection established, you can execute SQL queries to interact with the database. Here's an example of querying a database:</p>
+
+    <h2>Program :-</h2>
+    <div class="source_code">
+        here we discuss everything about how do we display data of the table <br>
+// Connecting to the Database<br>
+$servername = "localhost";<br>
+$username = "root";<br>
+$password = "";<br>
+$database = "princedb1";<br>
+
+// Create a connection<br>
+$conn = mysqli_connect($servername, $username, $password, $database);<br>
+// Die if connection was not successful<br>
+if (!$conn){<br>
+    die("Sorry we failed to connect: ". mysqli_connect_error());<br>
+}<br>
+else{<br>
+    echo "Connection was successful";<br>
+}<br>
+
+$sql = "SELECT * FROM `employees`";<br>
+$result = mysqli_query($conn, $sql);<br>
+
+
+// Find the number of records returned<br>
+$num = mysqli_num_rows($result);<br>
+echo $num;<br>
+echo " records found in the DataBase";<br>
+// Display the rows returned by the sql query<br>
+if($num> 0){<br>
+    while($row = mysqli_fetch_assoc($result)){<br>
+        // echo var_dump($row);<br>
+        echo $row['E.id'] ."          ".  $row['Name'] ."          ". $row['Age'];<br>
+        echo "";<br>
+    }<br>
+}<br>
+
+
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        Connection was successful<br>
+3 records found in the DataBase<br>
+7055 Prince 19<br>
+7065 rohan 21<br>
+7066 mohan 22<br>
+        
+    </div>
+    <script>
+        function copyCode() {
+        var code = document.querySelector("pre code");
+        var textArea = document.createElement("textarea");
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Code copied to clipboard");
+}
+    </script>
+</body>
+</html>

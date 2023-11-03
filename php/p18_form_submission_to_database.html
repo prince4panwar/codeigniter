@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Submitting form's data into the database</h1>
+     
+    <h3>To submit form data into a MySQL database using PHP, you'll need to follow a series of steps that involve creating an HTML form, processing the form data in PHP, and inserting the data into the database. Here's a step-by-step guide :-</h3>
+
+    <h3>html file</h3>
+    <div class="source_code">
+    <form action="p18_form_submission_to_database.php" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" required></textarea><br>
+
+        <input type="reset" value="Reset">
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+<div class="source_code">
+    here we discuss eveything about how we make a form in html and connect it with database to store the entered data of the form by using php<br>
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {<br>
+        // Handle POST request<br>
+        $name = $_POST["name"];<br>
+        $email = $_POST["email"];<br>
+        $phone = $_POST["phone"];<br>
+        $address = $_POST["address"];<br>
+
+        // Database connection details<br>
+        $servername = "localhost";<br>
+        $username = "root";<br>
+        $password = "";<br>
+        $database = "contactform";<br>
+
+        // Create a database connection<br>
+        $conn = mysqli_connect($servername, $username, $password, $database);<br>
+
+        // Check connection<br>
+        if ($conn->connect_error) {<br>
+            die("Connection failed: " . $conn->connect_error);<br>
+        }<br>
+
+        // Insert data into the database<br>
+        $sql = "INSERT INTO contact_info (names, email, phone, address) VALUES ('$name', '$email', '$phone', '$address')";<br>
+
+        
+        $result = mysqli_query($conn, $sql);<br>
+
+        if($result)<br>
+        {<br>
+            echo "The data is inserted succesfully ";<br>
+        }<br>
+        else<br>
+        {<br>
+            echo "The data is not inserted succesfully because of this eroor ------->". mysqli_error($conn);<br>
+        }<br>
+
+        // Close the database connection<br>
+        $conn->close();<br>
+    }<br>
+
+    </div>
+    <h3>Output :- </h3>
+    <img src="content_image/form2.png" alt="">
+
+</body>
+</html>

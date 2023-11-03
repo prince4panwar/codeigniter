@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Control Structure</h1>
+     
+    <h3>Control structures in PHP are constructs used to control the flow of a PHP script. They determine how the program behaves based on conditional statements and loops. PHP provides a variety of control structures to handle different situations. Here are the main types of control structures in PHP :-</h3>
+    
+    <h2>Control Structure</h2>
+    <h3>1. ifelse Statements</h3>
+    <div class="source_code">
+        $temperature = 32;<br>
+        if ($temperature > 30)//if statement<br>
+        {<br>
+            echo "It's a hot day!";<br>
+        }<br>
+
+        $temperature = 28;<br>
+        if ($temperature > 30)//if else statement<br>
+        {<br>
+            echo "It's a hot day!";<br>
+        } else {<br>
+            echo "It's not too hot today.";<br>
+        }<br>
+
+        $grade = 75;<br>
+        if ($grade >= 90) {//if else if else statement<br>
+            echo "A";<br>
+        } elseif ($grade >= 80) {<br>
+            echo "B";<br>
+        } elseif ($grade >= 70) {<br>
+            echo "C";<br>
+        } elseif ($grade >= 60) {<br>
+            echo "D";<br>
+        } else {<br>
+            echo "F";<br>
+        }<br>
+        </div>
+
+        <h3>2. Switch Statements</h3>
+        <div class="source_code">
+        $day = "Monday";<br>
+        switch ($day) {//switch statment<br>
+            case "Monday":<br>
+                echo "It's the start of the work week.";<br>
+                break;<br>
+            case "Tuesday<br>":
+            case "Wednesday":<br>
+            case "Thursday":<br>
+                echo "It's a weekday.";<br>
+                break;<br>
+            case "Friday":<br>
+                echo "It's Friday! The weekend is almost here.";<br>
+                break;<br>
+            case "Saturday":<br>
+            case "Sunday":<br>
+                echo "It's the weekend!";<br>
+                break;<br>
+            default:<br>
+                echo "Invalid day.";<br>
+        }<br>
+        </div>
+
+        <h3>3. Ternary Operator</h3>
+        <div class="source_code">
+        $age = 20;<br>
+        // Using the ternary operator to determine if a person is a minor or an adult<br>
+        $status = ($age < 18) ? "Minor" : "Adult";<br>
+
+        echo "You are a $status.";<br>
+        </div>
+
+        <h3>Output :- </h3>
+        <div class="Output">
+            It's a hot day!<br>
+            It's not too hot today.<br>
+            C<br>
+            It's the start of the work week.<br>
+            You are a Adult.<br>
+            </div>
+
+        <h3>4. Looping Statements</h3>
+        <div class="source_code">
+        echo "2. Looping Statements";<br>
+        $counter = 1;<br>
+        while ($counter <= 5) {<br>
+            echo "Iteration $counter";<br>
+            $counter++;<br>
+        }<br>
+
+        echo ";<br>
+        for ($i = 1; $i <= 5; $i++) {<br>
+            echo "Iteration $i";<br>
+        }<br>
+
+        echo "";<br>
+        $counter = 1;<br>
+        do {<br>
+            echo "Iteration $counter";<br>
+            $counter++;<br>
+        } while ($counter <= 5);<br>
+
+        echo "";<br>
+        $colors = array("red", "green", "blue", "yellow");<br>
+        foreach ($colors as $color) {<br>
+            echo $color . "";<br>
+        }<br>
+
+    </div>
+
+        <h3>Output :- </h3>
+        <div class="Output">
+        2. Looping Statements<br>
+        Iteration 1<br>
+        Iteration 2<br>
+        Iteration 3<br>
+        Iteration 4<br>
+        Iteration 5<br>
+
+        Iteration 1<br>
+        Iteration 2<br>
+        Iteration 3<br>
+        Iteration 4<br>
+        Iteration 5<br>
+
+        Iteration 1<br>
+        Iteration 2<br>
+        Iteration 3<br>
+        Iteration 4<br>
+        Iteration 5<br>
+
+        red<br>
+        green<br>
+        blue<br>
+        yellow<br>
+    </div>
+    <script>
+        function copyCode() {
+        var code = document.querySelector("pre code");
+        var textArea = document.createElement("textarea");
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Code copied to clipboard");
+}
+    </script>
+</body>
+</html>

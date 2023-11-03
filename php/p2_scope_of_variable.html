@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Scope of variable</h1>
+     
+    <h3>In PHP, the scope of a variable refers to the part of the program where the variable can be accessed and used. PHP supports several types of variable scope, including global scope, local scope, and static scope. Here's an overview of each :-</h3>
+    <h3>1. Global Scope:</h3>
+    <p>Variables declared outside of any function or class have global scope.</p>
+    <p>They can be accessed from anywhere in the PHP script, both inside and outside functions and classes.</p>
+    <h3>2. Local Scope</h3>
+    <p>Variables declared inside a function or method have local scope.</p>
+    <p>They are only accessible within the function or method where they are declared.</p>
+    <p>They do not exist outside of the function or method.</p>
+    
+
+    <div class="source_code">
+        here we discuss about scope of variable in php<br>
+
+        local variable <br>
+        $var = 5; <br>
+        function test() <br>
+        { <br>
+            $var = 6;//local scope <br>
+            echo "Local variable =  $var"; <br>
+        }
+        test();<br>
+
+        function test2()<br>
+        {<br>
+            global $var;//global scope<br>
+            echo "Global variable = $var";<br>
+        }<br>
+        test2();<br>
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        Local variable = 6 <br>
+        Global variable = 5 <br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Sessions</h1>
+     
+    <h3>Sessions in PHP allow you to store and manage user-specific data across multiple pages during a user's visit to a website. Sessions are a critical component of web applications for tasks like user authentication, shopping carts, and maintaining user data. Here's an overview of working with sessions in PHP :-</h3>
+
+
+    <h2>There are some steps of using Sessions :- </h2>
+    <h3>1. Starting a Session:</h3>
+    <h3>For using sessions, you have to first start the session</h3>
+    <h3>Session is now started and can store data</h3>
+    <div class="source_code">
+    session_start();<br>
+    // Your PHP code here<br>
+    </div>
+    
+
+    <h3>2. Storing Data in a Session</h3>
+    <h3>You can store data in the session by using the $_SESSION superglobal array.</h3>
+    <div class="source_code">
+    // Storing Data in a Session:<br>
+    $_SESSION['username'] = 'JohnDoe';<br>
+    $_SESSION['user_id'] = 123;<br>
+    </div>
+
+
+    <h3>3. Retrieving Data from a Session:</h3>
+    <h3>To retrieve data from the session, you simply access the $_SESSION superglobal array.</h3>
+    <div class="source_code">
+    // Retrieving Data from a Session:<br>
+    $username = $_SESSION['username'];<br>
+    $user_id = $_SESSION['user_id'];<br>
+    </div>
+
+    <h3>4. Unsetting a Session:</h3>
+    <h3>If you want to remove specific session data, you can use the unset() function.</h3>
+    <div class="source_code">
+    // Unsetting and Destroying a Session:<br>
+        unset($_SESSION['username']);<br>
+    </div>
+
+<h3>5. Destroying a Session</h3>
+<h3>To end a user's session and clear all session data, you can use the session_destroy() function:</h3>
+<div class="source_code">
+//session_destroy();<br>
+</div>
+
+
+<h3>6. Checking for Session Existence:</h3>
+<h3>To check if a session variable exists, you can use isset():</h3>
+<div class="source_code">
+// Checking for Session Existence:<br>
+if (isset($_SESSION['username'])) <br>
+{<br>
+    echo "Session exist";<br>
+}<br>
+else<br>
+{<br>
+    echo "Session doesn't exist";<br>
+}<br>
+
+</div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        Session exist<br>
+    </div>
+    <script>
+        function copyCode() {
+        var code = document.querySelector("pre code");
+        var textArea = document.createElement("textarea");
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Code copied to clipboard");
+}
+    </script>
+</body>
+</html>

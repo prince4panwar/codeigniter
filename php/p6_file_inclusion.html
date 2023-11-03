@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>File Inclusion</h1>
+     
+    <h3>In PHP, you can include the content of one file within another file using the include, require, include_once, and require_once statements. File inclusion is a common technique for reusing code, separating code into manageable files, and building modular applications. Here's an overview of these file inclusion methods:-</h3>
+    
+    <h3>1. include Statement:</h3>
+    <p>  The include statement is used to include and evaluate a file.
+        If the included file is not found, it generates a warning, but the script continues to execute.
+        The include statement is often used for non-essential file inclusions, such as templates, libraries, or optional components.</p>
+    <h3>2. require Statement:</h3>
+    <p>The require statement is used to include and evaluate a file, just like include.
+        However, if the included file is not found, it generates a fatal error and terminates the script.</p>
+
+    <div class="source_code">
+        // Example of using include <br>
+        include 'my_file.php';<br>
+
+        // Rest of your PHP code<br>
+        echo "This code is after the include statement.";<br>
+
+        // Example of using require<br>
+        require 'my_file.php';<br>
+
+        // Rest of your PHP code<br>
+        echo "This code is after the require statement.";<br>
+    </div>
+    <h3>my_file.php</h3>
+    <div class="source_code">
+        echo "include and require is working properly"; <br>
+    </div>
+    
+    <h3>Output :- </h3>
+    <div class="Output">
+        
+        include and require is working properly <br>
+        This code is after the include statement. <br>
+        include and require is working properly <br>
+        This code is after the require statement. <br>
+    </div>
+    <script>
+        function copyCode() {
+        var code = document.querySelector("pre code");
+        var textArea = document.createElement("textarea");
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Code copied to clipboard");
+}
+    </script>
+</body>
+</html>

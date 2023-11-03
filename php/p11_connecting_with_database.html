@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Connecting php with database</h1>
+     
+    <h3>
+        Connecting PHP with a database is a fundamental part of web development, as it allows you to store and retrieve data dynamically. PHP provides a variety of database extensions and libraries to connect to different database management systems (DBMS), with MySQL and SQLite being common choices. Here, I'll explain how to connect to a MySQL database, but the general principles apply to other DBMS as well. :-</h3>
+
+        <h2>Prerequisites:</h2>
+        <p>1. You need a web server with PHP installed.</p>
+        <p>2. You should have a MySQL database set up and the necessary credentials (username and password) to access it.</p>
+
+        <h2>Steps to Connect PHP to a MySQL Database:</h2>
+        <h3>1. Install a PHP MySQL Extension:</h3>
+        <p>You'll need a PHP extension for MySQL. The most common extension is MySQLi (MySQL Improved) or PDO (PHP Data Objects). If you're using MySQLi, you need to make sure it's enabled in your PHP installation. For PDO, it's a built-in extension and is available by default.</p>
+        <h3>2. Create a Connection:</h3>
+        <p>You need to create a connection to the MySQL database using the provided credentials.</p>
+        <h3>3. Execute SQL Queries:</h3>
+        <p>With the connection established, you can execute SQL queries to interact with the database. Here's an example of querying a database:</p>
+        
+
+    <h2>Program :-</h2>
+    <div class="source_code">
+         here we discuss eveything about how we connect with the database <br>
+        echo "We are ready to connect with the database "; <br>
+
+        //Steps to connect with the mysqli<br>
+
+        //1. Connecting with the database <br>
+        $servername = "localhost";<br>
+        $username = "root";<br>
+        $password = "";<br>
+
+        //Create a connection<br>
+        $conn = mysqli_connect($servername, $username, $password);<br>
+
+        //3. Die if connection was not succesfull<br>
+        if(!$conn)<br>
+        {<br>
+            die("Sorry we failed to connect ".mysqli_connect_error());<br>
+        }<br>
+        else<br>
+        {<br>
+            echo "Connection was successful";<br>
+        }<br>
+
+
+
+
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        We are ready to connect with the database <br>
+        Connection was successful <br>
+    </div>
+    <script>
+        function copyCode() {
+        var code = document.querySelector("pre code");
+        var textArea = document.createElement("textarea");
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Code copied to clipboard");
+}
+    </script>
+</body>
+</html>

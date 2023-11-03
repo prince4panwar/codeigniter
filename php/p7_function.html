@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Function</h1>
+     
+    <h3>In PHP, a function is a reusable block of code that performs a specific task. Functions are an essential part of PHP programming and help organize and modularize your code. Here's how to define and use functions in PHP :-</h3>
+
+    <h3>Function definition with arguments</h3>
+    <div class="source_code">
+        echo "FUNCTIONS";<br>
+        // Function definition with arguments<br>
+        function greet($name) {<br>
+            echo "Hello, $name! (function with pararmeters)";<br>
+        }<br>
+</div>
+
+<h3>Function call with arguments</h3>
+<div class="source_code">
+// Function call with arguments<br>
+greet("John");<br>
+</div>
+
+<h3>Function definition without arguments</h3>
+<div class="source_code">
+// Function definition without arguments<br>
+function sayHello() {<br>
+echo "Hello, World! (function without pararmeters)";<br>
+}
+</div>
+
+<h3>Function call without arguments</h3>
+<div class="source_code">
+// Function call without arguments<br>
+sayHello();<br>
+</div>
+
+<h3>Function definition with default argument</h3>
+<div class="source_code">
+// Function definition with default argument<br>
+function greetDefault($name = "Guest") {<br>
+    echo "Hello, $name! (function with default pararmeters)";<br>
+}
+</div>
+
+<h3>Function call without an argument (uses the default)</h3>
+<div class="source_code">
+// Function call without an argument (uses the default)<br>
+greetDefault();<br>
+</div>
+
+<h2>Two methods of passing arguments in php</h2>
+<h3>1. Using call by value</h3>
+<div class="source_code">
+echo "1. Using call by value";<br>
+function incrementValue($num) {
+    $num++;<br>
+    echo "Inside function: $num";<br>
+}<br>
+$number = 5;<br>
+incrementValue($number);<br>
+echo "Outside function: $number";<br>
+</div>
+
+<h3>2. Using call by reference</h3>
+<div class="source_code">
+echo "2. Using call by reference";<br>
+function incrementReference(&$num) {<br>
+    $num++;<br>
+    echo "Inside function: $num";<br>
+}<br>
+
+$number = 5;<br>
+incrementReference($number);<br>
+echo "Outside function: $number";<br>
+</div>
+
+<h2>RECURSION</h2>
+<h3>In which function calls itself again and again until it get the required result</h3>
+<div class="source_code">
+function factorial($n) {<br>
+    if ($n <= 1) {<br>
+        return 1;<br>
+    } else {<br>
+        return $n * factorial($n - 1);<br>
+    }<br>
+}<br>
+
+$number = 5; // Change this to the desired number for which you want to calculate the factorial.
+$result = factorial($number);<br>
+echo "Factorial of $number is $result";
+</div>
+
+
+
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        FUNCTIONS<br>
+
+        Hello, John! (function with pararmeters)<br>
+        Hello, World! (function without pararmeters)<br>
+        Hello, Guest! (function with default pararmeters)<br>
+
+
+        Two methods of passing arguments in php<br>
+
+        1. Using call by value<br>
+        Inside function: 6<br>
+        Outside function: 5<br>
+
+        2. Using call by reference<br>
+        Inside function: 6<br>
+        Outside function: 6<br>
+
+
+        Factorial of 5 is 120<br>
+    </div>
+    <script>
+        function copyCode() {
+        var code = document.querySelector("pre code");
+        var textArea = document.createElement("textarea");
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Code copied to clipboard");
+}
+    </script>
+</body>
+</html>

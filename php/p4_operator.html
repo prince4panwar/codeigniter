@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Operators</h1>
+     
+    <h3>Operators in PHP are symbols or special keywords that perform operations on variables and values. PHP supports a wide range of operators for tasks such as arithmetic, assignment, comparison, logical, and more. Here's an overview of the most commonly used operators in PHP :-</h3>
+
+    <h3>Here we discuss about scope of variable in php</h3>
+    <h3>1. Arithmetic Operator</h3>
+    <div class="source_code">
+        echo "Arithmetic Operator (+, -, *, /, **)";<br>
+        echo " 5+2 = ",5+2;   <br>  
+        echo " 5-2 = ",5-2;   <br>  
+        echo " 5*2 = ",5*2;   <br>  
+        echo " 5/2 = ",5/2;    <br> 
+        echo " 5**2 = ",5**2;<br>
+        </div>
+        <h3>Output :- </h3>
+    <div class="Output">
+        1. Arithmetic Operator (+, -, *, /, **)1. Arithmetic Operator (+, -, *, /, **) <br>
+        5+2 = 7 <br>
+        5-2 = 3 <br>
+        5*2 = 10 <br>
+        5/2 = 2.5 <br>
+        5**2 = 25 <br>
+        </div>
+
+        <h3>2. Logical Operator</h3>
+        <div class="source_code">
+        echo "Logical Operator(&&, ||, !, xor)";<br>
+        $age = 25;<br>
+        $isStudent = true;<br>
+
+        if ($age >= 18 && $isStudent) {<br>
+            echo "You are eligible for a student discount.";<br>
+        } else {<br>
+            echo "You are not eligible for a student discount.";<br>
+        }<br>
+
+        $isMember = false;<br>
+        $isGuest = true;<br>
+
+        if ($isMember || $isGuest) {<br>
+            echo "<br>Welcome to our website!";<br>
+        } else {<br>
+            echo "Please log in or sign up to access our content.";<br>
+        }
+
+        $loggedIn = false;<br>
+
+        if (!$loggedIn) {<br>
+            echo "<br>Please log in to continue.";<br>
+        } else {<br>
+            echo "Welcome back!";<br>
+        }<br>
+
+        $isMale = true;<br>
+        $isMarried = false;<br>
+
+        if ($isMale xor $isMarried) {<br>
+            echo "<br>You are a single male.";<br>
+        } else {<br>
+            echo "You are either married or not male.";<br>
+        }<br>
+        </div>
+
+        <h3>Output :- </h3>
+        <div class="Output">
+        2. Logical Operator(&&, ||, !, xor) <br>
+        You are eligible for a student discount. <br>
+        Welcome to our website! <br>
+        Please log in to continue. <br>
+        You are a single male. <br>
+        </div>
+
+        <h3>3. Comparison Operator</h3>
+        <div class="source_code">
+        echo "Comparison Operator(++, != <>, <, >, <=, >=, ===, !==)";<br>
+        $num1 = 5;<br>
+        $num2 = "5";<br>
+
+        if ($num1 == $num2) {<br>
+            echo "<br>They are equal.";<br>
+        } else {<br>
+            echo "They are not equal.";<br>
+        }
+        $num1 = 5;<br>
+        $num2 = "5";<br>
+
+        if ($num1 === $num2) {<br>
+            echo "They are identical.";<br>
+        } else {<br>
+            echo "<br>They are not identical.";<br>
+        }
+        $num1 = 5;<br>
+        $num2 = "5";<br>
+
+        if ($num1 != $num2) {<br>
+            echo "They are not equal.";<br>
+        } else {<br>
+            echo "<br>They are equal.";<br>
+        }
+        $num1 = 5;
+        $num2 = "5";<br>
+
+        if ($num1 !== $num2) {<br>
+            echo "<br>They are not identical.";<br>
+        } else {<br>
+            echo "They are identical.";<br>
+        }<br>
+        $age = 25;<br>
+
+        if ($age > 18) {<br>
+            echo "You are older than 18.";<br>
+        } else {<br>
+            echo "You are not older than 18.";<br>
+        }
+        $score = 85;<br>
+
+        if ($score < 90) {<br>
+            echo "You did not score 90 or higher.";<br>
+        } else {<br>
+            echo "You scored 90 or higher.";<br>
+        }
+        $quantity = 10;<br>
+
+        if ($quantity >= 5) {<br>
+            echo "You have enough items.";<br>
+        } else {
+            echo "You do not have enough items.";<br>
+        }<br>
+        $temperature = 30;<br>
+
+        if ($temperature <= 32) {<br>
+            echo "It's freezing!";<br>
+        } else {<br>
+            echo "It's not freezing.";<br>
+        }<br>
+        </div>
+
+        <h3>Output :- </h3>
+        <div class="Output">
+        3. Comparison Operator(++, != <>, <, >, <=, >=, ===, !==) <br>
+        They are equal. <br>
+        They are not identical. <br>
+        They are equal. <br>
+        They are not identical. <br>
+        You are older than 18. <br>
+        You did not score 90 or higher. <br>
+        You have enough items. <br>
+        It's freezing! <br>
+        </div>
+
+        <h3>4. Assignment Operator</h3>
+        <div class="source_code">
+        echo "Assignment Operator (=, +=, -=, *=, /=, %=)";<br>
+        $x = 10;<br>
+        $y = 5;<br>
+        $x = 10;<br>
+        $x += 5; // Equivalent to $x = $x + 5;<br>
+
+        echo $x; // Output: 15<br>
+        <!-- echo "<br>"; -->
+        $y = 20;<br>
+        $y -= 7; // Equivalent to $y = $y - 7;<br>
+        echo $y; // Output: 13<br>
+        <!-- echo "<br>"; -->
+        $a = 5;<br>
+        $a *= 4; // Equivalent to $a = $a * 4;<br>
+        echo $a; // Output: 20<br>
+        <!-- echo "<br>"; -->
+        $b = 50;<br>
+        $b /= 10; // Equivalent to $b = $b / 10;<br>
+        echo $b; // Output: 5<br>
+        <!-- echo "<br>"; -->
+        $c = 17;<br>
+        $c %= 5; // Equivalent to $c = $c % 5;<br>
+        echo $c; // Output: 2<br>
+        <!-- echo "<br>"; -->
+        $message = "Hello, ";<br>
+        $name = "John";<br>
+        $message .= $name; // Equivalent to $message = $message . $name;<br>
+        echo $message; // Output: "Hello, John" <br>
+        <!-- echo "<br>"; -->
+    </div>
+
+    <h3>Output :- </h3>
+        <div class="Output">
+        4. Assignment Operator (=, +=, -=, *=, /=, %=)15 <br>
+        13 <br>
+        20 <br>
+        5 <br>
+        2 <br>
+        Hello, John <br>
+        5+2 = 7 <br>
+        5-2 = 3
+        5*2 = 10 <br>
+        5/2 = 2.5 <br>
+        5**2 = 25 <br>
+        </div>
+        
+</body>
+</html>

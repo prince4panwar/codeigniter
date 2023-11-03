@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Inserting data into the database</h1>
+     
+    <h3>To insert data into a table in a MySQL database using PHP, you'll need to use SQL's INSERT INTO statement. Here's a step-by-step guide on how to insert data into a MySQL table using PHP :-</h3>
+
+    <h2>Prerequisites:</h2>
+        <p>1. You need a web server with PHP installed.</p>
+        <p>2. You should have a MySQL database set up and the necessary credentials (username and password) to access it.</p>
+
+        <h2>Steps to Create a Database in MySQL :</h2>
+        <h3>1. Connect to MySQL:</h3>
+        <p>First, you need to connect to your MySQL server. You can do this using a MySQL client, phpMyAdmin, or the MySQL command-line client.</p>
+
+        <h3>2. Insert Data into the Table :</h3>
+        <p>Use SQL's INSERT INTO statement to add data to your table. Specify the table name, the column names you're inserting data into, and the values you want to insert. :</h3>
+        
+        <h3>3. Execute SQL Queries:</h3>
+        <p>With the connection established, you can execute SQL queries to interact with the database. Here's an example of querying a database:</p>
+    <h2>Program :-</h2>
+    <div class="source_code">
+        here we discuss everthing about how do we insert data in the table<br>
+
+$username = "root";<br>
+$servername = "localhost";<br>
+$password = "";<br>
+$database = "princedb1";<br>
+
+$conn = mysqli_connect($servername, $username, $password, $database);<br>
+
+if(!$conn)<br>
+    die("Sorry we failed to connect ".mysqli_connect_error());  <br>
+else<br>
+    echo "Connection was successful ";<br>
+
+$first="one";<br>
+$second="two";<br>
+$sql = "INSERT INTO `employees` (`Name`, `Age`) VALUES ('Sourav', '20');";<br>
+
+$result = mysqli_query($conn, $sql);<br>
+
+if($result)<br>
+ {<br>
+     echo "The data is inserted succesfully ";<br>
+ }<br>
+ else<br>
+ {<br>
+     echo "The data is not inserted succesfully because of this eroor ------->". mysqli_error($conn);<br>
+ }<br>
+
+
+
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        Connection was successful<br>
+The data is inserted succesfully<br>
+    </div>
+    <script>
+        function copyCode() {
+        var code = document.querySelector("pre code");
+        var textArea = document.createElement("textarea");
+        textArea.value = code.textContent;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        alert("Code copied to clipboard");
+}
+    </script>
+</body>
+</html>

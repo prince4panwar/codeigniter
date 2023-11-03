@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Introduction of cookies </h1>
+     
+    <h3>Cookies in PHP are small pieces of data that a web server sends to a user's web browser to be stored locally. Cookies are often used to track user information, such as session data or user preferences, between HTTP requests. In PHP, you can set, retrieve, and manipulate cookies using built-in functions. Here's an overview of working with cookies in PHP :-</h3>
+
+
+    <h3>1. Creating a cookie</h3>
+    <h3>Syntax: setcookie(name, value, expire, path, domain, secure, httponly);</h3>
+    <div class="source_code">
+    $cookieName = "user";<br>
+    $cookieValue = "John Doe";<br>
+    $expirationTime = time() + 3600; // 1 hour from now<br>
+    setcookie($cookieName, $cookieValue, $expirationTime);<br>
+</div>
+
+<h3>2. Retrieving Cookie Values :</h3>
+<div class="source_code">
+// Retrieving Cookie Values<br>
+if (isset($_COOKIE["user"])) {<br>
+    $userName = $_COOKIE["user"];<br>
+    echo "Welcome back, $userName!";<br>
+} else {<br>
+    echo "Welcome to our website!";<br>
+}<br>
+</div>
+
+<h3>3. Modifying cookies value</h3>
+<div class="source_code">
+// Modifying cookies value<br>
+$newCookieValue = "Jane Doe";<br>
+setcookie($cookieName, $newCookieValue, $expirationTime);<br>
+</div>
+
+<h3>4. Set the cookie's expiration time to a time in the past (e.g., 1 second ago)</h3>
+<div class="source_code">
+setcookie($cookieName, "", time() - 1);<br>
+</div>
+
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        Welcome to our website!<br>
+    </div>
+    
+    <h2>Cookies</h2>
+    <div class="source_code">
+        $cookieName = "user";<br>
+        $cookieValue = "John Doe";
+        $expirationTime = time() + 3600;//time to expire cookies<br>
+        $path = "/";<br>
+        $domain = "example.com";<br>
+        $secure = true; // Cookie transmitted over HTTPS only<br>
+        $httponly = true; // JavaScript cannot access the cookie<br>
+
+        setcookie($cookieName, $cookieValue, $expirationTime, $path, $domain, $secure, $httponly);<br>
+    </div>
+</body>
+</html>

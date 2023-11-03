@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>File Handling</h1>
+     
+    <h3>File handling in PHP allows you to perform various operations on files, including reading, writing, creating, deleting, and more. PHP provides a set of functions and methods for file manipulation. Here's an overview of common file handling tasks in PHP :-    </h3>
+
+    <h2>There are some steps of using file handling :-</h2>
+    <h3>1. Opening a File:</h3> 
+    <h3>To work with a file, you must open it using the fopen() function.</h3>
+    <h3> fopen function takes two parameters: the file path and the mode  For example: </h3>
+    <h3>"r" for reading</h3>
+    <h3>"w" for writing</h3>
+    <h3>"a" for appending</h3>
+    <div class="source_code">
+        //  Opening a File:<br>
+        $file = fopen("example.txt", "r");  // Opens "example.txt" for reading.<br>
+    </div>
+
+    <h3>2. Reading from a File:</h3>
+    <h3>If you opened the file in read mode, you can read its contents using functions like fgets(), fread(), or file_get_contents():</h3>
+    <div class="source_code">
+    // Reading from a File:<br>
+    $content = fread($file, filesize("example.txt"));  // Reads the entire file content.<br>
+    </div>
+
+    <h3>3. Writing to a File:</h3>
+    <h3>To write to a file, you need to open it in write mode ("w"):</h3>
+    <div class="source_code">
+    // Writing to a File:<br>
+    $file = fopen("output.txt", "w");<br>
+    fwrite($file, "Hello, world!");<br>
+    </div>
+
+    <h3>4. Appending to a File:</h3>
+    <h3>To append content to an existing file without overwriting it, use append mode ("a"):</h3>
+    <div class="source_code">
+    // Appending to a File:<br>
+    $file = fopen("existing_file.txt", "a");<br>
+    fwrite($file, "Appending some text.");<br>
+    </div>
+
+    <h3>5. Closing a File:</h3>
+    <h3>It's important to close the file when you're done to release system resources. Use the fclose() function:</h3>
+    <div class="source_code">
+    // Closing a File:<br>
+    fclose($file);<br>
+    </div>
+    
+</body>
+</html>

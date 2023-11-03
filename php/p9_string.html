@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>String</h1>
+     
+    <h3>In PHP, a string is a sequence of characters, such as letters, numbers, symbols, or spaces, enclosed in either single quotes (') or double quotes ("). PHP treats strings as a fundamental data type and provides a wide range of functions and operators for manipulating and working with strings. Here's an overview of strings in PHP :-</h3>
+
+    <h3>Define two strings for concatenation</h3>
+    <div class="source_code">
+        // Define two strings for concatenation <br>
+        $string1 = "Hello, ";//This is how we define the string  <br>
+        $string2 = "World!";//This is how we define the string  <br>
+</div>
+    <h3>Concatenate the strings</h3>
+        <div class="source_code">
+        // Concatenate the strings <br>
+        $concatenatedString = $string1 . $string2; <br>
+</div>
+
+    <h3>Display the concatenated string</h3>
+        <div class="source_code">
+        // Display the concatenated string <br>
+        echo "Concatenated String: " . $concatenatedString . ""; <br>
+</div>
+<h3>Reverse the concatenated string</h3>
+        <div class="source_code">
+        // Reverse the concatenated string <br>
+        $reversedString = strrev($concatenatedString); <br>
+        echo "Reversed String: " . $reversedString . ""; <br>
+</div>
+<h3>Find the position of "World" in the concatenated string</h3>
+        <div class="source_code">
+        // Find the position of "World" in the concatenated string <br>
+        $position = strpos($concatenatedString, "World"); <br>
+        if ($position !== false) { <br>
+            echo "Position of 'World' in the string: " . $position . ""; <br>
+        } else { <br>
+            echo "'World' not found in the string."; <br>
+        } <br>
+</div>
+<h3>Get the length of the concatenated string</h3>
+        <div class="source_code">
+        // Get the length of the concatenated string <br>
+        $length = strlen($concatenatedString); <br>
+        echo "Length of the string: " . $length . ""; <br>
+</div>
+<h3>Convert the concatenated string to lowercase</h3>
+        <div class="source_code">
+        // Convert the concatenated string to lowercase <br>
+        $lowercaseString = strtolower($concatenatedString); <br>
+        echo "Lowercase String: " . $lowercaseString . ""; <br>
+</div>
+<h3>Convert the concatenated string to uppercase</h3>
+        <div class="source_code">
+        // Convert the concatenated string to uppercase <br>
+        $uppercaseString = strtoupper($concatenatedString); <br>
+        echo "Uppercase String: " . $uppercaseString . ""; <br>
+</div>
+
+<h3>HEREDOC</h3>
+<div class="source_code">
+        echo "HEREDOC :"; <br>
+        echo<<< END <br>
+        This <br>
+        is  <br>
+        how  <br>
+        we  <br>
+        use  <br>
+        heredoc <br>
+        END; <br>
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        Concatenated String: Hello, World! <br>
+        Reversed String: !dlroW ,olleH <br>
+        Position of 'World' in the string: 7 <br>
+        Length of the string: 13 <br>
+        Lowercase String: hello, world! <br>
+        Uppercase String: HELLO, WORLD! <br>
+
+        HEREDOC : <br>
+        This is how we use heredoc <br>
+    </div>
+    
+</body>
+</html>

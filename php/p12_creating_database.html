@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types</title>
+    <link rel="stylesheet" href="comman.css">
+
+</head>
+<body>
+    <h1>Creating database using php</h1>
+     
+    <h3>In PHP, you don't create a database directly using PHP code. Database creation is typically done using a Database Management System (DBMS) such as MySQL, PostgreSQL, SQLite, or others. PHP is used to interact with databases and perform operations like creating tables, inserting data, querying data, and more. Here's a general overview of how to create a database using a popular DBMS, MySQL, and interact with it using PHP :-</h3>
+
+    
+    <h2>Prerequisites:</h2>
+        <p>1. You need a web server with PHP installed.</p>
+        <p>2. You should have a MySQL database set up and the necessary credentials (username and password) to access it.</p>
+
+        <h2>Steps to Create a Database in MySQL :</h2>
+        <h3>1. Connect to MySQL:</h3>
+        <p>First, you need to connect to your MySQL server. You can do this using a MySQL client, phpMyAdmin, or the MySQL command-line client.</p>
+
+        <h3>2. Create a Database:</h3>
+        <p>Use SQL commands to create a new database. In this example, we'll create a database named "princedb20.":</h3>
+
+        <h3>3. Execute SQL Queries:</h3>
+        <p>With the connection established, you can execute SQL queries to interact with the database. Here's an example of querying a database:</p>
+        
+
+    <h2>Program :-</h2>
+    <div class="source_code">
+        here we discuss everything about how do we create database and connect with the database<br>
+
+$servername = "localhost";<br>
+$username = "root";<br>
+$password = "";<br>
+
+$conn = mysqli_connect($servername, $username, $password);<br>
+
+if(!$conn)<br>
+{<br>
+    die("Sorry we failed to connect ".mysqli_connect_error());<br>
+}<br>
+else<br>
+{<br>
+    echo "Connection was successful ";<br>
+}<br>
+
+
+$sql = "CREATE DATABASE princedb20";<br>
+$result = mysqli_query($conn, $sql);<br>
+
+if($result)<br>
+{<br>
+    echo "The database is created succesfully ";<br>
+}<br>
+else<br>
+{<br>
+    echo "The database is not created succesfully because of this eroor ------->". mysqli_error($conn);<br>
+}<br>
+    </div>
+    <h3>Output :- </h3>
+    <div class="Output">
+        Connection was successful<br>
+The database is created succesfully<br>
+    </div>
+</body>
+</html>

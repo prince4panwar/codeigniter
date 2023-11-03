@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* overflow-x: hidden; */
+    
+}
+body, html{
+    height: 100%;
+    width: 100%;
+    /* overflow: unset; */
+    /* overflow-x: hidden; */
+}
+
+header
+{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(2, 12, 22, 0.7),rgba(2, 28, 35, 0.7)),url(images/th.jpeg);
+    /* background-color: #0D3159; */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    /* overflow: hidden; */
+    /* opacity: 2; */
+    
+}  
+nav{
+    display: flex;
+    padding: 0.8% 4%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #020A43;
+}
+.nav_image{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    font-family: 'Lexend Giga', sans-serif;
+}
+
+.nav_image h3::after
+{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: #EF5050;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+.nav_image h3:hover::after{
+    width: 100%;
+}
+
+
+nav img
+{
+    width: 45px;
+}
+.nav-links
+{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size:  16px;
+    font-weight: 600;
+    
+}
+i{
+    color: white;
+    font-size: 25px;
+}
+.nav-links ul li::after
+{
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: crimson;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+aside{
+    width: 18vw;
+    /* height: calc(100vh - 50px); */
+    /* height: 100vw; */
+    height: 5200px;
+    /* padding-left: 20px; */
+    padding-top: 15px;
+    background-color: gainsboro;
+    overflow: hidden;
+    margin-right: 10px;
+}
+li{
+    list-style: none;
+    /* color: #020A43; */
+    cursor: pointer;  
+}
+aside ul li{
+    text-decoration: none;
+    width: 100%;
+    /* color: #020A43; */
+    color: #020A43;
+    font-size: 18px;
+    font-weight: 900;
+    padding: 5px 0;  
+    padding-left: 50px;  
+    /* padding-right: 0; */
+
+}
+.intro{
+    background-color: #020A43;
+    color: white;
+}
+aside ul li:hover{
+    color: white;
+    background-color: #020A43;
+    transition: all 0.5s;
+}
+
+
+
+.contento{
+    width: calc(100vw - 18vw);
+    height: 100vh;
+    position: absolute;
+    top: 90px;
+    left: 280px;
+    padding-left: 10px;
+    /* overflow:; */
+}
