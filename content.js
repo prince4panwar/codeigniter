@@ -1,8 +1,21 @@
 const frame = document.getElementById("frames");
 const programs = document.getElementsByClassName("program1");
-
 console.log(programs);
 
+const menu1 = document.querySelector(".fa");
+const nav = document.querySelector(".nav-links");
+const menu2 = document.querySelector(".ra");
+menu1.addEventListener("click",()=>{
+    nav.style.display = "block";
+    nav.style.transition = "all 0.6s";
+    nav.style.right = "0";
+});
+menu2.addEventListener("click",()=>{
+    nav.style.display = "none";
+    nav.style.transition = "1s ease";
+    nav.style.right = "-200";
+    // console.log("hello");
+});
 // programsArray = Array.from(programs);
 // programsArray.forEach(element => {
 //     element.addEventListener("click",()=>{
