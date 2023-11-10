@@ -223,8 +223,8 @@ nav .fa
     {
         width: 35px;
     }
-    aside {
-        width: 22vw;
+   aside {
+        width: 20vw;
         /* height: calc(100vh - 50px); */
         /* height: 100vw; */
         height: 5200px;
@@ -240,11 +240,10 @@ nav .fa
         width: 100%;
         /* color: #020A43; */
         color: #020A43;
-        font-size: 2%;
+        font-size: 35%;
         font-weight: 900;
         padding: 5px 0;
-        padding-left: 5px;
-        
+        padding-left: 5px;   
     }
     nav {
         display: flex;
