@@ -68,24 +68,24 @@ img{
 }
 
 @media (max-width: 600px) {
-    h1{
-        color:#020A43;
-        font-size: 11vw;
+   h1 {
+        color: #020A43;
+        font-size: 7vw;
         margin-bottom: 7vw;
     }
 
-    h2{
+    h2 {
         color: #020A43;
-        font-size: 9vw;
+        font-size: 5.9vw;
     }
     h3 {
         color: #020A43;
-        font-size: 8vw;
+        font-size: 5.5vw;
         margin-bottom: 1.5vw;
         line-height: 30px;
     }
     p {
-        font-size: 8vw;
+        font-size: 5.2vw;
         margin-bottom: 1vw;
     }
     .source_code {
