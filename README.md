@@ -45,10 +45,7 @@ Provide instructions on how users can get started with your project. Include any
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/prince4panwar/codeigniter.git
 
-# Navigate to the project directory
-cd your-repository
 
-# [Add any additional setup steps here]
 
