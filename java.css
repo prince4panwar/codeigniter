@@ -85,16 +85,14 @@ i{
     color: white;
     font-size: 25px;
 }
-.nav-links ul li::after
-{
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 3px;
-    background: crimson;
+    background: #fff;
     display: block;
     margin: auto;
     transition: 0.5s;
-
 }
 .nav-links ul li:hover::after{
     width: 100%;
