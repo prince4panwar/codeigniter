@@ -16,7 +16,7 @@ A comprehensive collection of PHP and Java topics and programs.
 
 ## Introduction 💡
 
-Welcome to the [Your Project Name] repository! 🌐 This project is a comprehensive resource for anyone looking to dive into the worlds of PHP and Java. Whether you're a beginner eager to learn from scratch or an experienced developer seeking a quick reference, you'll find a wealth of topics, programs, and explanations here.
+Welcome to the CodeIgniter repository! 🌐 This project is a comprehensive resource for anyone looking to dive into the worlds of PHP and Java. Whether you're a beginner eager to learn from scratch or an experienced developer seeking a quick reference, you'll find a wealth of topics, programs, and explanations here.
 
 What to Expect 💡
 In-Depth PHP Topics: Explore a curated collection of PHP topics, each accompanied by clear explanations and practical examples.
