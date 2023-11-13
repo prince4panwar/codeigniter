@@ -48,7 +48,7 @@ body, html{
     content: '';
     width: 0%;
     height: 3px;
-    background: crimson;
+    background: #fff;
     display: block;
     /* margin: auto; */
     transition: 0.5s;
