@@ -122,7 +122,7 @@ nav{
     content: '';
     width: 0%;
     height: 3px;
-    background: #EF5050;
+    background: #fff;
     display: block;
     margin: auto;
     transition: 0.5s;
