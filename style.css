@@ -110,7 +110,7 @@ nav{
 .nav_image{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 6px;
     color: white;
     font-size: 22px;
     cursor: pointer;
