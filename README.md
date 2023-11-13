@@ -37,7 +37,7 @@ Highlight the key features of your website or the content included in the reposi
 
 - In-depth PHP topics
 - Java programs and explanations
-- [Add more features as applicable]
+- Many more
 
 ## Getting Started 🏁
 
