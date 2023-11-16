@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>CONTENT</h1>
+                <ul>
+                        <li><a href="#bp1">1. Write a Java method to find the smallest number among three numbers.</a></li>
+                        <li><a href="#bp2">2. Write a Java method to compute the average of three numbers.
+
+                        </a></li>
+                        <li><a href="#bp3">3. Program to Multiply Two Matrices</a>
+                        </li>
+                        <li><a href="#bp4">4. Write a Java method to display the middle character of a string. Note: a) If the length of the string is odd there will be two middle characters. b) If the length of the string is even there will be one middle character.</a></li>
+                        <li><a href="#bp5">5. Write a Java method to compute the future investment value at a given interest rate for a specified number of years.</a></li>
+                        <li><a href="#bp6">6. Write a Java method to print characters between two characters (i.e. A to P).</a></li>
+                        <li><a href="#bp7">7. Write a Java method to check whether a string is a valid password.</a></li>
+                        <li><a href="#bp8">8. Write a Java method to display the current date and time.</a></li>
+                        <li><a href="#bp9">9. Write a Java method to find all twin prime numbers less than 100.</a></li>
+                        <li><a href="#bp10">10. Write a Java method to count the number of digits in an integer with the value 2. The integer may be assumed to be non-negative.</a>
+                        </li>
+                        <li><a href="#bp11">11. Write a Java method that accepts three integers and checks whether they are consecutive or not. Returns true or false.</a></li>
+                        <li><a href="#bp12">12. Write a Java method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false</a></li>
+                        <li><a href="#bp13">13. Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.</a></li>
+                    </ul>
+                </div>
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- Write a Java method to find the smallest number among three numbers.</h3>
+        <div id="bp1" class="source_code">
+            // Write a Java method to find the smallest number among three numbers. <br>
+
+import java.util.Scanner; <br>
+class CheckSmallestNumber <br>
+{ <br>
+    public static void main(String arg[]) <br>
+    { <br>
+        smallestNumber(); <br>
+    } <br>
+    public static void smallestNumber() <br>
+    { <br>
+        Scanner s = new Scanner(System.in); <br>
+        System.out.print("\nEnter a first number :- "); <br>
+        int a = s.nextInt(); <br>
+        System.out.print("\nEnter a second number :- "); <br>
+        int b = s.nextInt(); <br>
+        System.out.print("\nEnter a thrid number :- "); <br>
+        int c = s.nextInt(); <br>
+
+        if(a< b&&a< c) <br>
+        { <br>
+            System.out.println(a+" is smallest number"); <br>
+        } <br>
+        else if(b< a&&b< c) <br>
+        { <br>
+            System.out.println(b+" is smallest number"); <br>
+        } <br>
+        else <br>
+        { <br>
+            System.out.println(c+"is smallest number"); <br>
+        } <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="functions_output/pro1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Write a Java method to compute the average of three numbers.</h3>
+        <div id="bp2" class="source_code">
+            
+ class AverageCalculator { <br>
+    static double computeAverage(double num1, double num2, double num3) { <br>
+       return (num1 + num2 + num3) / 3.0; <br>
+   } <br>
+
+   public static void main(String[] args) { <br>
+       double number1 = 10.0; <br>
+       double number2 = 5.0; <br>
+       double number3 = 8.0; <br>
+
+       double average = computeAverage(number1, number2, number3); <br>
+
+       System.out.println("The average is: " + average); <br>
+   } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :- Write a Java method to display the middle character of a string. Note: a) If the length of the string is odd there will be two middle characters. b) If the length of the string is even there will be one middle character.</h3>
+        <div id="bp3" class="source_code">
+            // Write a Java method to display the middle character of a string. Note: a) If the length of the  <br>string is odd there will be two middle characters. b) If the length of the string is even there will be  <br>one middle character. <br>
+
+class MiddleCharacter <br>
+{ <br>
+    public static void main(String arg[]) <br>
+    { <br>
+        middleCharacter(); <br>
+    } <br>
+    public static void middleCharacter() <br>
+    { <br>
+        String s = new String("pripnce"); <br>
+       System.out.println("Original String : "+s); <br>
+        int n = s.length(); <br>
+        if(n%2 == 0) <br>
+        { <br>
+            
+            System.out.println(s.substring(n/2, (n+2)/2)); <br>
+            System.out.println(s.substring((n-1)/2, n/2)); <br>
+        } <br>
+        else <br>
+        { <br>
+            System.out.println(s.substring(n/2, (n+1)/2)); <br>
+        } <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- Write a Java method to count all the words in a string.</h3>
+        <div id="bp4" class="source_code">
+            /*Write a java method to count all the words in a string.*/ <br>
+
+class a <br>
+
+{ <br>
+
+static int countWord(String s) <br>
+{ <br>
+int t=1; <br>
+for(int i=0; i< s.length(); i++) <br>
+{ <br>
+
+if((s.charAt(i) == ' ') && (s.charAt(i+1) != ' ')) <br>
+{ <br>
+t++; <br>
+} <br>
+} <br>
+return t; <br>
+} <br>
+
+public static void main(String args[]) <br>
+{ <br>
+
+System.out.println(countWord("Hello How are you")); <br>
+} <br>
+
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Write a Java method to compute the future investment value at a given interest rate for a specified number of years.</h3>
+        <div id="bp5" class="source_code">
+            
+import java.util.*; <br>
+class A <br>
+{ <br>
+    void display() <br>
+    { <br>
+        Scanner sc = new Scanner(System.in); <br>
+       
+       System.out.print("Enter present value: "); <br>
+	    double p=sc.nextInt(); <br>
+	    System.out.print("Enter the interest rate: "); <br>
+	    double r=sc.nextInt(); <br>
+	    System.out.print("Enter the time period in years: "); <br>
+	    double y=sc.nextInt(); <br>
+	    double f=p*Math.pow((1+r/100),y); <br>
+	    System.out.print("value is: "+f); <br>
+    } <br>
+    public static void main(String a[]) <br>
+    { <br>
+        A obj = new A(); <br>
+        obj.display(); <br>
+    } <br>
+    } <br>
+     <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :- Write a Java method to print characters between two characters (i.e. A to P).</h3>
+        <div id="bp6" class="source_code">
+            class A{ <br>
+                void show() <br>
+                { <br>
+                    char c; <br>
+                    for(c='A';  c <= 'P'; ++c) <br>
+                    { <br>
+                        System.out.print(c + " "); <br>
+                    } <br>
+                } <br>
+                public static  void main (String a[]) <br>
+                { <br>
+                    A obj = new A(); <br>
+                    obj.show(); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  Write a Java method to check whether a string is a valid password.</h3>
+        <div id="bp7" class="source_code">
+     
+//Program name : Write a Java method to check whether a string is a valid password. <br>
+
+class Func  <br>
+{ <br>
+ <br>
+    static String validatingPassword(String s) { <br>
+        int cap = 0, smLetter = 0, digit = 0; <br>
+
+        int len = 0; <br>
+
+        for (int i = 0; i < s.length(); i++) { <br>
+
+            len++; <br>
+
+            char c = s.charAt(i); <br>
+
+            if (c > 46 && c < 58) { <br>
+                digit++; <br>
+            } <br>
+
+            if (c > 64 && c < 91) { <br>
+                cap++; <br>
+            } <br>
+
+            if (c > 96 && c < 123) { <br>
+                smLetter++; <br>
+            } <br>
+
+        } <br>
+        String result = ""; <br>
+        if (cap < 2) { <br>
+            result += "Password should contain at least  two capital letters."; <br>
+        } <br>
+
+        if (digit < 2) { <br>
+            result += "\nPassword should contain at least 1 digit ..."; <br>
+        } <br>
+
+        if (len < 8) { <br>
+            result += "\nPassword should be minimum 8 characters"; <br>
+        } <br>
+
+        if (cap >= 2 && digit >= 2 && len >= 8) { <br>
+           result+="Password is valid..."; <br>
+        } <br>
+
+        else{ <br>
+            result+="\nPassword is not valid..."; <br>
+        } <br>
+
+        return result; <br>
+    } <br>
+
+    public static void main(String[] args) { <br>
+        String s = "HHellolodev45"; <br>
+
+        System.out.println(validatingPassword(s)); <br>
+
+    } <br>
+
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :- Write a Java method to display the current date and time.</h3>
+        <div id="bp8" class="source_code">
+           
+            import java.util.Date; <br>
+            class Test <br>
+            { <br>
+                static void apnaTimeAgya(Boolean check) <br>
+                { <br>
+                    if (check) <br>
+                    {
+                        Date d = new Date(); <br>
+             <br>
+                        System.out.println(" hero time "+d); <br>
+                    } <br>
+                    else <br>
+                    { <br>
+                        System.out.println("ja me nahi btata"); <br>
+                    } <br>
+                } <br>
+                public static void main(String args[]) <br>
+                { <br>
+                    Test t = new Test(); <br>
+                    
+                    t.apnaTimeAgya(false); <br>
+                    t.apnaTimeAgya(true); <br>
+                } <br>
+            } <br>
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :- Write a Java method to find all twin prime numbers less than 100.
+
+        </h3>
+        <div id="bp9" class="source_code">
+            
+class twinprime  <br>
+{ <br>
+    public static void main(String[] a) { <br>
+                int limit = 100; <br>
+        
+                System.out.println("Unique Twin Prime Numbers less than " + limit + ":"); <br>
+                for (int number = 3; number < limit; number += 2) { <br>
+                    if (isTwinPrime(number)) { <br>
+                        System.out.println(number + " and " + (number + 2)); <br>
+                        number += 2;  <br>
+                    } <br>
+                } <br>
+            } <br>
+        
+            public static boolean isPrime(int num) { <br>
+                if (num <= 1) { <br>
+                    return false; <br>
+                }
+                if (num <= 3) { <br>
+                    return true; <br>
+                } <br>
+                if (num % 2 == 0 || num % 3 == 0) { <br>
+                    return false; <br>
+                } <br>
+                int sqrtNum = (int) Math.sqrt(num); <br>
+                for (int i = 5; i <= sqrtNum; i += 6) { <br>
+                    if (num % i == 0 || num % (i + 2) == 0) { <br>
+                        return false; <br>
+                    } <br>
+                } <br>
+                return true; <br>
+            } <br>
+        
+            public static boolean isTwinPrime(int num) { <br>
+                return isPrime(num) && (isPrime(num + 2) || isPrime(num - 2)); <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro9.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>10 :- Write a Java method to count the number of digits in an integer with the value 2. The integer may be assumed to be non-negative.
+
+        </h3>
+        <div id="bp10" class="source_code">
+            
+class DigitCounter <br>
+{ <br>
+   public static int countTwos(int number) { <br>
+       String numberStr = String.valueOf(number); <br>
+       int count = 0; <br>
+
+       for (int i = 0; i < numberStr.length(); i++) { <br>
+           if (numberStr.charAt(i) == '2') { <br>
+               count++; <br>
+           } <br>
+       } <br>
+
+       return count; <br>
+   } <br>
+
+   public static void main(String[] args) { <br>
+       int number = 22253; <br>
+       int numberOfTwos = countTwos(number); <br>
+
+       System.out.println("The number of 2s in " + number + " is: " + numberOfTwos); <br>
+   } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro10.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>11 :- Write a Java method that accepts three integers and checks whether they are consecutive or not. Returns true or false.</h3>
+        <div id="bp11" class="source_code">
+
+            
+class ConsecutiveChecker <br>
+{ <br>
+public static boolean areConsecutive(int num1, int num2, int num3){ <br>
+return (num2 == num1 + 1 && num3 == num2 + 1) ||  // num1, num2, num3 <br>
+ (num1 == num2 + 1 && num2 == num3 + 1);    // num3, num2, num1 <br>
+    } <br>
+public static void main(String[] args) { <br>
+System.out.println("To check if numbers are consecutive or not "); <br>
+System.out.println("Numbers are 5 ,6 ,7 "); <br>
+System.out.println(areConsecutive(5, 6, 7)); <br>
+System.out.println("Numbers are 1 ,2 ,4 "); <br>
+System.out.println(areConsecutive(1, 2, 4));  <br>
+    } <br>
+
+   
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro11.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>12 :-  Write a Java method that accepts three integers and returns true if one is the middle point between the other two integers, otherwise false</h3>
+        <div id="bp12" class="source_code">
+            import java.util.Scanner; <br>
+            class Char <br>
+            { <br>
+                public static void main(String[ ] arg) <br>
+                { <br>
+                int i=0; <br>
+                Scanner sc=new Scanner(System.in); <br>
+                System.out.println("Enter a character : "); <br>
+                char ch=sc.next( ).charAt(0);	 		 <br>
+                if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U') <br>
+                { <br>
+                System.out.println("Entered character "+ch+" is  Vowel");  <br>
+                } <br>
+                else if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z')) <br>
+                    System.out.println("Entered character "+ch+" is Consonant"); <br>
+                      else <br>
+                    System.out.println("Not an alphabet");		 <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro11.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>13 :- Write a Java method that checks whether all the characters in a given string are vowels (a, e,i,o,u) or not. Return true if each character in the string is a vowel, otherwise return false.</h3>
+        <div id="bp13" class="source_code">
+            import java.util.Scanner; <br>
+            class Char <br>
+            { <br>
+                public static void main(String[ ] arg) <br>
+                { <br>
+                int i=0; <br>
+                Scanner sc=new Scanner(System.in); <br>
+                System.out.println("Enter a character : "); <br>
+                char ch=sc.next( ).charAt(0);	 		 <br>
+                if(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u'||ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U') <br>
+                { <br>
+                System.out.println("Entered character "+ch+" is  Vowel");  <br>
+                } <br>
+                else if((ch>='a'&&ch<='z')||(ch>='A'&&ch<='Z')) <br>
+                    System.out.println("Entered character "+ch+" is Consonant"); <br>
+                      else <br>
+                    System.out.println("Not an alphabet");		 <br>
+                } <br>
+            } <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro13.png" alt="">
+                 
+</body>
+</html>
