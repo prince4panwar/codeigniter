@@ -2,6 +2,11 @@
     margin: 0;
     padding: 0;
 }
+
+pre
+{
+    font-size: 20px;
+}
 h1{
     color:#020A43;
     font-size: 3.5vw;
@@ -63,8 +68,9 @@ cursor: pointer;
 }
 
 img{
-    width: 30vw;
-    height: 30vw;
+    width: 40vw;
+    height: 20vw;
+    border-radius: 1vw;
 }
 
 @media (max-width: 600px) {

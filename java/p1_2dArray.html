@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="/php/comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>CONTENT</h1>
+                <ul>
+                        <li><a href="#bp1">Enter the Matrix of rows and columns entered by the user and print in matrix format.</a></li>
+                        <li><a href="#bp2">Program to Add Two Matrices</a></li>
+                        <li><a href="#bp3">Program to Multiply Two Matrices</a>
+                        </li>
+                        <li><a href="#bp4"> Program to subtract the two matrices</a></li>
+                        <li><a href="#bp5">Program to determine whether two matrices are equal</a></li>
+                        <li><a href="#bp6">Program to display the lower triangular matrix</a></li>
+                        <li><a href="#bp7">Program to display the upper triangular matrix</a></li>
+                        <li><a href="#bp8">Program to find the frequency of odd & even numbers in the given matrix</a></li>
+                        <li><a href="#bp9">Program to find the sum of each row and each column of a matrix</a></li>
+                        <li><a href="#bp10">Program to find the transpose of a given matrix</a>
+                        </li>
+                        <li><a href="#bp11">Program to determine whether a given matrix is an identity matrix</a></li>
+                        <li><a href="#bp12">Program to Transpose matrix</a></li>
+                        <li><a href="#bp13">Program to determine whether a given matrix is a sparse matrix</a></li>
+                    </ul>
+                </div>
+        
+                
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- Enter the Matrix of rows and columns entered by the user and print in matrix format.</h3>
+        <div id="bp1" class="source_code">
+            /*Enter matrix of rows and columns entered by user and print in matrix format */ <br>
+
+import java.util.Scanner; <br>
+
+class Array1  <br>
+{ <br>
+public static void main(String[] args)  <br>
+{ <br>
+Scanner scanner = new Scanner(System.in); <br>
+
+System.out.print("\nEnter the number of rows: "); <br>
+int rows = scanner.nextInt(); <br>
+
+System.out.print("Enter the number of columns: "); <br>
+int columns = scanner.nextInt(); <br>
+
+int[][] matrix = new int[rows][columns]; <br>
+
+System.out.println("Enter the elements of the matrix:"); <br>
+
+// Input matrix elements <br>
+for (int i = 0; i < rows; i++) { <br>
+for (int j = 0; j < columns; j++) { <br>
+matrix[i][j] = scanner.nextInt(); <br>
+} <br>
+} <br>
+
+System.out.println("The matrix is:"); <br>
+// Output matrix elements in matrix format <br>
+for (int i = 0; i < rows; i++) { <br>
+for (int j = 0; j < columns; j++) { <br>
+System.out.print(matrix[i][j] + " "); <br>
+} <br>
+System.out.println(); // Move to the next line after each row <br>
+} <br>
+
+scanner.close(); <br>
+} <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="2dArrat_output/pro1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Program to Add Two Matrices.</h3>
+        <div id="bp2" class="source_code">
+
+            class MatrixAddition <br>
+            {   <br>
+            public static void main(String args[]) <br>
+            {      <br>
+            int arr1[][]={{15,3,4},{5,4,3},{3,4,5}};   <br>  
+            int arr2[][]={{1,8,4},{2,4,3},{1,2,4}};    <br> 
+            int arr3[][]=new int[3][3];  <br>
+            System.out.println("\nAddition of two matrix is : ");   <br>
+            for(int i=0;i< 3;i++) <br>
+            {     <br>
+            for(int j=0;j< 3;j++) <br>
+            {     <br>
+            arr3[i][j]=arr1[i][j]+arr2[i][j];    <br>  
+            }     <br>
+            }  <br>
+            for(int i=0;i< 3;i++) <br>
+            {     <br>
+            for(int j=0;j< 3;j++) <br>
+            {   <br>
+            System.out.print(arr3[i][j]+" ");  <br>
+            } <br>
+            System.out.print("\n"); <br>
+            }   <br>
+            } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :- Program to Multiply Two Matrices.</h3>
+        <div id="bp3" class="source_code">
+
+            class MatrixMultiplication <br>
+            {   <br>
+            public static void main(String args[]) <br>
+            {      <br>
+            int arr1[][]={{15,3,4},{5,4,3},{3,4,5}};  <br>   
+            int arr2[][]={{1,8,4},{2,4,3},{1,2,4}};   <br>  
+            int arr3[][]=new int[3][3]; <br>
+            System.out.println("\nMultiplication of two matrix is :  ");   <br> 
+            for(int i=0;i< 3;i++) <br>
+            {     <br>
+            for(int j=0;j< 3;j++) <br>
+            {     <br>
+            arr3[i][j]=arr1[i][j]*arr2[i][j];   <br>   
+            }     <br>
+            }  <br>
+            for(int i=0;i < 3;i++) <br>
+            {     <br>
+            for(int j=0;j < 3;j++) <br>
+            {   <br>
+            System.out.print(arr3[i][j]+" ");   <br>   
+            } <br>
+            System.out.print("\n"); <br>
+            }   <br>
+            } <br>
+            }  <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- Program to subtract the two matrices.</h3>
+        <div id="bp4" class="source_code">
+
+               
+class MatrixSubstraction <br>
+{   <br>
+public static void main(String args[]) <br>
+{      <br>
+int arr1[][]={{15,3,4},{15,4,3},{3,4,5}};     <br>
+int arr2[][]={{1,8,4},{2,4,13},{1,12,4}};     <br>
+int arr3[][]=new int[3][3];  <br>
+System.out.println("\nSubstraction of two matrix is :  ");   <br>
+for(int i=0;i< 3;i++) <br>
+{     <br>
+for(int j=0;j< 3;j++) <br>
+{     <br>
+arr3[i][j]=arr1[i][j]-arr2[i][j];    <br>  
+}     <br>
+}  <br>
+for(int i=0;i< 3;i++) <br>
+{     <br>
+for(int j=0;j< 3;j++) <br>
+{   <br>
+System.out.print(arr3[i][j]+" ");      <br>
+} <br>
+System.out.print("\n"); <br>
+}   <br>
+} <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Program to determine whether two matrices are equal.</h3>
+        <div id="bp5" class="source_code">
+
+              
+//Program to determine whether two matrices are equal <br>
+
+class D <br>
+{ <br>
+
+    
+    public static void main(String[] args) { <br>
+        int[][] A = { <br>
+            {1, 2, 3}, <br>
+            {4, 5, 6}, <br>
+            {7, 8, 9} <br>
+        }; <br>
+
+        int[][] B = { <br>
+            {1, 2, 3}, <br>
+            {4, 5, 6}, <br>
+            {7, 8, 9} <br>
+        }; <br>
+
+        if (areMatricesEqual(A, B)) { <br>
+            System.out.println("\nMatrices A and B are equal."); <br>
+        } else { <br>
+            System.out.println("Matrices A and B are not equal."); <br>
+        } <br>
+  } <br>
+       
+
+    
+    public static boolean areMatricesEqual(int[][] A, int[][] B) { <br>
+        if (A.length != B.length || A[0].length != B[0].length) { <br>
+            return false; <br>
+        } <br>
+
+        for (int i = 0; i < A.length; i++) { <br>
+            for (int j = 0; j < A[0].length; j++) { <br>
+                if (A[i][j] != B[i][j]) { <br>
+                    return false; <br>
+                } <br>
+            } <br>
+        } <br>
+
+        return true; <br>
+    } <br>
+
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :- Program to display the lower triangular matrix.</h3>
+        <div id="bp6" class="source_code">
+
+            import java.util.Scanner; <br>
+            //Program to display the lower triangular matrix <br>
+            class LowerTriangularMatrix  <br>
+            { <br>
+                public static void main(String[] args)  <br>
+                { <br>
+                    Scanner sc = new Scanner(System.in); <br>
+                    int j,i; <br>
+                    System.out.print("\nEnter the rows : "); <br>
+                    int r = sc.nextInt(); <br>
+                    System.out.print("Enter the column: "); <br>
+                    int c = sc.nextInt(); <br>
+                    int arr[][]= new int[r][c]; <br>
+                    System.out.println("Enter the elements of the array: "); <br>
+                    for(i = 0;i< r;i++)  <br>
+                    { <br>
+                        for(j = 0;j< c;j++)  <br>
+                        {
+                            arr[i][j] = sc.nextInt(); <br>
+                        } <br>
+                    } <br>
+                    System.out.println("Displaying the Array :  "); <br>
+                    for(i = 0;i< r;i++)  <br>
+                    { <br>
+                        for(j = 0;j< c;j++)  <br>
+                        { <br>
+                            System.out.print(arr[i][j]+" "); <br>
+                        } <br>
+                        System.out.println(); <br>
+                    } <br>
+                    System.out.print("Lower Triangular Matrix: "+"\n"); <br>
+                    for( i=0;i< r;i++) <br>
+                    { <br>
+                     for( j=0;j < c;j++) <br>
+                      { <br>
+                       if(i>=j) <br>
+                        { <br>
+                          System.out.print(arr[i][j] +" "); <br>
+                        } <br>
+                     else <br>
+                     { <br>
+                         System.out.print("0"+" "); <br>
+                     }  <br>
+                     } <br>
+                     System.out.println(); <br>
+                   }   <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  Program to display the upper triangular matrix.</h3>
+        <div id="bp7" class="source_code">
+            import java.util.Scanner; <br>
+
+            class uppertriangularmatrix  <br>
+            { <br>
+                public static void main(String[] a) { <br>
+                            
+                    Scanner s = new Scanner(System.in); <br>
+            
+                    System.out.print("\nEnter the number of rows and columns for the square matrix: "); <br>
+                    int n = s.nextInt(); <br>
+            
+                    int[][] matrix = new int[n][n]; <br>
+            
+                    System.out.println("Enter matrix elements:"); <br>
+                    for (int i = 0; i < n; i++) { <br>
+                        for (int j = 0; j < n; j++) { <br>
+                            matrix[i][j] = s.nextInt(); <br>
+                        } <br>
+                    } <br>
+            
+                    System.out.println("Upper Triangular Matrix:"); <br>
+                    for (int i = 0; i < n; i++) { <br>
+                        for (int j = 0; j < n; j++) { <br>
+                            if (j >= i) { <br>
+                                System.out.print(matrix[i][j] + " "); <br>
+                            } else { <br>
+                                System.out.print("  "); <br>
+                            } <br>
+                        }
+                        System.out.println(" "); <br>
+                    }  <br>
+            
+                    } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :- Program to find the frequency of odd & even numbers in the given matrix.</h3>
+        <div id="bp8" class="source_code">
+            import java.util.Scanner; <br>
+ 
+   
+            class MatrixFrequency { <br>
+               public static void main(String[] args) { <br>
+                   Scanner scanner = new Scanner(System.in); <br>
+           
+                   // Get the number of rows and columns for the matrix <br>
+                   System.out.print("\nEnter the number of rows: "); <br>
+                   int rows = scanner.nextInt(); <br>
+                   System.out.print("Enter the number of columns: "); <br>
+                   int columns = scanner.nextInt(); <br>
+            <br>
+                   // Create the matrix
+                   int[][] matrix = new int[rows][columns]; <br>
+           
+                   // Input elements into the matrix <br>
+                   System.out.println("Enter the elements of the matrix:"); <br>
+                   for (int i = 0; i < rows; i++) { <br>
+                       for (int j = 0; j < columns; j++) { <br>
+                           System.out.print("Matrix[" + i + "][" + j + "]: "); <br>
+                           matrix[i][j] = scanner.nextInt(); <br>
+                       } <br>
+                   } <br>
+           
+                   // Find the frequency of odd and even numbers <br>
+                   int oddFrequency = 0; <br>
+                   int evenFrequency = 0; <br>
+           
+                   for (int i = 0; i < rows; i++) { <br>
+                       for (int j = 0; j < columns; j++) { <br>
+                           if (matrix[i][j] % 2 == 0) { <br>
+                               evenFrequency++; <br>
+                           } else { <br>
+                               oddFrequency++; <br>
+                           } <br>
+                       } <br>
+                   } <br>
+           
+                   // Display the result <br>
+                   System.out.println("Frequency of even numbers: " + evenFrequency); <br>
+                   System.out.println("Frequency of odd numbers: " + oddFrequency); <br>
+           
+                   // Close the scanner <br>
+                   scanner.close(); <br>
+               } <br>
+           } <br>
+           
+               
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :-Program to find the sum of each row and each column of a matrix.</h3>
+        <div id="bp9" class="source_code">
+
+            class ary2 { <br>
+                public static void main(String[] args) { <br>
+                    int[][] matrix = { <br>
+                        {1, 2, 3}, <br>
+                        {4, 5, 6}, <br>
+                        {7, 8, 9} <br>
+                    }; <br>
+            
+                    int rows = matrix.length; <br>
+                    int columns = matrix[0].length; <br>
+            
+                    int[] rowSums = new int[rows]; <br>
+                    int[] columnSums = new int[columns]; <br>
+            
+                    // Calculate row sums <br>
+                    for (int i = 0; i < rows; i++) { <br>
+                        for (int j = 0; j < columns; j++) { <br>
+                            rowSums[i] += matrix[i][j]; <br>
+                        } <br>
+                    } <br>
+            
+                    // Calculate column sums <br>
+                    for (int j = 0; j < columns; j++) { <br>
+                        for (int i = 0; i < rows; i++) { <br>
+                            columnSums[j] += matrix[i][j]; <br>
+                        } <br>
+                    } <br>
+            
+                    // Print row sums <br>
+                    System.out.println("Sum of each row:"); <br>
+                    for (int i = 0; i < rows; i++) { <br>
+                        System.out.println("Row " + (i + 1) + ": " + rowSums[i]); <br>
+                    } <br>
+            
+                    // Print column sums <br>
+                    System.out.println("\nSum of each column:"); <br>
+                    for (int j = 0; j < columns; j++) { <br>
+                        System.out.println("Column " + (j + 1) + ": " + columnSums[j]); <br>
+                    } <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro9.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>10 :- Program to find the transpose of a given matrix.</h3>
+        <div id="bp10" class="source_code">
+
+            class Transpose  <br>
+            { <br>
+                public static void main(String[] args)  <br>
+                { <br>
+                    int rows = 3, columns = 3; <br>
+            
+                    // Initialize a matrix <br>
+                    int[][] matrix = { {1, 2, 3}, {4, 5, 6}, {7, 8, 9} }; <br>
+            
+                    // Create a matrix to store the transpose <br>
+                    int[][] transpose = new int[columns][rows]; <br>
+            
+                    // Find the transpose of the matrix <br>
+                    for (int i = 0; i < rows; i++) { <br>
+                        for (int j = 0; j < columns; j++) { <br>
+                            transpose[j][i] = matrix[i][j]; <br>
+                        } <br>
+                    } <br>
+            
+                    // Display the original matrix <br>
+                    System.out.println("\nOriginal Matrix:"); <br>
+                    displayMatrix(matrix); <br>
+            
+                    // Display the transpose matrix <br>
+                    System.out.println("\nTranspose of the Matrix:"); <br>
+                    displayMatrix(transpose); <br>
+                } <br>
+            
+                // Helper method to display a matrix <br>
+                public static void displayMatrix(int[][] matrix) { <br>
+                    for (int[] row : matrix) { <br>
+                        for (int num : row) { <br>
+                            System.out.print(num + " "); <br>
+                        } <br>
+                        System.out.println(); <br>
+                    } <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro10.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>11 :- Program to determine whether a given matrix is an identity matrix            .</h3>
+        <div id="bp11" class="source_code">
+
+            import java.util.Scanner; <br>
+
+            class IdentityMatrixChecker  <br>
+            { <br>
+                public static void main(String[] args) { <br>
+                    Scanner scanner = new Scanner(System.in); <br>
+                    System.out.print("\nEnter the order of the square matrix: "); <br>
+                    int order = scanner.nextInt(); <br>
+                    int[][] matrix = new int[order][order]; <br>
+            
+                    System.out.println("Enter elements of the square matrix:"); <br>
+                    enterMatrixElements(scanner, matrix); <br>
+            
+                    boolean isIdentity = isIdentityMatrix(matrix); <br>
+            
+                    if (isIdentity) { <br>
+                        System.out.println("The entered matrix is an Identity Matrix."); <br>
+                    } else { <br>
+                        System.out.println("The entered matrix is NOT an Identity Matrix."); <br>
+                    } <br>
+                } <br>
+            
+                private static void enterMatrixElements(Scanner scanner, int[][] matrix) { <br>
+                    for (int i = 0; i < matrix.length; i++) { <br>
+                        for (int j = 0; j < matrix[0].length; j++) { <br>
+                            System.out.print("Enter element at position [" + i + "][" + j + "]: "); <br>
+                            matrix[i][j] = scanner.nextInt(); <br>
+                        } <br>
+                    } <br>
+                } <br>
+            
+                private static boolean isIdentityMatrix(int[][] matrix) { <br>
+                    int order = matrix.length; <br>
+            
+                    if (order != matrix[0].length) { <br>
+                        return false; <br>
+                    } <br>
+                    for (int i = 0; i < order; i++) { <br>
+                        for (int j = 0; j < order; j++) { <br>
+                            if ((i == j && matrix[i][j] != 1) || (i != j && matrix[i][j] != 0)) { <br>
+                                return false; <br>
+                            } <br>
+                        } <br>
+                    } <br>
+            
+                    return true; <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro11.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>12 :-  Program to Transpose matrix.</h3>
+        <div id="bp12" class="source_code">
+
+            class MatrixTranspose <br>
+            {   <br>
+            public static void main(String args[]) <br>
+            {      <br>
+            int arr1[][]={{1,3,4},{5,4,3},{3,14,5}};     <br>
+            int brr[][]=new int[3][3];  <br>
+            
+            System.out.println("\nTranspose of matrix is :  "); <br>
+            for(int i=0;i< 3;i++) <br>
+            {     <br>
+            for(int j=0;j< 3;j++) <br>
+            {     <br>
+            brr[i][j]=arr1[j][i];    <br>
+            }     <br>
+            }  <br>
+            for(int i=0;i< 3;i++) <br>
+            {     <br>
+            for(int j=0;j< 3;j++) <br>
+            {   <br>
+            System.out.print(arr1[i][j]+" ");     <br> 
+            } <br>
+            System.out.print("\n"); <br>
+            } <br>
+            System.out.print("\n"); <br>
+            System.out.print("\n"); <br>
+            for(int i=0;i< 3;i++) <br>
+            {     <br>
+            for(int j=0;j< 3;j++) <br>
+            {   <br>
+            System.out.print(brr[i][j]+" ");    <br>  
+            } <br>
+            System.out.print("\n"); <br>
+            }   <br>
+              
+            } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro12.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>13 :- Program to determine whether a given matrix is a sparse matrix.</h3>
+        <div id="bp13" class="source_code">
+
+            //Program to determine whether a given matrix is a sparse matrix <br>
+
+            class E <br>
+            { <br>
+               
+                public static void main(String[] args) { <br>
+                    int[][] matrix = { <br>
+                        {1, 0, 0, 0}, <br>
+                        {0, 0, 0, 0}, <br>
+                        {0, 0, 0, 0}, <br>
+                        {0, 0, 0, 1} <br>
+                    }; <br>
+            
+                    double threshold = 0.5; <br>
+            
+                    if (isSparseMatrix(matrix, threshold)) { <br>
+                        System.out.println("\nThe matrix is sparse."); <br>
+                    } else { <br>
+                        System.out.println("The matrix is not sparse."); <br>
+                    } <br>
+                
+            } <br>
+               
+                public static boolean isSparseMatrix(int[][] matrix, double threshold) { <br>
+                    int rowCount = matrix.length; <br>
+                    int colCount = matrix[0].length; <br>
+                    int zeroCount = 0; <br>
+            
+                    for (int i = 0; i < rowCount; i++) { <br>
+                        for (int j = 0; j < colCount; j++) { <br>
+                            if (matrix[i][j] == 0) { <br>
+                                zeroCount++; <br>
+                            } <br>
+                        } <br>
+                    } <br>
+            
+                    double zeroProportion = (double) zeroCount / (rowCount * colCount); <br>
+            
+                    return zeroProportion >= threshold; <br>
+                } <br>
+            } <br>
+            
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="2dArrat_output/pro13.png" alt="">
+                 
+</body>
+</html>
