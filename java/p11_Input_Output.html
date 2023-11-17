@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>Functions</h1>
+                <ul>
+                        <li><a href="#bp1">1. Enter the character from user using InputStreamReader.</a></li>
+                        <li><a href="#bp2">2. Enter the string from user using BufferedStreamReader.
+
+                        </a></li>
+                        <li><a href="#bp3">3. Enter the integer from user using Scanner class</a>
+                        </li>
+                        <li><a href="#bp4">4. Enter the float from user using Scanner class.</a></li>
+                        <li><a href="#bp5">5. Enter the double from user using Scanner class.</a></li>
+                        <li><a href="#bp6">6.  Enter the boolean from user using Scanner class.</a></li>
+                        <li><a href="#bp7">7. Enter the short integer from user using Scanner class</a></li>
+                        <li><a href="#bp8">8. Write a Java method to display the current date and time.</a></li>
+                        <li><a href="#bp9">9. Get all characters from the file and display on the screen    .</a></li>
+                        <li><a href="#bp10">10. Get all characters from the file, count number of lines, words, characters and display on the screen.</a>
+                    </ul>
+                </div>
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- Enter the character from user using InputStreamReader
+
+            .</h3>
+        <div id="bp1" class="source_code">
+            //Enter the character from user using InputStreamReader <br>
+
+import java.io.*;   <br>
+ class InputStreamReaderP{   <br>
+public static void main(String args[])throws Exception{   <br>
+  
+InputStreamReader r=new InputStreamReader(System.in);   <br>
+BufferedReader br=new BufferedReader(r);   <br>
+  
+System.out.println("Enter your name");  <br> 
+String name=br.readLine();   <br>
+System.out.println("Welcome "+name);   <br>
+ }   <br>
+}   <br>
+
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="input_output_output/pro1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Enter the string from user using BufferedStreamReader.</h3>
+        <div id="bp2" class="source_code">
+            import java.io.*; <br>
+ <br>
+            class Buffered <br>
+            { <br>
+              public static void main ( String s[] ) throws IOException  //handle the i/o exceptions  <br>
+              { <br>
+                System.out.print ( "Enter the string: " ); <br>
+            
+                BufferedReader input = new BufferedReader ( new InputStreamReader ( System.in ) ); // taking the  <br>input
+            
+                String inputString = input.readLine(); <br>
+            
+              
+            
+                System.out.println ( "Entered string is: " + inputString ); <br>
+              } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :- Enter the integer from user using Scanner class.</h3>
+        <div id="bp3" class="source_code">
+            //Enter the integer from the user using Scanner class <br>
+import java.util.Scanner; <br>
+class A{ <br>
+    public static void main(String arg[]) <br>
+    { <br>
+        Scanner s = new Scanner(System.in); <br>
+        System.out.println("Enter an integer :-"); <br>
+        int a = s.nextInt(); <br>
+        System.out.println(a); <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- Enter the float from user using Scanner class</h3>
+        <div id="bp4" class="source_code">
+            import java.util.Scanner; <br>
+
+ class FloatInputExample { <br>
+    public static void main(String[] args) { <br>
+        // Create a Scanner object to read user input <br>
+        Scanner scanner = new Scanner(System.in); <br>
+
+        System.out.print("Enter a float number: "); <br>
+
+        // Check if the next token entered by the user is a float <br>
+        if (scanner.hasNextFloat()) { <br>
+            float userInput = scanner.nextFloat(); <br>
+            System.out.println("You entered: " + userInput); <br>
+        } else { <br>
+            System.out.println("Invalid input. Please enter a valid float number."); <br>
+        } <br>
+
+        // Close the Scanner to release resources <br>
+        scanner.close(); <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Enter the double from user using Scanner class</h3>
+        <div id="bp5" class="source_code">
+    
+import java.util.Scanner; <br>
+ <br>
+class Double5 <br>
+{ <br>
+    public static void main(String args[]) <br>
+    { <br>
+        System.out.println("\nEnter the double from user using Scanner class.\n"); <br>
+        Scanner sc= new Scanner(System.in); <br>
+        System.out.println("Enter a Double Value : "); <br>
+        Double d= sc.nextDouble(); <br>
+        System.out.println("your entered double value is : "+d); <br>
+
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :- Enter the boolean from user using Scanner class.</h3>
+        <div id="bp6" class="source_code">
+           
+class Boolean6  <br>
+{ <br>
+
+    public static void main(String[] args)  <br>
+    { <br>
+        System.out.println("\nEnter the boolean from user using Scanner class.\n"); <br>
+        java.util.Scanner sc = new java.util.Scanner(System.in); <br>
+        System.out.print("Enter a boolean value (true or false): "); <br>
+        Boolean b = sc.nextBoolean(); <br>
+        System.out.println(b); <br>
+        
+    } <br>
+} <br>
+ <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  Enter the short integer from user using Scanner class.</h3>
+        <div id="bp7" class="source_code">
+            import java.util.Scanner;   <br>
+            class a   <br>
+            {   <br>
+            public static void main(String[] x)   <br> 
+            {   <br>
+                   //object of the Scanner class   <br>
+                   Scanner s=new Scanner(System.in); <br>  
+                   System.out.print("Enter a short integer value: ");   <br>
+                   //invoking nextShort() method that reads an integer input by keyboard   <br>
+                   //storing the input number in a variable num   <br>
+                   int num = s.nextShort();   <br>
+                   System.out.println("The Short integer entered by the user is: "+num);   <br>
+            }   <br>
+            }   <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :- Enter the long integer from user using Scanner class.</h3>
+        <div id="bp8" class="source_code">
+           
+class Long8 <br>
+{ <br>
+
+    public static void main(String[] args)  <br>
+    { <br>
+        System.out.println("\nEnter the long integer from user using Scanner class.\n"); <br>
+        java.util.Scanner sc = new java.util.Scanner(System.in); <br>
+        System.out.print("Enter a Long Interger value : "); <br>
+        long num = sc.nextLong(); <br>
+        System.out.println("your entered long integer value is  : "+num); <br>
+    } <br>
+} <br>
+ <br>
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :- Get all characters from the file and display on the screen
+
+        </h3>
+        <div id="bp9" class="source_code">
+            import java.util.Scanner; <br>
+            import java.io.*; <br>
+            
+            class test <br>
+            { <br>
+                public static void main(String[] args) <br>
+                {
+                    String fname; <br>
+                    Scanner scan = new Scanner(System.in); <br>
+                    
+                    // enter filename along with its extension <br>
+                    System.out.print("Enter the Name of File: "); <br>
+                    fname = scan.nextLine(); <br>
+                    
+                    String line = null; <br>
+                    try <br>
+                    { <br>
+                        FileReader fileReader = new FileReader(fname); <br>
+                        
+                        // always wrap the FileReader in BufferedReader <br>
+                        BufferedReader bufferedReader = new BufferedReader(fileReader); <br>
+                        
+                        while((line = bufferedReader.readLine()) != null) <br>
+                        { <br>
+                            System.out.println(line); <br>
+                        } <br>
+                        
+                        // always close the file after its use <br>
+                        bufferedReader.close(); <br>
+                    } <br>
+                    catch(IOException ex) <br>
+                    { <br>
+                        System.out.println("\nError occurred"); <br>
+                        System.out.println("Exception Name: " +ex); <br>
+                    } <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro9.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>10 :- Get all characters from the file, count number of lines, words, characters and display on the screen
+
+        </h3>
+        <div id="bp10" class="source_code">
+            import java.io.File; <br>
+            import java.io.FileNotFoundException; <br>
+            import java.util.Scanner; <br>
+            
+            class countFile
+            { <br>
+            public static void ma <br>in(String args[]) <br>
+            { <br>
+            String filePath = "file.txt"; <br>
+            
+            try <br>
+            { <br>
+            File f=new File(filePath); <br>
+            Scanner sc = new Scanner(f); <br>
+            int lineCount = 0; <br>
+            int wordCount = 0; <br>
+            int charCount = 0;  <br>
+            while(sc.hasNextLine()) <br>
+            { <br>
+            String line = sc.nextLine(); <br>
+            lineCount++; <br>
+            charCount +=line.length(); <br>
+            String[] words =line.split(" "); <br>
+            wordCount +=words.length; <br>
+            } <br>
+            System.out.println("\nGet All Characters from the file, Count the number of line, words, characters and display on the screen");  <br>
+            
+            System.out.println("\nfile.txt : \nHello,\nGood Morning\nHow are you\n"); <br>
+            System.out.println("Number of Lines : "+lineCount);  <br>
+            System.out.println("Number of Words : "+wordCount);  <br>
+            System.out.println("Number of characters : "+charCount);  <br>
+            } <br>
+            
+            catch(FileNotFoundException e) <br>
+            { <br>
+            System.out.println("File not found : "+e.getMessage()); <br>
+            } <br>
+            
+            } <br>
+            } <br>
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="input_output_output/pro10.png" alt="">
+           
+</body>
+</html>

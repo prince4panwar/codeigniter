@@ -1,0 +1,2445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>Data Conversion</h1>
+                <ul>
+                        <li><a href="#bp1">1. Write a Java program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.</a></li>
+                        <li><a href="#bp2">2. Write a Java program to create a class called "Dog" with a name and breed attribute. Create two instances of the "Dog" class, set their attributes using the constructor and modify the attributes using the setter methods and print the updated values.
+
+                        </a></li>
+                        <li><a href="#bp3">3.  Write a Java program to create a class called "Rectangle" with width and height attributes. Calculate the area and perimeter of the rectangle.</a>
+                        </li>
+                        <li><a href="#bp4">4. Write a Java program to create a class called "Circle" with a radius attribute. You can access and modify this attribute. Calculate the area and circumference of the circle.</a></li>
+                        <li><a href="#bp5">5. Write a Java program to create a class called "Book" with attributes for title, author, and ISBN, and methods to add and remove books from a collection.</a></li>
+                        <li><a href="#bp6">6. Write a Java program to create a class called "Employee" with a name, job title, and salary attributes, and methods to calculate and update salary.</a></li>
+                        <li><a href="#bp7">7. Write a Java program to create a class called "Bank" with a collection of accounts and methods to add and remove accounts, and to deposit and withdraw money. Also define a class called "Account" to maintain account details of a particular customer.</a></li>
+                        <li><a href="#bp8">8.  Write a Java program to create class called "TrafficLight" with attributes for color and duration, and methods to change the color and check for red or green.</a></li>
+                        <li><a href="#bp9">9.  Write a Java program to create a class called "Employee" with a name, salary, and hire date attributes, and a method to calculate years of service.</a></li>
+                        <li><a href="#bp10">10. Write a Java program to create a class called "Student" with a name, grade, and courses attributes, and methods to add and remove courses.</a>
+                        </li>
+                        <li><a href="#bp11">11. Write a Java program to create a class called "Library" with a collection of books and methods to add and remove books.</a></li>
+                        <li><a href="#bp12">12. Write a Java program to create a class called "Airplane" with a flight number, destination, and departure time attributes, and methods to check flight status and delay.</a></li>
+                        <li><a href="#bp13">13. Write a Java program to create a class called "Inventory" with a collection of products and methods to add and remove products, and to check for low inventory.</a></li>
+                        <li><a href="#bp14">14. Write a Java program to create a class called "School" with attributes for students, teachers, and classes, and methods to add and remove students and teachers, and to create classes.</a></li>
+                        <li><a href="#bp15">15. Write a Java program to create a class called "MusicLibrary" with a collection of songs and methods to add and remove songs, and to play a random song.</a></li>
+                        <li><a href="#bp16">16. Write a Java program to create a class called "Shape" with abstract methods for calculating area and perimeter, and subclasses for "Rectangle", "Circle", and "Triangle".</a></li>
+                        <li><a href="#bp17">17. Write a Java program to create a class called "Movie" with attributes for title, director, actors, and reviews, and methods for adding and retrieving reviews.</a></li>
+                        <li><a href="#bp18">18. Write a Java program to create a class called "Restaurant" with attributes for menu items, prices, and ratings, and methods to add and remove items, and to calculate average rating.</a></li>
+                        <li><a href="#bp19">19. Write a Java program to create a class with methods to search for flights and hotels, and to book and cancel reservations.</a></li>
+                        <li><a href="#bp20">20. Create a class showing an example of default constructor.</a></li>
+                        <li><a href="#bp21">21. Create a class showing an example of parameterized constructor.</a></li>
+                        <li><a href="#bp22">22. Create a class showing an example of copy constructor.</a></li>
+                        <li><a href="#bp23">23. Create a class entering the rollno, name and class of the student from user but rollno should be automatically generated as we enter the information of 10 students</a></li>
+                        <li><a href="#bp24">24. Create a class showing the area of circle and rectangle by method overloading.</a></li>
+                        <li><a href="#bp25">25. Create a class, entering the command line arguments from the user and show all the arguments as output..</a></li>
+                        <li><a href="#bp26">26. Write a Java program to create a class called Person with private instance variables name, age. and country. Provide public getter and setter methods to access and modify these variables.</a></li>
+                        <li><a href="#bp27">27. Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.</a></li>
+                        <li><a href="#bp28">28. Write a Java program to create a class called Rectangle with private instance variables length and width. Provide public getter and setter methods to access and modify these variables.</a></li>
+                        <li><a href="#bp29">29. Write a Java program to create a class called Employee with private instance variables employee_id, employee_name, and employee_salary. Provide public getter and setter methods to access and modify the id and name variables, but provide a getter method for the salary variable that returns a formatted string.</a></li>
+                        <li><a href="#bp30">30. Write a Java program to create a class called Circle with a private instance variable radius. Provide public getter and setter methods to access and modify the radius variable. However, provide two methods called calculateArea() and calculatePerimeter() that return the calculated area and perimeter based on the current radius value.</a></li>
+                        <li><a href="#bp30">30. Write a Java program to create a class called Car with private instance variables company_name, model_name, year, and mileage. Provide public getter and setter methods to access and modify the company_name, model_name, and year variables. However, only provide a getter method for the mileage variable.</a></li>
+                    </ul>
+                </div>
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- Write a Java program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.</h3>
+        <div id="bp1" class="source_code">
+            
+            // Write a Java program to create a class called "Person" with a name and age attribute.<br/> Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.<br/>
+            class Person {<br/>
+                private String name;<br/>
+                private int age;<br/>
+            <br/>
+                // Constructor<br/>
+                public Person(String name, int age) {<br/>
+                    this.name = name;<br/>
+                    this.age = age;<br/>
+                }<br/>
+            <br/>
+                // Getter methods<br/>
+                public String getName() {<br/>
+                    return name;<br/>
+                }<br/>
+            <br/>
+                public int getAge() {<br/>
+                    return age;<br/>
+                }<br/>
+            }<br/>
+            <br/>
+            public class pro1 {<br/>
+                public static void main(String[] args) {<br/>
+                    // Creating two instances of the Person class<br/>
+                    Person person1 = new Person("Alice", 25);<br/>
+                    Person person2 = new Person("Bob", 30);<br/>
+            <br/>
+                    // Printing their name and age<br/>
+                    System.out.println("Person 1 - Name: " + person1.getName() + ", Age: " + person1.getAge());<br/>
+                    System.out.println("Person 2 - Name: " + person2.getName() + ", Age: " + person2.getAge());<br/>
+                }<br/>
+            }
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="oops_output/Screenshot (109).png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Write a Java program to create a class called "Dog" with a name and breed attribute. Create two instances of the "Dog" class, set their attributes using the constructor and modify the attributes using the setter methods and print the updated values.</h3>
+        <div id="bp2" class="source_code">
+            <p>
+                        
+                class Dog {<BR/>
+                    private String name;<BR/>
+                    private String breed;<BR/>
+                <BR/>
+                    // Constructor<BR/>
+                    public Dog(String name, String breed) {<BR/>
+                        this.name = name;<BR/>
+                        this.breed = breed;<BR/>
+                    }<BR/>
+                <BR/>
+                    // Getter methods<BR/>
+                    public String getName() {<BR/>
+                        return name;<BR/>
+                    }<BR/>
+                <BR/>
+                    public String getBreed() {<BR/>
+                        return breed;<BR/>
+                    }<BR/>
+                <BR/>
+                    // Setter methods<BR/>
+                    public void setName(String name) {<BR/>
+                        this.name = name;<BR/>
+                    }<BR/>
+                <BR/>
+                    public void setBreed(String breed) {<BR/>
+                        this.breed = breed;<BR/>
+                    }<BR/>
+                }<BR/>
+                <BR/>
+                 class pro2 {<BR/>
+                    public static void main(String[] args) {<BR/>
+                        // Creating two instances of the Dog class<BR/>
+                        Dog dog1 = new Dog("Buddy", "Labrador");<BR/>
+                        Dog dog2 = new Dog("Max", "German Shepherd");<BR/>
+                <BR/>
+                        // Printing initial values<BR/>
+                        System.out.println("Initial Values:");<BR/>
+                        System.out.println("Dog 1 - Name: " + dog1.getName() + ", Breed: " + dog1.getBreed());<BR/>
+                        System.out.println("Dog 2 - Name: " + dog2.getName() + ", Breed: " + dog2.getBreed());<BR/>
+                <BR/>
+                        // Modifying attributes using setter methods<BR/>
+                        dog1.setName("Charlie");<BR/>
+                        dog2.setBreed("Golden Retriever");<BR/>
+                <BR/>
+                        // Printing updated values<BR/>
+                        System.out.println("\nUpdated Values:");<BR/>
+                        System.out.println("Dog 1 - Name: " + dog1.getName() + ", Breed: " + dog1.getBreed());<BR/>
+                        System.out.println("Dog 2 - Name: " + dog2.getName() + ", Breed: " + dog2.getBreed());<BR/>
+                    }<BR/>
+                }
+                
+                
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (110).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :-  Write a Java program to create a class called "Rectangle" with width and height attributes. Calculate the area and perimeter of the rectangle.            .</h3>
+        <div id="bp3" class="source_code">
+            
+            <p>
+                        
+                class Rectangle {<br/>
+                    private double width;<br/>
+                    private double height;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Rectangle(double width, double height) {<br/>
+                        this.width = width;<br/>
+                        this.height = height;<br/>
+                    }<br/>
+                <br/>
+                    // Method to calculate area<br/>
+                    public double calculateArea() {<br/>
+                        return width * height;<br/>
+                    }<br/>
+                <br/>
+                    // Method to calculate perimeter<br/>
+                    public double calculatePerimeter() {<br/>
+                        return 2 * (width + height);<br/>
+                    }<br/>
+                <br/>
+                    // Getter methods (optional)<br/>
+                    public double getWidth() {<br/>
+                        return width;<br/>
+                    }<br/>
+                <br/>
+                    public double getHeight() {<br/>
+                        return height;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro3 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating a rectangle instance<br/>
+                        Rectangle rectangle = new Rectangle(5.0, 10.0);<br/>
+                <br/>
+                        // Calculating area and perimeter<br/>
+                        double area = rectangle.calculateArea();<br/>
+                        double perimeter = rectangle.calculatePerimeter();<br/>
+                <br/>
+                        // Printing the calculated values<br/>
+                        System.out.println("Rectangle Area: " + area);<br/>
+                        System.out.println("Rectangle Perimeter: " + perimeter);<br/>
+                    }<br/>
+                }
+                
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (110).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- Write a Java program to create a class called "Circle" with a radius attribute. You can access and modify this attribute. Calculate the area and circumference of the circle.</h3>
+        <div id="bp4" class="source_code">
+     
+            <p>
+                        
+                // Write a Java program to create a class called "Circle" with a radius attribute.<br/> You can access and modify this attribute.<br/> Calculate the area and circumference of the circle.<br/>
+                class Circle {<br/>
+                    private double radius;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Circle(double radius) {<br/>
+                        this.radius = radius;<br/>
+                    }<br/>
+                <br/>
+                    // Getter method for radius<br/>
+                    public double getRadius() {<br/>
+                        return radius;<br/>
+                    }<br/>
+                <br/>
+                    // Setter method for radius<br/>
+                    public void setRadius(double radius) {<br/>
+                        this.radius = radius;<br/>
+                    }<br/>
+                <br/>
+                    // Method to calculate area<br/>
+                    public double calculateArea() {<br/>
+                        return Math.PI * radius * radius;<br/>
+                    }<br/>
+                <br/>
+                    // Method to calculate circumference<br/>
+                    public double calculateCircumference() {<br/>
+                        return 2 * Math.PI * radius;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro4 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating a circle instance<br/>
+                        Circle circle = new Circle(5.0);<br/>
+                <br/>
+                        // Calculating area and circumference<br/>
+                        double area = circle.calculateArea();<br/>
+                        double circumference = circle.calculateCircumference();<br/>
+                <br/>
+                        // Printing the calculated values<br/>
+                        System.out.println("Circle Area: " + area);<br/>
+                        System.out.println("Circle Circumference: " + circumference);<br/>
+                <br/>
+                        // Modifying the radius<br/>
+                        circle.setRadius(7.0);<br/>
+                <br/>
+                        // Recalculating area and circumference<br/>
+                        area = circle.calculateArea();<br/>
+                        circumference = circle.calculateCircumference();<br/>
+                <br/>
+                        // Printing the updated values<br/>
+                        System.out.println("\nUpdated Circle Area: " + area);<br/>
+                        System.out.println("Updated Circle Circumference: " + circumference);<br/>
+                    }<br/>
+                }<br/>
+                
+                
+            </p>
+oops4
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (111).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Write a Java program to create a class called "Book" with attributes for title, author, and ISBN, and methods to add and remove books from a collection.</h3>
+        <div id="bp5" class="source_code">
+            <p>
+                oops5 
+                 class Book {<br/>
+                     private String title;<br/>
+                     private String author;<br/>
+                     private String isbn;<br/>
+                 <br/>
+                     // Constructor<br/>
+                     public Book(String title, String author, String isbn) {<br/>
+                         this.title = title;<br/>
+                         this.author = author;<br/>
+                         this.isbn = isbn;<br/>
+                     }<br/>
+                 <br/>
+                     // Getter methods<br/>
+                     public String getTitle() {<br/>
+                         return title;<br/>
+                     }<br/>
+                 <br/>
+                     public String getAuthor() {<br/>
+                         return author;<br/>
+                     }<br/>
+                 <br/>
+                     public String getIsbn() {<br/>
+                         return isbn;<br/>
+                     }<br/>
+                 }<br/>
+                 <br/>
+                 class BookCollection {<br/>
+                     private static final int MAX_BOOKS = 100; // Maximum number of books in the collection<br/>
+                     private Book[] books;<br/>
+                     private int numBooks;<br/>
+                 <br/>
+                     // Constructor<br/>
+                     public BookCollection() {<br/>
+                         books = new Book[MAX_BOOKS];<br/>
+                         numBooks = 0;<br/>
+                     }<br/>
+                 <br/>
+                     // Method to add a book to the collection<br/>
+                     public void addBook(Book book) {<br/>
+                         if (numBooks < MAX_BOOKS) {<br/>
+                             books[numBooks] = book;<br/>
+                             numBooks++;<br/>
+                             System.out.println("Book added: " + book.getTitle());<br/>
+                         } else {<br/>
+                             System.out.println("Cannot add more books. Collection is full.");<br/>
+                         }<br/>
+                     }<br/>
+                 <br/>
+                     // Method to remove a book from the collection<br/>
+                     public void removeBook(String isbn) {<br/>
+                         for (int i = 0; i < numBooks; i++) {<br/>
+                             if (books[i].getIsbn().equals(isbn)) {<br/>
+                                 System.out.println("Book removed: " + books[i].getTitle());<br/>
+                                 // Shift books to fill the gap<br/>
+                                 for (int j = i; j < numBooks - 1; j++) {<br/>
+                                     books[j] = books[j + 1];<br/>
+                                 }<br/>
+                                 books[numBooks - 1] = null;<br/>
+                                 numBooks--;<br/>
+                                 return;<br/>
+                             }<br/>
+                         }<br/>
+                         System.out.println("Book with ISBN " + isbn + " not found.");<br/>
+                     }<br/>
+                 }<br/>
+                 <br/>
+                 public class pro5 {<br/>
+                     public static void main(String[] args) {<br/>
+                         // Creating a BookCollection<br/>
+                         BookCollection myBooks = new BookCollection();<br/>
+                 <br/>
+                         // Adding books<br/>
+                         myBooks.addBook(new Book("The Catcher in the Rye", "J.D. Salinger", "9780316769488"));<br/>
+                         myBooks.addBook(new Book("To Kill a Mockingbird", "Harper Lee", "9780061120084"));<br/>
+                         myBooks.addBook(new Book("1984", "George Orwell", "9780451524935"));<br/>
+                 <br/>
+                         // Removing a book<br/>
+                         myBooks.removeBook("9780061120084");<br/>
+                     }<br/>
+                 }
+                 
+             </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (112).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :- Write a Java program to create a class called "Employee" with a name, job title, and salary attributes, and methods to calculate and update salary.</h3>
+        <div id="bp6" class="source_code">
+            <p>
+                class Employee {<br/>
+                    private String name;<br/>
+                    private String jobTitle;<br/>
+                    private double salary;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Employee(String name, String jobTitle, double salary) {<br/>
+                        this.name = name;<br/>
+                        this.jobTitle = jobTitle;<br/>
+                        this.salary = salary;<br/>
+                    }<br/>
+                <br/>
+                    // Method to calculate salary increase<br/>
+                    public void increaseSalary(double percentage) {<br/>
+                        double increaseAmount = salary * (percentage / 100);<br/>
+                        salary += increaseAmount;<br/>
+                        System.out.println(name + "'s salary increased by " + percentage + "%. New salary: " + salary);<br/>
+                    }<br/>
+                <br/>
+                    // Getter methods<br/>
+                    public String getName() {<br/>
+                        return name;<br/>
+                    }<br/>
+                <br/>
+                    public String getJobTitle() {<br/>
+                        return jobTitle;<br/>
+                    }<br/>
+                <br/>
+                    public double getSalary() {<br/>
+                        return salary;<br/>
+                    }<br/>
+                <br/>
+                    // Setter method for job title (optional)<br/>
+                    public void setJobTitle(String jobTitle) {<br/>
+                        this.jobTitle = jobTitle;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro6 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating an Employee instance<br/>
+                        Employee employee = new Employee("Alice", "Software Engineer", 50000.0);<br/>
+                <br/>
+                        // Displaying employee information<br/>
+                        System.out.println("Employee Name: " + employee.getName());<br/>
+                        System.out.println("Job Title: " + employee.getJobTitle());<br/>
+                        System.out.println("Salary: " + employee.getSalary());<br/>
+                <br/>
+                        // Increasing employee salary by 10%<br/>
+                        employee.increaseSalary(10);<br/>
+                    }<br/>
+                }
+                
+              </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (113).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  Write a Java program to create a class called "Bank" with a collection of accounts and methods to add and remove accounts, and to deposit and withdraw money. Also define a class called "Account" to maintain account details of a particular customer.</h3>
+        <div id="bp7" class="source_code">
+            <p>
+                oops7 
+                 class Account {<br/>
+                     private String accountNumber;<br/>
+                     private String customerName;<br/>
+                     private double balance;<br/>
+                 <br/>
+                     // Constructor<br/>
+                     public Account(String accountNumber, String customerName, double initialBalance) {<br/>
+                         this.accountNumber = accountNumber;<br/>
+                         this.customerName = customerName;<br/>
+                         this.balance = initialBalance;<br/>
+                     }<br/>
+                 <br/>
+                     // Method to deposit money<br/>
+                     public void deposit(double amount) {<br/>
+                         balance += amount;<br/>
+                         System.out.println("Deposit of $" + amount + " made. Current balance: $" + balance);<br/>
+                     }<br/>
+                 <br/>
+                     // Method to withdraw money<br/>
+                     public void withdraw(double amount) {<br/>
+                         if (balance >= amount) {<br/>
+                             balance -= amount;<br/>
+                             System.out.println("Withdrawal of $" + amount + " made. Current balance: $" + balance);<br/>
+                         } else {<br/>
+                             System.out.println("Insufficient funds. Current balance: $" + balance);<br/>
+                         }<br/>
+                     }<br/>
+                 <br/>
+                     // Getter methods<br/>
+                     public String getAccountNumber() {<br/>
+                         return accountNumber;<br/>
+                     }<br/>
+                 <br/>
+                     public String getCustomerName() {<br/>
+                         return customerName;<br/>
+                     }<br/>
+                 <br/>
+                     public double getBalance() {<br/>
+                         return balance;<br/>
+                     }<br/>
+                 }<br/>
+                 <br/>
+                 class Bank {<br/>
+                     private Account[] accounts;<br/>
+                     private int numAccounts;<br/>
+                 <br/>
+                     // Constructor<br/>
+                     public Bank(int maxAccounts) {<br/>
+                         accounts = new Account[maxAccounts];<br/>
+                         numAccounts = 0;<br/>
+                     }<br/>
+                 <br/>
+                     // Method to add an account<br/>
+                     public void addAccount(Account account) {<br/>
+                         if (numAccounts < accounts.length) {<br/>
+                             accounts[numAccounts] = account;<br/>
+                             numAccounts++;<br/>
+                             System.out.println("Account added for " + account.getCustomerName());<br/>
+                         } else {<br/>
+                             System.out.println("Cannot add more accounts. Bank is full.");<br/>
+                         }<br/>
+                     }<br/>
+                 <br/>
+                     // Method to remove an account<br/>
+                     public void removeAccount(String accountNumber) {<br/>
+                         for (int i = 0; i < numAccounts; i++) {<br/>
+                             if (accounts[i].getAccountNumber().equals(accountNumber)) {<br/>
+                                 System.out.println("Account removed for " + accounts[i].getCustomerName());<br/>
+                                 for (int j = i; j < numAccounts - 1; j++) {<br/>
+                                     accounts[j] = accounts[j + 1];<br/>
+                                 }<br/>
+                                 accounts[numAccounts - 1] = null;<br/>
+                                 numAccounts--;<br/>
+                                 return;<br/>
+                             }<br/>
+                         }
+                         System.out.println("Account with account number " + accountNumber + " not found.");<br/>
+                     }<br/>
+                 <br/>
+                     // Method to deposit to an account<br/>
+                     public void depositToAccount(String accountNumber, double amount) {<br/>
+                         for (int i = 0; i < numAccounts; i++) {<br/>
+                             if (accounts[i].getAccountNumber().equals(accountNumber)) {<br/>
+                                 accounts[i].deposit(amount);<br/>
+                                 return;<br/>
+                             }<br/>
+                         }<br/>
+                         System.out.println("Account with account number " + accountNumber + " not found.");<br/>
+                     }<br/>
+                 <br/>
+                     // Method to withdraw from an account<br/>
+                     public void withdrawFromAccount(String accountNumber, double amount) {<br/>
+                         for (int i = 0; i < numAccounts; i++) {<br/>
+                             if (accounts[i].getAccountNumber().equals(accountNumber)) {<br/>
+                                 accounts[i].withdraw(amount);<br/>
+                                 return;<br/>
+                             }<br/>
+                         }<br/>
+                         System.out.println("Account with account number " + accountNumber + " not found.");<br/>
+                     }<br/>
+                 }<br/>
+                 <br/>
+                 public class pro7 {<br/>
+                     public static void main(String[] args) {<br/>
+                         // Creating a Bank<br/>
+                         Bank bank = new Bank(10);<br/>
+                 <br/>
+                         // Adding accounts<br/>
+                         Account account1 = new Account("123456", "Alice", 1000.0);<br/>
+                         Account account2 = new Account("789012", "Bob", 500.0);<br/>
+                 <br/>
+                         bank.addAccount(account1);<br/>
+                         bank.addAccount(account2);<br/>
+                 <br/>
+                         // Depositing and withdrawing from accounts<br/>
+                         bank.depositToAccount("123456", 500.0);<br/>
+                         bank.withdrawFromAccount("789012", 200.0);<br/>
+                 <br/>
+                         // Removing an account<br/>
+                         bank.removeAccount("123456");<br/>
+                     }<br/>
+                 }
+                 
+                 
+             </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (114).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :-  Write a Java program to create class called "TrafficLight" with attributes for color and duration, and methods to change the color and check for red or green.</h3>
+        <div id="bp8" class="source_code">
+            <p>
+                oops8 
+                 class TrafficLight {<br/>
+                     private String color;<br/>
+                     private int duration; // Duration in seconds<br/>
+                 <br/>
+                     // Constructor<br/>
+                     public TrafficLight(String color, int duration) {<br/>
+                         this.color = color;<br/>
+                         this.duration = duration;<br/>
+                     }<br/>
+                 <br/>
+                     // Method to change the color of the traffic light<br/>
+                     public void changeColor(String newColor, int newDuration) {<br/>
+                         this.color = newColor;<br/>
+                         this.duration = newDuration;<br/>
+                         System.out.println("Traffic light changed to " + newColor + " for " + newDuration + " seconds.");<br/>
+                     }<br/>
+                 <br/>
+                     // Method to check if the light is red<br/>
+                     public boolean isRed() {<br/>
+                         return color.equalsIgnoreCase("red");<br/>
+                     }<br/>
+                 <br/>
+                     // Method to check if the light is green<br/>
+                     public boolean isGreen() {<br/>
+                         return color.equalsIgnoreCase("green");<br/>
+                     }<br/>
+                 <br/>
+                     // Getter methods<br/>
+                     public String getColor() {<br/>
+                         return color;<br/>
+                     }<br/>
+                 <br/>
+                     public int getDuration() {<br/>
+                         return duration;<br/>
+                     }<br/>
+                 }<br/>
+                 <br/>
+                 public class pro8 {<br/>
+                     public static void main(String[] args) {<br/>
+                         // Creating a TrafficLight instance<br/>
+                         TrafficLight trafficLight = new TrafficLight("red", 30);<br/>
+                 <br/>
+                         // Checking initial light color and duration<br/>
+                         System.out.println("Initial Traffic Light Color: " + trafficLight.getColor());<br/>
+                         System.out.println("Initial Duration: " + trafficLight.getDuration() + " seconds");<br/>
+                 <br/>
+                         // Changing the color and duration of the traffic light<br/>
+                         trafficLight.changeColor("green", 45);<br/>
+                 <br/>
+                         // Checking if the light is red or green<br/>
+                         if (trafficLight.isRed()) {<br/>
+                             System.out.println("Traffic light is currently red.");<br/>
+                         } else if (trafficLight.isGreen()) {<br/>
+                             System.out.println("Traffic light is currently green.");<br/>
+                         } else {<br/>
+                             System.out.println("Traffic light is neither red nor green.");<br/>
+                         }<br/>
+                     }<br/>
+                 }
+                 
+                 
+             </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (115).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :-  Write a Java program to create a class called "Employee" with a name, salary, and hire date attributes, and a method to calculate years of service.
+        </h3>
+        <div id="bp9" class="source_code">
+            <p>
+                oops10
+                class Student {<br/>
+                    private String name;<br/>
+                    private int grade;<br/>
+                    private String[] courses;<br/>
+                    private int numCourses;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Student(String name, int grade) {<br/>
+                        this.name = name;<br/>
+                        this.grade = grade;<br/>
+                        this.courses = new String[10]; // Assuming maximum 10 courses<br/>
+                        this.numCourses = 0;<br/>
+                    }<br/>
+                <br/>
+                    // Method to add a course<br/>
+                    public void addCourse(String course) {<br/>
+                        if (numCourses < courses.length) {<br/>
+                            courses[numCourses] = course;<br/>
+                            numCourses++;<br/>
+                            System.out.println("Course added: " + course);<br/>
+                        } else {<br/>
+                            System.out.println("Cannot add more courses. Maximum courses reached.");<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to remove a course<br/>
+                    public void removeCourse(String course) {<br/>
+                        boolean found = false;<br/>
+                        for (int i = 0; i < numCourses; i++) {<br/>
+                            if (courses[i].equals(course)) {<br/>
+                                found = true;<br/>
+                                System.out.println("Course removed: " + course);<br/>
+                                // Shift courses to fill the gap<br/>
+                                for (int j = i; j < numCourses - 1; j++) {<br/>
+                                    courses[j] = courses[j + 1];<br/>
+                                }<br/>
+                                courses[numCourses - 1] = null;<br/>
+                                numCourses--;<br/>
+                                break;<br/>
+                            }<br/>
+                        }<br/>
+                        if (!found) {<br/>
+                            System.out.println("Course not found: " + course);<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Getter methods<br/>
+                    public String getName() {<br/>
+                        return name;<br/>
+                    }<br/>
+                <br/>
+                    public int getGrade() {<br/>
+                        return grade;<br/>
+                    }<br/>
+                <br/>
+                    public String[] getCourses() {<br/>
+                        return courses;<br/>
+                    }<br/>
+                <br/>
+                    public int getNumCourses() {<br/>
+                        return numCourses;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro10 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating a Student instance<br/>
+                        Student student = new Student("Alice", 10);<br/>
+                <br/>
+                        // Adding courses<br/>
+                        student.addCourse("Math");<br/>
+                        student.addCourse("Science");<br/>
+                        student.addCourse("History");<br/>
+                <br/>
+                        // Displaying courses<br/>
+                        System.out.println("Courses for " + student.getName() + " (Grade " + student.getGrade() + "):");<br/>
+                        String[] courses = student.getCourses();<br/>
+                        for (int i = 0; i < student.getNumCourses(); i++) {<br/>
+                            System.out.println("- " + courses[i]);<br/>
+                        }<br/>
+                <br/>
+                        // Removing a course<br/>
+                        student.removeCourse("Science");<br/>
+                <br/>
+                        // Displaying courses after removal
+                        System.out.println("\nCourses after removal:");<br/>
+                        courses = student.getCourses();<br/>
+                        for (int i = 0; i < student.getNumCourses(); i++) {<br/>
+                            System.out.println("- " + courses[i]);<br/>
+                        }<br/>
+                    }<br/>
+                }
+                
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (116).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>10 :-Write a Java program to create a class called "Student" with a name, grade, and courses attributes, and methods to add and remove courses.</h3>
+        <div id="bp10" class="source_code">
+            <p>
+                oops10
+                class Student {<br/>
+                    private String name;<br/>
+                    private int grade;<br/>
+                    private String[] courses;<br/>
+                    private int numCourses;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Student(String name, int grade) {<br/>
+                        this.name = name;<br/>
+                        this.grade = grade;<br/>
+                        this.courses = new String[10]; // Assuming maximum 10 courses<br/>
+                        this.numCourses = 0;<br/>
+                    }<br/>
+                <br/>
+                    // Method to add a course<br/>
+                    public void addCourse(String course) {<br/>
+                        if (numCourses < courses.length) {<br/>
+                            courses[numCourses] = course;<br/>
+                            numCourses++;<br/>
+                            System.out.println("Course added: " + course);<br/>
+                        } else {<br/>
+                            System.out.println("Cannot add more courses. Maximum courses reached.");<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to remove a course<br/>
+                    public void removeCourse(String course) {<br/>
+                        boolean found = false;<br/>
+                        for (int i = 0; i < numCourses; i++) {<br/>
+                            if (courses[i].equals(course)) {<br/>
+                                found = true;<br/>
+                                System.out.println("Course removed: " + course);<br/>
+                                // Shift courses to fill the gap<br/>
+                                for (int j = i; j < numCourses - 1; j++) {<br/>
+                                    courses[j] = courses[j + 1];<br/>
+                                }<br/>
+                                courses[numCourses - 1] = null;<br/>
+                                numCourses--;<br/>
+                                break;<br/>
+                            }<br/>
+                        }<br/>
+                        if (!found) {<br/>
+                            System.out.println("Course not found: " + course);<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Getter methods<br/>
+                    public String getName() {<br/>
+                        return name;<br/>
+                    }<br/>
+                <br/>
+                    public int getGrade() {<br/>
+                        return grade;<br/>
+                    }<br/>
+                <br/>
+                    public String[] getCourses() {<br/>
+                        return courses;<br/>
+                    }<br/>
+                <br/>
+                    public int getNumCourses() {<br/>
+                        return numCourses;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro10 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating a Student instance<br/>
+                        Student student = new Student("Alice", 10);<br/>
+                <br/>
+                        // Adding courses<br/>
+                        student.addCourse("Math");<br/>
+                        student.addCourse("Science");<br/>
+                        student.addCourse("History");<br/>
+                <br/>
+                        // Displaying courses<br/>
+                        System.out.println("Courses for " + student.getName() + " (Grade " + student.getGrade() + "):");<br/>
+                        String[] courses = student.getCourses();<br/>
+                        for (int i = 0; i < student.getNumCourses(); i++) {<br/>
+                            System.out.println("- " + courses[i]);<br/>
+                        }<br/>
+                <br/>
+                        // Removing a course<br/>
+                        student.removeCourse("Science");<br/>
+                <br/>
+                        // Displaying courses after removal
+                        System.out.println("\nCourses after removal:");<br/>
+                        courses = student.getCourses();<br/>
+                        for (int i = 0; i < student.getNumCourses(); i++) {<br/>
+                            System.out.println("- " + courses[i]);<br/>
+                        }<br/>
+                    }<br/>
+                }
+                
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (117).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>11 :- Write a Java program to create a class called "Library" with a collection of books and methods to add and remove books.</h3>
+        <div id="bp11" class="source_code">
+            <p>
+                oops11
+                class Book {<br/>
+                    private String title;<br/>
+                    private String author;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Book(String title, String author) {<br/>
+                        this.title = title;<br/>
+                        this.author = author;<br/>
+                    }<br/>
+                <br/>
+                    // Getter methods<br/>
+                    public String getTitle() {<br/>
+                        return title;<br/>
+                    }<br/>
+                <br/>
+                    public String getAuthor() {<br/>
+                        return author;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                class Library {<br/>
+                    private Book[] books;<br/>
+                    private int numBooks;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Library(int maxBooks) {<br/>
+                        books = new Book[maxBooks];<br/>
+                        numBooks = 0;<br/>
+                    }<br/>
+                <br/>
+                    // Method to add a book to the library<br/>
+                    public void addBook(Book book) {<br/>
+                        if (numBooks < books.length) {<br/>
+                            books[numBooks] = book;<br/>
+                            numBooks++;<br/>
+                            System.out.println("Book added: " + book.getTitle() + " by " + book.getAuthor());<br/>
+                        } else {<br/>
+                            System.out.println("Cannot add more books. Library is full.");<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to remove a book from the library<br/>
+                    public void removeBook(String title) {<br/>
+                        boolean found = false;<br/>
+                        for (int i = 0; i < numBooks; i++) {<br/>
+                            if (books[i].getTitle().equalsIgnoreCase(title)) {<br/>
+                                found = true;<br/>
+                                System.out.println("Book removed: " + books[i].getTitle() + " by " + books[i].getAuthor());<br/>
+                                for (int j = i; j < numBooks - 1; j++) {<br/>
+                                    books[j] = books[j + 1];<br/>
+                                }<br/>
+                                books[numBooks - 1] = null;<br/>
+                                numBooks--;<br/>
+                                break;<br/>
+                            }<br/>
+                        }<br/>
+                        if (!found) {<br/>
+                            System.out.println("Book not found: " + title);<br/>
+                        }<br/>
+                    }<br/>
+                }
+                <br/>
+                public class pro11 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating a Library instance<br/>
+                        Library library = new Library(5); // Assuming maximum 5 books in the library<br/>
+                <br/>
+                        // Adding books to the library<br/>
+                        Book book1 = new Book("The Great Gatsby", "F. Scott Fitzgerald");<br/>
+                        Book book2 = new Book("To Kill a Mockingbird", "Harper Lee");<br/>
+                        Book book3 = new Book("1984", "George Orwell");<br/>
+                <br/>
+                        library.addBook(book1);<br/>
+                        library.addBook(book2);<br/>
+                        library.addBook(book3);<br/>
+                <br/>
+                        // Removing a book from the library<br/>
+                        library.removeBook("To Kill a Mockingbird");<br/>
+                    }<br/>
+                }
+                
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (118).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>12 :-  Write a Java program to create a class called "Airplane" with a flight number, destination, and departure time attributes, and methods to check flight status and delay.</h3>
+        <div id="bp12" class="source_code">
+            <p>
+                oops13
+                class Product {<br/>
+                    private String name;<br/>
+                    private int quantity;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Product(String name, int quantity) {<br/>
+                        this.name = name;<br/>
+                        this.quantity = quantity;<br/>
+                    }<br/>
+                <br/>
+                    // Method to increase product quantity<br/>
+                    public void increaseQuantity(int amount) {<br/>
+                        quantity += amount;<br/>
+                        System.out.println("Added " + amount + " " + name + "(s) to inventory. Total quantity: " + quantity);<br/>
+                    }<br/>
+                <br/>
+                    // Method to decrease product quantity<br/>
+                    public void decreaseQuantity(int amount) {<br/>
+                        if (quantity >= amount) {<br/>
+                            quantity -= amount;<br/>
+                            System.out.println("Removed " + amount + " " + name + "(s) from inventory. Total quantity: " + quantity);<br/>
+                        } else {<br/>
+                            System.out.println("Insufficient " + name + "(s) in inventory.");<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Getter methods<br/>
+                    public String getName() {<br/>
+                        return name;<br/>
+                    }<br/>
+                <br/>
+                    public int getQuantity() {<br/>
+                        return quantity;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                class Inventory {<br/>
+                    private Product[] products;<br/>
+                    private int numProducts;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Inventory(int maxProducts) {<br/>
+                        products = new Product[maxProducts];<br/>
+                        numProducts = 0;<br/>
+                    }<br/>
+                <br/>
+                    // Method to add a product to the inventory<br/>
+                    public void addProduct(Product product) {<br/>
+                        if (numProducts < products.length) {<br/>
+                            products[numProducts] = product;<br/>
+                            numProducts++;<br/>
+                            System.out.println("Product added to inventory: " + product.getName());<br/>
+                        } else {<br/>
+                            System.out.println("Cannot add more products. Inventory is full.");<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to remove a product from the inventory<br/>
+                    public void removeProduct(String productName) {<br/>
+                        boolean found = false;<br/>
+                        for (int i = 0; i < numProducts; i++) {<br/>
+                            if (products[i].getName().equalsIgnoreCase(productName)) {<br/>
+                                found = true;<br/>
+                                System.out.println("Product removed from inventory: " + products[i].getName());<br/>
+                                for (int j = i; j < numProducts - 1; j++) {<br/>
+                                    products[j] = products[j + 1];<br/>
+                                }<br/>
+                                products[numProducts - 1] = null;<br/>
+                                numProducts--;<br/>
+                                break;<br/>
+                            }<br/>
+                        }<br/>
+                        if (!found) {<br/>
+                            System.out.println("Product not found in inventory: " + productName);<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to check for low inventory<br/>
+                    public void checkLowInventory(int threshold) {<br/>
+                        System.out.println("Products with low inventory:");<br/>
+                        for (int i = 0; i < numProducts; i++) {<br/>
+                            if (products[i].getQuantity() < threshold) {<br/>
+                                System.out.println("- " + products[i].getName() + ": " + products[i].getQuantity());<br/>
+                            }<br/>
+                        }<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro13 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating an Inventory instance<br/>
+                        Inventory inventory = new Inventory(5); // Assuming maximum 5 products in the inventory<br/>
+                <br/>
+                        // Adding products to the inventory<br/>
+                        Product product1 = new Product("Laptop", 10);<br/>
+                        Product product2 = new Product("Phone", 5);<br/>
+                        Product product3 = new Product("Tablet", 3<br/>);<br/>
+                <br/>
+                        inventory.addProduct(product1);<br/>
+                        inventory.addProduct(product2);<br/>
+                        inventory.addProduct(product3);<br/>
+                <br/>
+                        // Removing a product from the inventory<br/>
+                        inventory.removeProduct("Phone");<br/>
+                <br/>
+                        // Checking for low inventory (threshold set to 5)<br/>
+                        inventory.checkLowInventory(5);<br/>
+                    }<br/>
+                }<br/>
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (119).png" alt="">
+
+
+
+        
+        <br><br><br>
+        <hr>
+        <h3>13 :- Write a Java program to create a class called "Inventory" with a collection of products and methods to add and remove products, and to check for low inventory.           .</h3>
+        <div id="bp13" class="source_code">
+            <p>
+                oops13
+                class Product {<br/>
+                    private String name;<br/>
+                    private int quantity;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Product(String name, int quantity) {<br/>
+                        this.name = name;<br/>
+                        this.quantity = quantity;<br/>
+                    }<br/>
+                <br/>
+                    // Method to increase product quantity<br/>
+                    public void increaseQuantity(int amount) {<br/>
+                        quantity += amount;<br/>
+                        System.out.println("Added " + amount + " " + name + "(s) to inventory. Total quantity: " + quantity);<br/>
+                    }<br/>
+                <br/>
+                    // Method to decrease product quantity<br/>
+                    public void decreaseQuantity(int amount) {<br/>
+                        if (quantity >= amount) {<br/>
+                            quantity -= amount;<br/>
+                            System.out.println("Removed " + amount + " " + name + "(s) from inventory. Total quantity: " + quantity);<br/>
+                        } else {<br/>
+                            System.out.println("Insufficient " + name + "(s) in inventory.");<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Getter methods<br/>
+                    public String getName() {<br/>
+                        return name;<br/>
+                    }<br/>
+                <br/>
+                    public int getQuantity() {<br/>
+                        return quantity;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                class Inventory {<br/>
+                    private Product[] products;<br/>
+                    private int numProducts;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Inventory(int maxProducts) {<br/>
+                        products = new Product[maxProducts];<br/>
+                        numProducts = 0;<br/>
+                    }<br/>
+                <br/>
+                    // Method to add a product to the inventory<br/>
+                    public void addProduct(Product product) {<br/>
+                        if (numProducts < products.length) {<br/>
+                            products[numProducts] = product;<br/>
+                            numProducts++;<br/>
+                            System.out.println("Product added to inventory: " + product.getName());<br/>
+                        } else {<br/>
+                            System.out.println("Cannot add more products. Inventory is full.");<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to remove a product from the inventory<br/>
+                    public void removeProduct(String productName) {<br/>
+                        boolean found = false;<br/>
+                        for (int i = 0; i < numProducts; i++) {<br/>
+                            if (products[i].getName().equalsIgnoreCase(productName)) {<br/>
+                                found = true;<br/>
+                                System.out.println("Product removed from inventory: " + products[i].getName());<br/>
+                                for (int j = i; j < numProducts - 1; j++) {<br/>
+                                    products[j] = products[j + 1];<br/>
+                                }<br/>
+                                products[numProducts - 1] = null;<br/>
+                                numProducts--;<br/>
+                                break;<br/>
+                            }<br/>
+                        }<br/>
+                        if (!found) {<br/>
+                            System.out.println("Product not found in inventory: " + productName);<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to check for low inventory<br/>
+                    public void checkLowInventory(int threshold) {<br/>
+                        System.out.println("Products with low inventory:");<br/>
+                        for (int i = 0; i < numProducts; i++) {<br/>
+                            if (products[i].getQuantity() < threshold) {<br/>
+                                System.out.println("- " + products[i].getName() + ": " + products[i].getQuantity());<br/>
+                            }<br/>
+                        }<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro13 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating an Inventory instance<br/>
+                        Inventory inventory = new Inventory(5); // Assuming maximum 5 products in the inventory<br/>
+                <br/>
+                        // Adding products to the inventory<br/>
+                        Product product1 = new Product("Laptop", 10);<br/>
+                        Product product2 = new Product("Phone", 5);<br/>
+                        Product product3 = new Product("Tablet", 3<br/>);<br/>
+                <br/>
+                        inventory.addProduct(product1);<br/>
+                        inventory.addProduct(product2);<br/>
+                        inventory.addProduct(product3);<br/>
+                <br/>
+                        // Removing a product from the inventory<br/>
+                        inventory.removeProduct("Phone");<br/>
+                <br/>
+                        // Checking for low inventory (threshold set to 5)<br/>
+                        inventory.checkLowInventory(5);<br/>
+                    }<br/>
+                }<br/>
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (120).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>14 :-  Write a Java program to create a class called "School" with attributes for students, teachers, and classes, and methods to add and remove students and teachers, and to create classes.</h3>
+        <div id="bp14" class="source_code">
+            <p>
+                oops14
+                                        class Student {<br/>
+                                            private String name;<br/>
+                                            private int grade;<br/>
+                                        <br/>
+                                            // Constructor<br/>
+                                            public Student(String name, int grade) {<br/>
+                                                this.name = name;<br/>
+                                                this.grade = grade;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter methods<br/>
+                                            public String getName() {<br/>
+                                                return name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public int getGrade() {<br/>
+                                                return grade;<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        class Teacher {<br/>
+                                            private String name;<br/>
+                                            private String subject;<br/>
+                                        <br/>
+                                            // Constructor<br/>
+                                            public Teacher(String name, String subject) {<br/>
+                                                this.name = name;<br/>
+                                                this.subject = subject;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter methods<br/>
+                                            public String getName() {<br/>
+                                                return name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public String getSubject() {<br/>
+                                                return subject;<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        class School {<br/>
+                                            private Student[] students;<br/>
+                                            private Teacher[] teachers;<br/>
+                                            private String[] classes;<br/>
+                                            private int numStudents;<br/>
+                                            private int numTeachers;<br/>
+                                            private int numClasses;<br/>
+                                        <br/>
+                                            // Constructor<br/>
+                                            public School(int maxStudents, int maxTeachers, int maxClasses) {<br/>
+                                                students = new Student[maxStudents];<br/>
+                                                teachers = new Teacher[maxTeachers];<br/>
+                                                classes = new String[maxClasses];<br/>
+                                                numStudents = 0;<br/>
+                                                numTeachers = 0;<br/>
+                                                numClasses = 0;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to add a student<br/>
+                                            public void addStudent(Student student) {<br/>
+                                                if (numStudents < students.length) {<br/>
+                                                    students[numStudents] = student;<br/>
+                                                    numStudents++;<br/>
+                                                    System.out.println("Student added: " + student.getName());<br/>
+                                                } else {<br/>
+                                                    System.out.println("Cannot add more students. School is full.");<br/>
+                                                }<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to remove a student<br/>
+                                            public void removeStudent(String studentName) {<br/>
+                                                boolean found = false;<br/>
+                                                for (int i = 0; i < numStudents; i++) {<br/>
+                                                    if (students[i].getName().equalsIgnoreCase(studentName)) {<br/>
+                                                        found = true;<br/>
+                                                        System.out.println("Student removed: " + students[i].getName());<br/>
+                                                        for (int j = i; j < numStudents - 1; j++) {<br/>
+                                                            students[j] = students[j + 1];<br/>
+                                                        }<br/>
+                                                        students[numStudents - 1] = null;<br/>
+                                                        numStudents--;<br/>
+                                                        break;<br/>
+                                                    }<br/>
+                                                }<br/>
+                                                if (!found) {<br/>
+                                                    System.out.println("Student not found: " + studentName);<br/>
+                                                }<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to add a teacher<br/>
+                                            public void addTeacher(Teacher teacher) {<br/>
+                                                if (numTeachers < teachers.length) {<br/>
+                                                    teachers[numTeachers] = teacher;<br/>
+                                                    numTeachers++;<br/>
+                                                    System.out.println("Teacher added: " + teacher.getName());<br/>
+                                                } else {<br/>
+                                                    System.out.println("Cannot add more teachers. School is full.");<br/>
+                                                }<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to remove a teacher<br/>
+                                            public void removeTeacher(String teacherName) {<br/>
+                                                boolean found = false;<br/>
+                                                for (int i = 0; i < numTeachers; i++) {<br/>
+                                                    if (teachers[i].getName().equalsIgnoreCase(teacherName)) {<br/>
+                                                        found = true;<br/>
+                                                        System.out.println("Teacher removed: " + teachers[i].getName());<br/>
+                                                        for (int j = i; j < numTeachers - 1; j++) {<br/>
+                                                            teachers[j] = teachers[j + 1];<br/>
+                                                        }<br/>
+                                                        teachers[numTeachers - 1] = null;<br/>
+                                                        numTeachers--;<br/>
+                                                        break;<br/>
+                                                    }<br/>
+                                                }<br/>
+                                                if (!found) {<br/>
+                                                    System.out.println("Teacher not found: " + teacherName);<br/>
+                                                }<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to create a class<br/>
+                                            public void createClass(String className) {<br/>
+                                                if (numClasses < classes.length) {<br/>
+                                                    classes[numClasses] = className;<br/>
+                                                    numClasses++;<br/>
+                                                    System.out.println("Class created: " + className);<br/>
+                                                } else {<br/>
+                                                    System.out.println("Cannot create more classes. Limit reached.");<br/>
+                                                }<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        public class pro14 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                // Creating a School instance<br/>
+                                                School school = new School(20, 5, 10); // Assuming limits for 20 students, 5 teachers, and 10 classes<br/>
+                                        <br/>
+                                                // Adding students<br/>
+                                                Student student1 = new Student("Alice", 10);<br/>
+                                                Student student2 = new Student("Bob", 9);<br/>
+                                        <br/>
+                                                school.addStudent(student1);<br/>
+                                                school.addStudent(student2);<br/>
+                                        <br/>
+                                                // Removing a student<br/>
+                                                school.removeStudent("Bob");<br/>
+                                        <br/>
+                                                // Adding teachers<br/>
+                                                Teacher teacher1 = new Teacher("Mr. Smith", "Math");<br/>
+                                                Teacher teacher2 = new Teacher("Ms. Johnson", "Science");<br/>
+                                        <br/>
+                                                school.addTeacher(teacher1);<br/>
+                                                school.addTeacher(teacher2);<br/>
+                                        <br/>
+                                                // Removing a teacher<br/>
+                                                school.removeTeacher("Ms. Johnson");<br/>
+                                        <br/>
+                                                // Creating classes<br/>
+                                                school.createClass("Mathematics");<br/>
+                                                school.createClass("Science");<br/>
+                                            }<br/>
+                                        }
+                                        
+                                       
+                                    </p>
+
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (121).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>15 :- Write a Java program to create a class called "MusicLibrary" with a collection of songs and methods to add and remove songs, and to play a random song.</h3>
+        <div id="bp15" class="source_code">
+            <p>
+                        
+                import java.util.Random;<br/>
+<br/>
+                class Song {<br/>
+                    private String title;<br/>
+                    private String artist;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Song(String title, String artist) {<br/>
+                        this.title = title;<br/>
+                        this.artist = artist;<br/>
+                    }<br/>
+                <br/>
+                    // Getter methods<br/>
+                    public String getTitle() {<br/>
+                        return title;<br/>
+                    }<br/>
+                <br/>
+                    public String getArtist() {<br/>
+                        return artist;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                class MusicLibrary {<br/>
+                    private Song[] songs;<br/>
+                    private int numSongs;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public MusicLibrary(int maxSongs) {<br/>
+                        songs = new Song[maxSongs];<br/>
+                        numSongs = 0;<br/>
+                    }<br/>
+                <br/>
+                    // Method to add a song to the library<br/>
+                    public void addSong(Song song) {<br/>
+                        if (numSongs < songs.length) {<br/>
+                            songs[numSongs] = song;<br/>
+                            numSongs++;<br/>
+                            System.out.println("Song added to the library: " + song.getTitle() + " by " + song.getArtist());<br/>
+                        } else {<br/>
+                            System.out.println("Cannot add more songs. Library is full.");<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to remove a song from the library<br/>
+                    public void removeSong(String songTitle) {<br/>
+                        boolean found = false;<br/>
+                        for (int i = 0; i < numSongs; i++) {<br/>
+                            if (songs[i].getTitle().equalsIgnoreCase(songTitle)) {<br/>
+                                found = true;<br/>
+                                System.out.println("Song removed from the library: " + songs[i].getTitle() + " by " + songs[i].getArtist());<br/>
+                                for (int j = i; j < numSongs - 1; j++) {<br/>
+                                    songs[j] = songs[j + 1];<br/>
+                                }<br/>
+                                songs[numSongs - 1] = null;<br/>
+                                numSongs--;<br/>
+                                break;<br/>
+                            }<br/>
+                        }<br/>
+                        if (!found) {<br/>
+                            System.out.println("Song not found in the library: " + songTitle);<br/>
+                        }<br/>
+                    }<br/>
+                <br/>
+                    // Method to play a random song<br/>
+                    public void playRandomSong() {<br/>
+                        if (numSongs == 0) {<br/>
+                            System.out.println("No songs in the library to play.");<br/>
+                            return;<br/>
+                        }<br/>
+                <br/>
+                        Random random = new Random();<br/>
+                        int randomIndex = random.nextInt(numSongs);<br/>
+                        Song randomSong = songs[randomIndex];<br/>
+                        System.out.println("Playing a random song: " + randomSong.getTitle() + " by " + randomSong.getArtist());<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                 class pro15 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating a MusicLibrary instance<br/>
+                        MusicLibrary musicLibrary = new MusicLibrary(10); // Assuming maximum 10 songs in the library<br/>
+                <br/>
+                        // Adding songs to the library<br/>
+                        Song song1 = new Song("Song A", "Artist X");<br/>
+                        Song song2 = new Song("Song B", "Artist Y");<br/>
+                        Song song3 = new Song("Song C", "Artist Z");<br/>
+                <br/>
+                        musicLibrary.addSong(song1);<br/>
+                        musicLibrary.addSong(song2);<br/>
+                        musicLibrary.addSong(song3);<br/>
+                <br/>
+                        // Removing a song from the library<br/>
+                        musicLibrary.removeSong("Song B");<br/>
+                <br/>
+                        // Playing a random song<br/>
+                        musicLibrary.playRandomSong();<br/>
+                    }<br/>
+                }
+                
+
+            </p>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (122).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>16:- Write a Java program to create a class called "Shape" with abstract methods for calculating area and perimeter, and subclasses for "Rectangle", "Circle", and "Triangle".</h3>
+        <div id="bp16" class="source_code">
+            <p>
+                class TravelAgent {<br/>
+                    // Method to search for flights<br/>
+                    public void searchFlights(String source, String destination, String date) {<br/>
+                        System.out.println("Searching for flights from " + source + " to " + destination + " on " + date);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to search for hotels<br/>
+                    public void searchHotels(String location, String checkInDate, String checkOutDate) {<br/>
+                        System.out.println("Searching for hotels in " + location + " from " + checkInDate + " to " + checkOutDate);<br/>
+                
+                    }<br/>
+                <br/>
+                    // Method to book a flight<br/>
+                    public void bookFlight(String flightNumber, String passengerName) {<br/>
+                        System.out.println("Booking flight " + flightNumber + " for " + passengerName);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to book a hotel<br/>
+                    public void bookHotel(String hotelName, String guestName) {<br/>
+                        System.out.println("Booking hotel " + hotelName + " for " + guestName);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to cancel a flight reservation<br/>
+                    public void cancelFlightReservation(String reservationNumber) {<br/>
+                        System.out.println("Canceling flight reservation: " + reservationNumber);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to cancel a hotel reservation<br/>
+                    public void cancelHotelReservation(String reservationNumber) {<br/>
+                        System.out.println("Canceling hotel reservation: " + reservationNumber);<br/>
+                <br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro19 {<br/>
+                    public static void main(String[] args) {<br/>
+                        TravelAgent agent = new TravelAgent();<br/>
+                <br/>
+                        // Searching for flights<br/>
+                        agent.searchFlights("New York", "London", "2023-12-15");<br/>
+                <br/>
+                        // Searching for hotels<br/>
+                        agent.searchHotels("Paris", "2023-12-20", "2023-12-25");<br/>
+                <br/>
+                        // Booking a flight<br/>
+                        agent.bookFlight("ABC123", "Alice");<br/>
+                <br/>
+                        // Booking a hotel<br/>
+                        agent.bookHotel("Hotel XYZ", "Bob");<br/>
+                <br/>
+                        // Canceling a flight reservation<br/>
+                        agent.cancelFlightReservation("XYZ789");<br/>
+                <br/>
+                        // Canceling a hotel reservation<br/>
+                        agent.cancelHotelReservation("ABC456");<br/>
+                    }<br/>
+                }
+                
+            </p>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (123).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>17:- Write a Java program to create a class called "Movie" with attributes for title, director, actors, and reviews, and methods for adding and retrieving reviews.</h3>
+        <div id="bp17" class="source_code">
+            <p>
+                class TravelAgent {<br/>
+                    // Method to search for flights<br/>
+                    public void searchFlights(String source, String destination, String date) {<br/>
+                        System.out.println("Searching for flights from " + source + " to " + destination + " on " + date);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to search for hotels<br/>
+                    public void searchHotels(String location, String checkInDate, String checkOutDate) {<br/>
+                        System.out.println("Searching for hotels in " + location + " from " + checkInDate + " to " + checkOutDate);<br/>
+                
+                    }<br/>
+                <br/>
+                    // Method to book a flight<br/>
+                    public void bookFlight(String flightNumber, String passengerName) {<br/>
+                        System.out.println("Booking flight " + flightNumber + " for " + passengerName);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to book a hotel<br/>
+                    public void bookHotel(String hotelName, String guestName) {<br/>
+                        System.out.println("Booking hotel " + hotelName + " for " + guestName);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to cancel a flight reservation<br/>
+                    public void cancelFlightReservation(String reservationNumber) {<br/>
+                        System.out.println("Canceling flight reservation: " + reservationNumber);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to cancel a hotel reservation<br/>
+                    public void cancelHotelReservation(String reservationNumber) {<br/>
+                        System.out.println("Canceling hotel reservation: " + reservationNumber);<br/>
+                <br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro19 {<br/>
+                    public static void main(String[] args) {<br/>
+                        TravelAgent agent = new TravelAgent();<br/>
+                <br/>
+                        // Searching for flights<br/>
+                        agent.searchFlights("New York", "London", "2023-12-15");<br/>
+                <br/>
+                        // Searching for hotels<br/>
+                        agent.searchHotels("Paris", "2023-12-20", "2023-12-25");<br/>
+                <br/>
+                        // Booking a flight<br/>
+                        agent.bookFlight("ABC123", "Alice");<br/>
+                <br/>
+                        // Booking a hotel<br/>
+                        agent.bookHotel("Hotel XYZ", "Bob");<br/>
+                <br/>
+                        // Canceling a flight reservation<br/>
+                        agent.cancelFlightReservation("XYZ789");<br/>
+                <br/>
+                        // Canceling a hotel reservation<br/>
+                        agent.cancelHotelReservation("ABC456");<br/>
+                    }<br/>
+                }
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (124).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>18 :- Write a Java program to create a class called "Restaurant" with attributes for menu items, prices, and ratings, and methods to add and remove items, and to calculate average rating.</h3>
+        <div id="bp18" class="source_code">
+            <p>
+                class TravelAgent {<br/>
+                    // Method to search for flights<br/>
+                    public void searchFlights(String source, String destination, String date) {<br/>
+                        System.out.println("Searching for flights from " + source + " to " + destination + " on " + date);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to search for hotels<br/>
+                    public void searchHotels(String location, String checkInDate, String checkOutDate) {<br/>
+                        System.out.println("Searching for hotels in " + location + " from " + checkInDate + " to " + checkOutDate);<br/>
+                
+                    }<br/>
+                <br/>
+                    // Method to book a flight<br/>
+                    public void bookFlight(String flightNumber, String passengerName) {<br/>
+                        System.out.println("Booking flight " + flightNumber + " for " + passengerName);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to book a hotel<br/>
+                    public void bookHotel(String hotelName, String guestName) {<br/>
+                        System.out.println("Booking hotel " + hotelName + " for " + guestName);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to cancel a flight reservation<br/>
+                    public void cancelFlightReservation(String reservationNumber) {<br/>
+                        System.out.println("Canceling flight reservation: " + reservationNumber);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to cancel a hotel reservation<br/>
+                    public void cancelHotelReservation(String reservationNumber) {<br/>
+                        System.out.println("Canceling hotel reservation: " + reservationNumber);<br/>
+                <br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro19 {<br/>
+                    public static void main(String[] args) {<br/>
+                        TravelAgent agent = new TravelAgent();<br/>
+                <br/>
+                        // Searching for flights<br/>
+                        agent.searchFlights("New York", "London", "2023-12-15");<br/>
+                <br/>
+                        // Searching for hotels<br/>
+                        agent.searchHotels("Paris", "2023-12-20", "2023-12-25");<br/>
+                <br/>
+                        // Booking a flight<br/>
+                        agent.bookFlight("ABC123", "Alice");<br/>
+                <br/>
+                        // Booking a hotel<br/>
+                        agent.bookHotel("Hotel XYZ", "Bob");<br/>
+                <br/>
+                        // Canceling a flight reservation<br/>
+                        agent.cancelFlightReservation("XYZ789");<br/>
+                <br/>
+                        // Canceling a hotel reservation<br/>
+                        agent.cancelHotelReservation("ABC456");<br/>
+                    }<br/>
+                }
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (125).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>19 :- Write a Java program to create a class with methods to search for flights and hotels, and to book and cancel reservations.</h3>
+        <div id="bp19" class="source_code">
+            
+            <p>
+                class TravelAgent {<br/>
+                    // Method to search for flights<br/>
+                    public void searchFlights(String source, String destination, String date) {<br/>
+                        System.out.println("Searching for flights from " + source + " to " + destination + " on " + date);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to search for hotels<br/>
+                    public void searchHotels(String location, String checkInDate, String checkOutDate) {<br/>
+                        System.out.println("Searching for hotels in " + location + " from " + checkInDate + " to " + checkOutDate);<br/>
+                
+                    }<br/>
+                <br/>
+                    // Method to book a flight<br/>
+                    public void bookFlight(String flightNumber, String passengerName) {<br/>
+                        System.out.println("Booking flight " + flightNumber + " for " + passengerName);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to book a hotel<br/>
+                    public void bookHotel(String hotelName, String guestName) {<br/>
+                        System.out.println("Booking hotel " + hotelName + " for " + guestName);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to cancel a flight reservation<br/>
+                    public void cancelFlightReservation(String reservationNumber) {<br/>
+                        System.out.println("Canceling flight reservation: " + reservationNumber);<br/>
+                <br/>
+                    }<br/>
+                <br/>
+                    // Method to cancel a hotel reservation<br/>
+                    public void cancelHotelReservation(String reservationNumber) {<br/>
+                        System.out.println("Canceling hotel reservation: " + reservationNumber);<br/>
+                <br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro19 {<br/>
+                    public static void main(String[] args) {<br/>
+                        TravelAgent agent = new TravelAgent();<br/>
+                <br/>
+                        // Searching for flights<br/>
+                        agent.searchFlights("New York", "London", "2023-12-15");<br/>
+                <br/>
+                        // Searching for hotels<br/>
+                        agent.searchHotels("Paris", "2023-12-20", "2023-12-25");<br/>
+                <br/>
+                        // Booking a flight<br/>
+                        agent.bookFlight("ABC123", "Alice");<br/>
+                <br/>
+                        // Booking a hotel<br/>
+                        agent.bookHotel("Hotel XYZ", "Bob");<br/>
+                <br/>
+                        // Canceling a flight reservation<br/>
+                        agent.cancelFlightReservation("XYZ789");<br/>
+                <br/>
+                        // Canceling a hotel reservation<br/>
+                        agent.cancelHotelReservation("ABC456");<br/>
+                    }<br/>
+                }
+                
+            </p>
+
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (126).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>20 :- Create a class showing an example of default constructor.
+
+        </h3>
+        <div id="bp20" class="source_code">
+            <p>
+                oops20
+                class MyClass {<br/>
+                    private int number;<br/>
+                    private String name;<br/>
+                <br/>
+                    // Default Constructor<br/>
+                    public MyClass() {<br/>
+                        number = 0;<br/>
+                        name = "Default";<br/>
+                    }<br/>
+                <br/>
+                    // Method to display values<br/>
+                    public void display() {<br/>
+                        System.out.println("Number: " + number);<br/>
+                        System.out.println("Name: " + name);<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro20 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating an instance of MyClass using the default constructor<br/>
+                        MyClass myObject = new MyClass();<br/>
+                <br/>
+                        // Displaying values initialized by the default constructor<br/>
+                        myObject.display();<br/>
+                    }<br/>
+                }
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (127).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>21 :- Create a class showing an example of parameterized constructor.</h3>
+        <div id="bp21" class="source_code">
+            <p>
+                oop21
+                class MyClass {<br/>
+                    private int number;<br/>
+                    private String name;<br/>
+                <br/>
+                    // Default Constructor<br/>
+                    public MyClass() {<br/>
+                        number = 0;<br/>
+                        name = "Default";<br/>
+                    }<br/>
+                <br/>
+                    // Method to display values<br/>
+                    public void display() {<br/>
+                        System.out.println("Number: " + number);<br/>
+                        System.out.println("Name: " + name);<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro21 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating an instance of MyClass using the default constructor<br/>
+                        MyClass myObject = new MyClass();<br/>
+                <br/>
+                        // Displaying values initialized by the default constructor<br/>
+                        myObject.display();<br/>
+                    }<br/>
+                }
+                
+            </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (128).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>22 :- Create a class showing an example of copy constructor.</h3>
+        <div id="bp22" class="source_code">
+            <p>
+                oops22
+                class Point {<br/>
+                    private int x;<br/>
+                    private int y;<br/>
+                <br/>
+                    // Constructor<br/>
+                    public Point(int x, int y) {<br/>
+                        this.x = x;<br/>
+                        this.y = y;<br/>
+                    }<br/>
+                <br/>
+                    // Copy Constructor<br/>
+                    public Point(Point otherPoint) {<br/>
+                        this.x = otherPoint.x;<br/>
+                        this.y = otherPoint.y;<br/>
+                    }<br/>
+                <br/>
+                    // Method to display coordinates<br/>
+                    public void display() {<br/>
+                        System.out.println("X: " + x + ", Y: " + y);<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+                public class pro22 {<br/>
+                    public static void main(String[] args) {<br/>
+                        // Creating an instance of Point using the constructor<br/>
+                        Point point1 = new Point(5, 10);<br/>
+                <br/>
+                        // Using the copy constructor to create another Point object<br/>
+                        Point point2 = new Point(point1);<br/>
+                <br/>
+                        // Displaying coordinates of both points<br/>
+                        System.out.println("Point 1:");<br/>
+                        point1.display();<br/>
+                <br/>
+                        System.out.println("Point 2:");<br/>
+                        point2.display();<br/>
+                    }<br/>
+                }<br/>
+                
+            </p>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (128).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>23 :- Create a class entering the rollno, name and class of the student from user but rollno should be automatically generated as we enter the information of 10 students
+
+        </h3>
+        <div id="bp23" class="source_code">
+            <p>
+                oops23
+                                        class AreaCalculator {<br/>
+                                            // Method to calculate the area of a circle<br/>
+                                            public double calculateArea(double radius) {<br/>
+                                                return Math.PI * radius * radius;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to calculate the area of a rectangle<br/>
+                                            public double calculateArea(double length, double width) {<br/>
+                                                return length * width;<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        public class pro23 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                AreaCalculator calculator = new AreaCalculator();<br/>
+                                        <br/>
+                                                // Calculate area of a circle<br/>
+                                                double circleArea = calculator.calculateArea(5.0); // Radius = 5.0<br/>
+                                                System.out.println("Area of the circle: " + circleArea);<br/>
+                                        <br/>
+                                                // Calculate area of a rectangle<br/>
+                                                double rectangleArea = calculator.calculateArea(4.0, 6.0); // Length = 4.0, Width = 6.0<br/>
+                                                System.out.println("Area of the rectangle: " + rectangleArea);<br/>
+                                            }<br/>
+                                        }
+                                        
+                                    </p>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (128).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>24 :- Create a class showing the area of circle and rectangle by method overloading.</h3>
+        <div id="bp24" class="source_code">
+            
+            class pro24 {<br/>
+                public static void main(String[] args) {<br/>
+                    // Check if any arguments were provided<br/>
+                    if (args.length == 0) {<br/>
+                        System.out.println("No command-line arguments provided.");<br/>
+                    } else {<br/>
+                        System.out.println("Command-line arguments:");<br/>
+                        // Display all command-line arguments provided by the user<br/>
+                        for (int i = 0; i < args.length; i++) {<br/>
+                            System.out.println("Argument " + (i + 1) + ": " + args[i]);<br/>
+                        }<br/>
+                    }<br/>
+                }<br/>
+            }
+                
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (129).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>25 :- Create a class, entering the command line arguments from the user and show all the arguments as output..</h3>
+        <div id="bp25" class="source_code">
+            <p>
+                oops25
+                                        class Person {<br/>
+                                            private String name;<br/>
+                                            private int age;<br/>
+                                            private String country;<br/>
+                                        <br/>
+                                            // Getter and Setter for 'name'<br/>
+                                            public String getName() {<br/>
+                                                return name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setName(String name) {<br/>
+                                                this.name = name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter and Setter for 'age'<br/>
+                                            public int getAge() {<br/>
+                                                return age;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setAge(int age) {<br/>
+                                                this.age = age;
+                                            }
+                                        
+                                            // Getter and Setter for 'country'<br/>
+                                            public String getCountry() {<br/>
+                                                return country;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setCountry(String country) {<br/>
+                                                this.country = country;<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                         class pro25 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                // Creating an instance of Person class<br/>
+                                                Person person = new Person();<br/>
+                                        <br/>
+                                                // Setting values using setter methods<br/>
+                                                person.setName("Alice");<br/>
+                                                person.setAge(30);<br/>
+                                                person.setCountry("USA");<br/>
+                                        <br/>
+                                                // Getting and displaying values using getter methods<br/>
+                                                System.out.println("Name: " + person.getName());<br/>
+                                                System.out.println("Age: " + person.getAge());<br/>
+                                                System.out.println("Country: " + person.getCountry());<br/>
+                                            }<br/>
+                                        }
+                                        
+                                        
+                                    </p>    
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (130).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>26 :- Write a Java program to create a class called Person with private instance variables name, age. and country. Provide public getter and setter methods to access and modify these variables.</h3>
+        <div id="bp26" class="source_code">
+            
+            <p>
+                oops26
+                                        class BankAccount {<br/>
+                                            private String accountNumber;<br/>
+                                            private double balance;<br/>
+                                        <br/>
+                                            // Getter and Setter for 'accountNumber'<br/>
+                                            public String getAccountNumber() {<br/>
+                                                return accountNumber;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setAccountNumber(String accountNumber) {<br/>
+                                                this.accountNumber = accountNumber;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter and Setter for 'balance'<br/>
+                                            public double getBalance() {<br/>
+                                                return balance;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setBalance(double balance) {<br/>
+                                                this.balance = balance;<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        public class pro26 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                // Creating an instance of BankAccount class<br/>
+                                                BankAccount account = new BankAccount();<br/>
+                                        <br/>
+                                                // Setting values using setter methods<br/>
+                                                account.setAccountNumber("123456789");<br/>
+                                                account.setBalance(5000.0);<br/>
+                                        <br/>
+                                                // Getting and displaying values using getter methods<br/>
+                                                System.out.println("Account Number: " + account.getAccountNumber());<br/>
+                                                System.out.println("Balance: " + account.getBalance());<br/>
+                                            }<br/>
+                                        }
+                                        
+                                    </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (131).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>27 :- Write a Java program to create a class called BankAccount with private instance variables accountNumber and balance. Provide public getter and setter methods to access and modify these variables.</h3>
+        <div id="bp27" class="source_code">
+            <p>
+                oops27
+                                        class BankAccount {<br/>
+                                            private String accountNumber;<br/>
+                                            private double balance;<br/>
+                                        <br/>
+                                            // Getter method for 'accountNumber'<br/>
+                                            public String getAccountNumber() {<br/>
+                                                return accountNumber;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Setter method for 'accountNumber'<br/>
+                                            public void setAccountNumber(String accountNumber) {<br/>
+                                                this.accountNumber = accountNumber;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter method for 'balance'<br/>
+                                            public double getBalance() {<br/>
+                                                return balance;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Setter method for 'balance'<br/>
+                                            public void setBalance(double balance) {<br/>
+                                                this.balance = balance;<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        public class pro27 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                // Creating an instance of BankAccount class<br/>
+                                                BankAccount account = new BankAccount();<br/>
+                                        <br/>
+                                                // Setting values using setter methods<br/>
+                                                account.setAccountNumber("123456789");<br/>
+                                                account.setBalance(5000.0);<br/>
+                                        <br/>
+                                                // Getting and displaying values using getter methods<br/>
+                                                System.out.println("Account Number: " + account.getAccountNumber());<br/>
+                                                System.out.println("Balance: " + account.getBalance());<br/>
+                                            }<br/>
+                                        }
+                                        
+                                    </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (131).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>28 :- Write a Java program to create a class called Rectangle with private instance variables length and width. Provide public getter and setter methods to access and modify these variables.</h3>
+        <div id="bp28" class="source_code">
+            <p>
+                oops28
+                                        class Rectangle {<br/>
+                                            private double length;<br/>
+                                            private double width;<br/>
+                                        <br/>
+                                            // Getter and Setter for 'length'<br/>
+                                            public double getLength() {<br/>
+                                                return length;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setLength(double length) {<br/>
+                                                this.length = length;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter and Setter for 'width'<br/>
+                                            public double getWidth() {<br/>
+                                                return width;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setWidth(double width) {<br/>
+                                                this.width = width;<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        public class pro28 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                // Creating an instance of Rectangle class<br/>
+                                                Rectangle rect = new Rectangle();<br/>
+                                        <br/>
+                                                // Setting values using setter methods<br/>
+                                                rect.setLength(5.0);<br/>
+                                                rect.setWidth(3.0);<br/>
+                                        <br/>
+                                                // Getting and displaying values using getter methods<br/>
+                                                System.out.println("Length: " + rect.getLength());<br/>
+                                                System.out.println("Width: " + rect.getWidth());<br/>
+                                            }<br/>
+                                        }
+                                        
+                                    </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (132).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>29 :- Write a Java program to create a class called Employee with private instance variables employee_id, employee_name, and employee_salary. Provide public getter and setter methods to access and modify the id and name variables, but provide a getter method for the salary variable that returns a formatted string.
+
+            .</h3>
+        <div id="bp29" class="source_code">
+            <p>
+                oops29
+                                        class Employee {<br/>
+                                            private int employee_id;<br/>
+                                            private String employee_name;<br/>
+                                            private double employee_salary;<br/>
+                                        <br/>
+                                            // Getter and Setter for 'employee_id'<br/>
+                                            public int getEmployeeId() {<br/>
+                                                return employee_id;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setEmployeeId(int employee_id) {<br/>
+                                                this.employee_id = employee_id;
+                                            }<br/>
+                                        <br/>
+                                            // Getter and Setter for 'employee_name'<br/>
+                                            public String getEmployeeName() {<br/>
+                                                return employee_name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setEmployeeName(String employee_name) {<br/>
+                                                this.employee_name = employee_name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter for 'employee_salary' with formatted output<br/>
+                                            public String getEmployeeSalary() {<br/>
+                                                return String.format("%.2f", employee_salary);<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Setter for 'employee_salary'<br/>
+                                            public void setEmployeeSalary(double employee_salary) {<br/>
+                                                this.employee_salary = employee_salary;<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        public class pro29 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                // Creating an instance of Employee class<br/>
+                                                Employee emp = new Employee();<br/>
+                                        <br/>
+                                                // Setting values using setter methods<br/>
+                                                emp.setEmployeeId(101);<br/>
+                                                emp.setEmployeeName("John Doe");<br/>
+                                                emp.setEmployeeSalary(5000.0);<br/>
+                                        <br/>
+                                                // Getting and displaying values using getter methods<br/>
+                                                System.out.println("Employee ID: " + emp.getEmployeeId());<br/>
+                                                System.out.println("Employee Name: " + emp.getEmployeeName());<br/>
+                                                System.out.println("Employee Salary: $" + emp.getEmployeeSalary());<br/>
+                                            }<br/>
+                                        }
+                                        
+                                    </p>
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot (133).png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>30 :-  Write a Java program to create a class called Circle with a private instance variable radius. Provide public getter and setter methods to access and modify the radius variable. However, provide two methods called calculateArea() and calculatePerimeter() that return the calculated area and perimeter based on the current radius value.</h3>
+        <div id="bp30" class="source_code">
+                  
+            <p>
+                oops31
+                                        class Student {<br/>
+                                            private int student_id;<br/>
+                                            private String student_name;<br/>
+                                            private int grades;<br/>
+                                            private int numberOfGrades;<br/>
+                                        <br/>
+                                            // Getter and Setter for 'student_id'<br/>
+                                            public int getStudentId() {<br/>
+                                                return student_id;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setStudentId(int student_id) {<br/>
+                                                this.student_id = student_id;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter and Setter for 'student_name'<br/>
+                                            public String getStudentName() {<br/>
+                                                return student_name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setStudentName(String student_name) {<br/>
+                                                this.student_name = student_name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to add a grade with validation<br/>
+                                            public void addGrade(int grade) {<br/>
+                                                if (grade >= 0 && grade <= 100) {<br/>
+                                                    grades += grade;<br/>
+                                                    numberOfGrades++;<br/>
+                                                } else {<br/>
+                                                    System.out.println("Invalid grade. Grade should be between 0 and 100.");<br/>
+                                                }<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to calculate average grade<br/>
+                                            public double calculateAverageGrade() {<br/>
+                                                if (numberOfGrades > 0) {<br/>
+                                                    return (double) grades / numberOfGrades;<br/>
+                                                } else {<br/>
+                                                    return 0.0;<br/>
+                                                }<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        public class pro31 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                // Creating an instance of Student class<br/>
+                                                Student student = new Student();<br/>
+                                        <br/>
+                                                // Setting values using setter methods<br/>
+                                                student.setStudentId(101);<br/>
+                                                student.setStudentName("Alice");<br/>
+                                        <br/>
+                                                // Adding grades<br/>
+                                                student.addGrade(85);<br/>
+                                                student.addGrade(92);<br/>
+                                                student.addGrade(78);<br/>
+                                        <br/>
+                                                // Displaying student details and average grade<br/>
+                                                System.out.println("Student ID: " + student.getStudentId());<br/>
+                                                System.out.println("Student Name: " + student.getStudentName());<br/>
+                                                System.out.println("Average Grade: " + student.calculateAverageGrade());<br/>
+                                            }<br/>
+                                        }
+                                        
+                                    </p>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot(133).png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>31 :- Write a Java program to create a class called Car with private instance variables company_name, model_name, year, and mileage. Provide public getter and setter methods to access and modify the company_name, model_name, and year variables. However, only provide a getter method for the mileage variable.</h3>
+        <div id="bp31" class="source_code">
+                  
+            <p>
+                oops31
+                                        class Student {<br/>
+                                            private int student_id;<br/>
+                                            private String student_name;<br/>
+                                            private int grades;<br/>
+                                            private int numberOfGrades;<br/>
+                                        <br/>
+                                            // Getter and Setter for 'student_id'<br/>
+                                            public int getStudentId() {<br/>
+                                                return student_id;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setStudentId(int student_id) {<br/>
+                                                this.student_id = student_id;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Getter and Setter for 'student_name'<br/>
+                                            public String getStudentName() {<br/>
+                                                return student_name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            public void setStudentName(String student_name) {<br/>
+                                                this.student_name = student_name;<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to add a grade with validation<br/>
+                                            public void addGrade(int grade) {<br/>
+                                                if (grade >= 0 && grade <= 100) {<br/>
+                                                    grades += grade;<br/>
+                                                    numberOfGrades++;<br/>
+                                                } else {<br/>
+                                                    System.out.println("Invalid grade. Grade should be between 0 and 100.");<br/>
+                                                }<br/>
+                                            }<br/>
+                                        <br/>
+                                            // Method to calculate average grade<br/>
+                                            public double calculateAverageGrade() {<br/>
+                                                if (numberOfGrades > 0) {<br/>
+                                                    return (double) grades / numberOfGrades;<br/>
+                                                } else {<br/>
+                                                    return 0.0;<br/>
+                                                }<br/>
+                                            }<br/>
+                                        }<br/>
+                                        <br/>
+                                        public class pro31 {<br/>
+                                            public static void main(String[] args) {<br/>
+                                                // Creating an instance of Student class<br/>
+                                                Student student = new Student();<br/>
+                                        <br/>
+                                                // Setting values using setter methods<br/>
+                                                student.setStudentId(101);<br/>
+                                                student.setStudentName("Alice");<br/>
+                                        <br/>
+                                                // Adding grades<br/>
+                                                student.addGrade(85);<br/>
+                                                student.addGrade(92);<br/>
+                                                student.addGrade(78);<br/>
+                                        <br/>
+                                                // Displaying student details and average grade<br/>
+                                                System.out.println("Student ID: " + student.getStudentId());<br/>
+                                                System.out.println("Student Name: " + student.getStudentName());<br/>
+                                                System.out.println("Average Grade: " + student.calculateAverageGrade());<br/>
+                                            }<br/>
+                                        }
+                                        
+                                    </p>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="oops_output/Screenshot(134).png" alt="">
+                 
+</body>
+</html>

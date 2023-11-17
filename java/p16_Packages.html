@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>Functions</h1>
+                <ul>
+                        <li><a href="#bp1">1. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system.</a></li>
+                        <li><a href="#bp2">2. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.
+
+                        </a></li>
+                        <li><a href="#bp3">3. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system but inherit the Date class.</a>
+                        </li>
+                        <li><a href="#bp4">4.  Create a Java program to access the java.util.Date class through qualified way and print the current date of the system but inherit the Date class..</a></li>
+                        <li><a href="#bp5">5. Create a Java program to create a package with multiple default classes.</a></li>
+                        <li><a href="#bp6">6.  Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes..</a></li>
+                        <li><a href="#bp7">7. Write a Java program to perform employee payroll processing using packages. In the java file, Emp.java creates a package employee and creates a class Emp. Declare the variables name,empid, category, bpay, hra, da, npay, pf, grosspay, incometax, and allowance. Calculate the values in methods. Create another java file Emppay.java.Create an object e to call the methods to perform and print values.
+
+                        </a></li>
+                        <li><a href="#bp8">8. Create a Java program to create a package with public class and protected members to be accessed in another class.</a></li>
+                        <li><a href="#bp9">9. Create a Java program to create a nested package i.e. c4.sample with public class and protected members to be accessed in another class.</a></li>
+                        <li><a href="#bp10">10. Create a Java program to create a package with public class and public members to be accessed in another class.</a>
+                        </li>
+                        </ul>
+                </div>
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- Create a Java program to access the java.util.Date class through import keyword and print the current date of the system.</h3>
+        <div id="bp1" class="source_code">
+       
+            import java.util.Date; <br>
+class A{ <br>
+    public static void main(String a[]) <br>
+    { <br>
+        Date obj = new  Date(); <br>
+        System.out.println(obj);  <br>
+    } <br>
+} <br>
+
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="functions_output/pro1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.</h3>
+        <div id="bp2" class="source_code">
+            
+            /* Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.*/ <br>
+
+            public class packages2_7024 { <br>
+                public static void main(String[] args) { <br>
+                    java.util.Date currentDate = new java.util.Date(); <br>
+                    System.out.println("Current Date: " + currentDate); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :- Create a Java program to access the java.util.Date class through import keyword and print the current date of the system but inherit the Date class.</h3>
+        <div id="bp3" class="source_code">
+            import java.util.Date; <br>
+ <br>
+            class CustomDate { <br>
+               private Date date; <br>
+           
+               public CustomDate() { <br>
+                   date = new Date(); <br>
+               } <br>
+           
+               public Date getCurrentDate() { <br>
+                   return date; <br>
+               } <br>
+           
+               public static void main(String[] args) { <br>
+                   CustomDate customDate = new CustomDate(); <br>
+                   Date currentDate = customDate.getCurrentDate(); <br>
+           
+                   System.out.println("Current Date: " + currentDate); <br>
+               } <br>
+           } <br>
+ <br>           
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- Create a Java program to access the java.util.Date class through qualified way and print the current date of the system but inherit the Date class.</h3>
+        <div id="bp4" class="source_code">
+            class Date { <br>
+                public static void main(String args[]){ <br>
+                java.util.Date date=new java.util.Date();   <br>
+                System.out.println(date);  <br>
+                } <br>
+            } <br>
+            
+ <br>        
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Create a Java program to create a package with multiple default classes.</h3>
+        <div id="bp5" class="source_code">
+            //Create a Java program to create a package with multiple default classes. <br>
+
+package mypackage; <br>
+
+class Class1 { <br>
+    void printMessage() { <br>
+        System.out.println("This is Class1"); <br>
+    } <br>
+
+   public static void main(String[] args) { <br>
+        Class1 c1 = new Class1(); <br>
+       
+
+        c1.printMessage(); <br>
+        
+   
+} <br>
+} <br>
+  class Class2 { <br>
+    void printMessage() { <br>
+        System.out.println("This is Class2"); <br>
+    } <br>
+
+    public static void main(String[] args) { <br>
+        
+        Class2 c2 = new Class2(); <br>
+
+        
+        c2.printMessage(); <br>
+   
+} <br>
+} <br>
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :-  Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes.</h3>
+        <div id="bp6" class="source_code">
+            package employee; <br>
+
+            class Emp { <br>
+                public static void main(String args[]) <br>
+                { <br>
+                String name, empid, category; <br>
+                int bpay; <br>
+                double hra, da, npay, pf, grosspay, incometax, allowance; <br>
+            
+                public Emp(String n, String id, String c, int b) { <br>
+                    name = n; <br>
+                    empid = id; <br>
+                    category = c; <br>
+                    bpay = b; <br>
+                }
+            
+                public void call() { <br>
+                    da = bpay * 0.05; <br>
+                    hra = bpay * 0.09; <br>
+                    pf = bpay * 0.11; <br>
+                    allowance = bpay * 0.10; <br>
+                    grosspay = bpay + da + hra + allowance - pf; <br>
+                    incometax = 0.75 * grosspay; <br>
+                    npay = grosspay - incometax; <br>
+                } <br>
+             <br>
+                public void display() { <br>
+                    System.out.println("\n\nEmployee Details"); <br>
+                    System.out.println("\nName: " + name); <br>
+                    System.out.println("\nEmpid: " + empid); <br>
+                    System.out.println("\nCategory: " + category); <br>
+                    System.out.println("\nbpay: " + bpay); <br>
+                    System.out.println("\nda: " + da); <br>
+                    System.out.println("\nhra: " + hra); <br>
+                    System.out.println("\npf: " + pf); <br>
+                    System.out.println("\nall: " + allowance); <br>
+                    System.out.println("\ngs: " + grosspay); <br>
+                    System.out.println("\nIncometax: " + incometax); <br>
+                    System.out.println("\nnpay: " + npay); <br>
+                } <br>
+            } <br>
+            
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  Write a Java program to perform employee payroll processing using packages. In the java file, Emp.java creates a package employee and creates a class Emp. Declare the variables name,empid, category, bpay, hra, da, npay, pf, grosspay, incometax, and allowance. Calculate the values in methods. Create another java file Emppay.java. Create an object e to call the methods to perform and print values.</h3>
+        <div id="bp7" class="source_code">
+            package employee; <br>
+
+            class Emp { <br>
+                public static void main(String args[]) <br>
+                { <br>
+                String name, empid, category; <br>
+                int bpay; <br>
+                double hra, da, npay, pf, grosspay, incometax, allowance; <br>
+            
+                public Emp(String n, String id, String c, int b) { <br>
+                    name = n; <br>
+                    empid = id; <br>
+                    category = c; <br>
+                    bpay = b; <br>
+                }
+            
+                public void call() { <br>
+                    da = bpay * 0.05; <br>
+                    hra = bpay * 0.09; <br>
+                    pf = bpay * 0.11; <br>
+                    allowance = bpay * 0.10; <br>
+                    grosspay = bpay + da + hra + allowance - pf; <br>
+                    incometax = 0.75 * grosspay; <br>
+                    npay = grosspay - incometax; <br>
+                } <br>
+             <br>
+                public void display() { <br>
+                    System.out.println("\n\nEmployee Details"); <br>
+                    System.out.println("\nName: " + name); <br>
+                    System.out.println("\nEmpid: " + empid); <br>
+                    System.out.println("\nCategory: " + category); <br>
+                    System.out.println("\nbpay: " + bpay); <br>
+                    System.out.println("\nda: " + da); <br>
+                    System.out.println("\nhra: " + hra); <br>
+                    System.out.println("\npf: " + pf); <br>
+                    System.out.println("\nall: " + allowance); <br>
+                    System.out.println("\ngs: " + grosspay); <br>
+                    System.out.println("\nIncometax: " + incometax); <br>
+                    System.out.println("\nnpay: " + npay); <br>
+                } <br>
+            } <br>
+            
+ <br>            
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :- Create a Java program to create a package with public class and protected members to be accessed in another class.</h3>
+        <div id="bp8" class="source_code">
+
+           class Test { <br>
+           
+               public static void main(String args[]) <br>
+               { <br>
+                   c4.sample.Demo d = new c4.sample.Demo(); <br>
+                   
+                   System.out.println("rollno "+d.name); <br>
+                   System.out.println("rollno "+d.rollno); <br>
+           
+               } <br>
+               
+           } <br>
+
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :- Create a Java program to create a nested package i.e. c4.sample with public class and protected members to be accessed in another class.
+
+        </h3>
+        <div id="bp9" class="source_code">
+            class Test { <br>
+           
+                public static void main(String args[]) <br>
+                { <br>
+                    c4.sample.Demo d = new c4.sample.Demo(); <br>
+                    
+                    System.out.println("rollno "+d.name); <br>
+                    System.out.println("rollno "+d.rollno); <br>
+            
+                } <br>
+                
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro9.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>10 :- Create a Java program to create a package with public class and public members to be accessed in another class.
+
+        </h3>
+        <div id="bp10" class="source_code">
+            /*
+            10. Create a Java program to create a package with public class and public members to be accessed in another class. 
+        */ <br>
+        package mayankpackage; <br>
+         class MyClass <br>
+        { <br>
+            public int rollno = 7027; <br>
+        
+            public void publicMethod() <br>
+            { <br>
+                System.out.println("if you are like follow me https://github.com/MayankDevil/"); <br>
+            } <br>
+        } <br>
+        class Test <br>
+        { <br>
+            public static void main(String[] args) <br>
+            { <br>
+                mayankpackage.MyClass my = new myPackage.MyClass(); <br>
+            
+                System.out.println("Mayank rollno is " + my.rollno); <br>
+            
+                my.publicMethod(); <br>
+            } <br>
+        } <br>
+ <br>        
+        </div>
+        <h3>Output :- </h3>
+        <img src="functions_output/pro10.png" alt="">
+        
+                 
+</body>
+</html>

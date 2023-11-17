@@ -1,0 +1,1830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>Data Conversion</h1>
+                <ul>
+                        <li><a href="#bp1">1. pro to Check if a String contains only digits?</a></li>
+                        <li><a href="#bp2">2. pro to perform Deep Copy for String?
+
+                        </a></li>
+                        <li><a href="#bp3">3. Hpro to prove String is immutable promatically?</a>
+                        </li>
+                        <li><a href="#bp4">4. pro to remove all occurrences of a given character from input String?
+
+                        </a></li>
+                        <li><a href="#bp5">5. pro to append the string using StringBuffer class
+
+                        </a></li>
+                        <li><a href="#bp6">6. pro to insert the string using StringBuffer class</a></li>
+                        <li><a href="#bp7">7. pro to Add Characters to a String</a></li>
+                        <li><a href="#bp8">8.  pro to Add Characters to a String</a></li>
+                        <li><a href="#bp9">9.  pro to Check Anagram</a></li>
+                        <li><a href="#bp10">10. pro to check whether a string is a Palindrome</a>
+                        </li>
+                        <li><a href="#bp11">11. pro to Convert Enum to String</a></li>
+                        <li><a href="#bp12">12. pro to Convert String to String Array</a></li>
+                        <li><a href="#bp13">13. pro to count number of words in a String?</a></li>
+                        <li><a href="#bp14">14. pro to count the total number of characters in a string</a></li>
+                        <li><a href="#bp15">15. pro to count the total number of punctuation characters exists in a String
+
+                        </a></li>
+                        <li><a href="#bp16">16. pro to count the total number of vowels and consonants in a string
+
+                        </a></li>
+                        <li><a href="#bp17">17. pro to determine whether a given string is palindrome</a></li>
+                        <li><a href="#bp18">18. pro to determine whether one string is a rotation of another</a></li>
+                        <li><a href="#bp19">19. pro to divide a string in 'N' equal parts.</a></li>
+                        <li><a href="#bp20">20. pro to find all subsets of a string</a></li>
+                        <li><a href="#bp21">21. pro to find all the permutations of a string</a></li>
+                        <li><a href="#bp22">22.  pro to find maximum and minimum occurring character in a string</a></li>
+                        <li><a href="#bp23">23. pro to find Reverse of the string</a></li>
+                        <li><a href="#bp24">24. pro to find the duplicate characters in a string</a></li>
+                        <li><a href="#bp25">25.pro to find the duplicate words in a string</a></li>
+                        <li><a href="#bp26">26. pro to find the frequency of characters</a></li>
+                        <li><a href="#bp27">27. pro to find the largest and smallest word in a string</a></li>
+                        <li><a href="#bp28">28. pro to find the longest repeating sequence in a string</a></li>
+                        <li><a href="#bp29">29. pro to find the most repeated word in a text file</a></li>
+                        <li><a href="#bp30">30. pro to find the number of the words in the given text file</a></li>
+                        <li><a href="#bp31">31. Program to Get a Character From the Given String</a></li>
+                        <li><a href="#bp32">32. Program to Insert a string into another string</a></li>
+                        <li><a href="#bp33">33. Program to Iterate Over Characters in String</a></li>
+                        <li><a href="#bp34">34. Program to Print a New Line in String</a></li>
+                        <li><a href="#bp35">35. Program to Print even length words</a></li>
+                        <li><a href="#bp36">36. Program to print smallest and biggest possible palindrome word in a given string
+
+                        </a></li>
+                        <li><a href="#bp37">37. Program to remove all the white spaces from a string</a></li>
+                        <li><a href="#bp38">38. Program to replace lower-case characters with upper-case and vice-versa</a></li>
+                        <li><a href="#bp39">39. Program to replace the spaces of a string with a specific character</a></li>
+                        <li><a href="#bp40">40. Program to separate the Individual Characters from a String
+
+                        </a></li>
+                        <li><a href="#bp41">41. Program to Splitting into a number of sub-strings</a></li>
+                        <li><a href="#bp42">42. P Program to swap two string variables without using third or temp variable.
+
+                        </a></li>
+                        <li><a href="#bp43">43. Program to Swapping Pair of Characters</a></li>
+                        <li><a href="#bp44">44. Read two String user input and check if first contains second?</a></li>
+                        <li><a href="#bp45">45. Reserve String without reverse() function</a></li>
+                        <li><a href="#bp46">46. Reverse String Word by Word</a></li>
+                        <li><a href="#bp47">47. Write a program to check if two Strings are created with same characters?</a></li>
+                        <li><a href="#bp48">48. Write a program to find out first non repeated character from input String?</a></li>
+                        <li><a href="#bp49">49. Create an object StringBuffer class to reverse the string.</a></li>
+                        <li><a href="#bp50">50. Create an object StringBuffer class to show functionality of insert, append, delete and replace functions.</a></li>
+                        
+                    </ul>
+                </div>
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- How to convert String to int.</h3>
+        <div id="bp1" class="source_code">
+            
+class string1 {  <br>
+
+	// Function to check if a string  <br>
+	// contains only digits  <br>
+	public static boolean <br>
+	onlyDigits(String str, int n)  <br>
+	{  <br>
+		// Traverse the string from  <br>
+		// start to end  <br>
+		for (int i = 0; i < n; i++) {  <br>
+
+			// Check if character is  <br>
+			// not a digit between 0-9  <br>
+			// then return false <br>
+			if (str.charAt(i) < '0' <br>
+				|| str.charAt(i) > '9') {  <br>
+				return false;  <br>
+			}  <br>
+		}  <br>
+		// If we reach here, that means  <br>
+		// all characters were digits. <br>
+		return true;  <br>
+	}  <br>
+
+	// Driver Code  <br>
+	public static void main(String args[])  <br>
+	{  <br>
+		// Given string str  <br>
+		String str = "1a234";  <br>
+		int len = str.length();  <br>
+ <br>
+		// Function Call  <br>
+		System.out.println(onlyDigits(str, len));  <br>
+	}  <br>
+} <br>
+
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="String_output/pro1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- How to convert int to String.</h3>
+        <div id="bp2" class="source_code">
+           
+class String2  <br>
+{   <br>
+// instance variable of the class ABC   <br>
+int x = 30;   <br>
+}   <br>
+class DeepCopyExample    <br>
+{      <br>
+// main method   <br>
+public static void main(String argvs[])   <br> 
+{   <br>
+// creating an object of the class ABC   <br>
+
+
+String2 obj1 = new String2();   <br>
+  
+// it will copy the reference, not value   <br>
+String2 obj2 = new String2();   <br>
+  
+// updating the value to 6    <br>
+// using the reference variable obj2   <br>
+obj2.x = 6;   <br>
+  
+// printing the value of x using reference variable obj1    <br>
+System.out.println("The value of x is: " + obj1.x);   <br>
+}   <br>
+
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :- How to convert String to long            .</h3>
+        <div id="bp3" class="source_code">
+             
+ class ProveStringImmutable  <br>
+ {   <br>
+    public static void referenceCheck(Object x, Object y) {   <br>
+        if (x == y) {   <br>
+            System.out.println("Both pointing to the same reference");   <br>
+   
+        } else {   <br>
+            System.out.println("Both are pointing to different reference");   <br>
+        }   <br>
+    }   <br>
+    public static void main(String[] args) {   <br>
+        String st1 = "Java";   <br>
+        String st2 = "Java";   <br>
+        System.out.println("\nBefore Modification in st1");   <br>
+        referenceCheck(st1, st2);   <br>
+        st1 += "ava";   <br>
+        System.out.println("After Modification");   <br>
+        referenceCheck(st1, st2);   <br>
+    }   <br>
+}   <br>
+          
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- How to convert String to float.</h3>
+        <div id="bp4" class="source_code">
+            import java.util.Scanner; <br>
+
+            class RemoveCharacter { <br>
+                public static void main(String[] args) { <br>
+                    Scanner scanner = new Scanner(System.in); <br>
+                    
+                    System.out.print("Enter a string: "); <br>
+                    String inputString = scanner.nextLine(); <br>
+                    
+                    System.out.print("Enter the character to remove: "); <br>
+                    char charToRemove = scanner.next().charAt(0); <br>
+                    
+                    String result = removeCharacter(inputString, charToRemove); <br>
+                    System.out.println("Result: " + result); <br>
+                    
+                    scanner.close(); <br>
+                } <br>
+                
+                public static String removeCharacter(String inputString, char charToRemove) { <br>
+                    StringBuilder stringBuilder = new StringBuilder(); <br>
+                     <br>
+                    for (int i = 0; i < inputString.length(); i++) { <br>
+                        char currentChar = inputString.charAt(i); <br>
+                        
+                        if (currentChar != charToRemove) { <br>
+                            stringBuilder.append(currentChar); <br>
+                        } <br>
+                    } <br>
+                    
+                    return stringBuilder.toString(); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- How to convert String to float</h3>
+        <div id="bp5" class="source_code">
+            
+ <br>
+class pro5 <br>
+{ <br>
+    public static void main(String[] args) { <br>
+        // Create a StringBuilder <br>
+        StringBuffer s = new StringBuffer("Hello, "); <br>
+        System.out.println("\nOriginal String : "+s); <br>
+        // Add characters to the string <br>
+        s.append("how are you"); <br>
+ <br>
+        // Print the final string <br>
+        System.out.println("Append a String is : "+s.toString()); // Output: "Hello, World!" <br>
+    } <br>
+} <br>
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :- How to convert float to String.</h3>
+        <div id="bp6" class="source_code">
+          
+            //pro:-pro to insert the string using StringBuffer class <br>
+            
+             class prog6 { <br>
+                public static void main(String[] args) { <br>
+                    // Create a StringBuffer <br>
+                    StringBuffer stringBuffer = new StringBuffer("Hello, "); <br>
+            
+                    // Print the original StringBuffer <br>
+                    System.out.println("\nOriginal StringBuffer: " + stringBuffer); <br>
+             <br>
+                    // String to insert <br>
+                    String toInsert = "World!"; <br>
+            
+                    // Index at which to insert the string <br>
+                    int insertIndex = 7; <br>
+            
+                    // Insert the string into the StringBuffer <br>
+                    stringBuffer.insert(insertIndex, toInsert); <br>
+            
+                    // Print the modified StringBuffer <br>
+                    System.out.println("Modified StringBuffer: " + stringBuffer); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  How to convert String to double.</h3>
+        <div id="bp7" class="source_code">
+    
+import java.util.Scanner; <br>
+
+class AddCharacterToString <br>
+{ <br>
+public static void main(String a[]) <br>
+{ <br>
+Scanner s=new Scanner(System.in); <br>
+System.out.print("\nEnter a String : "); <br>
+String str=s.nextLine(); <br>
+System.out.print("Enter the character : "); <br>
+char c=s.next().charAt(0); <br>
+String str2=c+str; <br>
+System.out.println("\nOriginal String : "+str); <br>
+System.out.println("Modified String : "+str2); <br>
+} <br>
+} <br>
+
+ <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :-  How to convert double to String.</h3>
+        <div id="bp8" class="source_code">
+  
+import java.util.Scanner; <br>
+
+class prog8 <br>
+{ <br>
+public static void main(String a[]) <br>
+{ <br>
+Scanner s=new Scanner(System.in); <br>
+System.out.print("\nEnter a String : "); <br>
+String str=s.nextLine(); <br>
+System.out.print("Enter the character : "); <br>
+char c=s.next().charAt(0); <br>
+String str2=c+str; <br>
+System.out.println("\nOriginal String : "+str); <br>
+System.out.println("Modified String : "+str2); <br>
+} <br>
+} <br>
+
+ <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :-  How to convert String to Date.
+
+        </h3>
+        <div id="bp9" class="source_code">
+            import java.util.Arrays; <br>
+            class AnagramChecker { <br>
+           
+               public static boolean areAnagrams(String str1, String str2) { <br>
+                   
+                   str1 = str1.replaceAll("\\s", "").toLowerCase(); <br>
+                   str2 = str2.replaceAll("\\s", "").toLowerCase(); <br>
+           
+                   
+                   if (str1.length() != str2.length()) { <br>
+                       return false; <br>
+                   } <br>
+           
+                   
+                   char[] charArray1 = str1.toCharArray(); <br>
+                   char[] charArray2 = str2.toCharArray(); <br>
+           
+                   Arrays.sort(charArray1); <br>
+                   Arrays.sort(charArray2); <br>
+           
+                   
+                   return Arrays.equals(charArray1, charArray2); <br>
+               } <br>
+           
+               public static void main(String[] args) { <br>
+                   String str1 = "Listen"; <br>
+                   String str2 = "Silent"; <br>
+             System.out.println("\nOrignal String : "+str1); <br>
+             System.out.println("Orignal String : "+str2); <br>
+             
+                   if (areAnagrams(str1, str2)) { <br>
+                       System.out.println(str1 + " and " + str2 + " are anagrams."); <br>
+                   } else { <br>
+                       System.out.println(str1 + " and " + str2 + " are not anagrams."); <br>
+                   } <br>
+               } <br>
+           } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro9.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>10 :- How to convert Date to String</h3>
+        <div id="bp10" class="source_code">
+  
+            class PalindromeString10 <br>
+            {     <br>
+                public static void main(String[] args) {   <br>  
+                    String string = "Kayak";     <br>
+                    boolean flag = true;     <br>
+                        
+                    //Converts the given string into lowercase     <br>
+                    string = string.toLowerCase();     <br>
+                        
+                    //Iterate the string forward and backward, compare one character at a time     <br> 
+                    //till middle of the string is reached     <br>
+                    for(int i = 0; i < string.length()/2; i++){    <br> 
+                        if(string.charAt(i) != string.charAt(string.length()-i-1)){     <br>
+                            flag = false;     <br>
+                            break;     <br>
+                        }     <br>
+                    }     <br>
+                    if(flag)     <br>
+                        System.out.println(string + "\nGiven string is palindrome");    <br> 
+                    else     <br>
+                        System.out.println(string + "\nGiven string is not a palindrome");     <br>
+                }     <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro10.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>11 :- How to convert String to char.</h3>
+        <div id="bp11" class="source_code">
+            import java.io.*;  <br>
+
+  
+// Enum  <br>
+
+enum Fruits {  <br>
+
+    Orange,  <br>
+
+    Apple,  <br>
+
+    Banana,  <br>
+
+    Mango;  <br>
+}  <br>
+
+  
+// Main class  <br>
+
+class GFG {  <br>
+
+  
+
+    // Main driver method  <br>
+
+    public static void main(String[] args) {  <br>
+
+  
+
+        // Printing all the values  <br>
+
+        System.out.println(Fruits.Orange.name());  <br>
+
+        System.out.println(Fruits.Apple.name());  <br>
+
+        System.out.println(Fruits.Banana.name());  <br>
+
+        System.out.println(Fruits.Mango.name());  <br>
+
+    }  <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro11.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>12 :-  How to convert char to String</h3>
+        <div id="bp12" class="source_code">
+            import java.util.Scanner; <br>
+            import java.util.Arrays; <br>
+             <br>
+            class StringToArray <br>
+            { <br>
+            public static void main(String args[])
+            {
+            System.out.println("\npro to Convert String To String Array\n"); <br>
+            Scanner sc = new Scanner(System.in); <br>
+            System.out.print("Enter a String value : "); <br>
+            String str = sc.nextLine(); <br>
+            String[] StringArray = str.split(","); <br>
+            for (String s1 : StringArray) <br>
+            { <br>
+            System.out.println("Convert string To ArrayString is : "+s1); <br>
+            } <br>
+            System.out.println("Convert string To ArrayString is : "+Arrays.toString(StringArray)); <br>
+            } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro12.png" alt="">
+
+
+
+        
+        <br><br><br>
+        <hr>
+        <h3>13 :- How to convert String to Object            .</h3>
+        <div id="bp13" class="source_code">
+            class Count <br>
+{ <br>
+    public static void main(String[] args) { <br>
+        // Example string <br>
+        String inputString = "This is a sample string"; <br>
+
+        // Count the number of words <br>
+        int wordCount = countWords(inputString); <br>
+
+        // Print the result <br>
+        System.out.println("\nOrignal string: " + inputString ); <br>
+        System.out.println("Number of words in the string: " + wordCount); <br>
+    } <br>
+
+    // Function to count words in a string <br>
+    private static int countWords(String str) { <br>
+        // Check for null or empty string <br>
+        if (str == null || str.isEmpty()) { <br>
+            return 0; <br>
+        } <br>
+ <br>
+        // Split the string into an array of words <br>
+        String[] words = str.split("\\s+"); <br>
+
+        // Return the number of words <br>
+        return words.length; <br>
+    } <br>
+} <br>
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro13.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>14 :-  How to convert Object to String.</h3>
+        <div id="bp14" class="source_code">
+           
+import java.util.Scanner; <br>
+
+class CountCharToString <br>
+{ <br>
+public static void main(String a[]) <br>
+{ <br>
+
+Scanner sc=new Scanner(System.in); <br>
+System.out.print("\nEnter a String : "); <br>
+String str=sc.nextLine(); <br>
+int charactercount=str.length(); <br>
+System.out.println("Total number of character in a string : "+charactercount); <br>
+} <br>
+} <br>
+ <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro14.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>15 :- How to convert int to long.</h3>
+        <div id="bp15" class="source_code">
+            
+            import java.util.Scanner; <br>
+
+class count { <br>
+    public static void main(String[] a) { <br>
+        Scanner s = new Scanner(System.in); <br>
+        System.out.print("\nEnter a string: "); <br>
+        String input = s.nextLine(); <br>
+ <br>
+        int vowelCount = 0; <br>
+        int consonantCount = 0; <br>
+
+        input = input.toLowerCase();  <br>
+
+        for (int i = 0; i < input.length(); i++) { <br>
+            char ch = input.charAt(i); <br>
+            if (ch >= 'a' && ch <= 'z') { <br>
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') { <br>
+                    vowelCount++; <br>
+                } else { <br>
+                    consonantCount++; <br>
+                } <br>
+            } <br>
+        } <br>
+
+        System.out.println("Total vowels: " + vowelCount); <br>
+        System.out.println("Total consonants: " + consonantCount); <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro15.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>16:- How to convert long to int</h3>
+        <div id="bp16" class="source_code">
+            import java.util.Scanner; <br>
+
+            class count { <br>
+                public static void main(String[] a) { <br>
+                    Scanner s = new Scanner(System.in); <br>
+                    System.out.print("\nEnter a string: "); <br>
+                    String input = s.nextLine(); <br>
+             <br>
+                    int vowelCount = 0; <br>
+                    int consonantCount = 0; <br>
+            
+                    input = input.toLowerCase();  <br>
+            
+                    for (int i = 0; i < input.length(); i++) { <br>
+                        char ch = input.charAt(i); <br>
+                        if (ch >= 'a' && ch <= 'z') { <br>
+                            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') { <br>
+                                vowelCount++; <br>
+                            } else { <br>
+                                consonantCount++; <br>
+                            } <br>
+                        } <br>
+                    } <br>
+            
+                    System.out.println("Total vowels: " + vowelCount); <br>
+                    System.out.println("Total consonants: " + consonantCount); <br>
+                } <br>
+            } <br> <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro16.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>17:- How to convert int to double</h3>
+        <div id="bp17" class="source_code">
+           
+class SubsetToString <br>
+{ <br>
+  static void subString(String str, int n)  <br>
+  { <br>
+    for (int i = 0; i < n; i++) //starting index <br>
+    { <br>
+      for (int j = i + 1; j <= n; j++) //ending index <br>
+      { <br>
+        System.out.println(str.substring(i, j)); <br>
+      } <br>
+    } <br>
+  } <br>
+  public static void main(String[] args)  <br>
+  { <br>
+    System.out.println("\npro Find all the Subset of a string.\n"); <br>
+    java.util.Scanner sc = new java.util.Scanner(System.in); <br>
+    System.out.print("Enter a String :  "); <br>
+    String str = sc.nextLine(); <br>
+    System.out.println("\nOrginal String is :  " + str); <br>
+    System.out.println("subsets of a given string are :  "); <br>
+    SubsetToString s = new SubsetToString(); <br>
+    s.subString(str, str.length()); <br>
+  } <br>
+} <br>
+
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro17.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>18 :- How to convert double to int.</h3>
+        <div id="bp18" class="source_code">
+            class SubsetToString <br>
+            { <br>
+              static void subString(String str, int n)  <br>
+              { <br>
+                for (int i = 0; i < n; i++) //starting index <br>
+                { <br>
+                  for (int j = i + 1; j <= n; j++) //ending index <br>
+                  { <br>
+                    System.out.println(str.substring(i, j)); <br>
+                  } <br>
+                } <br>
+              } <br>
+              public static void main(String[] args)  <br>
+              { <br>
+                System.out.println("\npro Find all the Subset of a string.\n"); <br>
+                java.util.Scanner sc = new java.util.Scanner(System.in); <br>
+                System.out.print("Enter a String :  "); <br>
+                String str = sc.nextLine(); <br>
+                System.out.println("\nOrginal String is :  " + str); <br>
+                System.out.println("subsets of a given string are :  "); <br>
+                SubsetToString s = new SubsetToString(); <br>
+                s.subString(str, str.length()); <br>
+              } <br>
+            } <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro18.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>19 :- How to convert char to int.</h3>
+        <div id="bp19" class="source_code">
+      
+            class SubsetToString <br>
+            { <br>
+              static void subString(String str, int n)  <br>
+              { <br>
+                for (int i = 0; i < n; i++) //starting index <br>
+                { <br>
+                  for (int j = i + 1; j <= n; j++) //ending index <br>
+                  { <br>
+                    System.out.println(str.substring(i, j)); <br>
+                  } <br>
+                } <br>
+              } <br>
+              public static void main(String[] args)  <br>
+              { <br>
+                System.out.println("\npro Find all the Subset of a string.\n"); <br>
+                java.util.Scanner sc = new java.util.Scanner(System.in); <br>
+                System.out.print("Enter a String :  "); <br>
+                String str = sc.nextLine(); <br>
+                System.out.println("\nOrginal String is :  " + str); <br>
+                System.out.println("subsets of a given string are :  "); <br>
+                SubsetToString s = new SubsetToString(); <br>
+                s.subString(str, str.length()); <br>
+              } <br>
+            } <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro21.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>20 :- How to convert int to char.</h3>
+        <div id="bp20" class="source_code">
+            class SubsetToString <br>
+            { <br>
+              static void subString(String str, int n)  <br>
+              { <br>
+                for (int i = 0; i < n; i++) //starting index <br>
+                { <br>
+                  for (int j = i + 1; j <= n; j++) //ending index <br>
+                  { <br>
+                    System.out.println(str.substring(i, j)); <br>
+                  } <br>
+                } <br>
+              } <br>
+              public static void main(String[] args)  <br>
+              { <br>
+                System.out.println("\npro Find all the Subset of a string.\n"); <br>
+                java.util.Scanner sc = new java.util.Scanner(System.in); <br>
+                System.out.print("Enter a String :  "); <br>
+                String str = sc.nextLine(); <br>
+                System.out.println("\nOrginal String is :  " + str); <br>
+                System.out.println("subsets of a given string are :  "); <br>
+                SubsetToString s = new SubsetToString(); <br>
+                s.subString(str, str.length()); <br>
+              } <br>
+            } <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro20.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>21 :- How to convert String to boolean.</h3>
+   
+        //pro to find all the permutations of a string <br>
+        class StringPermutations  <br>
+        { <br>
+            public static void main(String[] args) { <br>
+                String inputString = "four"; <br>
+                findPermutations(inputString, ""); <br>
+            } <br>
+        
+            public static void findPermutations(String input, String current) { <br>
+                int length = input.length(); <br>
+        
+                // If the input string is empty, we've formed a permutation <br>
+                if (length == 0) { <br>
+                    System.out.println(current); <br>
+                } else { <br>
+                    for (int i = 0; i < length; i++) { <br>
+                        char currentChar = input.charAt(i); <br>
+                        String remaining = input.substring(0, i) + input.substring(i + 1); <br>
+                        findPermutations(remaining, current + currentChar); <br>
+                    } <br>
+                } <br>
+            } <br>
+        } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro21.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>22 :- How to convert boolean to String.</h3>
+        <div id="bp22" class="source_code">
+            class reverse <br>
+            { <br>
+              public static void main(String args[]) <br>
+              { <br>
+                 StringBuffer a = new StringBuffer("ABCDE"); <br>
+                 System.out.println( "\nOriginal String : "+a); <br>
+                 System.out.println( "The reverse string--"+a.reverse()); <br>
+              } <br>
+            } <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro22.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>23 :- How to convert Date to Timestamp.</h3>
+        <div id="bp23" class="source_code">
+            class reverse <br>
+            { <br>
+              public static void main(String args[]) <br>
+              { <br>
+                 StringBuffer a = new StringBuffer("ABCDE"); <br>
+                 System.out.println( "\nOriginal String : "+a); <br>
+                 System.out.println( "The reverse string--"+a.reverse()); <br>
+              } <br>
+            } <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro23.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>24 :- How to convert Timestamp to Date.</h3>
+        <div id="bp24" class="source_code">
+            
+class DuplicateWord  <br>
+{     <br>
+    public static void main(String[] args)  <br>
+    {  <br>
+        System.out.println("\npro to find the duplicate words in a string\n");   <br>
+        java.util.Scanner sc = new java.util.Scanner(System.in); <br>
+        System.out.print("Enter a String  : "); <br>
+        String str = sc.nextLine();   <br>
+        int count;         <br>
+        str = str.toLowerCase();         <br>
+        String words[] = str.split(" ");  <br>
+        System.out.println("\nyour enetred String is  : "+str);     <br>
+        System.out.println("Duplicate words in a given string : ");    <br>  
+        for(int i = 0; i < words.length; i++)  <br>
+        {     <br>
+            count = 1;     <br>
+            for(int j = i+1; j < words.length; j++)  <br>
+            {     <br>
+                if(words[i].equals(words[j]))  <br>
+                {     <br>
+                    count++;       <br>
+                    words[j] = "0";     <br>
+                }     <br>
+            }     <br>
+            if(count > 1 && words[i] != "0")     <br>
+                System.out.println(words[i]);     <br>
+        }   <br>  
+    }     <br>
+}     <br>
+                
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro24.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>25 :- How to convert Binary to Decimal.</h3>
+        <div id="bp25" class="source_code">
+                      
+class DuplicateWord  <br>
+{     <br>
+    public static void main(String[] args)  <br>
+    {  <br>
+        System.out.println("\npro to find the duplicate words in a string\n");   <br>
+        java.util.Scanner sc = new java.util.Scanner(System.in); <br>
+        System.out.print("Enter a String  : "); <br>
+        String str = sc.nextLine();   <br>
+        int count;         <br>
+        str = str.toLowerCase();         <br>
+        String words[] = str.split(" ");  <br>
+        System.out.println("\nyour enetred String is  : "+str);     <br>
+        System.out.println("Duplicate words in a given string : ");    <br>  
+        for(int i = 0; i < words.length; i++)  <br>
+        {     <br>
+            count = 1;     <br>
+            for(int j = i+1; j < words.length; j++)  <br>
+            {     <br>
+                if(words[i].equals(words[j]))  <br>
+                {     <br>
+                    count++;       <br>
+                    words[j] = "0";     <br>
+                }     <br>
+            }     <br>
+            if(count > 1 && words[i] != "0")     <br>
+                System.out.println(words[i]);     <br>
+        }   <br>  
+    }     <br>
+}     <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro25.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>26 :- How to convert Decimal to Binary.</h3>
+        <div id="bp26" class="source_code">
+            import java.util.Scanner; <br>
+            class spro4 <br>
+            { <br>
+                public static void main(String st[])
+                { <br>
+                String str="hello world"; <br>
+                int count=0; <br>
+                System.out.println("\nString is :"+str); <br>
+                System.out.print("Enter a character to find its frequency: "); <br>
+                Scanner sc= new Scanner(System.in); <br>
+                char c = sc.next().charAt(0); <br>
+            
+                for(int i=0; i< str.length();i++) <br>
+                { <br>
+                    if(c== str.charAt(i)) <br>
+                      { <br>
+                        count++; <br>
+                      } <br>
+                } <br>
+                System.out.println("Frequency of "+c+" in the string is: "+ count); <br>
+                } <br>
+            } <br>
+       
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro26.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>27 :- How to convert Hex to Decimal.</h3>
+        <div id="bp27" class="source_code">
+            import java.util.Scanner; <br>
+
+            class WordLength { <br>
+                public static void main(String[] args) { <br>
+                    Scanner scanner = new Scanner(System.in); <br>
+            
+                    
+                    System.out.print("\nEnter a string: "); <br>
+                    String inputString = scanner.nextLine(); <br>
+            
+                   
+                    String[] words = inputString.split("\\s+"); <br>
+                    String smallestWord = words[0]; <br>
+                    String largestWord = words[0]; <br>
+            
+                    for (int i = 1; i < words.length; i++) { <br>
+                        if (words[i].length() < smallestWord.length()) { <br>
+                            smallestWord = words[i]; <br>
+                        } <br>
+                        if (words[i].length() > largestWord.length()) { <br>
+                            largestWord = words[i]; <br>
+                        } <br>
+                    } <br>
+            
+                    System.out.println("Smallest word: " + smallestWord); <br>
+                    System.out.println("Largest word: " + largestWord); <br>
+            
+                    scanner.close(); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro27.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>28 :- How to convert Decimal to Hex.</h3>
+        <div id="bp28" class="source_code">
+            import java.io.BufferedReader; <br>
+            import java.io.FileReader; <br>
+            import java.io.IOException; <br>
+            import java.util.HashMap; <br>
+            import java.util.Map; <br>
+            import java.util.Scanner; <br>
+             <br>
+            class wordfinder {
+            
+                public static void main(String[] a) { <br>
+                    Scanner s = new Scanner(System.in); <br>
+             <br>
+                    System.out.print("\nEnter the path to the text file: "); <br>
+                    String filePath = s.nextLine(); <br>
+            
+                    try { <br>
+                        String mostRepeatedWord = findMostRepeatedWord(filePath); <br>
+                        System.out.println("The most repeated word in the file is: " + mostRepeatedWord); <br>
+                    } catch (IOException e) { <br>
+                        System.out.println("Error reading the file: " + e.getMessage()); <br>
+                    } <br>
+                } <br>
+            
+                private static String findMostRepeatedWord(String filePath) throws IOException { <br>
+                    BufferedReader reader = new BufferedReader(new FileReader(filePath)); <br>
+                    String line; <br>
+                    Map<String, Integer> wordCountMap = new HashMap<String,Integer>(); <br>
+            
+                    while ((line = reader.readLine()) != null) { <br>
+                        String[] words = line.split("\\s+"); <br>
+            
+                        for (String word : words) { <br>
+                            word = word.replaceAll("[^a-zA-Z]", "").toLowerCase(); <br>
+                            if (wordCountMap.containsKey(word)) { <br>
+                wordCountMap.put(word, wordCountMap.get(word) + 1); <br>
+            } else { <br>
+                wordCountMap.put(word, 1); <br>
+            } <br>
+            
+                        } <br>
+                    } <br>
+            
+                    reader.close(); <br>
+                    String mostRepeatedWord = null; <br>
+                    int maxCount = 0; <br>
+            
+                    for (Map.Entry<String, Integer> entry : wordCountMap.entrySet()) { <br>
+                        if (entry.getValue() > maxCount) { <br>
+                            mostRepeatedWord = entry.getKey(); <br>
+                            maxCount = entry.getValue(); <br>
+                        } <br>
+                    } <br>
+            
+                    return mostRepeatedWord; <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro28.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>29 :- How to convert Octal to Decimal
+
+            .</h3>
+        <div id="bp29" class="source_code">
+            import java.io.BufferedReader; <br>
+            import java.io.FileReader; <br>
+            import java.io.IOException; <br>
+            import java.util.HashMap; <br>
+            import java.util.Map; <br>
+            import java.util.Scanner; <br>
+             <br>
+            class wordfinder {
+            
+                public static void main(String[] a) { <br>
+                    Scanner s = new Scanner(System.in); <br>
+             <br>
+                    System.out.print("\nEnter the path to the text file: "); <br>
+                    String filePath = s.nextLine(); <br>
+            
+                    try { <br>
+                        String mostRepeatedWord = findMostRepeatedWord(filePath); <br>
+                        System.out.println("The most repeated word in the file is: " + mostRepeatedWord); <br>
+                    } catch (IOException e) { <br>
+                        System.out.println("Error reading the file: " + e.getMessage()); <br>
+                    } <br>
+                } <br>
+            
+                private static String findMostRepeatedWord(String filePath) throws IOException { <br>
+                    BufferedReader reader = new BufferedReader(new FileReader(filePath)); <br>
+                    String line; <br>
+                    Map<String, Integer> wordCountMap = new HashMap<String,Integer>(); <br>
+            
+                    while ((line = reader.readLine()) != null) { <br>
+                        String[] words = line.split("\\s+"); <br>
+            
+                        for (String word : words) { <br>
+                            word = word.replaceAll("[^a-zA-Z]", "").toLowerCase(); <br>
+                            if (wordCountMap.containsKey(word)) { <br>
+                wordCountMap.put(word, wordCountMap.get(word) + 1); <br>
+            } else { <br>
+                wordCountMap.put(word, 1); <br>
+            } <br>
+            
+                        } <br>
+                    } <br>
+            
+                    reader.close(); <br>
+                    String mostRepeatedWord = null; <br>
+                    int maxCount = 0; <br>
+            
+                    for (Map.Entry<String, Integer> entry : wordCountMap.entrySet()) { <br>
+                        if (entry.getValue() > maxCount) { <br>
+                            mostRepeatedWord = entry.getKey(); <br>
+                            maxCount = entry.getValue(); <br>
+                        } <br>
+                    } <br>
+            
+                    return mostRepeatedWord; <br>
+                } <br>
+            } <br>
+ <br>         
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro29.png" alt="">
+
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>30 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp30" class="source_code">
+            class  spro3 <br>
+            { <br>
+                public static void main(String st[]) <br>
+                { <br>
+                    String str= new String( "Java is platform independent. "); <br>
+                    int c=0; <br>
+                    System.out.println("\nString is : "+str); <br>
+            
+                   int n= str.length(); <br>
+                   for(int i=0; i< n;i++) <br>
+                   { <br>
+                    char s= str.charAt(i); <br>
+                    if(s==' ') <br>
+                      { <br>
+                        c++; <br>
+                      } <br>
+                   } <br>
+                   System.out.println("No. of words in String : "+ (c)); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro30.png" alt="">
+
+
+        <br><br><br>
+        <hr>
+        <h3>31 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp31" class="source_code">
+
+
+            class character {  <br>
+ 
+                public static char <br>
+                getCharFromString(String str, int index)  <br>
+                {  <br>
+                    return str.charAt(index); <br> 
+                }  <br>
+             <br>
+                
+                public static void main(String[] args)  <br>
+                {  <br>
+                    String str = "ABCDEFGH";  <br>
+            
+                    
+                    int index = 5;  <br>
+                    char ch = getCharFromString(str, index);  <br>
+            
+                    System.out.println("\nCharacter from " + str  <br>
+                                    + " at index " + index  <br>
+                                    + " is " + ch); <br> 
+                }  <br>
+            }  <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro31.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>32 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp32" class="source_code">
+
+            
+            import java.util.Scanner; <br>
+            
+            class String32  <br>
+            { <br>
+                public static void main(String[] args) { <br>
+                    Scanner scanner = new Scanner(System.in); <br>
+            
+                    // Get the main string from the user <br>
+                    System.out.print("\nEnter the main string: "); <br>
+                    String mainString = scanner.nextLine(); <br>
+            
+                    // Get the string to be inserted <br>
+                    System.out.print("Enter the string to insert: "); <br>
+                    String insertString = scanner.nextLine(); <br>
+            
+                    // Get the index at which to insert the string <br>
+                    System.out.print("Enter the index to insert the string: "); <br>
+                    int index = scanner.nextInt(); <br>
+            
+                    // Check if the index is within the valid range <br>
+                    if (index >= 0 && index <= mainString.length()) { <br>
+                        // Insert the string and display the result <br>
+                        String resultString = insertStringIntoMainString(mainString, insertString, index); <br>
+                        System.out.println("Result: " + resultString); <br>
+                    } else { <br>
+                        System.out.println("Invalid index. Please enter a valid index."); <br>
+                    } <br>
+            
+                    scanner.close(); <br>
+                } <br>
+            
+                private static String insertStringIntoMainString(String mainString, String insertString, int index) { <br>
+                    // Concatenate the substrings before and after the insertion point <br>
+                    return mainString.substring(0, index) + insertString + mainString.substring(index); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro32.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>33 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp33" class="source_code">
+
+            // pro to Print a New Line in String <br>
+            class NewLineString  <br>
+            { <br>
+            
+                public static void main(String[] args)  <br>
+                { <br>
+                      System.out.println("Java" + '\n' + "proming"); <br>
+                } <br>
+            
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro33.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>34 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp34" class="source_code">
+            class EvenLength  <br>
+            {   <br>
+                public static void main(String str[] )  <br>
+                {   <br>
+                    String s = "This is the java even length word pro ";   <br>
+                      
+                    String[] words = s.split(" ");  <br> 
+                      
+                    for(String word : words) {   <br>
+                        if(word.length() % 2 == 0) {   <br>
+                            System.out.println(word);   <br>
+                        }   <br>
+                    }   <br>
+                }   <br>
+            }   <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro34.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>35 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp35" class="source_code">
+            import java.util.Scanner; <br>
+
+            class RemoveWhiteSpace <br>
+            { <br>
+            public static void main(String args[]) <br>
+            { <br>
+            System.out.println("\npro to remove all the white spaces from a string.\n"); <br>
+            Scanner sc= new Scanner(System.in); <br>
+            System.out.print("Enter a String value : "); <br>
+            String str1= sc.nextLine(); <br>
+            String result = str1.replaceAll("\\s+",""); <br>
+            System.out.println("\nOriginal String  :  "+str1); <br>
+            System.out.println("Remove a all the WhiteSpace :  "+result); <br>
+            } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro35.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>36 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp36" class="source_code">
+            import java.util.Scanner; <br>
+
+            class RemoveWhiteSpace <br>
+            { <br>
+            public static void main(String args[]) <br>
+            { <br>
+            System.out.println("\npro to remove all the white spaces from a string.\n"); <br>
+            Scanner sc= new Scanner(System.in); <br>
+            System.out.print("Enter a String value : "); <br>
+            String str1= sc.nextLine(); <br>
+            String result = str1.replaceAll("\\s+",""); <br>
+            System.out.println("\nOriginal String  :  "+str1); <br>
+            System.out.println("Remove a all the WhiteSpace :  "+result); <br>
+            } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro36.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>37 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp37" class="source_code">
+            import java.util.Scanner; <br>
+ <br>
+            class RemoveWhiteSpace <br>
+            { <br>
+            public static void main(String args[]) <br>
+            { <br>
+            System.out.println("\npro to remove all the white spaces from a string.\n"); <br>
+            Scanner sc= new Scanner(System.in); <br>
+            System.out.print("Enter a String value : "); <br>
+            String str1= sc.nextLine(); <br>
+            String result = str1.replaceAll("\\s+",""); <br>
+            System.out.println("\nOriginal String  :  "+str1); <br>
+            System.out.println("Remove a all the WhiteSpace :  "+result); <br>
+            } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro37.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>38 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp38" class="source_code">
+
+            class ReplaceSpace   <br>
+            {   <br>
+                public static void main(String str[] ) {   <br>
+                    String s = "This is replace the space pro";   <br>
+                    char ch = '-';   <br>
+                       <br>
+                    s = s.replace(' ', ch);   <br>
+                      
+                    System.out.println("\nString after replacing spaces with given character: ");   <br>
+                    System.out.println(s);   <br>
+                }   <br>
+            }   <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro38.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>39 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp39" class="source_code">
+
+            class ReplaceSpace   <br>
+            {   <br>
+                public static void main(String str[] ) {   <br>
+                    String s = "This is replace the space pro";   <br>
+                    char ch = '-';   <br>
+                       <br>
+                    s = s.replace(' ', ch);   <br>
+                      
+                    System.out.println("\nString after replacing spaces with given character: ");   <br>
+                    System.out.println(s);   <br>
+                }   <br>
+            }   <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro39.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>40 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp40" class="source_code">
+
+            class SeparateCharacters <br>
+            { <br>
+               public static void main(String[] args) { <br>
+                   String inputString = "Hello, World!"; <br>
+           
+                   // Using a for loop to separate and print individual characters <br>
+                   for (int i = 0; i < inputString.length(); i++) { <br>
+                       char character = inputString.charAt(i); <br>
+                       System.out.println(character); <br>
+                   } <br>
+               } <br>
+           } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro40.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>41 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp41" class="source_code">
+
+            class String41  <br>
+            { <br>
+                public static void main(String[] args)  <br>
+                { <br>
+                    String originalString = "hello world"; <br>
+                    int substringLength = 3; <br>
+            
+                    
+                    int numSubstrings = (int) Math.ceil((double) originalString.length() / substringLength); <br>
+            
+            
+                    for (int i = 0; i < numSubstrings; i++) { <br>
+                        int start = i * substringLength; <br>
+                        int end = Math.min((i + 1) * substringLength, originalString.length()); <br>
+            
+                        String substring = originalString.substring(start, end); <br>
+                        System.out.println("Substring " + (i + 1) + ": " + substring); <br>
+                    } <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro41.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>42 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp42" class="source_code">
+            import java.lang.*; <br>
+            class B {   <br>
+                public static void main(String[] args) {   <br>
+                    String x = "hello", y = "world"; <br>
+                    System.out.println("\nBefore swapping: " + x + " " + y);   <br>
+                    x = x + y;    <br>
+                    y = x.substring(0, (x.length() - y.length()));  <br>
+                    x = x.substring(y.length());   <br>
+                    System.out.println("After swapping: " + x + " " + y);   <br>
+                }   <br>
+            }   <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro42.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>43 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp43" class="source_code">
+            import java.util.Scanner; <br>
+
+            class CharacterSwapper { <br>
+                public static void main(String[] args) { <br>
+                    Scanner scanner = new Scanner(System.in); <br>
+            
+                    
+                    System.out.print("\nEnter a string: "); <br>
+                    String userString = scanner.nextLine(); <br>
+            
+                    System.out.print("Enter the first character to swap: "); <br>
+                    char charToSwap1 = scanner.next().charAt(0); <br>
+            
+                    System.out.print("Enter the second character to swap: "); <br>
+                    char charToSwap2 = scanner.next().charAt(0); <br>
+            
+                    
+                    if (userString.contains(String.valueOf(charToSwap1)) && userString.contains(String.valueOf(charToSwap2))) { <br>
+                        
+                        String resultString = swapCharacters(userString, charToSwap1, charToSwap2); <br>
+                        System.out.println("Original string: " + userString); <br>
+                        System.out.println("String after swapping characters: " + resultString); <br>
+                    } else { <br>
+                        System.out.println("Error: At least one of the characters is not present in the input string."); <br>
+                    } <br>
+                } <br>
+            
+                private static String swapCharacters(String inputString, char char1, char char2) { <br>
+                    StringBuilder swappedString = new StringBuilder(); <br>
+                    for (char ch : inputString.toCharArray()) { <br>
+                        if (ch == char1) { <br>
+                            swappedString.append(char2); <br>
+                        } else if (ch == char2) { <br>
+                            swappedString.append(char1); <br>
+                        } else { <br>
+                            swappedString.append(ch); <br>
+                        } <br>
+                    } <br>
+                    return swappedString.toString(); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro43.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>44 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp44" class="source_code">
+            import java.util.*; <br>
+            class string  <br>
+            { <br>
+                
+             public static boolean is_str_contains(String str1, String str2) { <br>
+                if (str1 == null || str2 == null) { <br>
+                  throw new IllegalArgumentException("You can't pass null strings as input."); <br>
+                } <br>
+                 boolean ans = false; <br>
+                 for (int i = 0; i < str2.length() - 1; i++) { <br>
+                   if (str2.charAt(i) == str1.charAt(0)) { <br>
+                     for (int j = 0; j < str1.length(); j++) { <br>
+                       if ((i + j) < str2.length() && str1.charAt(j) == str2.charAt(i + j) && j == str1.length() - 1) { <br>
+                         ans = true; <br>
+                         break; <br>
+                       } <br>
+                    } <br>
+                  } <br>
+                } <br>
+                return ans; <br>
+              } <br>
+            
+               public static void main(String[] args) { <br>
+                    Scanner scanner = new Scanner(System.in); <br>
+                    System.out.print("\nInput first string: "); <br>
+                    String str1 = scanner.nextLine(); <br>
+                    System.out.print("Input second string: "); <br>
+                    String str2 = scanner.nextLine(); <br>
+                    System.out.println("If the second string contains the first one? "+is_str_contains(str1, str2));		 <br>
+                    } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro44.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>45 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp45" class="source_code">
+            class spro2 <br>
+            { <br>
+                public static void main(String arr[]) <br>
+                { <br>
+                String s= "hello world"; <br>
+                System.out.println("\nString: "+s); <br>
+                int x= s.length(); <br>
+              
+                while(x>0) <br>
+                { <br>
+                  System.out.print(s.charAt(x-1)); <br>
+                  x--; <br>
+                } <br>
+            
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro45.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>46 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp46" class="source_code">
+
+            import java.util.Scanner; <br>
+
+            class ReverseString   <br>
+            {   <br>
+            public static void main(String str[] )    <br>
+            {   <br>
+            String s;   <br>
+            System.out.print("\nEnter a string: ");   <br>
+            Scanner scanner = new Scanner(System.in);  <br> 
+            s = scanner.nextLine();   <br>
+            scanner.close();    <br>
+            
+            String reversed = reverseString(s);   <br>
+            System.out.println("The reversed string is: " + reversed);   <br>
+            }   <br>
+            public static String reverseString(String s)   <br>
+            {   <br>
+            if (s.isEmpty())                              <br>
+            return s;   <br>
+            return reverseString(s.substring(1)) + s.charAt(0);        <br>    
+            }   <br>
+            }   <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro46.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>47 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp47" class="source_code">
+
+            class pro47 <br>
+            { <br>
+                static String getString(char x) { <br>
+            String s = String.valueOf(x); <br>
+                return s; <br>
+            } <br>
+            
+            
+            static boolean solve(String s1, String s2)  <br>
+            {	 <br>
+                String a = getString(s1.charAt(0)),  <br>
+                    b = getString(s2.charAt(0)); <br>
+            
+                for (int i = 1; i < s1.length(); i++) <br>
+                    if (s1.charAt(i) != s1.charAt(i - 1))  <br>
+                    { <br>
+                        a += getString(s1.charAt(i)); <br>
+                    } <br>
+            
+                for (int i = 1; i < s2.length(); i++) <br>
+                    if (s2.charAt(i) != s2.charAt(i - 1))  <br>
+                    { <br>
+                        b += getString(s2.charAt(i)); <br>
+                    } <br>
+            
+                if (a.equals(b)) <br>
+                    return true; <br>
+            
+                return false; <br>
+            } <br>
+            
+            public static void main(String[] args)  <br>
+            { <br>
+                String s1 = "RADHE", s2 = "RADHE"; <br>
+                if (solve(s1, s2)) <br>
+                    System.out.print("\nThik ha, chal rha hai"); <br>
+                else <br>
+                    System.out.print("Thik nhi hai"); <br>
+            } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro47.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>48 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp48" class="source_code">
+
+
+            class pro49 <br>
+            { <br>
+               public static void main(String[] args) { <br>
+                   StringBuffer sb = new StringBuffer("proming"); <br>
+                   System.out.println("\nstring: " + sb); <br>
+                  
+                   System.out.println("reverse: " + sb.reverse()); <br>
+               } <br>
+           } <br>
+ <br>           
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro48.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>49 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp49" class="source_code">
+            class pro49 <br>
+            { <br>
+               public static void main(String[] args) { <br>
+                   StringBuffer sb = new StringBuffer("proming"); <br>
+                   System.out.println("\nstring: " + sb); <br>
+                  
+                   System.out.println("reverse: " + sb.reverse()); <br>
+               } <br>
+           } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro49.png" alt="">
+
+
+
+
+        <br><br><br>
+        <hr>
+        <h3>50 :-  How to convert Decimal to Octal.</h3>
+        <div id="bp50" class="source_code">
+            /*
+            50. Create an object StringBuffer class to show functionality of insert, append, delete and replace functions.  <br>
+        */
+        class Test <br>
+        { <br>
+            public static void main(String args[]) <br>
+            { <br>
+                StringBuffer string_buffer = new StringBuffer("write"); <br>
+        
+                /* [ insert ] */ <br>
+        
+                // System.out.println(new StringBuffer(" if just use ").toString()); <br>
+        
+                string_buffer.insert(5,"\n inbuild function insert() "); <br>
+        
+        
+                /* [ append ] */  <br>
+        
+                string_buffer.append("\n If you are like <br>
+        
+                // System.out.println(string_buffer.toString()); <br>
+                 <br>
+                /* [ replace ] */  <br>
+         <br>
+                string_buffer.replace(0,5,"wrong");
+         <br>
+                /* [ delete ] */
+        
+                string_buffer.delete(5,20); <br>
+        
+                /* [ display ] */  <br>
+        
+                System.out.println(string_buffer); <br>
+            } <br>
+        } <br>
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="String_output/pro50.png" alt="">
+
+                 
+</body>
+</html>

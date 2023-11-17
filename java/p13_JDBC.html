@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>Functions</h1>
+                <ul>
+                        <li><a href="#bp1">1. Create the connection with MySQL Database and manage the driver.</a></li>
+                        <li><a href="#bp2">2. Create the table in the database from Java API.
+
+                        </a></li>
+                        <li><a href="#bp3">3. Insert the row in the table in the database from Java API.</a>
+                        </li>
+                        <li><a href="#bp4">4. Update the row in the table in the database from Java API.</a></li>
+                        <li><a href="#bp5">5. Delete the row in the table in the database from Java API.</a></li>
+                        <li><a href="#bp6">6.  Select multiple rows from the database table in Java API and show the result on the screen.</a></li>
+                        <li><a href="#bp7">7. Create a Scrollable Readonly Resultset and ask the row number from the user and display that row on the screen.</a></li>
+                        <li><a href="#bp8">8. Create a Scrollable Updateable Resultset and insert a new row, update an existing row and delete the row from Resultset and also the changes should be made to the database also. The values should be inserted, updated and deleted by the user only.
+
+                        </a></li>
+                        <li><a href="#bp9">9.  Create a Java Program to show, insert, update, delete of the table in Java API through PreparedStatement  .</a></li>
+                        </ul>
+                </div>
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- Create the connection with MySQL Database and manage the driver.
+
+
+
+            .</h3>
+        <div id="bp1" class="source_code">
+            import java.sql.Connection; <br>
+import java.sql.DriverManager; <br>
+import java.sql.SQLException; <br>
+ <br>
+class MySQLConnectionExample { <br>
+    public static void main(String[] args) { <br>
+        String url = "jdbc:mysql://localhost:3306/test"; <br>
+        String user = "root"; <br>
+        String password = ""; <br>
+ <br>
+        try { <br>
+            Class.forName("com.mysql.cj.jdbc.Driver"); <br>
+            Connection connection = DriverManager.getConnection(url, user, password); <br>
+ <br>
+            if (connection != null) { <br>
+                System.out.println("Connected to the MySQL database");
+                connection.close(); <br>
+            } <br>
+        } catch (ClassNotFoundException e) { <br>
+            System.err.println("MySQL JDBC driver not found"); <br>
+        } catch (SQLException e) { <br>
+            System.err.println("Connection to the database failed: " + e.getMessage()); <br>
+        } <br>
+    } <br>
+} <br>
+
+
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="jdbc_output/pro1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Create the table in the database from Java API.</h3>
+        <div id="bp2" class="source_code">
+           
+//Program name : Create the table in the database from Java API. <br> <br>
+ <br> <br>
+// java -cp "D:\44\javaPrograms\jd\JDBC;C:\mysql-connector-j-8.2.0.jar" DataDefination <br> <br>
+ <br> <br>
+class DataDefination { <br> <br>
+    public static void main(String[] args) { <br> <br>
+        try { <br> <br>
+ <br> <br>
+            Class.forName("com.mysql.cj.jdbc.Driver"); <br> <br>
+ <br> <br>
+            java.sql.Connection connect = java.sql.DriverManager.getConnection("jdbc:mysql://localhost:3306/test", <br> <br>
+                    "root", ""); <br> <br>
+ <br> <br>
+            if (connect.isClosed()) { <br> <br>
+                System.out.println(" Your Connection is Closed!"); <br> <br>
+                System.exit(0); <br> <br>
+            } <br> <br>
+ <br> <br>
+            // ------------------------------------------------------ <br> <br>
+ <br> <br>
+            System.out.println(" Your Connection is Establised "); <br> <br>
+ <br> <br>
+            java.sql.Statement state = connect.createStatement(); <br> <br>
+ <br> <br>
+            String create_table_query = "CREATE Table mytable3 (id int)"; <br> <br>
+ <br> <br>
+            Boolean result = state.execute(create_table_query); <br> <br>
+ <br> <br>
+            if (result) { <br> <br>
+                System.out.println("Table created!"); <br> <br>
+            } <br> <br>
+            // ----------------------------------------------------- <br> <br>
+ <br> <br>
+            connect.close(); <br> <br>
+ <br> <br>
+            if (connect.isClosed()) <br> <br>
+                System.out.println(" Successfully Connection is Closed!"); <br> <br>
+        } catch (ClassNotFoundException error) { <br> <br>
+            System.out.print(error.getMessage()); <br> <br>
+        } catch (java.sql.SQLException error) { <br> <br>
+            System.out.print(error.getMessage()); <br> <br>
+        } <br> <br>
+    } <br> <br>
+} <br> <br>
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="jdbc_output/pro2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :- Insert the row in the table in the database from Java API.</h3>
+        <div id="bp3" class="source_code">
+            import java.sql.*; <br> <br> <br>
+ <br>
+class employee{
+public static void main(String s[]){ <br>
+ <br>
+try{ <br>
+Class.forName("com.mysql.cj.jdbc.Driver"); <br>
+Connection con =DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb","root",""); <br>
+ <br>
+Statement s1=con.createStatement(); <br>
+int x= s1.executeUpdate("insert into users values(8,'test','something@gmail.com')"); <br>
+if(x==1){ <br>
+System.out.println("Row inserted successfully");} <br>
+}catch(ClassNotFoundException e){System.out.println(e);} <br>
+catch(SQLException e){System.out.println(e);} <br>
+}} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="jdbc_output/pro3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- Update the row in the table in the database from Java API.</h3>
+        <div id="bp4" class="source_code">
+            import java.sql.Connection; <br>
+            import java.sql.DriverManager; <br>
+            import java.sql.SQLException; <br>
+            import java.sql.Statement; <br>
+             <br>
+            class DatabaseUpdateWithStatement { <br>
+                public static void main(String[] args) { <br>
+                    String url = "jdbc:mysql://localhost:3306/mydb"; <br>
+                    String username = "root"; <br>
+                    String password = ""; <br>
+             <br>
+                    // SQL update statement <br>
+                    String updateSql = "UPDATE users SET id = 2 WHERE id = 5"; <br>
+             <br>
+                    try {
+                        Connection connection = DriverManager.getConnection(url, username, password); <br>
+                        Statement statement = connection.createStatement(); <br>
+                        int rowsAffected = statement.executeUpdate(updateSql); <br>
+             <br>
+                        if (rowsAffected > 0) {
+                            System.out.println("Row updated successfully."); <br>
+                        } else { <br>
+                            System.out.println("No rows updated."); <br>
+                        } <br>
+                    } catch (SQLException e) { <br>
+                        e.printStackTrace(); <br>
+                    } <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="jdbc_output/pro4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Delete the row in the table in the database from Java API.</h3>
+        <div id="bp5" class="source_code">
+            //  Delete the row in the table in the database from Java API. <br> <br>
+ <br> <br>
+            import java.sql.Connection; <br> <br>
+            import java.sql.DriverManager; <br> <br>
+            import java.sql.Statement; <br> <br>
+            import java.sql.SQLException; <br> <br>
+            import java.sql.ResultSet; <br> <br>
+             <br> <br>
+            class Main { <br> <br>
+                private static Connection con; <br> <br>
+                private static int rows_affected; <br> <br>
+             <br> <br>
+                public static void main(String[] args) { <br> <br>
+                     <br> <br>
+                    try{ <br> <br>
+                        Class.forName("com.mysql.cj.jdbc.Driver");
+                        con = DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root",""); <br> <br>
+                         <br> <br>
+                        Statement st = con.createStatement(ResultSet.TYPE_FORWARD_ONLY,ResultSet.CONCUR_UPDATABLE); <br> <br>
+                        String sql = "DELETE FROM students"; <br> <br>
+                         <br> <br>
+                        rows_affected = st.executeUpdate(sql); <br> <br>
+                        System.out.println("Numbers of rows deleted : "+rows_affected); <br> <br>
+                         <br> <br>
+                        //telling user that he is deleting from an empty table. <br> <br>
+                        ResultSet rs =  st.executeQuery("SELECT * FROM students"); <br> <br>
+                        if(!rs.next()) <br> <br>
+                        System.out.println("--------   Hey User, Your table is empty.  --------"); <br> <br>
+                    } <br> <br>
+                    catch(ClassNotFoundException c) <br> <br>
+                    { <br> <br>
+                        c.printStackTrace(); <br> <br>
+                    } <br> <br>
+                    catch(SQLException s) <br> <br>
+                    { <br> <br>
+                        s.printStackTrace(); <br> <br>
+                    } <br> <br>
+             <br> <br>
+                    if(con!=null) { <br> <br>
+                        try { <br> <br>
+                            con.close(); <br> <br>
+                        } <br> <br>
+                        catch(SQLException sql_e) { <br> <br>
+                            sql_e.printStackTrace(); <br> <br>
+                        } <br> <br>
+                    } <br> <br>
+                } <br> <br>
+            } <br> <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="jdbc_output/pro5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :- Select multiple rows from the database table in Java API and show the result on the screen.</h3>
+        <div id="bp6" class="source_code">
+            import java.sql.*; <br>
+            import java.util.Scanner; <br>
+             <br>
+            class DatabaseManager { <br>
+                public static void main(String[] args) throws ClassNotFoundException { <br>
+                   Class.forName("com.mysql.cj.jdbc.Driver"); <br>
+                    try { <br>
+                        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/chatTest", "root", ""); <br>
+                        System.out.println("Connection successfully"); <br>
+                        Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY); <br>
+                        ResultSet result = st.executeQuery("select * from chats"); <br>
+             <br>
+                        try{ <br>
+                            while(result.next()){ <br>
+                                System.out.println("Id = "+result.getInt("id")+ ", username = " + result.getString("username") + ", message = " + result.getString("message")); <br>
+                            } <br>
+                        } catch(NumberFormatException e){ <br>
+                            System.out.println("Exception: " + e.getMessage()); <br>
+                        } <br>
+                        connection.close(); <br>
+                    } catch (SQLException e) { <br>
+                        System.out.println("SQL Exception: " + e.getMessage()); <br>
+                    } catch (Exception e){ <br>
+                        System.out.println("Exception: " + e.getMessage()); <br>
+                    } <br>
+                } <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="jdbc_output/pro6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  Create a Scrollable Readonly Resultset and ask the row number from the user and display that row on the screen.</h3>
+        <div id="bp7" class="source_code">
+            import java.sql.*; <br>
+            import java.util.Scanner; <br>
+             <br>
+            class DatabaseManager { <br>
+                public static void main(String[] args) throws ClassNotFoundException { <br>
+                   Class.forName("com.mysql.cj.jdbc.Driver"); <br>
+                    try { <br>
+                        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/chatTest", "root", ""); <br>
+                        System.out.println("Connection successfully"); <br>
+                        Statement st = connection.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_READ_ONLY); <br>
+                        ResultSet result = st.executeQuery("select * from chats"); <br>
+            
+                        try{ <br>
+                            Scanner scanner = new Scanner(System.in); <br>
+                            System.out.print("Enter row number : "); <br>
+                            int row = scanner.nextInt(); <br>
+                            result.absolute(row); <br>
+                            System.out.println("Id = "+result.getInt("id")+ ", username = " + result.getString("username") + ", message = " + result.getString("message")); <br>
+                            scanner.close(); <br>
+                        } catch(NumberFormatException e){ <br>
+                            System.out.println("Exception: " + e.getMessage()); <br>
+                        } <br>
+                        connection.close(); <br>
+                    } catch (SQLException e) { <br>
+                        System.out.println("SQL Exception: " + e.getMessage()); <br>
+                    } catch (Exception e){ <br>
+                        System.out.println("Exception: " + e.getMessage()); <br>
+                    } <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="jdbc_output/pro7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :- Create a Scrollable Updateable Resultset and insert a new row, update an existing row and delete the row from Resultset and also the changes should be made to the database also. The values should be inserted, updated and deleted by the user only.</h3>
+        <div id="bp8" class="source_code">
+            import java.sql.*;<br> <br>
+            import java.util.Scanner;<br> <br>
+            <br> <br>
+            class ScrollableResultSetExample {<br> <br>
+                public static void main(String[] args) {<br> <br>
+                    String url = "jdbc:mysql://localhost:3306/chatTest";<br> <br>
+                    String username = "root";<br> <br>
+                    String password = "";<br> <br>
+            <br> <br>
+                    try {<br> <br>
+                        Connection connection = DriverManager.getConnection(url, username, password);<br> <br>
+                        Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);<br> <br>
+            <br> <br>
+                        // Create a ResultSet that is scrollable and updatable<br> <br>
+                        ResultSet resultSet = statement.executeQuery("SELECT * FROM chats");<br> <br>
+            <br> <br>
+                        System.out.println("All rows before operations :");<br> <br>
+                        while (resultSet.next()) {<br> <br>
+                            System.out.println("Id = " + resultSet.getInt("id") + ", username = " + resultSet.getString("username") + ",<br> <br> message = " + resultSet.getString("message"));<br> <br>
+                        }<br> <br>
+            
+                        Scanner scanner = new Scanner(System.in);<br> <br>
+            
+                        // Insert a new row<br> <br>
+                        System.out.println("Enter values for new row:");<br> <br>
+                        System.out.print("Id: ");<br> <br>
+                        int id = scanner.nextInt();<br> <br>
+                        scanner.nextLine();<br> <br>
+                        System.out.print("Username: ");<br> <br>
+                        String usernameValue = scanner.nextLine();<br> <br>
+                        System.out.print("Message: ");<br> <br>
+                        String message = scanner.nextLine();<br> <br>
+            
+                        resultSet.moveToInsertRow();<br> <br>
+                        resultSet.updateInt("id", id);<br> <br>
+                        resultSet.updateString("username", usernameValue);<br> <br>
+                        resultSet.updateString("message", message);<br> <br>
+                        resultSet.insertRow();<br> <br>
+            
+                        // Update an existing row<br> <br>
+                        System.out.println("Enter values for row to update:");<br> <br>
+                        System.out.print("Id: ");<br> <br>
+                        int updateId = scanner.nextInt();<br> <br>
+                        scanner.nextLine();<br> <br>
+                        System.out.print("New message: ");<br> <br>
+                        String newMessage = scanner.nextLine();<br> <br>
+            
+                        resultSet.beforeFirst();<br> <br>
+                        while (resultSet.next()) {<br> <br>
+                            if (resultSet.getInt("id") == updateId) {<br> <br>
+                                resultSet.updateString("message", newMessage);<br> <br>
+                                resultSet.updateRow();<br> <br>
+                                break;<br> <br>
+                            }<br> <br>
+                        }<br> <br>
+            
+                        // Delete a row<br> <br>
+                        System.out.println("Enter id of row to delete:");<br> <br>
+                        int deleteId = scanner.nextInt();<br> <br>
+                        scanner.nextLine();<br> <br>
+            
+                        resultSet.beforeFirst();<br> <br>
+                        while (resultSet.next()) {<br> <br>
+                            if (resultSet.getInt("id") == deleteId) {<br> <br>
+                                resultSet.deleteRow();<br> <br>
+                                break;<br> <br>
+                            }
+                        }<br> <br>
+            
+                        scanner.close();<br> <br>
+            <br> <br>
+                        System.out.println("All rows after operations :");<br> <br>
+                        resultSet.beforeFirst();<br> <br>
+                        while (resultSet.next()) {<br> <br>
+                            System.out.println("Id = " + resultSet.getInt("id") + ", username = " + resultSet.getString("username") + ",<br> <br> message = " + resultSet.getString("message"));<br> <br>
+                        }<br> <br>
+            
+                    } catch (SQLException e) {<br> <br>
+                        System.out.println("SQLException: " + e.getMessage());<br> <br>
+                    } catch (Exception e){<br> <br>
+                        System.out.println("Exception: " + e.getMessage());<br> <br>
+                    }<br> <br>
+                }<br> <br>
+            }<br> <br>
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="jdbc_output/pro8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :- Create a Java Program to show, insert, update, delete of the table in Java API through PreparedStatement
+
+        </h3>
+        <div id="bp9" class="source_code">
+            // Program to insert, delete, update in table using PreparedStatement. <br><br> <br>
+            import java.sql.*; <br><br> <br>
+            import java.util.Scanner; <br><br> <br>
+             <br><br> <br>
+            class Database{ <br><br> <br>
+                Connection c; <br><br> <br>
+                PreparedStatement s; <br><br> <br>
+                public Database(String url,String uname,String pass) throws SQLException,ClassNotFoundException{ <br><br> <br>
+                Class.forName("com.mysql.cj.jdbc.Driver"); <br><br> <br>
+                     c=DriverManager.getConnection(url,uname,pass); <br><br> <br>
+                } <br><br> <br>
+                 void insert() throws SQLException { <br><br> <br>
+                s=c.prepareStatement("insert into users values(?,?,?)"); <br><br> <br>
+                s.setInt(1,13); <br><br> <br>
+                s.setString(2,"Ankush"); <br><br> <br>
+                s.setString(3,"Ankush@gmail.com"); <br><br> <br>
+            System.out.println(s.executeUpdate() +"Row affected"); <br><br> <br>
+               } <br><br> <br>
+                 void delete() throws SQLException { <br><br> <br>
+                    s=c.prepareStatement("delete from users where id=?"); <br><br> <br>
+                    s.setInt(1,8); <br><br> <br>
+            System.out.println(s.executeUpdate() +"Row affected"); <br><br> <br>
+                    } <br><br> <br>
+             <br><br> <br>
+                 void update() throws SQLException { <br><br> <br>
+                   s=c.prepareStatement("update users set username=? where id=?"); <br><br> <br>
+                   s.setString(1,"Srk"); <br><br> <br>
+                   s.setInt(2,1); <br><br> <br>
+                   System.out.println(s.executeUpdate() +"Row affected"); <br><br> <br>
+                    } <br><br> <br>
+            } <br><br> <br>
+            class Db{ <br><br> <br>
+                public static void main(String str [])throws SQLException,ClassNotFoundException,java.io.IOException{ <br><br> <br>
+                    String url = "jdbc:mysql://localhost:3306/mydb"; <br><br> <br>
+                    String username = "root"; <br><br> <br>
+                    String password = ""; <br><br> <br>
+                    Database d=new Database(url,username,password); <br><br> <br>
+                    int c = 5; <br><br> <br>
+                    Scanner sc=new Scanner(System.in); <br><br> <br>
+                    while(c!=4){ <br><br> <br>
+                        System.out.println(" Press 1 for insert. \n Press 2 for delete \n Press 3 for update \n Press 4 for Exit"); <br><br> <br>
+                        c=sc.nextInt(); <br><br> <br>
+                        switch(c){ <br><br> <br>
+                          case 1: <br><br> <br>
+                          d.insert(); <br><br> <br>
+                          break; <br><br> <br>
+                          
+                          case 2: <br><br> <br>
+                          d.delete(); <br><br> <br>
+                          break; <br><br> <br> <br>
+                          
+                          case 3: <br><br> <br>
+                          d.update(); <br><br> <br>
+                          break; <br><br> <br>
+                          case 4: <br><br> <br>
+                          System.out.println("Exit Successfully"); <br><br> <br>
+                          break; <br><br> <br>
+                          default : <br><br> <br>
+                          System.out.println("Choose between 1-4"); <br><br> <br>
+                          break; <br><br> <br>
+                        } <br><br> <br>
+                    } <br><br> <br>
+                } <br><br> <br>
+            } <br><br> <br>
+ <br><br> <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="jdbc_output/pro9.png" alt="">
+        
+           
+</body>
+</html>
