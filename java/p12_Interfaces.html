@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>CONTENT</h1>
+                <ul>
+                        <li><a href="#bp1">1. Write a Java program to create an interface Shape with the getArea() method. Create three classes Rectangle, Circle, and Triangle that implement the Shape interface. Implement the getArea() method for each of the three classes..</a></li>
+                        <li><a href="#bp2">2. Write a Java program to create a Animal interface with a method called bark() that takes no arguments and returns void. Create a Dog class that implements Animal and overrides speak() to print "Dog is barking".</a></li>
+                        <li><a href="#bp3">3. Write a Java program to create an interface Flyable with a method called fly_obj(). Create three classes Spacecraft, Airplane, and Helicopter that implement the Flyable interface. Implement the fly_obj() method for each of the three classes.</a>
+                        </li>
+                        <li><a href="#bp4">4. Write a Java programming to create a banking system with three classes - Bank, Account, SavingsAccount, and CurrentAccount. The bank should have a list of accounts and methods for adding them. Accounts should be an interface with methods to deposit, withdraw, calculate interest, and view balances. SavingsAccount and CurrentAccount should implement the Account interface and have their own unique methods.</a></li>
+                        <li><a href="#bp5">5. Write a Java program to create an interface Resizable with methods resizeWidth(int width) and resizeHeight(int height) that allow an object to be resized. Create a class Rectangle that implements the Resizable interface and implements the resize methods.</a></li>
+                        <li><a href="#bp6">6. Write a Java program to create an interface Drawable with a method draw() that takes no arguments and returns void. Create three classes Circle, Rectangle, and Triangle that implement the Drawable interface and override the draw() method to draw their respective shapes.</a></li>
+                        <li><a href="#bp7">7. Write a Java program to create an interface Sortable with a method sort() that sorts an array of integers in ascending order. Create two classes BubbleSort and SelectionSort that implement the Sortable interface and provide their own implementations of the sort() method.</a></li>
+                        <li><a href="#bp8">8. Write a Java program to create an interface Playable with a method play() that takes no arguments and returns void. Create three classes Football, Volleyball, and Basketball that implement the Playable interface and override the play() method to play the respective sports.</a></li>
+                        <li><a href="#bp9">9. Write a Java program to create an interface Searchable with a method search(String keyword) that searches for a given keyword in a text document. Create two classes Document and WebPage that implement the Searchable interface and provide their own implementations of the search() method.</a></li>
+                        <li><a href="#bp10">10. Write a Java program to create an interface Encryptable with methods encrypt (String data) and decrypt (String encryptedData) that define encryption and decryption operations. Create two classes AES and RSA that implement the Encryptable interface and provide their own encryption and decryption algorithms.</a>
+                        </li>
+                        <li><a href="#bp11">11. Write a Java program to create an interface Sortable with a method sort (int[] array) that sorts an array of integers in descending order. Create two classes QuickSort and MergeSort that implement the Sortable interface and provide their own implementations of the sort() method.</a></li>
+                        </ul>
+                </div>
+        
+                
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- Write a Java program to create an interface Shape with the getArea() method. Create three classes Rectangle, Circle, and Triangle that implement the Shape interface. Implement the getArea() method for each of the three classes.</h3>
+        <div id="bp1" class="source_code">
+            // Shape interface <br>
+interface Shape { <br>
+    double getArea(); <br>
+} <br>
+
+// Rectangle class implementing Shape <br>
+class Rectangle implements Shape { <br>
+    private double length; <br>
+    private double width; <br>
+
+    public Rectangle(double length, double width) { <br>
+        this.length = length; <br>
+        this.width = width; <br>
+    }
+
+    @Override <br>
+    public double getArea() { <br>
+        return length * width; <br>
+    } <br>
+} <br>
+
+// Circle class implementing Shape <br>
+class Circle implements Shape { <br>
+    private double radius; <br>
+ <br>
+    public Circle(double radius) { <br>
+        this.radius = radius; <br>
+    } <br>
+
+    @Override <br>
+    public double getArea() { <br>
+        return Math.PI * radius * radius; <br>
+    } <br>
+} <br>
+
+// Triangle class implementing Shape <br>
+class Triangle implements Shape { <br>
+    private double base; <br>
+    private double height; <br>
+
+    public Triangle(double base, double height) { <br>
+        this.base = base; <br>
+        this.height = height; <br>
+    } <br>
+
+    @Override <br>
+    public double getArea() { <br>
+        return 0.5 * base * height; <br>
+    } <br>
+} <br>
+
+// Main class to test the Shape interface and its implementations <br>
+ class ShapeTest  <br>
+{ <br>
+    public static void main(String[] args) { <br>
+        // Test Rectangle <br>
+        Rectangle rectangle = new Rectangle(5, 8); <br>
+        System.out.println("Area of Rectangle: " + rectangle.getArea()); <br>
+
+        // Test Circle <br>
+        Circle circle = new Circle(4); <br>
+        System.out.println("Area of Circle: " + circle.getArea()); <br>
+ <br>
+        // Test Triangle <br>
+        Triangle triangle = new Triangle(6, 10); <br>
+        System.out.println("Area of Triangle: " + triangle.getArea()); <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="interfaces_output/pro1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Write a Java program to create a Animal interface with a method called bark() that takes no arguments and returns void. Create a Dog class that implements Animal and overrides speak() to print "Dog is barking".</h3>
+        <div id="bp2" class="source_code">
+            interface Animal { <br>
+                void bark(); <br>
+            } <br>
+            
+            
+            
+            class Dog implements Animal { <br>
+                
+                
+                public void bark() { <br>
+                    System.out.println("DOG IS BARKING"); <br>
+                }
+            }
+            
+             <br>
+            class demo { <br>
+                public static void main(String[] args) { <br>
+                    
+                    
+                    Dog dog = new Dog(); <br>
+                    dog.bark(); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :- Write a Java program to create an interface Flyable with a method called fly_obj(). Create three classes Spacecraft, Airplane, and Helicopter that implement the Flyable interface. Implement the fly_obj() method for each of the three classes.</h3>
+        <div id="bp3" class="source_code">
+            /* Write a Java program to create an interfae Flyable with a method called fly_obj(). <br>
+Create three classes Spacecraft, Airplane, and Helicopter that implement the flyable interface. Implement the fly_obj() method for each of the three classes. <br>
+*/ <br>
+
+
+interface Flyable <br>
+{ <br>
+
+void fly_obj(); <br>
+
+} <br>
+
+class Spacecraft implements Flyable <br>
+
+{ <br>
+
+public void fly_obj() <br>
+{ <br>
+
+System.out.println("Spaceraft is ready to fly"); <br>
+
+} <br>
+
+
+} <br>
+
+class Airplane implements Flyable <br>
+ <br>
+{ <br>
+
+public void fly_obj() <br>
+{ <br>
+
+System.out.println("Airplane is ready to fly"); <br>
+
+} <br>
+
+
+} <br>
+
+class Helicopter implements Flyable <br>
+
+{ <br>
+
+public void fly_obj() <br>
+{ <br>
+
+System.out.println("Helicopter is ready to fly"); <br>
+
+} <br>
+
+public static void main(String args[]) <br>
+{ <br>
+
+Spacecraft obj1 = new Spacecraft(); <br>
+Airplane obj2 = new Airplane(); <br>
+Helicopter obj3 = new Helicopter(); <br>
+
+obj1.fly_obj(); <br>
+obj2.fly_obj(); <br>
+obj3.fly_obj();  <br>
+
+} <br>
+
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- Write a Java programming to create a banking system with three classes - Bank, Account, SavingsAccount, and CurrentAccount. The bank should have a list of accounts and methods for adding them. Accounts should be an interface with methods to deposit, withdraw, calculate interest, and view balances. SavingsAccount and CurrentAccount should implement the Account interface and have their own unique methods.</h3>
+        <div id="bp4" class="source_code">
+            interface Resizable { <br>
+                void resizeWidth(int width); <br>
+                void resizeHeight(int height); <br>
+            } <br>
+            
+            class Rectangle implements Resizable { <br>
+                private int width; <br>
+                private int height; <br>
+            
+                public Rectangle(int width, int height) { <br>
+                    this.width = width; <br>
+                    this.height = height; <br>
+                } <br>
+            
+                public void resizeWidth(int width) { <br>
+                    this.width = width; <br>
+                } <br>
+            
+                public void resizeHeight(int height) { <br>
+                    this.height = height; <br>
+                } <br>
+            
+                public String toString() { <br>
+                    return "Rectangle[width=" + width + ", height=" + height + "]"; <br>
+                }
+            } <br>
+            class Main { <br>
+                public static void main(String[] args) { <br>
+                    Rectangle rectangle = new Rectangle(5, 10); <br>
+                    System.out.println(rectangle); // Output: Rectangle[width=5, height=10] <br>
+            
+                    rectangle.resizeWidth(20); <br>
+                    rectangle.resizeHeight(30); <br>
+                    System.out.println(rectangle); // Output: Rectangle[width=20, height=30] <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Write a Java program to create an interface Resizable with methods resizeWidth(int width) and resizeHeight(int height) that allow an object to be resized. Create a class Rectangle that implements the Resizable interface and implements the resize methods..</h3>
+        <div id="bp5" class="source_code">
+            interface Resizable { <br>
+                void resizeWidth(int width); <br>
+                void resizeHeight(int height); <br>
+            } <br>
+            
+            class Rectangle implements Resizable { <br>
+                private int width; <br>
+                private int height; <br>
+            
+                public Rectangle(int width, int height) { <br>
+                    this.width = width; <br>
+                    this.height = height; <br>
+                } <br>
+            
+                public void resizeWidth(int width) { <br>
+                    this.width = width; <br>
+                } <br>
+            
+                public void resizeHeight(int height) { <br>
+                    this.height = height; <br>
+                } <br>
+            
+                public String toString() { <br>
+                    return "Rectangle[width=" + width + ", height=" + height + "]"; <br>
+                }
+            } <br>
+            class Main { <br>
+                public static void main(String[] args) { <br>
+                    Rectangle rectangle = new Rectangle(5, 10); <br>
+                    System.out.println(rectangle); // Output: Rectangle[width=5, height=10] <br>
+            
+                    rectangle.resizeWidth(20); <br>
+                    rectangle.resizeHeight(30); <br>
+                    System.out.println(rectangle); // Output: Rectangle[width=20, height=30] <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :- Write a Java program to create an interface Drawable with a method draw() that takes no arguments and returns void. Create three classes Circle, Rectangle, and Triangle that implement the Drawable interface and override the draw() method to draw their respective shapes.</h3>
+        <div id="bp6" class="source_code">
+            interface Resizable { <br>
+                void resizeWidth(int width); <br>
+                void resizeHeight(int height); <br>
+            } <br>
+            
+            class Rectangle implements Resizable { <br>
+                private int width; <br>
+                private int height; <br>
+            
+                public Rectangle(int width, int height) { <br>
+                    this.width = width; <br>
+                    this.height = height; <br>
+                } <br>
+            
+                public void resizeWidth(int width) { <br>
+                    this.width = width; <br>
+                } <br>
+            
+                public void resizeHeight(int height) { <br>
+                    this.height = height; <br>
+                } <br>
+            
+                public String toString() { <br>
+                    return "Rectangle[width=" + width + ", height=" + height + "]"; <br>
+                }
+            } <br>
+            class Main { <br>
+                public static void main(String[] args) { <br>
+                    Rectangle rectangle = new Rectangle(5, 10); <br>
+                    System.out.println(rectangle); // Output: Rectangle[width=5, height=10] <br>
+            
+                    rectangle.resizeWidth(20); <br>
+                    rectangle.resizeHeight(30); <br>
+                    System.out.println(rectangle); // Output: Rectangle[width=20, height=30] <br>
+                } <br>
+            } <br>
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  Write a Java program to create an interface Sortable with a method sort() that sorts an array of integers in ascending order. Create two classes BubbleSort and SelectionSort that implement the Sortable interface and provide their own implementations of the sort() method.</h3>
+        <div id="bp7" class="source_code">
+            interface Sortable { <br>
+                void sort(int[] arr); <br>
+            } <br>
+            
+            class BubbleSort implements Sortable { <br>
+                @Override <br>
+                public void sort(int[] arr) { <br>
+                    int n = arr.length; <br>
+                    boolean swapped; <br>
+                    for (int i = 0; i < n - 1; i++) { <br>
+                        swapped = false; <br>
+                        for (int j = 0; j < n - i - 1; j++) { <br>
+                            if (arr[j] > arr[j + 1]) { <br>
+                                // Swap arr[j] and arr[j+1] <br>
+                                int temp = arr[j]; <br>
+                                arr[j] = arr[j + 1]; <br>
+                                arr[j + 1] = temp; <br>
+                                swapped = true; <br>
+                            } <br>
+                        } <br>
+                        // If no two elements were swapped in inner loop, the array is already sorted <br>
+                        if (!swapped) { <br>
+                            break; <br>
+                        } <br>
+                    } <br>
+                } <br>
+            } <br>
+            
+            class SelectionSort implements Sortable { <br>
+                @Override <br>
+                public void sort(int[] arr) { <br>
+                    int n = arr.length; <br>
+                    for (int i = 0; i < n - 1; i++) { <br>
+                        int minIndex = i; <br>
+                        for (int j = i + 1; j < n; j++) { <br>
+                            if (arr[j] < arr[minIndex]) { <br>
+                                minIndex = j; <br>
+                            } <br>
+                        } <br>
+                        // Swap the found minimum element with the first element <br>
+                        int temp = arr[i]; <br>
+                        arr[i] = arr[minIndex]; <br>
+                        arr[minIndex] = temp; <br>
+                    } <br>
+                } <br>
+            } <br>
+            
+            class SortExample { <br>
+                public static void main(String[] args) { <br>
+                    int[] arr = {64, 34, 25, 12, 22, 11, 90}; <br>
+            
+                    Sortable bubbleSort = new BubbleSort(); <br>
+                    bubbleSort.sort(arr); <br>
+                    System.out.println("Sorted using Bubble Sort: " + java.util.Arrays.toString(arr)); <br>
+            
+                    int[] arr2 = {64, 34, 25, 12, 22, 11, 90}; <br>
+            
+                    Sortable selectionSort = new SelectionSort(); <br>
+                    selectionSort.sort(arr2); <br>
+                    System.out.println("Sorted using Selection Sort: " + java.util.Arrays.toString(arr2)); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :- Write a Java program to create an interface Playable with a method play() that takes no arguments and returns void. Create three classes Football, Volleyball, and Basketball that implement the Playable interface and override the play() method to play the respective sports.</h3>
+        <div id="bp8" class="source_code">
+            
+            interface Playable { <br>
+                void play(); <br>
+            } <br>
+            class Football implements Playable { <br>
+              public void play() { <br>
+                System.out.println("Playing football"); <br>
+              } <br>
+            } <br>
+            
+            
+            class Volleyball implements Playable { <br>
+                public void play() { <br>
+                    System.out.println("Playing volleyball"); <br>
+                } <br>
+            } <br>
+            class Basketball implements Playable { <br>
+                public void play() { <br>
+                System.out.println("Playing basketball"); <br>
+                } <br>
+            }  <br>
+            class Main { <br>
+                public static void main(String[] args) { <br>
+                    Playable football = new Football(); <br>
+                    Playable volleyball = new Volleyball(); <br>
+                    Playable basketball = new Basketball(); <br>
+            
+                    football.play(); <br>
+                    volleyball.play(); <br>
+                    basketball.play(); <br>
+                } <br>
+            } <br>
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :- Write a Java program to create an interface Searchable with a method search(String keyword) that searches for a given keyword in a text document. Create two classes Document and WebPage that implement the Searchable interface and provide their own implementations of the search() method.</h3>
+        <div id="bp9" class="source_code">
+            //Write a Java program to create an interface Searchable with a method search(String keywordss) that searches for a  <br>given keywordss in a text document. Create two classes Document and WebPage that implement the Searchable interface  <br>and provide their own implementations of the search() method.  <br>
+import java.io.BufferedReader; <br>
+import java.io.FileReader; <br>
+import java.io.IOException; <br>
+import java.io.InputStreamReader; <br>
+import java.net.URL; <br>
+import java.util.Scanner; <br>
+ <br>
+interface Searchable <br>
+{ <br>
+    public void search(String keywordss); <br>
+} <br>
+class Document implements Searchable <br>
+{ <br>
+    public void search(String keywordss) <br>
+    { <br>
+        String keyword = "your_keyword_here"; // Replace with the keywordss you want to search for <br>
+        String filePath = "data.txt"; // Replace with the path to your text document <br>
+
+        try { <br>
+            BufferedReader reader = new BufferedReader(new FileReader(filePath)); <br>
+            String line; <br>
+            int lineNumber = 0; <br>
+
+            while ((line = reader.readLine()) != null) { <br>
+                lineNumber++; <br>
+                if (line.contains(keywordss)) { <br>
+                    System.out.println("Found '" + keywordss + "' on line " + lineNumber + ": " + line); <br>
+                } <br>
+            } <br>
+
+            reader.close(); <br>
+        } catch (IOException e) { <br>
+            System.err.println("An error occurred while reading the file: " + e.getMessage()); <br>
+        } <br>
+    } <br>
+} <br>
+class WebPage implements Searc <br>hable <br>
+{
+    public void search(String keywordss) <br>
+    { <br>
+         Scanner scanner = new Scanner(System.in); <br>
+        System.out.print("Enter the URL of the web page: "); <br>
+        String urlString = scanner.nextLine(); <br>
+        System.out.print("Enter the keyword to search for: "); <br>
+        String keyword = scanner.nextLine(); <br>
+
+        try { <br>
+            // Create a URL object to represent the web page <br>
+            URL url = new URL(urlString); <br>
+ <br>
+            // Open a connection to the URL <br>
+            BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream())); <br>
+            String line; <br>
+            int lineNumber = 0; <br>
+            int keywordCount = 0; <br>
+ <br>
+            while ((line = reader.readLine()) != null) { <br>
+                lineNumber++; <br>
+                if (line.contains(keyword)) { <br>
+                    keywordCount++; <br>
+                    System.out.println("Found '" + keyword + "' on line " + lineNumber + ": " + line); <br>
+                } <br>
+            } <br>
+ <br>
+            reader.close(); <br>
+
+            if (keywordCount == 0) { <br>
+                System.out.println("Keyword '" + keyword + "' not found on the web page."); <br>
+            } else { <br>
+                System.out.println("Found '" + keyword + "' " + keywordCount + " times on the web page."); <br>
+            }
+        } catch (IOException e) { <br>
+            System.err.println("An error occurred while accessing the web page: " + e.getMessage()); <br>
+        } <br>
+    } <br>
+} <br>
+class check { <br>
+    public static void main(String[] args) { <br>
+        Document d = new Document(); <br>
+        WebPage w = new WebPage(); <br>
+        d.search("one"); <br>
+        w.search("one"); <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro9.png" alt="">
+
+        <br><br><br>
+        <hr>
+        <h3>10 :- Write a Java program to create an interface Encryptable with methods encrypt (String data) and decrypt (String encryptedData) that define encryption and decryption operations. Create two classes AES and RSA that implement the Encryptable interface and provide their own encryption and decryption algorithms.</h3>
+        <div id="bp10" class="source_code">
+
+            /*
+    11. Write a Java program to create an interface Sortable with a method sort (int[] array) that sorts an array of integers in  <br>descending order. Create two classes QuickSort and MergeSort that implement the Sortable interface and provide their own  <br>implementations of the sort() method.  <br>
+*/ <br>
+interface Sortable <br>
+{ <br>
+    void sort(int[] array); <br>
+} <br>
+
+class QuickSort implements Sortable <br>
+{ <br>
+    // @Override <br>
+    public void sort(int[] array) <br>
+    { <br>
+        quickSort(array, 0, array.length - 1); <br>
+    } <br>
+    private void quickSort(int[] array, int low, int high) <br>
+    {
+        if (low < high) <br>
+        { <br>
+            int pivotIndex = partition(array, low, high); <br>
+            quickSort(array, low, pivotIndex - 1); <br>
+            quickSort(array, pivotIndex + 1, high); <br>
+        } <br>
+    } <br>
+    private int partition(int[] array, int low, int high) <br>
+    { <br>
+        int pivot = array[high]; <br>
+        int i = low - 1; <br>
+        for (int j = low; j < high; j++) <br>
+            if (array[j] >= pivot) { <br>
+                i++; <br>
+                int temp = array[i]; <br>
+                array[i] = array[j]; <br>
+                array[j] = temp; <br>
+            } <br>
+
+        int temp = array[i + 1]; <br>
+        array[i + 1] = array[high]; <br>
+        array[high] = temp; <br>
+        return i + 1; <br>
+    } <br>
+} <br>
+
+class MergeSort implements Sortable <br>
+{ <br>
+    // @Override <br>
+    public void sort(int[] array) <br>
+    { <br>
+        mergeSort(array, 0, array.length - 1); <br>
+    } <br>
+    private void mergeSort(int[] array, int left, int right) <br>
+    { <br>
+        if (left < right) <br>
+        { <br>
+            int mid = left + (right - left) / 2; <br>
+            mergeSort(array, left, mid); <br>
+            mergeSort(array, mid + 1, right); <br>
+            merge(array, left, mid, right); <br>
+        } <br>
+    } <br>
+    private void merge(int[] array, int left, int mid, int right) <br>
+    { <br>
+        int n1 = mid - left + 1; <br>
+        int n2 = right - mid; <br>
+
+        int[] leftArray = new int[n1]; <br>
+        int[] rightArray = new int[n2]; <br>
+
+        for (int i = 0; i < n1; i++) <br>
+        { <br>
+            leftArray[i] = array[left + i]; <br>
+        } <br>
+        for (int j = 0; j < n2; j++) <br>
+        { <br>
+            rightArray[j] = array[mid + 1 + j]; <br>
+        } <br>
+        int i = 0, j = 0, k = left; <br>
+        
+        while (i < n1 && j < n2) <br>
+        { <br>
+            if (leftArray[i] >= rightArray[j]) { <br>
+                array[k] = leftArray[i]; <br>
+                i++; <br>
+            } else { <br>
+                array[k] = rightArray[j]; <br>
+                j++; <br>
+            } <br>
+            k++; <br>
+        } <br>
+        while (i < n1) <br>
+        { <br>
+            array[k] = leftArray[i]; <br>
+            i++; <br>
+            k++; <br>
+        } <br>
+        while (j < n2) <br>
+        { <br>
+            array[k] = rightArray[j]; <br>
+            j++; <br>
+            k++; <br>
+        } <br>
+    } <br>
+} <br>
+
+class Test <br>
+{ <br>
+    public static void main(String[] args) <br>
+    { <br>
+        int[] arr = {5, 1, 9, 3, 7, 6}; <br>
+        
+        Sortable quickSort = new QuickSort(); <br>
+        quickSort.sort(arr); <br>
+        System.out.print("QuickSort: "); <br>
+        printArray(arr); <br>
+
+        int[] arr2 = {5, 1, 9, 3, 7, 6}; <br>
+
+        Sortable mergeSort = new MergeSort(); <br>
+        mergeSort.sort(arr2); <br>
+        System.out.print("MergeSort: "); <br>
+        printArray(arr2); <br>
+    } <br>
+    private static void printArray(int[] array) <br>
+    { <br>
+        for (int num : array) { <br>
+            System.out.print(num + " "); <br>
+        } <br>
+        System.out.println(); <br>
+    } <br>
+} <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro11.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>11 :- Write a Java program to create an interface Sortable with a method sort (int[] array) that sorts an array of integers in descending order. Create two classes QuickSort and MergeSort that implement the Sortable interface and provide their own implementations of the sort() method.           .</h3>
+        <div id="bp11" class="source_code">
+
+            /*
+    11. Write a Java program to create an interface Sortable with a method sort (int[] array) that sorts an array of integers in  <br>descending order. Create two classes QuickSort and MergeSort that implement the Sortable interface and provide their own  <br>implementations of the sort() method.  <br>
+*/ <br>
+interface Sortable <br>
+{ <br>
+    void sort(int[] array); <br>
+} <br>
+
+class QuickSort implements Sortable <br>
+{ <br>
+    // @Override <br>
+    public void sort(int[] array) <br>
+    { <br>
+        quickSort(array, 0, array.length - 1); <br>
+    } <br>
+    private void quickSort(int[] array, int low, int high) <br>
+    {
+        if (low < high) <br>
+        { <br>
+            int pivotIndex = partition(array, low, high); <br>
+            quickSort(array, low, pivotIndex - 1); <br>
+            quickSort(array, pivotIndex + 1, high); <br>
+        } <br>
+    } <br>
+    private int partition(int[] array, int low, int high) <br>
+    { <br>
+        int pivot = array[high]; <br>
+        int i = low - 1; <br>
+        for (int j = low; j < high; j++) <br>
+            if (array[j] >= pivot) { <br>
+                i++; <br>
+                int temp = array[i]; <br>
+                array[i] = array[j]; <br>
+                array[j] = temp; <br>
+            } <br>
+
+        int temp = array[i + 1]; <br>
+        array[i + 1] = array[high]; <br>
+        array[high] = temp; <br>
+        return i + 1; <br>
+    } <br>
+} <br>
+
+class MergeSort implements Sortable <br>
+{ <br>
+    // @Override <br>
+    public void sort(int[] array) <br>
+    { <br>
+        mergeSort(array, 0, array.length - 1); <br>
+    } <br>
+    private void mergeSort(int[] array, int left, int right) <br>
+    { <br>
+        if (left < right) <br>
+        { <br>
+            int mid = left + (right - left) / 2; <br>
+            mergeSort(array, left, mid); <br>
+            mergeSort(array, mid + 1, right); <br>
+            merge(array, left, mid, right); <br>
+        } <br>
+    } <br>
+    private void merge(int[] array, int left, int mid, int right) <br>
+    { <br>
+        int n1 = mid - left + 1; <br>
+        int n2 = right - mid; <br>
+
+        int[] leftArray = new int[n1]; <br>
+        int[] rightArray = new int[n2]; <br>
+
+        for (int i = 0; i < n1; i++) <br>
+        { <br>
+            leftArray[i] = array[left + i]; <br>
+        } <br>
+        for (int j = 0; j < n2; j++) <br>
+        { <br>
+            rightArray[j] = array[mid + 1 + j]; <br>
+        } <br>
+        int i = 0, j = 0, k = left; <br>
+        
+        while (i < n1 && j < n2) <br>
+        { <br>
+            if (leftArray[i] >= rightArray[j]) { <br>
+                array[k] = leftArray[i]; <br>
+                i++; <br>
+            } else { <br>
+                array[k] = rightArray[j]; <br>
+                j++; <br>
+            } <br>
+            k++; <br>
+        } <br>
+        while (i < n1) <br>
+        { <br>
+            array[k] = leftArray[i]; <br>
+            i++; <br>
+            k++; <br>
+        } <br>
+        while (j < n2) <br>
+        { <br>
+            array[k] = rightArray[j]; <br>
+            j++; <br>
+            k++; <br>
+        } <br>
+    } <br>
+} <br>
+
+class Test <br>
+{ <br>
+    public static void main(String[] args) <br>
+    { <br>
+        int[] arr = {5, 1, 9, 3, 7, 6}; <br>
+        
+        Sortable quickSort = new QuickSort(); <br>
+        quickSort.sort(arr); <br>
+        System.out.print("QuickSort: "); <br>
+        printArray(arr); <br>
+
+        int[] arr2 = {5, 1, 9, 3, 7, 6}; <br>
+
+        Sortable mergeSort = new MergeSort(); <br>
+        mergeSort.sort(arr2); <br>
+        System.out.print("MergeSort: "); <br>
+        printArray(arr2); <br>
+    } <br>
+    private static void printArray(int[] array) <br>
+    { <br>
+        for (int num : array) { <br>
+            System.out.print(num + " "); <br>
+        } <br>
+        System.out.println(); <br>
+    } <br>
+} <br>
+            
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="interfaces_output/pro11.png" alt="">
+                 
+</body>
+</html>
