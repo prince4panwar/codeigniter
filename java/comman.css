@@ -113,6 +113,7 @@ img{
     }
     a{
         font-size: 3vw;     
+        border: 1px solid black;
     }
    h1 {
         color: #020A43;
