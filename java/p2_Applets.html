@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>Two Dimensional Arrays</h1>
+                <ul>
+                        <li><a href="#bp1">1. Create an applet showing the string "Hello World" which is embedded in the HTML page.</a></li>
+                        <li><a href="#bp2">2. Create an applet showing the string "Hello World" which is executed by an appletviewer.</a></li>
+                        <li><a href="#bp3">3. Create an applet in Java to draw a circle.</a>
+                        </li>
+                        <li><a href="#bp4">4. Create an applet in Java to draw a polygon.</a></li>
+                        <li><a href="#bp5">5. Create an applet in Java to draw a rectangle.</a></li>
+                        <li><a href="#bp6">6. Create an applet in Java to draw a square.</a></li>
+                        <li><a href="#bp7">7. Create an applet in Java to draw a 4 concentric circles.
+
+                        </a></li>
+                        <li><a href="#bp8">8. Create an applet in Java to draw a line.</a></li>
+                        <li><a href="#bp9">9. Create an applet in Java to draw a oval.</a></li>
+                        <li><a href="#bp10">10. Create an applet in Java to draw a arc</a>
+                        </li>
+                        <li><a href="#bp11">11. Create an applet in Java to change the background color.</a></li>
+                        <li><a href="#bp12">12. Create an applet in Java to draw rounded rectangle.</a></li>
+                        <li><a href="#bp13">13. Create an applet in Java to set font.</a></li>
+                        <li><a href="#bp14">14. Create an applet to display a digital clock.</a></li>
+                        <li><a href="#bp15">15. Java jgram to Draw a Smiling Face using Graphics Class Methods</a></li>
+                    </ul>
+                </div>
+        
+                
+ <br>
+        <br><br><br>
+        <hr>
+        <h3>1 :- Create an applet showing the string "Hello World" which is embedded in the HTML page.</h3>
+        <div id="bp1" class="source_code">
+            import java.applet.Applet; <br>
+            import java.awt.Graphics; <br>
+            public class j1 extends Applet <br>
+            { <br>
+                public void paint (Graphics g) <br>
+                { <br>
+                    g.drawString ("Hello World", 20, 20); <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="applets_output/j1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Create an applet showing the string "Hello World" which is executed by an appletviewer.</h3>
+        <div id="bp2" class="source_code">
+
+            import java.applet.Applet; <br>
+            import java.awt.*; <br>
+            
+             <pre>/*<applet code= j2 width= 600 height=500 ></applet>*/ <br></pre>
+            
+             public class j2 extends Applet { <br>
+                <br>
+                public void paint(Graphics g){ <br>
+                    g.setColor(Color.red); <br>
+                    g.drawString("hello world", 20, 20); <br>
+                } <br>
+                
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :- Create an applet in Java to draw a circle.</h3>
+        <div id="bp3" class="source_code">
+            import java.applet.*; <br>
+            import java.awt.*;
+             <br>
+            public class  j3 extends Applet <br>
+            { <br>
+                int x=300,y=100,r=50; <br>
+                public void paint(Graphics g) <br>
+                { <br>
+                    g.drawOval(x-r,y-r,100,100); <br>
+                    g.drawString("Circle",275,100); <br>
+                    
+                   
+               } <br>
+            } <br>
+            //<applet code= j3 width= 600 height=500 ></applet> <br>
+         
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :-  Create an applet in Java to draw a polygon.</h3>
+        <div id="bp4" class="source_code">
+            import java.applet.Applet; <br>
+            import java.awt.*; <br>
+             public class j4 extends Applet <br>
+             { <br>
+             
+            public void paint( Graphics g ) <br>
+            { <br>
+            int x[] = { 20, 40, 50, 30, 20, 15 };  <br>
+            int y[] = { 50, 50, 60, 80, 80, 60 };  <br>
+            int num=5; <br>
+            g.setColor(Color.blue);  <br>
+            g.drawPolygon(x,y, num); <br>
+             
+            } <br>
+            } <br>
+            //<applet code= j4 width= 600 height=500 ></applet>
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Create an applet in Java to draw a rectangle.</h3>
+        <div id="bp5" class="source_code">
+            import java.applet.*; <br>
+            import java.awt.*; <br>
+            
+            public class j5 extends Applet { <br>
+                public void paint(Graphics g) { <br>
+                    g.drawRect(50, 50, 200, 100); <br>
+                } <br>
+            } <br>
+            /*<applet code="j5" width="400" height="400"></applet> */ <br>
+    
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :- Create an applet in Java to draw a square.
+
+        </h3>
+        <div id="bp6" class="source_code">
+            import java.applet.*; <br>
+            import java.awt.*; <br>
+            
+            public class j6 extends Applet { <br>
+                public void paint(Graphics g) { <br>
+                    g.drawRect(50, 50, 200, 200); <br>
+                } <br>
+            } <br>
+            /*<applet code="j6" width="400" height="400"></applet> */ <br>
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-   Create an applet in Java to draw a 4 concentric circles.</h3>
+        <div id="bp7" class="source_code">
+            /*Java Applet to Print Concentric Circles using Applet*/ <br>
+            import java.applet.*; <br>
+            import java.awt.*; <br>
+            public class j7 extends Applet <br>
+            { <br>
+                //Initialize the applet <br>
+                public void init() <br>
+                {
+                setBackground(Color.yellow); <br>
+                } <br>
+                //Draw cocentric circle <br>
+                public void paint(Graphics g) <br>
+                { <br>
+                g.setColor(Color.red); <br>
+                int rad=25; <br>
+                int dia=50; <br>
+                for(int i=0;i<4;i++) <br>
+                { <br>
+                    g.drawOval(250-(i*rad),250-(i*rad),(i+1)*dia,(i+1)*dia); <br>
+                } <br>
+                } <br>
+            } <br>
+            /*
+            <applet code = j7 width=500 height=500>
+            </applet>
+            */ <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :- Create an applet in Java to draw a line.</h3>
+        <div id="bp8" class="source_code">
+           
+            import java.applet.Applet; <br>
+            import java.awt.Graphics; <br>
+            public class j8 extends Applet{ <br>
+             
+             public void paint(Graphics g){ <br>
+              
+            
+             //draw vertical line <br>
+             g.drawLine(10,50,20,100); <br>
+              <br>
+             //draw horizontal line <br>
+             g.drawLine(10,10,100,10); <br>
+             } <br>
+            } <br>
+             //<applet code= j8 width= 600 height=500 ></applet> <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :-Create an applet in Java to draw a oval.</h3>
+        <div id="bp9" class="source_code">
+            import java.awt.*; <br>
+            import java.applet.Applet; <br>
+             
+            public class j9 extends Applet { <br>
+             
+                public void paint(Graphics g) <br>
+                { <br>
+                   // draw a ellipse <br>
+                    g.drawOval(100, 100, 150, 100); <br>
+                } <br>
+            } <br>
+            /*<applet code="j9" width="500" height="500"></applet> */ <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j9.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>10 :- Create an applet in Java to draw a arc.</h3>
+        <div id="bp10" class="source_code">
+            import java.applet.Applet; <br>
+            import java.awt.*; <br>
+            
+            
+            public class j10 extends Applet <br>
+            { <br>
+                public void paint(Graphics g){ <br>
+                    setForeground(Color.red); <br>
+                    g.drawArc(10,10,50,100,10,45); <br>
+                    g.fillArc(100,10,1000,100,0,90); <br>
+            
+                } <br>
+            } <br>
+            /*<applet code="j10" width="400" height="400"></applet> */ <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j10.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>11 :- Create an applet in Java to change the background color.</h3>
+        <div id="bp11" class="source_code">
+
+            import java.applet.Applet; <br>
+            import java.awt.*; <br>
+            
+            public class j11 extends Applet { <br>
+                <br>
+                public j11() { <br>
+                    setBackground(Color.red); <br>
+                } <br>
+            
+                public void paint(java.awt.Graphics g) { <br>
+            
+                    g.drawString("Background Color Changed", 50, 50); <br>
+                } <br>
+                /*
+                 * <applet code="j11.class" width="300" height="300">
+                 * </applet>
+                 */ <br>
+            }
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j11.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>12 :-  Create an applet in Java to draw rounded rectangle.</h3>
+        <div id="bp12" class="source_code">
+            import java.awt.*; <br>
+            import java.applet.Applet; <br>
+             
+            public class j12 extends Applet { <br>
+             
+                public void paint(Graphics g) <br>
+                { <br>
+                      g.drawRoundRect(10,130,50,70,20,20); <br>
+                      g.fillRoundRect(70,130,50,70,20,20); <br>
+                } <br>
+            }
+            /*<applet code="j12" width="500" height="500"></applet> */ <br>
+           
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j12.png" alt="">
+
+        
+        <br><br><br>
+        <hr>
+        <h3>13 :- Create an applet in Java to set font.</h3>
+        <div id="bp13" class="source_code">
+
+            import java.awt.*;     <br>
+            import java.applet.*;     <br>
+                public class j13 extends Applet     <br>
+             {     <br>
+               Font f1,f2,f3;     <br>
+                
+               public void  init()     <br>
+                {     <br>
+                   f1 = new Font("Arial",Font.BOLD,18);    <br> 
+                   f2 = new Font("Forte",Font.PLAIN,24);     <br>
+                   f3 = new Font("Elephant",Font.ITALIC,28);   <br>  
+                }     <br>
+                      
+               public void  paint(Graphics g)  <br>   
+               {     <br>
+                  g.drawString("Welcome",50,50);   <br>  
+                
+                  g.setFont(f1);      <br>
+                  g.drawString("to ",50,80);     <br>
+                
+                  g.setFont(f2);      <br>
+                  g.drawString("My ",50,110);     <br>
+                
+                  g.setFont(f3);      <br>
+                  g.drawString("Website",50,140);     <br>
+               }     <br>
+             }     <br>
+                
+            /* <applet code = "j13" height = 500 width =500>  
+               </applet> */ <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j13.png" alt="">
+
+        <br><br><br>
+        <hr>
+        <h3>14 :- Create an applet to display a digital clock.
+
+        </h3>
+        <div id="bp14" class="source_code">
+
+            import java.awt.*; <br>
+            import java.applet.Applet; <br>
+            import java.text.DateFormat;
+            import java.text.SimpleDateFormat; <br>
+            import java.util.Date; <br>
+            public class j14 extends Applet { <br>
+                DateFormat dateFormat; <br>
+                Date date; <br>
+                Thread t; <br>
+                public void init() { <br>
+                    this.setSize(300,200); <br>
+                } <br>
+                public void paint(Graphics g) <br>
+                { <br>
+                    try <br>
+                    { <br>
+                        Font f=new Font("Arial",Font.BOLD,50); <br>
+                        g.setFont(f); <br>
+                        g.setColor(Color.DARK_GRAY); <br>
+                        dateFormat = new SimpleDateFormat("hh:mm:ss a"); <br>
+                        date = new Date(); <br>
+                        g.drawString(dateFormat.format(date),5,100); <br>
+                        Font f1=new Font("Arial",Font.BOLD,10); <br>
+                        g.setFont(f1); <br>
+                        t.sleep(1000); <br>
+                        repaint(); <br>
+                    }catch(Exception e) <br>
+                    { <br>
+                    
+                    } <br>
+                } <br>
+            } <br>
+            /* <applet code = "j14" height = 500 width =500>  
+               </applet> */ <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j14.png" alt="">
+
+        <br><br><br>
+        <hr>
+        <h3>15 :- Java jgram to Draw a Smiling Face using Graphics Class Methods</h3>
+        <div id="bp15" class="source_code">
+
+            import java.applet.Applet; <br>
+            import java.awt.*; <br>
+            
+               //<applet code= apj1 width= 600 height=500 ></applet> <br>
+               
+            public class apj1 extends Applet  <br>
+            { <br>
+              public void paint(Graphics g)  <br>
+               { <br>
+                  setBackground(Color.red); <br>
+                  g.setColor(Color.yellow); <br>
+                  g.fillOval(100, 100, 350, 350); <br>
+                  g.setColor(Color.black); <br>
+                  g.fillOval(195, 190, 40, 40); <br>
+                  g.fillOval(325, 190, 40, 40); <br>
+                  g.drawArc(200, 290, 150, 70, 180, 180); <br>
+               } <br>
+            
+            } <br>
+            
+        </div>
+        <h3>Output :- </h3>
+        <img src="applets_output/j15.png" alt="">
+                 
+</body>
+</html>

@@ -4977,544 +4977,1516 @@ System.out.println(" "); <br>
 
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+<h3>101 :- Write a Java Program to Sort the Array in an Descending Order</h3>
+<div id="bp101" class="source_code">
+        import java.util.Arrays;<br/>
+import java.util.Collections;<br/>
+<br/>
+class DescendingOrder <br/>
+{<br/>
+<br/>
+    public static void main(String[] args)<br/> 
+    {<br/>
+        System.out.println("\nProgram to Sort the Array in an Descending Order.\n");<br/>
+        Integer[] arr = {10, 4, 7, 9, 2, 6, 3, 8, 5, 1};<br/>
+        System.out.println("Orginal Array : "+Arrays.toString(arr));<br/>
+        Arrays.sort(arr, Collections.reverseOrder());<br/>
+        System.out.print("Sorted array in descending order is : ");<br/>
+        for (int element : arr) {<br/>
+            System.out.print(element + " ");<br/>
+        }<br/>
+        System.out.println(" ");<br/>
+}<br/>
+    } 
+        
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
 
-        Program to find second largest number from the array <br>
+        <img src="basic_programs_output/pro101.png" alt="">
 
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
+<h3>102 :- Write a Java Program to Sort Names in an Alphabetical Order</h3>
+<div id="bp102" class="source_code">
+                            
 
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+class oneHundredTwo<br/>
+{<br/>
+   public static void main(String[] args) throws java.io.IOException<br/>
+    {<br/>
+       java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+       try {<br/>
+           System.out.println("\nProgram to Sort Names in an Alphabetical Order.\n ");<br/>
+           System.out.print("Enter the elements of the array : ");<br/>
+           String[] names = input.readLine().toLowerCase().split(" ");<br/>
+<br/>
+           java.util.Arrays.sort(names);<br/>
+<br/>
+           System.out.print("Sorted array in ascending order: ");<br/>
+           for (String name : names) <br/>
+               System.out.print(name + " ");<br/>
+           System.out.println();<br/>
+<br/>
+       } catch (java.lang.NumberFormatException e) {<br/>
+           System.out.println("Invalid input. Please enter valid numbers.");<br/>
+       } catch (Exception e) {<br/>
+           System.out.println("Something went wrong.");<br/>
+       }<br/>
+   }<br/>
+}
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro102.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+<h3>103 :- Write a Java Program to Display Transpose Matrix</h3>
+<div id="bp103" class="source_code">
+    
+        class oneHundredThree<br/>
+        {<br/>
+            public static void main(String[] args) <br/>
+            {<br/>
+                System.out.println("\nProgram to Display Transpose Matrix.\n");<br/>
+                int[][] matrix = {{1, 2, 3}, {4, 5, 6}};<br/>
+                int[][] transpose = new int[3][2];<br/>
+                for (int i = 0; i < matrix.length; i++) {<br/>
+                    for (int j = 0; j < matrix[i].length; j++) {<br/>
+                        transpose[j][i] = matrix[i][j];<br/>
+                    }<br/>
+                }<br/>
+                System.out.println("The original matrix is:");<br/>
+                for (int[] row : matrix) {<br/>
+                    for (int element : row) {<br/>
+                        System.out.print(element + " ");<br/>
+                    }<br/>
+                    System.out.println();<br/>
+                }<br/>
+                System.out.println("The transpose matrix is:");<br/>
+                for (int[] row : transpose) {<br/>
+                    for (int element : row) {<br/>
+                        System.out.print(element + " ");<br/>
+                    }<br/>
+                    System.out.println();<br/>
+                }<br/>
+            }<br/>
+        }
+   
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro103.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+<h3>104 :-  Write a Java Program to Search Key Elements in an Array</h3>
+<div id="bp104" class="source_code">
+        import java.util.Scanner;<br/>
+        <br/>
+                                class onehunderedFour <br/>
+                                {<br/>
+                                  public static void main(String[] args) <br/>
+                                  {<br/>
+                                    System.out.println("\nProgram to Search Key Elements in an Array\n");<br/>
+                                    Scanner sc = new Scanner(System.in);<br/>
+                                    System.out.print("Enter the size of the array : ");<br/>
+                                    int n = sc.nextInt(); <br/>
+                                    int[] arr = new int[n]; <br/>
+                                    System.out.print("Enter the elements of the array : ");<br/>
+                                    for(int i = 0; i < n; i++) {<br/>
+                                      arr[i] = sc.nextInt(); <br/>
+                                    }<br/>
+                                    System.out.print("Enter the element you want to search : ");<br/>
+                                    int key = sc.nextInt(); <br/>
+                                    int index = linearSearch(arr, key);<br/>
+                                    if(index == -1) {<br/>
+                                      System.out.println("Element not found in the array.");<br/>
+                                    }<br/>
+                                    else {<br/>
+                                      System.out.println("Element found at index " + index + ".");<br/>
+                                    }<br/>
+                                  }<br/>
+                                <br/>
+                                  public static int linearSearch(int[] arr, int key) {<br/>
+                                    for(int i = 0; i < arr.length; i++) {<br/>
+                                      if(arr[i] == key) {<br/>
+                                        return i; <br/>
+                                      }<br/>
+                                    }<br/>
+                                    return -1; <br/>
+                                  }<br/>
+                                }<br/>
+                                
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro104.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
+<h3>105 :- Write a Java Program to Accept the Marks of a Student and find Total Marks and Percentage</h3>
+<div id="bp105" class="source_code">
+        class oneHundredFive <br/>
+        {<br/>
+            public static void main(String[] args) throws java.io.IOException {<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+                try {<br/>
+                    System.out.print("\nProgram to Accept the Marks of a Student and find Total Marks and Percentage\n");<br/>
+                    System.out.print("\nEnter the number of subjects: ");<br/>
+                    int n = Integer.parseInt(input.readLine());<br/>
+        <br/>
+                    int[] marks = new int[n];<br/>
+                    int totalMarks = 0;<br/>
+        <br/>
+                    for (int i = 0; i < n; i++) {<br/>
+                        System.out.print("Enter marks for subject " + (i + 1) + ": ");<br/>
+                        marks[i] = Integer.parseInt(input.readLine());<br/>
+                        totalMarks += marks[i];<br/>
+                    }<br/>
+        <br/>
+                    double percentage = (double) totalMarks / (n * 100) * 100;<br/>
+        <br/>
+                    System.out.println("\nTotal Marks: " + totalMarks);<br/>
+                    System.out.println("Percentage: " + percentage + "%");<br/>
+                } catch (java.lang.NumberFormatException e) {<br/>
+                    System.out.println("Invalid input. Please enter valid numbers.");<br/>
+                } catch (Exception e) {<br/>
+                    System.out.println("Something went wrong.");<br/>
+                }
+            }
+        }
 
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro105.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+<h3>106 :- Write a java program to print numbers from 1 to 10 using loop</h3>
+<div id="bp106" class="source_code">
+        class oneHundredSix <br/>
+        {<br/>
+            public static void main(String[] args) <br/>
+            {<br/>
+                System.out.println("\nprint numbers from 1 to 10 using loop\n");<br/>
+                for (int i = 1; i <= 10; i++) <br/>
+                    //System.out.println(i + " ");<br/>
+                System.out.println(i);<br/>
+            }<br/>
+        }
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro106.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+<h3>107 :-  Write a java program to calculate the sum of first 10 natural number using loop</h3>
+<div id="bp107" class="source_code">
+        class pro107 <br/>
+        {<br/>
+            public static void main(String[] args) <br/>
+            {<br/>
+                System.out.println("\nProgram to calculate the sum of first 10 natural number using loop.\n");<br/>
+                int sum = 0;<br/>
+                for (int i = 1; i <= 10; i++) sum += i;<br/>
+                System.out.println("Sum of the first 10 natural numbers: " + sum);<br/>
+            }<br/>
+        }
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro107.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
+<h3>108 :-   Write a Java program to print multiplication table of given number</h3>
+<div id="bp108" class="source_code">
+                        
+class pro108 <br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("\nProgram to print multiplication table of given number.\n");<br/>
+            System.out.print("Enter a number : ");<br/>
+            int number = Integer.parseInt(input.readLine());<br/>
+<br/>
+            System.out.println("Multiplication table for " + number + ":");<br/>
+            for (int i = 1; i <= 10; i++) <br/>
+                System.out.println(number + " x " + i + " = " + (number * i));<br/>
+            <br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid number.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+}
 
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro108.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
+<h3>109 :-  Write a Java program to find the factorial value of any number entered through the keyboard
 
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+</h3>
+<div id="bp109" class="source_code">
+                          
+class pro109<br/>
+{<br/>
+   public static void main(String[] args) throws java.io.IOException {<br/>
+       java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+       try {<br/>
+           System.out.println("\nProgram to find the factorial value of any number entered through the keyboard.\n");<br/>
+           System.out.print("Enter a number to find its factorial: ");<br/>
+           int number = Integer.parseInt(input.readLine());<br/>
+<br/>
+           if(number >=0){<br/>
+               long factorial = 1;<br/>
+               for(int i = 2; i <= number; i++)<br/>
+               factorial *= i;<br/>
+               <br/>
+               System.out.println("Factorial of " + number + " is: " + factorial);<br/>
+           } else {<br/>
+               System.out.println("Cannot calculate factorial for negative number");<br/>
+           }<br/>
+       } catch (java.lang.NumberFormatException e) {<br/>
+           System.out.println("Invalid input. Please enter a valid number.");<br/>
+       } catch (Exception e) {<br/>
+           System.out.println("Something went wrong.");<br/>
+       }<br/>
+   }<br/>
+}
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro109.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+<h3>110 :- Write a Java program that prompts the user to input an integer and then outputs the number with the digits reversed order</h3>
+<div id="bp110" class="source_code">
+        class pro110<br/>
+        {<br/>
+            public static void main(String[] args) throws java.io.IOException {<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+                try {<br/>
+                    System.out.println("\nProgram that prompts the user to input an integer and then outputs the number with the digits reversed order.\n");<br/>
+                    <br/>
+                    System.out.print("Enter an integer: ");<br/>
+                    int n = Integer.parseInt(input.readLine());<br/>
+                    int reversed = 0;<br/>
+                    while (n != 0) {<br/>
+                        reversed = (reversed * 10) + (n % 10);<br/>
+                        n /= 10;<br/>
+                    }<br/>
+                    System.out.println("Number with reversed digits: " + reversed);<br/>
+                } catch (java.lang.NumberFormatException e) {<br/>
+                    System.out.println("Invalid input. Please enter a valid integer.");<br/>
+                } catch (Exception e) {<br/>
+                    System.out.println("Something went wrong.");<br/>
+                }<br/>
+            }<br/>
+        }      
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro110.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
-
-import java.util.Arrays; <br>
-
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
-
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
-
+<h3>111 :- Write a Java program that reads a set of integers, and then prints the sum of the even and odd integers using loop</h3>
+<div id="bp111" class="source_code">
+        class pro111<br/>
+        {<br/>
+            public static void main(String[] args) throws java.io.IOException<br/>
+             {<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+                try {<br/>
+                    System.out.println("\nProgram that reads a set of integers, and then prints the sum of the even and odd integers using loop.\n");<br/>
+                    System.out.print("Enter a set of integers : ");<br/>
+                    String[] elements = input.readLine().split(" ");<br/>
+                    int evenSum = 0, oddSum = 0;<br/>
+        <br/>
+                    for (String element : elements) {<br/>
+                        int num = Integer.parseInt(element);<br/>
+                        if (num % 2 == 0) evenSum += num;<br/>
+                        else oddSum += num;<br/>
+                    }<br/>
+        <br/>
+                    System.out.println("Sum of even integers: " + evenSum);<br/>
+                    System.out.println("Sum of odd integers: " + oddSum);<br/>
+        <br/>
+                } catch (java.lang.NumberFormatException e) {<br/>
+                    System.out.println("Invalid input. Please enter valid integers separated by spaces.");<br/>
+                } catch (Exception e) {<br/>
+                    System.out.println("Something went wrong.");<br/>
+                }<br/>
+            }<br/>
+        }
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
-
-        Program to find second largest number from the array <br>
-
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
-
-</div>
+<img src="basic_programs_output/pro111.png" alt="">
 <br><br><br>
 <hr>
-<h3>93 :-  Write a Java program to find second largest number from the array</h3>
-<div id="bp93" class="source_code">
+<h3>112 :-  Write a Java program to check whether the number is a prime number or not</h3>
+<div id="bp112" class="source_code">
+                                  
+class pro112 <br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.println("\nProgram to check whether the number is a prime number or not.\n");<br/>
+            System.out.print("Enter a number to check if it's prime: ");<br/>
+            int number = Integer.parseInt(input.readLine());<br/>
+<br/>
+            if (checkPrime(number)) {<br/>
+                System.out.println(number + " is a prime number.");<br/>
+            } else {<br/>
+                System.out.println(number + " is not a prime number.");<br/>
+            }<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid number.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+<br/>
+    public static boolean checkPrime(int n) {<br/>
+        if (n <= 1) return false;<br/>
+        if (n <= 3) return true;<br/>
+        if (n % 2 == 0 || n % 3 == 0) return false;<br/>
+<br/>
+        for (int i = 5; i * i <= n; i += 6) <br/>
+            if (n % i == 0 || n % (i + 2) == 0) <br/>
+                return false;<br/>
+        return true;<br/>
+    }<br/>
+}
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro112.png" alt="">
 
-import java.util.Arrays; <br>
 
-class SecondLargestNumber <br>
-{ <br>
-public static void main(String args[]) <br>
-{ <br>
-System.out.println("\n Program to find second largest number from the array"); <br>
-int temp; <br>
-int array[] = {10, 20, 25, 63, 96, 57}; <br>
- <br>
-for(int i = 0; i< array.length; i++ ) <br>
-{ <br>
-for(int j = i+1; j< array.length; j++) <br>
-{ <br>
 
-if(array[i]>array[j]) <br>
-{ <br>
-temp = array[i]; <br>
-array[i] = array[j]; <br>
-array[j] = temp; <br>
-} <br>
-} <br>
-} <br>
-System.out.println("\n Arrays : "+Arrays.toString(array)); <br>
-System.out.println(" Second largest number is : "+array[array.length-2]); <br>
-} <br>
-} <br>
+
+<br><br><br>
+<hr>
+<h3>113 :-  Write a Java program to calculate HCF of Two given numbers using loop</h3>
+<div id="bp113" class="source_code">
+    
+              
+class pro113<br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+             System.out.println("\nProgram to calculate HCF of Two given numbers using loop.\n");
+            System.out.print("Enter the first number: ");<br/>
+            int num1 = Integer.parseInt(input.readLine());<br/>
+<br/>
+            System.out.print("Enter the second number: ");<br/>
+            int num2 = Integer.parseInt(input.readLine());<br/>
+<br/>
+            int hcf = calculateHCF(num1, num2);<br/>
+<br/>
+            System.out.println("HCF of " + num1 + " and " + num2 + " is: " + hcf);<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter valid numbers.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+<br/>
+    public static int calculateHCF(int a, int b) {<br/>
+        while (b != 0) {<br/>
+            int temp = b;<br/>
+            b = a % b;<br/>
+            a = temp;<br/>
+        }<br/>
+        return a;<br/>
+    }<br/>
+}           
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro113.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>114 :-  Write a Java program to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros</h3>
+<div id="bp114" class="source_code">
+ 
+                            
+        class pro114<br/>
+        {<br/>
+            public static void main(String arg[])throws java.io.IOException<br/>
+            {<br/>
+                System.out.println("\nProgram to enter the numbers till the user wants and at the end it should display the count of positive, negative and zeros.\n");<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+                int positive=0, negative=0, zeros=0;<br/>
+        <br/>
+                Double num;<br/>
+                String a="";<br/>
+                System.out.print("Enter numbers, to quit enter q : ");<br/>
+                a=input.readLine();<br/>
+                String[] numbers = a.split(" ");<br/>
+                for (String numberStr : numbers){<br/>
+                    if (numberStr.equals("q")) break;<br/>
+        <br/>
+                    try{<br/>
+                       num= Double.parseDouble(numberStr); <br/>
+                    }<br/>
+                    catch(java.lang.NumberFormatException e){<br/>
+                       continue;<br/>
+                    }<br/>
+        <br/>
+                    if(num< 0) negative++;<br/>
+                    else if (num>0) positive++;<br/>
+                    else zeros++;<br/>
+                }<br/>
+        <br/>
+            System.out.println("The number of positive numbers were =  "+positive);<br/>
+            System.out.println("The number of negative numbers were = "+negative);<br/>
+            System.out.println("The number of zeros were =  "+zeros);<br/>
+            }<br/>
+        }
+        
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro114.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>115 :- Write a Java program to enter the numbers till the user wants and at the end the program should display the largest and smallest numbers entered</h3>
+<div id="bp115" class="source_code">
+   
+                            
+class pro115 <br/>
+{<br/>
+    public static void main(String arg[]) throws java.io.IOException <br/>
+    {<br/>
+        System.out.println("\nProgram to enter the numbers till the user wants and at the end the program should display the largest and smallest numbers entered.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        double max = Double.MIN_VALUE, min = Double.MAX_VALUE;<br/>
+<br/>
+        Double num;<br/>
+        String a = "";<br/>
+        System.out.println("Enter numbers, to quit enter q : ");<br/>
+        a = input.readLine();<br/>
+        String[] numbers = a.split(" ");<br/>
+        for (String numberStr : numbers) {<br/>
+            if (numberStr.equals("q")) <br/>
+                break;<br/>
+<br/>
+            try {<br/>
+                num = Double.parseDouble(numberStr);<br/>
+            } catch (java.lang.NumberFormatException e) {<br/>
+                continue;<br/>
+            }<br/>
+<br/>
+            if (num > max) max = num;<br/>
+            if (num < min) min = num;<br/>
+        }<br/>
+<br/>
+        System.out.println("The maximum number was =  " + max);<br/>
+        System.out.println("The minimum number was  = " + min);<br/>
+    }<br/>
+}        
 
 </div>
 <h3>Output :- </h3>
-<div class="Output">
-        javac pro93.java <br>
-        java SecondLargestNumber <br>
+<img src="basic_programs_output/pro115.png" alt="">
 
-        Program to find second largest number from the array <br>
 
-        Arrays : [10, 20, 25, 57, 63, 96] <br>
-        Second largest number is : 63 <br>
+
+
+<br><br><br>
+<hr>
+<h3>116:- Write a Java program to print out all Armstrong numbers between 1 to 600 using loop</h3>
+<div id="bp116" class="source_code">
+                     
+class pro116<br/>
+{<br/>
+    public static void main(String[] args) <br/>
+    {<br/>
+        System.out.println("\nProgram to print out all Armstrong numbers between 1 to 600 using loop.\n");<br/>
+        System.out.println("Armstrong numbers 1 upto to 600 : ");<br/>
+        for (int number = 1; number <= 600; number++) {<br/>
+            if (isArmstrong(number)) {<br/>
+                System.out.print(number + " ");<br/>
+            }<br/>
+        }<br/>
+        System.out.println();<br/>
+    }<br/>
+<br/>
+    public static boolean isArmstrong(int number) {<br/>
+        int originalNumber, remainder, result = 0;<br/>
+        originalNumber = number;<br/>
+<br/>
+        while (originalNumber != 0) {<br/>
+            remainder = originalNumber % 10;<br/>
+            result += Math.pow(remainder, 3);<br/>
+            originalNumber /= 10;<br/>
+        }<br/>
+<br/>
+        return result == number;<br/>
+    }<br/>
+} <br/>
+
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro116.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>117:- Write a java program to count total number of notes in entered amount using loop</h3>
+<div id="bp117" class="source_code">
+                      
+class pro117<br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram to count total number of notes in entered amount using loop.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter the amount: ");<br/>
+            int amount = Integer.parseInt(input.readLine());<br/>
+<br/>
+            int[] notes = { 2000, 500, 200, 100, 50, 20, 10, 5, 2, 1 };<br/>
+            int[] noteCount = new int[10];<br/>
+            int remainingAmount = amount, index = 0;<br/>
+<br/>
+            while (remainingAmount > 0) {<br/>
+                int currentNote = notes[index];<br/>
+                if (remainingAmount >= currentNote) {<br/>
+                    int count = remainingAmount / currentNote;<br/>
+                    noteCount[index] = count;<br/>
+                    remainingAmount -= count * currentNote;<br/>
+                }<br/>
+                index++;<br/>
+            }<br/>
+<br/>
+            System.out.println("Total number of notes:");<br/>
+            for (int i = 0; i < notes.length; i++) {<br/>
+                if (noteCount[i] > 0) {<br/>
+                    System.out.println(notes[i] + " rupees notes: " + noteCount[i]);<br/>
+                }<br/>
+            }<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid amount.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+}
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro117.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>118 :- Write a Java program to print Fibonacci series of n terms where n is input by user using loop</h3>
+<div id="bp118" class="source_code">
+    
+    
+class pro118<br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram to print Fibonacci series of n terms where n is input by user using loop.\n");<br/>
+        int num = 0, first = 0, second = 1, next = 0;<br/>
+        java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        System.out.print("Enter a number: ");<br/>
+        try {<br/>
+            num = java.lang.Integer.parseInt(reader.readLine());<br/>
+            System.out.println("Fibonnaci series of " + num + " terms is : ");<br/>
+            for (int i = 1; i <= num; i++) {<br/>
+                if(i==1) System.out.print(first + " ");<br/>
+                else if(i==2) System.out.print(second + " ");<br/>
+                else{<br/>
+                    next = first + second;<br/>
+                    System.out.print(next + " ");<br/>
+                    first = second;<br/>
+                    second = next;<br/>
+                }<br/>
+            }<br/>
+            System.out.println();<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid number.");<br/>
+        }<br/>
+    }<br/>
+}
 
 </div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro118.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>119 :- Write a java program to calculate the sum of following series where n is input by user</h3>
+<div id="bp119" class="source_code">
+        class pro119<br/>
+        {<br/>
+            public static void main(String[] args) throws java.io.IOException {<br/>
+                System.out.println("\nProgram to calculate the sum of following series where n is input by user.\n");<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+                try{<br/>
+                    System.out.print("Enter a number : ");<br/>
+                    int n = Integer.parseInt(input.readLine());<br/>
+        <br/>
+                    int sum = 0;<br/>
+                    for(int i=1; i<=n; i++)<br/>
+                        sum += i;<br/>
+                    System.out.println("Sum of sequence is : " + sum);<br/>
+                } catch (java.lang.NumberFormatException e) {<br/>
+                    System.out.println("Invalid input. Please enter a valid year.");<br/>
+                } catch (Exception e) {<br/>
+                    System.out.println("Something went wrong.");<br/>
+                }<br/>
+            }<br/>
+        }<br/>
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro119.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>120 :- Write a Java method to compute the average of three numbers</h3>
+<div id="bp120" class="source_code">
+           
+class pro120<br/>
+{<br/>
+    public static void main(String[] args) <br/>
+    {<br/>
+        System.out.println("\nProgram method to compute the average of three numbers.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            double sum = 0;<br/>
+            for (int i = 1; i <= 3; i++) {<br/>
+                System.out.print("Enter number " + i + ": ");<br/>
+                double num = Double.parseDouble(input.readLine());<br/>
+                sum += num;<br/>
+            }<br/>
+            System.out.println("Average of 3 numbers : " + sum/3);<br/>
+<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid year.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+}
+   
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro120.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>121 :- Write a Java method to find the smallest number among three numbers</h3>
+<div id="bp121" class="source_code">
+                  
+class pro121 <br/>
+{<br/>
+    public static void main(String[] args) <br/>
+    {<br/>
+        System.out.println("\nProgram method to find the smallest number among three numbers.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter first number : ");<br/>
+            double num1 = Double.parseDouble(input.readLine());<br/>
+            System.out.print("Enter second number : ");<br/>
+            double num2 = Double.parseDouble(input.readLine());<br/>
+            System.out.print("Enter third number : ");<br/>
+            double num3 = Double.parseDouble(input.readLine());<br/>
+            double small = 0;<br/>
+<br/>
+            if(num1 < num2){<br/>
+                if(num1 < num3) small = num1;<br/>
+                else small = num3;<br/>
+            } else {<br/>
+                if(num2 < num3) small = num2;<br/>
+                else small = num3;<br/>
+            }<br/>
+            <br/>
+            System.out.println("Smallest number : " + small);<br/>
+<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid year.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }
+}
+
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro121.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>122 :- Write a Java method to count all words in a string</h3>
+<div id="bp122" class="source_code">
+    
+                            
+class pro122<br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram method to count all words in a string.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter a string: ");<br/>
+            String text = input.readLine();<br/>
+<br/>
+            int wordCount = countWords(text);<br/>
+<br/>
+            System.out.println("Total words in the string: " + wordCount);<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+<br/>
+    public static int countWords(String text) {<br/>
+        if (text == null || text.isEmpty()) {<br/>
+            return 0;<br/>
+        }<br/>
+        String[] words = text.split("\\s+");<br/>
+        return words.length;<br/>
+    }<br/>
+}
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro122.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>123 :- Write a Java method to count all vowels in a string</h3>
+<div id="bp123" class="source_code">
+    
+                            
+class pro123 <br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+         System.out.println("\nProgram method to count all vowels in a string.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter a string: ");<br/>
+            String text = input.readLine().toLowerCase();<br/>
+<br/>
+            int vowelCount = countVowels(text);<br/>
+<br/>
+            System.out.println("Total vowels in the string: " + vowelCount);<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+<br/>
+    public static int countVowels(String text) {<br/>
+        if (text == null || text.isEmpty()) {<br/>
+            return 0;<br/>
+        }<br/>
+        int count = 0;<br/>
+        for (char c : text.toCharArray()) {<br/>
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {<br/>
+                count++;<br/>
+            }<br/>
+        }<br/>
+        return count;<br/>
+    }<br/>
+}<br/>
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro123.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>124 :- Write a Java method to compute the sum of the digits in an integer</h3>
+<div id="bp124" class="source_code">
+                              
+class pro124 <br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram method to compute the sum of the digits in an integer.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        int number;<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter an integer: ");<br/>
+            number = Integer.parseInt(input.readLine());<br/>
+            <br/>
+            int sum = 0;<br/>
+            while (number != 0) {<br/>
+                sum += number % 10;<br/>
+                number /= 10;<br/>
+            }<br/>
+            System.out.println("Sum of digits: " + sum);<br/>
+<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input, please enter a valid binary number.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something is wrong ");<br/>
+        }<br/>
+    }<br/>
+}
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro124.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>125 :- Write a Java method to check whether an year entered by the user is a leap year or not</h3>
+<div id="bp125" class="source_code">
+                  
+class pro125<br/>
+{<br/>
+    public static void main(String[] args) <br/>
+    {<br/>
+        System.out.println("\nProgram method to check whether an year entered by the user is a leap year or not.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter a year: ");<br/>
+            int year = Integer.parseInt(input.readLine());<br/>
+<br/>
+            if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {<br/>
+                System.out.println(year + " is a leap year.");<br/>
+            } else {<br/>
+                System.out.println(year + " is not a leap year.");<br/>
+            }<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid year.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+}
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro125.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>126 :- Write a Java method to calculate the area of a triangle</h3>
+<div id="bp126" class="source_code">
+                              
+class pro126<br/> 
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram method to calculate the area of a triangle.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter base of triangle: ");<br/>
+            double base = Double.parseDouble(input.readLine());<br/>
+            System.out.print("Enter height of triangle: ");<br/>
+            double height = Double.parseDouble(input.readLine());<br/>
+<br/>
+            if (base < 0 || height < 0) {<br/>
+                System.out.println("Please enter non-negative values for base and height.");<br/>
+            } else {<br/>
+                double area = 0.5 * base * height;<br/>
+                System.out.println("Area of triangle: " + area);<br/>
+            }<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input, please enter a valid binary number.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something is wrong ");<br/>
+        }<br/>
+    }<br/>
+}
+
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro126.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>127 :- Write a Java method to find the area of a pentagon</h3>
+<div id="bp127" class="source_code">
+    
+class pro127<br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram method to find the area of a pentagon.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter the side length of the pentagon: ");<br/>
+            double sideLength = Double.parseDouble(input.readLine());<br/>
+<br/>
+            double area = (5.0 / 4.0) * (sideLength * sideLength) / (Math.tan(Math.PI / 5));<br/>
+<br/>
+            System.out.println("Area of the pentagon: " + area);<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid number.");
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+}
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro127.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>128 :- Write a Java method to find number is even number or not</h3>
+<div id="bp128" class="source_code">
+        class pro128<br/>
+        {<br/>
+            public static void main(String[] args) throws java.io.IOException {<br/>
+                System.out.println("\nProgram method to find number is even number or not.\n");<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+                try {<br/>
+                    System.out.print("Enter base of triangle: ");<br/>
+                    int num = Integer.parseInt(input.readLine());<br/>
+        <br/>
+                    if (num%2 == 0) {<br/>
+                        System.out.println("Number is even");<br/>
+                    } else {<br/>
+                        System.out.println("Number is odd");<br/>
+                    }<br/>
+                } catch (java.lang.NumberFormatException e) {<br/>
+                    System.out.println("Invalid input, please enter a valid binary number.");<br/>
+                } catch (Exception e) {<br/>
+                    System.out.println("Something is wrong ");<br/>
+                }<br/>
+            }<br/>
+        }
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro128.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>129 :- Write a Java method to check numbers is palindrome number or not
+
+    .</h3>
+<div id="bp129" class="source_code">
+    
+import java.io.BufferedReader;<br/>
+import java.io.InputStreamReader;<br/>
+<br/>
+class pro129<br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram method to check numbers is palindrome number or not.\n");<br/>
+        BufferedReader input = new BufferedReader(new InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter a positive number: ");<br/>
+            int num = Integer.parseInt(input.readLine());<br/>
+<br/>
+            if (num < 0) {<br/>
+                System.out.println("Please enter a positive number.");<br/>
+            } else {<br/>
+                int originalNum = num;<br/>
+                int reversedNum = 0;<br/>
+<br/>
+                while (num != 0) {<br/>
+                    int digit = num % 10;<br/>
+                    reversedNum = reversedNum * 10 + digit;<br/>
+                    num /= 10;<br/>
+                }<br/>
+<br/>
+                if (originalNum == reversedNum) {<br/>
+                    System.out.println(originalNum + " is a palindrome.");<br/>
+                } else {<br/>
+                    System.out.println(originalNum + " is not a palindrome.");<br/>
+                }<br/>
+            }<br/>
+        } catch (NumberFormatException e) {<br/>
+            System.out.println("Invalid input, please enter valid numbers.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+}
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro129.png" alt="">
+
+
+
+
+<br><br><br>
+<hr>
+<h3>130 :-   Write a Java method to displays prime numbers between 1 to 20</h3>
+<div id="bp130" class="source_code">
+        class pro130<br/>
+        {<br/>
+            public static void main(String[] args) <br/>
+            {<br/>
+                System.out.println("\nProgram method to displays prime numbers between 1 to 20.\n");<br/>
+                System.out.println("Prime numbers between 1 and 20:");<br/>
+                for (int i = 2; i <= 20; i++) <br/>
+                    if (isPrime(i)) <br/>
+                        System.out.print(i + " ");<br/>
+                System.out.println();<br/>
+            }<br/>
+        <br/>
+            public static boolean isPrime(int num) {<br/>
+                if (num <= 1) {<br/>
+                    return false;<br/>
+                }<br/>
+                for (int i = 2; i <= Math.sqrt(num); i++) {<br/>
+                    if (num % i == 0) {<br/>
+                        return false;<br/>
+                    }<br/>
+                }<br/>
+                return true;<br/>
+            }<br/>
+        }
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro130.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>131 :-   Write a Java method to find GCD and LCM of Two Numbers</h3>
+<div id="bp131" class="source_code">
+
+        class a<br/>
+        {<br/>
+            public static void hcf(int a ,int b )<br/>
+            {<br/>
+                int i;<br/>
+                i=a>b?a:b;<br/>
+                for(;i>0;--i)<br/>
+                {<br/>
+                    if(a%i==0&&b%i==0)<br/>
+                    {<br/>
+                        System.out.print("\nthe hcf of "+a+" and "+b+" is :- "+i);<br/>
+                            break;<br/>
+                    }<br/>
+                }<br/>
+                <br/>
+            }<br/>
+            public static void lcm(int a,int b)<br/>
+            {<br/>
+                int i;<br/>
+                for(i=(a< b ?b:a);i<=(a*b);i=i+(a< b?b:a))<br/>
+                {<br/>
+                    if(i%a==0&&i%b==0)<br/>
+                    {<br/>
+                     break;<br/>
+                    }<br/>
+                }<br/>
+                if(i%a==0&&i%b==0)<br/>
+                {<br/>
+                    System.out.print("\nthe lcm of "+a+" and "+b+" is :- "+i);<br/>
+                }<br/>
+            }<br/>
+            public static void main(String arr[])<br/>
+            {<br/>
+                int x,y;<br/>	
+                java.util.Scanner s1=new java.util.Scanner(System.in);<br/>
+                System.out.print("\nEnter 1st number :- ");<br/>
+                x=s1.nextInt();<br/>
+                System.out.print("\nEnter 2nd number :- ");<br/>
+                y=s1.nextInt();<br/>
+                hcf(x,y);<br/>
+                lcm(x,y);<br/>
+            }<br/>
+        }
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro131.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>132 :-   Write a Java method to find factorial using recursion in java</h3>
+<div id="bp132" class="source_code">
+
+                       
+class pro132<br/>
+{<br/>
+     private static java.util.HashMap<Integer, Long> track = new java.util.HashMap<Integer, Long>();<br/>
+<br/>
+    static long fact(int n){<br/>
+        if(track.containsKey(n)) return track.get(n);<br/>
+        long result =  n*fact(n-1);<br/>
+        track.put(n, result);<br/>
+        return result;<br/>
+    }<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram method to find factorial using recursion in java.\n");<br/>
+        int num = 0;<br/>
+        track.put(0, (long)1);<br/>
+        track.put(1, (long)1);<br/>
+        java.io.BufferedReader reader = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        System.out.print("Enter a number: ");<br/>
+        try {<br/>
+            num = java.lang.Integer.parseInt(reader.readLine());<br/>
+            long ans = fact(num);<br/>
+            System.out.println("Factorial of " + num + " is " + ans);<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid number.");<br/>
+        }<br/>
+    }
+}
+              
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro132.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>133 :-   Write a Java program to reverse an integer number</h3>
+<div id="bp133" class="source_code">
+        class pro133<br/>
+        {<br/>
+           public static void main(String[] args) throws java.io.IOException {<br/>
+               System.out.println("\nProgram to reverse an integer number.\n");<br/>
+               java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+               try {<br/>
+                   System.out.print("Enter an integer number: ");<br/>
+                   int number = Integer.parseInt(input.readLine());<br/>
+                   int reversedNumber = reverseNumber(number);<br/>
+                   System.out.println("Reversed number: " + reversedNumber);<br/>
+        <br/>
+               } catch (java.lang.NumberFormatException e) {<br/>
+                   System.out.println("Invalid input. Please enter a valid integer.");<br/>
+               } catch (Exception e) {<br/>
+                   System.out.println("Something went wrong.");<br/>
+               }<br/>
+           }<br/>
+        <br/>
+           public static int reverseNumber(int number) {<br/>
+               int reversedNumber = 0;<br/>
+               while (number != 0) {<br/>
+                   int digit = number % 10;<br/>
+                   reversedNumber = reversedNumber * 10 + digit;<br/>
+                   number /= 10;<br/>
+               }<br/>
+               return reversedNumber;<br/>
+           }<br/>
+        }
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro133.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>134 :-  Write a Java program to round a float number to specified decimals</h3>
+<div id="bp134" class="source_code">
+
+        class pro134<br/>
+        {<br/>
+            public static void main(String[] args) throws java.io.IOException {<br/>
+                System.out.println("\nprogram to round a float number to specified decimals.\n");<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+                try {<br/>
+                    System.out.print("Enter a float number: ");<br/>
+                    float number = Float.parseFloat(input.readLine());<br/>
+        <br/>
+                    System.out.print("Enter the number of decimals to round to: ");<br/>
+                    int decimals = Integer.parseInt(input.readLine());<br/>
+        <br/>
+                    float roundedNumber = roundFloat(number, decimals);<br/>
+                    <br/>
+                    System.out.println("Rounded number: " + roundedNumber);<br/>
+                } catch (java.lang.NumberFormatException e) {<br/>
+                    System.out.println("Invalid input. Please enter valid numbers.");<br/>
+                } catch (Exception e) {<br/>
+                    System.out.println("Something went wrong.");<br/>
+                }<br/>
+            }<br/>
+        <br/>
+            public static float roundFloat(float number, int decimals) {<br/>
+                double powerOfTen = Math.pow(10, decimals);<br/>
+                return (float) Math.round(number * powerOfTen) / (float) powerOfTen;<br/>
+            }<br/>
+        }
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro134.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>135 :-   Write a Java program to test if a double number is an integer</h3>
+<div id="bp135" class="source_code">
+                      
+        class pro135<br/>
+        {<br/>
+            public static void main(String arg[])throws java.io.IOException<br/>
+            {<br/>
+                System.out.println("\nProgram to test if a double number is an integer.\n");<br/>
+                double a;<br/>
+                int b;<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader (new java.io.InputStreamReader(System.in));<br/>
+                System.out.print("Enter a number ");<br/>
+        <br/>
+                try{<br/>
+                    a = Double.parseDouble(input.readLine());<br/>
+                    b = (int)a;<br/>
+                    if(a != b) System.out.println(a + " is not an integer");<br/>
+                    else System.out.println(a + " is a integer");<br/>
+                } catch(java.lang.NumberFormatException e){<br/>
+                    System.out.println("Invalid input. Please enter a valid number.");<br/>
+                }<br/>
+            }<br/>
+        }
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro135.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>136 :-   Write a Java program to round up the result of integer division</h3>
+<div id="bp136" class="source_code">
+        class pro136 <br/>
+        {<br/>
+            public static void main(String[] args) throws java.io.IOException {<br/>
+                System.out.println("\nProgram to round up the result of integer division.\n");<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+                try {<br/>
+                    System.out.print("Enter the numerator: ");<br/>
+                    int numerator = Integer.parseInt(input.readLine());<br/>
+        <br/>
+                    System.out.print("Enter the denominator: ");<br/>
+                    int denominator = Integer.parseInt(input.readLine());<br/>
+        <br/>
+                    int result = roundUpIntegerDivision(numerator, denominator);<br/>
+        <br/>
+                    System.out.println("Rounded up result of integer division: " + result);<br/>
+                } catch (java.lang.NumberFormatException e) {<br/>
+                    System.out.println("Invalid input. Please enter valid integers.");<br/>
+                } catch(java.lang.ArithmeticException e){<br/>
+                    System.out.println("Division by zero is not allowed.");<br/>
+                } catch (Exception e) {<br/>
+                    System.out.println("Something went wrong.");<br/>
+                }<br/>
+            }<br/>
+        <br/>
+            public static int roundUpIntegerDivision(int numerator, int denominator) {<br/>
+                if (denominator == 0) <br/>
+                    throw new java.lang.ArithmeticException();<br/>
+        <br/>
+                int result = numerator / denominator;<br/>
+                int remainder = numerator % denominator;<br/>
+        <br/>
+                if (remainder != 0) <br/>
+                    result++;<br/>
+                <br/>
+                return result;<br/>
+            }<br/>
+        }
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro136.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>137 :-   Write a Java program to convert Roman number to an integer number</h3>
+<div id="bp137" class="source_code">
+                       
+        class pro137 <br/>
+        {<br/>
+            public static void main(String[] args) throws java.io.IOException {<br/>
+                System.out.println("\nProgram to convert Roman number to an integer number.\n");<br/>
+                java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+        <br/>
+                try {<br/>
+                    System.out.print("Enter a Roman numeral: ");<br/>
+                    String romanNumeral = input.readLine();<br/>
+        <br/>
+                    int result = romanToInteger(romanNumeral);<br/>
+        <br/>
+                    System.out.println("Integer value of Roman numeral: " + result);<br/>
+                } catch (Exception e) {<br/>
+                    System.out.println("Something went wrong.");<br/>
+                }<br/>
+            }<br/>
+        <br/>
+            public static int romanToInteger(String romanNumeral) {<br/>
+                int result = 0;<br/>
+        <br/>
+                if (romanNumeral == null || romanNumeral.isEmpty()) {<br/>
+                    return result;<br/>
+                }<br/>
+        <br/>
+                java.util.HashMap < Character, Integer> romanValues = new java.util.HashMap< Character, Integer>();<br/>
+                romanValues.put('I', 1);<br/>
+                romanValues.put('V', 5);<br/>
+                romanValues.put('X', 10);<br/>
+                romanValues.put('L', 50);<br/>
+                romanValues.put('C', 100);<br/>
+                romanValues.put('D', 500);<br/>
+                romanValues.put('M', 1000);<br/>
+        <br/>
+                int prevValue = 0;<br/>
+        <br/>
+                for (int i = romanNumeral.length() - 1; i >= 0; i--) {<br/>
+                    char currentChar = romanNumeral.charAt(i);<br/>
+                    int currentValue = romanValues.get(currentChar);<br/>
+        <br/>
+                    if (currentValue < prevValue) {<br/>
+                        result -= currentValue;<br/>
+                    } else {<br/>
+                        result += currentValue;<br/>
+                    }<br/>
+        <br/>
+                    prevValue = currentValue;<br/>
+                }<br/>
+        
+                return result;<br/>
+            }<br/>
+        }
+    
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro137.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>138 :-   Write a Java program to convert a float value to absolute value</h3>
+<div id="bp138" class="source_code">
+
+                          
+class pro138<br/>
+{<br/>
+    public static void main(String[] args) throws java.io.IOException {<br/>
+        System.out.println("\nProgram to convert a float value to absolute value.\n");<br/>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br/>
+<br/>
+        try {<br/>
+            System.out.print("Enter a float value: ");<br/>
+            float floatValue = Float.parseFloat(input.readLine());<br/>
+<br/>
+            float absoluteValue = convertToAbsoluteValue(floatValue);<br/>
+<br/>
+            System.out.println("Absolute value of the float: " + absoluteValue);<br/>
+        } catch (java.lang.NumberFormatException e) {<br/>
+            System.out.println("Invalid input. Please enter a valid float value.");<br/>
+        } catch (Exception e) {<br/>
+            System.out.println("Something went wrong.");<br/>
+        }<br/>
+    }<br/>
+<br/>
+    public static float convertToAbsoluteValue(float value) {<br/>
+        return Math.abs(value);<br/>
+    }<br/>
+}
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro138.png" alt="">
+
+
+
+<br><br><br>
+<hr>
+<h3>139 :-   Write a Java program to accept a float value of number and return a rounded float value</h3>
+<div id="bp139" class="source_code">
+
+                          
+class pro139<br>
+{<br>
+    public static void main(String[] args) throws java.io.IOException {<br>
+        System.out.println("\nProgram to accept a float value of number and return a rounded float value.\n");<br>
+        java.io.BufferedReader input = new java.io.BufferedReader(new java.io.InputStreamReader(System.in));<br>
+<br>
+        try {<br>
+            System.out.print("Enter a float value: ");<br>
+            float floatValue = Float.parseFloat(input.readLine());<br>
+<br>
+            System.out.print("Enter the number of decimals to round to: ");<br>
+            int decimals = Integer.parseInt(input.readLine());<br>
+<br>
+            float roundedValue = roundFloatValue(floatValue, decimals);<br>
+<br>
+            System.out.println("Rounded float value: " + roundedValue);<br>
+        } catch (java.lang.NumberFormatException e) {<br>
+            System.out.println("Invalid input. Please enter valid numbers.");<br>
+        } catch (Exception e) {<br>
+            System.out.println("Something went wrong.");<br>
+        }<br>
+    }<br>
+<br>
+    public static float roundFloatValue(float value, int decimals) {<br>
+        double powerOfTen = Math.pow(10, decimals);<br>
+        return (float) Math.round(value * powerOfTen) / (float) powerOfTen;<br>
+    }<br>
+}
+</div>
+<h3>Output :- </h3>
+<img src="basic_programs_output/pro139.png" alt="">
 
 
 

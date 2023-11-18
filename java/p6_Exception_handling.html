@@ -367,17 +367,70 @@ try <br>
         <hr>
         <h3>10 :- Write a Java pro to throw the SQL Query, insert, delete, update, if not successful then throw an exception</h3>
         <div id="bp10" class="source_code">
-            class demo <br>
-            { <br>
-            public static void main(String st[]) throws InterruptedException <br>
-            { <br>
-            for(int i=1;i<=10;i++) <br>
-            { <br>
-            System.out.println(i); <br>
-            Thread.sleep(1000); <br>
-            } <br>
-            }} <br>
-        </div>
+            // Write a Java program to throw the SQL Query, insert, delete, update, if not successful then throw an exception<br/>
+            <br/>
+                                    import java.sql.DriverManager;<br/>
+                                    import java.sql.SQLException;<br/>
+                                    import java.sql.Statement;<br/>
+                                    import java.sql.Connection;<br/>
+                                    class Main {<br/>
+                                        private static Connection con;<br/>
+                                        private static String query;<br/>
+                                        Main(){<br/>
+                                            try<br/>
+                                            {<br/>
+                                                Class.forName("com.mysql.jdbc.Driver");<br/>
+                                                con = DriverManager.getConnection("jdbc:mysql://localhost:3306/prodb","root","");<br/>
+                                            }<br/>
+                                            catch(ClassNotFoundException cnf_e)<br/>
+                                            {<br/>
+                                                System.out.println("Error in finding class");<br/>
+                                            }<br/>
+                                            catch(SQLException sql_e)<br/>
+                                            {<br/>
+                                                System.out.println(sql_e.toString());<br/>
+                                            }<br/>
+                                        }<br/>
+                                        public static void main(String[] args) {<br/>
+                                            new Main();<br/>
+                                            int rows_affected_insert,rows_affected_update,rows_affected_delete;<br/>
+                                            try<br/>
+                                            {<br/>
+                                                    Statement  ps = con.createStatement();<br/>
+                                    <br/>
+                                                    query = "insert into student (roll_no) values (1234)";<br/>
+                                                    rows_affected_insert = ps.executeUpdate(query);<br/>
+                                    <br/>
+                                                    query = "UPDATE student SET roll_no = 4321 WHERE roll_no = 1234";<br/>
+                                                    rows_affected_update = ps.executeUpdate(query);<br/>
+                                    <br/>
+                                                    query = "DELETE FROM student WHERE roll_no = 7002";<br/>
+                                                    rows_affected_delete = ps.executeUpdate(query);<br/>
+                                    <br/>
+                                                    System.out.println("Rows inserted : "+rows_affected_insert);<br/>
+                                                    System.out.println("Rows updated: "+rows_affected_update);<br/>
+                                                    System.out.println("Rows deleted: "+rows_affected_delete);<br/>
+                                            }<br/>
+                                            catch(SQLException sqle)<br/>
+                                            {<br/>
+                                                            System.out.println(sqle.toString());<br/>
+                                                            sqle.printStackTrace();<br/>
+                                            }<br/>
+                                            finally{<br/>
+                                                if(con!=null)<br/>
+                                                {<br/>
+                                                   try<br/>
+                                                   {<br/>
+                                                        con.close();<br/>
+                                                   } <br/>
+                                                   catch(SQLException s)<br/>
+                                                   {<br/>
+                                                        s.printStackTrace();<br/>
+                                                   }<br/>
+                                                }<br/>
+                                            }<br/>
+                                        }
+                                    }
         <h3>Output :- </h3>
         <img src="exception_handling_output/pro10.png" alt="">
         <br><br><br>
