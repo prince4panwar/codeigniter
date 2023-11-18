@@ -105,6 +105,15 @@ img{
 }
 
 @media (max-width: 600px) {
+    li{
+
+        margin: 5vw 0;
+        
+
+    }
+    a{
+        font-size: 3vw;     
+    }
    h1 {
         color: #020A43;
         font-size: 8vw;
