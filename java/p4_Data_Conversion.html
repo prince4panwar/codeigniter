@@ -76,27 +76,17 @@ class StrToInt  <br>
         <hr>
         <h3>2 :- How to convert int to String.</h3>
         <div id="bp2" class="source_code">
-            /*How to convert long to String*/ <br>
-
-
-            class LongToStringConversion {  <br>
+            class DataConversion2{ <br>
+                public static void main(String[] args) { <br>
+            int num = 42; <br>
             
-                
-                public static void main(String args[])  <br>
-                {  <br>
+            String str = Integer.toString(num); <br>
             
-                    
-                    long a = 999999999999L; <br> 
-            System.out.println("Long value:"+a); <br>
-                    // convert into String  <br>
-                    String str = String.valueOf(a); <br> 
+            System.out.println(str); <br>
             
-                    
-                     
-            
-                    System.out.println(str);  <br>
-                }  <br>
+                } <br>
             } <br>
+ <br>            
         </div>
         <h3>Output :- </h3>
         <img src="dataConversion_output/program2.png" alt="">
@@ -104,25 +94,24 @@ class StrToInt  <br>
         <hr>
         <h3>3 :- How to convert String to long            .</h3>
         <div id="bp3" class="source_code">
+            class StringToLongExample { <br>
+                public static void main(String[] args) { <br>
+                    // Sample String <br>
+                    String numberString = "123456789"; <br>
             
-            class LongToStringConversion {  <br>
-            
-                
-                public static void main(String args[])  <br>
-                {  <br>
-            
-                    
-                    long a = 999999999999L; <br> 
-            System.out.println("Long value:"+a); <br>
-                    // convert into String  <br>
-                    String str = String.valueOf(a); <br> 
-            
-                    
-                     
-            
-                    System.out.println(str);  <br>
-                }  <br>
+                    try { <br>
+                        // Convert String to long <br>
+                        long number = Long.parseLong(numberString); <br>
+             <br>
+                        // Print the result <br>
+                        System.out.println("Converted long value: " + number); <br>
+                    } catch (NumberFormatException e) { <br>
+                        System.err.println("Error: Unable to parse the string as a long."); <br>
+                        e.printStackTrace(); <br>
+                    } <br>
+                } <br>
             } <br>
+ <br>            
         </div>
         <h3>Output :- </h3>
         <img src="dataConversion_output/program3.png" alt="">
@@ -415,18 +404,25 @@ class dConversion{ <br>
         <hr>
         <h3>15 :- How to convert int to long.</h3>
         <div id="bp15" class="source_code">
-            class programg17 { <br>
-                public static void main(String[] args) { <br>
-                    // Convert int to double <br>
-                    int intValue = 42; <br>
-                    double doubleValue = (double) intValue; // Casting int to double <br>
-                    // Alternatively, you can use: double doubleValue = intValue; <br>
             
-                    // Display the results <br>
-                    System.out.println("Original int value: " + intValue); <br>
-                    System.out.println("Converted double value: " + doubleValue); <br>
-                } <br>
-            }
+ class IntToLongConversion { <br>
+    public static void main(String[] args) { <br>
+        // Convert int to long using cast <br>
+        int intValue = 42; <br>
+        long longValue1 = (long) intValue; <br>
+ <br>
+        // Convert int to long using direct assignment <br>
+        int intValue2 = 123456789; <br>
+        long longValue2 = intValue2; <br>
+
+        // Display the results <br>
+        System.out.println("Original int value: " + intValue); <br>
+        System.out.println("Converted to long (cast): " + longValue1); <br>
+        
+        System.out.println("Original int value: " + intValue2); <br>
+        System.out.println("Converted to long (direct assignment): " + longValue2); <br>
+    } <br>
+} <br>
             
         </div>
         <h3>Output :- </h3>
@@ -439,18 +435,24 @@ class dConversion{ <br>
         <hr>
         <h3>16:- How to convert long to int</h3>
         <div id="bp16" class="source_code">
-            class programg17 { <br>
+            class LongToIntConversion { <br>
                 public static void main(String[] args) { <br>
-                    // Convert int to double <br>
-                    int intValue = 42; <br>
-                    double doubleValue = (double) intValue; // Casting int to double <br>
-                    // Alternatively, you can use: double doubleValue = intValue; <br>
+                    // Convert long to int using cast <br>
+                    long longValue = 987654321L; <br>
+                    int intValue1 = (int) longValue; <br>
+            
+                    // Convert long to int using direct assignment <br>
+                    long longValue2 = 987654322L; <br>
+                    int intValue2 = (int) longValue2; <br>
             
                     // Display the results <br>
-                    System.out.println("Original int value: " + intValue); <br>
-                    System.out.println("Converted double value: " + doubleValue); <br>
+                    System.out.println("Original long value: " + longValue); <br>
+                    System.out.println("Converted to int (cast): " + intValue1); <br>
+             <br>
+                    System.out.println("Original long value: " + longValue2); <br>
+                    System.out.println("Converted to int (direct assignment): " + intValue2); <br>
                 } <br>
-            }
+            } <br>
             
         </div>
         <h3>Output :- </h3>
@@ -694,13 +696,22 @@ class DateToTimestampExample { <br>
         <h3>24 :- How to convert Timestamp to Date.</h3>
         <div id="bp24" class="source_code">
             
-            class BinarytoDecimal{   <br>
-                public static void main(String args[]){   <br>
-                String binaryString="1010";  <br>
-                System.out.println("Binary Strings:"+binaryString ); <br>
-                int decimal=Integer.parseInt(binaryString,2);   <br>
-                System.out.println(decimal);   <br>
-                }} <br>
+            import java.sql.Timestamp; <br>
+            import java.util.Date; <br>
+            
+             class TimestampToDateConversion { <br>
+                public static void main(String[] args) { <br>
+                    // Create a Timestamp <br>
+                    Timestamp timestamp = new Timestamp(System.currentTimeMillis()); <br>
+            
+                    // Convert Timestamp to Date <br>
+                    Date date = new Date(timestamp.getTime()); <br>
+            
+                    // Display the results <br>
+                    System.out.println("Original Timestamp: " + timestamp); <br>
+                    System.out.println("Converted to Date: " + date); <br>
+                } <br>
+            } <br>
                 
         </div>
         <h3>Output :- </h3>
@@ -809,21 +820,19 @@ class HexToDecimal  <br>
         <h3>28 :- How to convert Decimal to Hex.</h3>
         <div id="bp28" class="source_code">
             
+            class DecimalToHexConversion { <br>
+                public static void main(String[] args) { <br>
+                    // Decimal number <br>
+                    int decimalNumber = 255; <br>
             
-       import java.util.Scanner; <br>
-        class DecimalToOctal <br>
-        { <br>
-          public static void main(String args[]) <br>
-          { <br>
-            Scanner input = new Scanner( System.in ); <br>
-            System.out.print("Enter a decimal number : "); <br>
-            int num =input.nextInt(); <br>
-          <br>
-            String octalString = Integer.toOctalString(num); <br>
-            System.out.println("Method 1: Decimal to octal: " + octalString); <br>
-        
-          } <br>
-        } <br>
+                    // Convert decimal to hex <br>
+                    String hexString = Integer.toHexString(decimalNumber); <br>
+            
+                    // Display the results <br>
+                    System.out.println("Decimal number: " + decimalNumber); <br>
+                    System.out.println("Converted to Hex: " + hexString.toUpperCase()); <br>
+                } <br>
+            } <br>
         </div>
         <h3>Output :- </h3>
         <img src="dataConversion_output/program28.png" alt="">
@@ -837,22 +846,22 @@ class HexToDecimal  <br>
 
             .</h3>
         <div id="bp29" class="source_code">
-            
-                  
-       import java.util.Scanner; <br>
-       class DecimalToOctal <br>
-       { <br>
-         public static void main(String args[]) <br>
-         { <br>
-           Scanner input = new Scanner( System.in ); <br>
-           System.out.print("Enter a decimal number : "); <br>
-           int num =input.nextInt(); <br>
-         <br>
-           String octalString = Integer.toOctalString(num); <br>
-           System.out.println("Method 1: Decimal to octal: " + octalString); <br>
-       
-         } <br>
-       } <br>
+        
+class GFG { <br>
+ 
+    public static void main(String args[]) <br>
+    { <br>
+        
+        String onum = "157"; <br>
+ 
+        
+        int num = Integer.parseInt(onum, 8); <br>
+ 
+        System.out.println(
+            "Decimal equivalent of Octal value 157 is: "
+            + num); <br>
+    } <br>
+} <br>
         </div>
         <h3>Output :- </h3>
         <img src="dataConversion_output/program29.png" alt="">

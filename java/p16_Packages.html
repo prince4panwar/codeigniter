@@ -9,7 +9,7 @@
 
 <body>
         <div id="home">
-                <h1>Functions</h1>
+                <h1>Packages</h1>
                 <ul>
                         <li><a href="#bp1">1. Create a Java program to access the java.util.Date class through import keyword and print the current date of the system.</a></li>
                         <li><a href="#bp2">2. Create a Java program to access the java.util.Date class through qualified way and print the current date of the system.
@@ -47,7 +47,7 @@ class A{ <br>
         </div>
         <h3>Output :- </h3>
  
-                <img src="functions_output/pro1.png" alt="">
+                <img src="packages_output/pro1.png" alt="">
        
         <br><br><br>
         <hr>
@@ -64,7 +64,7 @@ class A{ <br>
             } <br>
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro2.png" alt="">
+        <img src="packages_output/pro2.png" alt="">
         <br><br><br>
         <hr>
         <h3>3 :- Create a Java program to access the java.util.Date class through import keyword and print the current date of the system but inherit the Date class.</h3>
@@ -92,7 +92,7 @@ class A{ <br>
  <br>           
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro3.png" alt="">
+        <img src="packages_output/pro3.png" alt="">
         <br><br><br>
         <hr>
         <h3>4 :- Create a Java program to access the java.util.Date class through qualified way and print the current date of the system but inherit the Date class.</h3>
@@ -107,7 +107,7 @@ class A{ <br>
  <br>        
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro4.png" alt="">
+        <img src="packages_output/pro4.png" alt="">
         <br><br><br>
         <hr>
         <h3>5 :- Create a Java program to create a package with multiple default classes.</h3>
@@ -147,185 +147,311 @@ class Class1 { <br>
 
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro5.png" alt="">
+        <img src="packages_output/pro5.png" alt="">
         <br><br><br>
         <hr>
         <h3>6 :-  Create a Java program to create a package with 4 public classes, create the object in another file and call the function created in those classes.</h3>
         <div id="bp6" class="source_code">
-            package employee; <br>
+            Animal.java <br>
+            package pack1; <br>
 
-            class Emp { <br>
-                public static void main(String args[]) <br>
-                { <br>
-                String name, empid, category; <br>
-                int bpay; <br>
-                double hra, da, npay, pf, grosspay, incometax, allowance; <br>
+            public abstract class Animal <br>
+             
+            { <br>
             
-                public Emp(String n, String id, String c, int b) { <br>
-                    name = n; <br>
-                    empid = id; <br>
-                    category = c; <br>
-                    bpay = b; <br>
-                }
+                protected String name; <br>
+                protected String sound; <br>
             
-                public void call() { <br>
-                    da = bpay * 0.05; <br>
-                    hra = bpay * 0.09; <br>
-                    pf = bpay * 0.11; <br>
-                    allowance = bpay * 0.10; <br>
-                    grosspay = bpay + da + hra + allowance - pf; <br>
-                    incometax = 0.75 * grosspay; <br>
-                    npay = grosspay - incometax; <br>
-                } <br>
-             <br>
-                public void display() { <br>
-                    System.out.println("\n\nEmployee Details"); <br>
-                    System.out.println("\nName: " + name); <br>
-                    System.out.println("\nEmpid: " + empid); <br>
-                    System.out.println("\nCategory: " + category); <br>
-                    System.out.println("\nbpay: " + bpay); <br>
-                    System.out.println("\nda: " + da); <br>
-                    System.out.println("\nhra: " + hra); <br>
-                    System.out.println("\npf: " + pf); <br>
-                    System.out.println("\nall: " + allowance); <br>
-                    System.out.println("\ngs: " + grosspay); <br>
-                    System.out.println("\nIncometax: " + incometax); <br>
-                    System.out.println("\nnpay: " + npay); <br>
-                } <br>
+                public Animal(String name, String sound) <br>
+             
+            { <br>
+                    this.name = name; <br>
+                    this.sound = sound; <br>
             } <br>
             
- <br>            
+                public abstract void makeSound(); <br>
+            } <br>
+                Cat.java <br>
+                package pack1; <br>
+
+                public class Cat extends Animal { <br>
+                
+                    public Cat(String name) { <br>
+                        super(name, "Meow!"); <br>
+                    } <br>
+                
+                    @Override <br>
+                    public void makeSound() { <br>
+                        System.out.println(name + " says: " + sound); <br>
+                    } <br>
+                } <br>
+                Dog.java <br>
+                package pack1; <br>
+
+                public class Dog extends Animal { <br>
+                
+                    public Dog(String name) <br>
+                     { <br>
+                        super(name, "Woof!"); <br>
+                        } <br>
+                
+                    @Override <br>
+                    public void makeSound() { <br>
+                        System.out.println(name + " says: " + sound); <br>
+                    } <br>
+                } <br>
+ <br>
+                Bird.java <br>
+                package pack1; <br>
+
+public class Bird extends Animal { <br>
+ <br>
+public Bird(String name) { <br>
+super(name, "Chirp!"); <br>
+} <br>
+
+@Override <br>
+public void makeSound() { <br>
+System.out.println(name + " says: " + sound); <br>
+} <br>
+} <br>
+        Main.java <br>
+package pack1; <br>
+
+public class Main { <br>
+
+public static void main(String[] args) { <br>
+Dog dog = new Dog("Rex"); <br>
+dog.makeSound(); <br>
+
+Cat cat = new Cat("Kitty"); <br>
+cat.makeSound(); <br>
+
+Bird bird = new Bird("Tweety"); <br>
+bird.makeSound(); <br>
+} <br>
+} <br>
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro6.png" alt="">
+        <img src="packages_output/pro6.png" alt="">
         <br><br><br>
         <hr>
         <h3>7 :-  Write a Java program to perform employee payroll processing using packages. In the java file, Emp.java creates a package employee and creates a class Emp. Declare the variables name,empid, category, bpay, hra, da, npay, pf, grosspay, incometax, and allowance. Calculate the values in methods. Create another java file Emppay.java. Create an object e to call the methods to perform and print values.</h3>
         <div id="bp7" class="source_code">
+            Emp.java
             package employee; <br>
-
-            class Emp { <br>
-                public static void main(String args[]) <br>
-                { <br>
-                String name, empid, category; <br>
-                int bpay; <br>
-                double hra, da, npay, pf, grosspay, incometax, allowance; <br>
             
-                public Emp(String n, String id, String c, int b) { <br>
-                    name = n; <br>
-                    empid = id; <br>
-                    category = c; <br>
-                    bpay = b; <br>
-                }
+            public class Emp { <br>
+                private String name; <br>
+                private int empID; <br>
+                private String category; <br>
+                private double basicPay; <br>
+                private double hra; <br>
+                private double da; <br>
+                private double netPay; <br>
+                private double pf; <br>
+                private double grossPay; <br>
+                private double incomeTax; <br>
+                private double allowance; <br>
             
-                public void call() { <br>
-                    da = bpay * 0.05; <br>
-                    hra = bpay * 0.09; <br>
-                    pf = bpay * 0.11; <br>
-                    allowance = bpay * 0.10; <br>
-                    grosspay = bpay + da + hra + allowance - pf; <br>
-                    incometax = 0.75 * grosspay; <br>
-                    npay = grosspay - incometax; <br>
+                public Emp(String name, int empID, String category, double basicPay) { <br>
+                    this.name = name; <br>
+                    this.empID = empID; <br>
+                    this.category = category; <br>
+                    this.basicPay = basicPay; <br>
                 } <br>
              <br>
-                public void display() { <br>
-                    System.out.println("\n\nEmployee Details"); <br>
-                    System.out.println("\nName: " + name); <br>
-                    System.out.println("\nEmpid: " + empid); <br>
-                    System.out.println("\nCategory: " + category); <br>
-                    System.out.println("\nbpay: " + bpay); <br>
-                    System.out.println("\nda: " + da); <br>
-                    System.out.println("\nhra: " + hra); <br>
-                    System.out.println("\npf: " + pf); <br>
-                    System.out.println("\nall: " + allowance); <br>
-                    System.out.println("\ngs: " + grosspay); <br>
-                    System.out.println("\nIncometax: " + incometax); <br>
-                    System.out.println("\nnpay: " + npay); <br>
+                public void calculateHRA() { <br>
+                    if (category.equals("A")) { <br>
+                        hra = 0.5 * basicPay; <br>
+                    } else if (category.equals("B")) { <br>
+                        hra = 0.4 * basicPay; <br>
+                    } else { <br>
+                        hra = 0.3 * basicPay; <br>
+                    } <br>
+                } <br>
+            
+                public void calculateDA() { <br>
+                    da = 0.1 * basicPay; <br>
+                } <br>
+             <br>
+                public void calculateNetPay() { <br>
+                    grossPay = basicPay + hra + da; <br>
+                    pf = 0.12 * basicPay; <br>
+                    incomeTax = 0.2 * grossPay; <br>
+                    netPay = grossPay - pf - incomeTax; <br>
+                } <br>
+            
+                public void printPayroll() { <br>
+                    System.out.println("Employee Name: " + name); <br>
+                    System.out.println("Employee ID: " + empID); <br>
+                    System.out.println("Category: " + category); <br>
+                    System.out.println("Basic Pay: " + basicPay); <br>
+                    System.out.println("HRA: " + hra); <br>
+                    System.out.println("DA: " + da); <br>
+                    System.out.println("Gross Pay: " + grossPay); <br>
+                    System.out.println("PF: " + pf); <br>
+                    System.out.println("Income Tax: " + incomeTax); <br>
+                    System.out.println("Net Pay: " + netPay); <br>
                 } <br>
             } <br>
+                    EmpPay.java <br>
             
- <br>            
+                        package employee; <br>
+            
+            public class EmpPay { <br>
+                public static void main(String[] args) { <br>
+                    Emp e = new Emp("John Doe", 123, "A", 20000.00); <br>
+                    e.calculateHRA(); <br>
+                    e.calculateDA(); <br>
+                    e.calculateNetPay(); <br>
+                    e.printPayroll(); <br>
+                } <br>
+            } <br> 
 
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro7.png" alt="">
+        <img src="packages_output/pro7.png" alt="">
         <br><br><br>
         <hr>
         <h3>8 :- Create a Java program to create a package with public class and protected members to be accessed in another class.</h3>
         <div id="bp8" class="source_code">
 
-           class Test { <br>
-           
-               public static void main(String args[]) <br>
-               { <br>
-                   c4.sample.Demo d = new c4.sample.Demo(); <br>
-                   
-                   System.out.println("rollno "+d.name); <br>
-                   System.out.println("rollno "+d.rollno); <br>
-           
-               } <br>
-               
-           } <br>
+            package pack1; <br>
+
+            public class ParentClass <br>
+             
+            { <br>
+            
+                protected String name; <br>
+                protected int age; <br>
+                public ParentClass(String name, int age) <br>
+             
+                { <br>
+                    this.name = name; <br>
+                    this.age = age; <br>
+                    } <br>
+            } <br>
+            
+            class ChildClass extends ParentClass <br>
+             { <br>
+            
+                public ChildClass(String name, int age) <br>
+                 { <br>
+                    super(name, age); <br>
+                    } <br>
+            
+                public void accessProtectedInfo()  <br>
+                { <br>
+                    System.out.println("Name: " + name); <br>
+                    System.out.println("Age: " + age); <br>
+                } <br>
+            } <br>
+             class Main { <br>
+            
+                public static void main(String[] args) { <br>
+                    ChildClass childClass = new ChildClass("John Doe", 30); <br>
+                    childClass.accessProtectedInfo(); <br>
+                } <br>
+            } <br>
 
            
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro8.png" alt="">
+        <img src="packages_output/pro8.png" alt="">
         <br><br><br>
         <hr>
         <h3>9 :- Create a Java program to create a nested package i.e. c4.sample with public class and protected members to be accessed in another class.
 
         </h3>
         <div id="bp9" class="source_code">
-            class Test { <br>
-           
-                public static void main(String args[]) <br>
-                { <br>
-                    c4.sample.Demo d = new c4.sample.Demo(); <br>
-                    
-                    System.out.println("rollno "+d.name); <br>
-                    System.out.println("rollno "+d.rollno); <br>
+            package c4.sample; c4
+
+
+            public class Father
+             
+            {
             
-                } <br>
-                
-            } <br>
+                protected String name;
+                protected int age;
+            
+                public Father(String name, int age)
+             
+                {
+                    this.name = name;
+                    this.age = age;
+                }
+            }
+            
+            class ChildClass extends Father {
+            
+                public ChildClass(String name, int age) {
+                    super(name, age);
+                }
+            
+                public void accessProtectedInfo() {
+                    System.out.println("Name: " + name);
+                    System.out.println("Age: " + age);
+                }
+            }
+            
+             class Main {
+            
+                public static void main(String[] args) {
+                    c4.sample.ChildClass childClass = new c4.sample.ChildClass("anvd", 20);
+                    childClass.accessProtectedInfo();
+                }
+            }
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro9.png" alt="">
+        <img src="packages_output/pro9.png" alt="">
         <br><br><br>
         <hr>
         <h3>10 :- Create a Java program to create a package with public class and public members to be accessed in another class.
 
         </h3>
         <div id="bp10" class="source_code">
-            /*
-            10. Create a Java program to create a package with public class and public members to be accessed in another class. 
-        */ <br>
-        package mayankpackage; <br>
-         class MyClass <br>
-        { <br>
-            public int rollno = 7027; <br>
-        
-            public void publicMethod() <br>
-            { <br>
-                System.out.println("if you are like follow me https://github.com/MayankDevil/"); <br>
-            } <br>
-        } <br>
-        class Test <br>
-        { <br>
-            public static void main(String[] args) <br>
-            { <br>
-                mayankpackage.MyClass my = new myPackage.MyClass(); <br>
-            
-                System.out.println("Mayank rollno is " + my.rollno); <br>
-            
-                my.publicMethod(); <br>
-            } <br>
-        } <br>
- <br>        
+// Package declaration <br>
+package pack1; <br>
+
+// Public class with public members <br>
+public class Package10 { <br>
+
+    public String name; <br>
+    public int age; <br>
+
+    public Package10(String name, int age) {
+        this.name = name; <br>
+        this.age = age; <br>
+    } <br>
+
+    public void printPublicInfo() { <br>
+        System.out.println("Public Information:"); <br>
+        System.out.println("Name: " + name); <br>
+        System.out.println("Age: " + age); <br>
+    } <br>
+} <br>
+
+// Class that accesses the public members of ParentClass <br>
+class ChildClass { <br>
+
+    public static  void main(String arr[]) { <br>
+        // Create an instance of ParentClass <br>
+        Package10 parentClass = new Package10("John Doe", 30); <br>
+
+        // Access public members of ParentClass <br>
+        System.out.println("Accessing public information from ChildClass:"); <br>
+        System.out.println("Name: " + parentClass.name); <br>
+        System.out.println("Age: " + parentClass.age); <br>
+ <br>
+        // Call the public method of ParentClass <br>
+        System.out.println("\nCalling public method from ChildClass:"); <br>
+        parentClass.printPublicInfo(); <br>
+    } <br>
+} <br>
         </div>
         <h3>Output :- </h3>
-        <img src="functions_output/pro10.png" alt="">
+        <img src="packages_output/pro10.png" alt="">
         
                  
 </body>

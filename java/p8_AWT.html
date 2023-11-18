@@ -216,25 +216,80 @@ class a <br>
         <hr>
         <h3>7 :-  Create a simple AWT application that displays a Checkbox with Custom Layout.</h3>
         <div id="bp7" class="source_code">
-            import java.awt.*; <br>
-
-            class CheckboxExample extends Frame { <br>
+        
+            import java.awt.Frame; <br>
+            import java.awt.Button; <br>
+            import java.awt.event.ActionListener; <br>
+            import java.awt.event.ActionEvent; <br>
+            import java.awt.BorderLayout; <br>
+            import java.awt.Color; <br>
+             <br>
+             class ButtonLayout  <br>
+             { <br>
+                public static void main(String[] args)  <br>
+                { <br>
+                    Frame f = new Frame("Button Layouts"); <br>
+                    Button northButton = new Button("North"); <br>
+                    Button eastButton = new Button("East"); <br>
+                    Button westButton = new Button("West"); <br>
+                    Button southButton = new Button("South"); <br>
+                    Button centerButton = new Button("Center"); <br>
+                    f.setLayout(new BorderLayout()); <br>
+                    f.add(northButton, BorderLayout.NORTH); <br>
+                    f.add(eastButton, BorderLayout.EAST); <br>
+                    f.add(westButton, BorderLayout.WEST); <br>
+                    f.add(southButton, BorderLayout.SOUTH); <br>
+                    f.add(centerButton, BorderLayout.CENTER); <br>
+                    northButton.setBackground(Color.RED); <br>
+                    eastButton.setBackground(Color.GREEN); <br>
+                    westButton.setBackground(Color.PINK); <br>
+                    southButton.setBackground(Color.GRAY); <br>
+             <br>
+                    northButton.addActionListener(new ActionListener()  <br>
+                    { <br>
+                        public void actionPerformed(ActionEvent e)  <br>
+                        { <br>
+                            System.out.println("North Button Clicked"); <br>
+                        } <br>
+                    }); <br>
+             <br>
+                    eastButton.addActionListener(new ActionListener()  <br>
+                    { <br>
+                        public void actionPerformed(ActionEvent e)  <br>
+                        { <br>
+                            System.out.println("East Button Clicked"); <br>
+                        } <br>
+                    }); <br>
+             <br>
+                    westButton.addActionListener(new ActionListener()  <br>
+                    { <br>
+                        public void actionPerformed(ActionEvent e)  <br>
+                        { <br>
+                            System.out.println("West Button Clicked"); <br>
+                        } <br>
+                    }); <br>
             
-                public CheckboxExample() { <br>
-                    super("Checkbox Example"); <br>
+                    southButton.addActionListener(new ActionListener()  <br>
+                    { <br>
+                        public void actionPerformed(ActionEvent e)  <br>
+                        { <br>
+                            System.out.println("South Button Clicked"); <br>
+                        } <br>
+                    }); <br>
             
-                    Checkbox checkbox = new Checkbox("I am Heena"); <br>
-                    add(checkbox); <br>
+                    centerButton.addActionListener(new ActionListener() <br> 
+                    { <br>
+                        public void actionPerformed(ActionEvent e)  <br>
+                        { <br>
+                            System.out.println("Center Button Clicked"); <br>
+                        } <br>
+                    }); <br>
             
-                    setLayout(new FlowLayout()); <br>
-                    setSize(300, 100); <br>
-                    setVisible(true); <br>
-                } <br>
-            
-                public static void main(String[] args) { <br>
-                    new CheckboxExample(); <br>
-                } <br>
+                    f.setSize(400, 300); <br>
+                    f.setVisible(true); <br>
             } <br>
+            } <br>
+ <br>            
         </div>
         <h3>Output :- </h3>
         <img src="awt_output/pro7.png" alt="">
@@ -269,31 +324,31 @@ class a <br>
 
         </h3>
         <div id="bp9" class="source_code">
-            import java.awt.*; <br>
-            import java.awt.event.*; <br>
-            
-            class awt1 { <br>
-                public static void main(String a[]) { <br>
-                    Frame f = new Frame("Checkbox Group"); <br>
-                    f.setSize(400, 400); <br>
-                    f.setLayout(new FlowLayout()); <br>
-                    CheckboxGroup c = new CheckboxGroup(); <br>
-                    Checkbox c1 = new Checkbox("Java", c, true); <br>
-                    Checkbox c2 = new Checkbox("C++", c, false); <br>
-                    Checkbox c3 = new Checkbox("C", c, false); <br>
-                    Checkbox c4 = new Checkbox("MySQL", c, false); <br>
-                    f.add(c1); <br>
-                    f.add(c2); <br>
-                    f.add(c3); <br>
-                    f.add(c4); <br>
-                    f.addWindowListener(new WindowAdapter() { <br>
-                    public void windowClosing(WindowEvent we) { <br>
-                    System.exit(0); <br>
-                    } <br>
-                    }); <br>
-                    f.setVisible(true); <br>
+            import java.awt.Frame; <br>
+            import java.awt.Label; <br>
+            import java.awt.LayoutManager; <br>
+            import java.awt.BorderLayout; <br>
+            import java.awt.Color; <br>
+             <br>
+            class CustomLayout <br>
+            { <br>
+                public static void main(String[] args)  <br>
+                { <br>
+                    Frame frame = new Frame("Custom Layout"); <br>
+                    LayoutManager Custom = new BorderLayout(); <br>
+                    frame.setLayout(null);
+                    Label label = new Label("Hello, Custom Layout!"); <br>
+                    label.setBackground(Color.BLUE); <br>
+                    label.setForeground(Color.WHITE); <br>
+                    label.setBounds(397, 300 , 200,70); <br>
+                    frame.setBackground(Color.cyan); <br>
+                    frame.add(label); <br>
+                    frame.setSize(300, 100); <br>
+                    frame.setVisible(true); <br>
                 } <br>
             } <br>
+            
+ <br>            
         </div>
         <h3>Output :- </h3>
         <img src="awt_output/pro9.png" alt="">

@@ -126,14 +126,14 @@ aside ul li{
     /* padding-right: 0; */
 
 }
-.intro{
+.program3{
     background-color: #020A43;
     color: white;
 }
 aside ul li:hover{
-    color: white;
-    background-color: #020A43;
-    transition: all 0.5s;
+    color: white !important;
+    background-color: #020A43 !important;
+    transition: all 0.5s !important;
 }
 
 .contento{

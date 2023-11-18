@@ -9,7 +9,7 @@
 
 <body>
         <div id="home">
-                <h1>Data Conversion</h1>
+                <h1>Object Oriented Programmings</h1>
                 <ul>
                         <li><a href="#bp1">1. Write a Java program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.</a></li>
                         <li><a href="#bp2">2. Write a Java program to create a class called "Dog" with a name and breed attribute. Create two instances of the "Dog" class, set their attributes using the constructor and modify the attributes using the setter methods and print the updated values.
@@ -944,121 +944,41 @@ oops4
         <h3>12 :-  Write a Java program to create a class called "Airplane" with a flight number, destination, and departure time attributes, and methods to check flight status and delay.</h3>
         <div id="bp12" class="source_code">
             <p>
-                oops13
-                class Product {<br/>
-                    private String name;<br/>
-                    private int quantity;<br/>
-                <br/>
-                    // Constructor<br/>
-                    public Product(String name, int quantity) {<br/>
-                        this.name = name;<br/>
-                        this.quantity = quantity;<br/>
-                    }<br/>
-                <br/>
-                    // Method to increase product quantity<br/>
-                    public void increaseQuantity(int amount) {<br/>
-                        quantity += amount;<br/>
-                        System.out.println("Added " + amount + " " + name + "(s) to inventory. Total quantity: " + quantity);<br/>
-                    }<br/>
-                <br/>
-                    // Method to decrease product quantity<br/>
-                    public void decreaseQuantity(int amount) {<br/>
-                        if (quantity >= amount) {<br/>
-                            quantity -= amount;<br/>
-                            System.out.println("Removed " + amount + " " + name + "(s) from inventory. Total quantity: " + quantity);<br/>
-                        } else {<br/>
-                            System.out.println("Insufficient " + name + "(s) in inventory.");<br/>
-                        }<br/>
-                    }<br/>
-                <br/>
-                    // Getter methods<br/>
-                    public String getName() {<br/>
-                        return name;<br/>
-                    }<br/>
-                <br/>
-                    public int getQuantity() {<br/>
-                        return quantity;<br/>
-                    }<br/>
-                }<br/>
-                <br/>
-                class Inventory {<br/>
-                    private Product[] products;<br/>
-                    private int numProducts;<br/>
-                <br/>
-                    // Constructor<br/>
-                    public Inventory(int maxProducts) {<br/>
-                        products = new Product[maxProducts];<br/>
-                        numProducts = 0;<br/>
-                    }<br/>
-                <br/>
-                    // Method to add a product to the inventory<br/>
-                    public void addProduct(Product product) {<br/>
-                        if (numProducts < products.length) {<br/>
-                            products[numProducts] = product;<br/>
-                            numProducts++;<br/>
-                            System.out.println("Product added to inventory: " + product.getName());<br/>
-                        } else {<br/>
-                            System.out.println("Cannot add more products. Inventory is full.");<br/>
-                        }<br/>
-                    }<br/>
-                <br/>
-                    // Method to remove a product from the inventory<br/>
-                    public void removeProduct(String productName) {<br/>
-                        boolean found = false;<br/>
-                        for (int i = 0; i < numProducts; i++) {<br/>
-                            if (products[i].getName().equalsIgnoreCase(productName)) {<br/>
-                                found = true;<br/>
-                                System.out.println("Product removed from inventory: " + products[i].getName());<br/>
-                                for (int j = i; j < numProducts - 1; j++) {<br/>
-                                    products[j] = products[j + 1];<br/>
-                                }<br/>
-                                products[numProducts - 1] = null;<br/>
-                                numProducts--;<br/>
-                                break;<br/>
-                            }<br/>
-                        }<br/>
-                        if (!found) {<br/>
-                            System.out.println("Product not found in inventory: " + productName);<br/>
-                        }<br/>
-                    }<br/>
-                <br/>
-                    // Method to check for low inventory<br/>
-                    public void checkLowInventory(int threshold) {<br/>
-                        System.out.println("Products with low inventory:");<br/>
-                        for (int i = 0; i < numProducts; i++) {<br/>
-                            if (products[i].getQuantity() < threshold) {<br/>
-                                System.out.println("- " + products[i].getName() + ": " + products[i].getQuantity());<br/>
-                            }<br/>
-                        }<br/>
-                    }<br/>
-                }<br/>
-                <br/>
-                public class pro13 {<br/>
-                    public static void main(String[] args) {<br/>
-                        // Creating an Inventory instance<br/>
-                        Inventory inventory = new Inventory(5); // Assuming maximum 5 products in the inventory<br/>
-                <br/>
-                        // Adding products to the inventory<br/>
-                        Product product1 = new Product("Laptop", 10);<br/>
-                        Product product2 = new Product("Phone", 5);<br/>
-                        Product product3 = new Product("Tablet", 3<br/>);<br/>
-                <br/>
-                        inventory.addProduct(product1);<br/>
-                        inventory.addProduct(product2);<br/>
-                        inventory.addProduct(product3);<br/>
-                <br/>
-                        // Removing a product from the inventory<br/>
-                        inventory.removeProduct("Phone");<br/>
-                <br/>
-                        // Checking for low inventory (threshold set to 5)<br/>
-                        inventory.checkLowInventory(5);<br/>
-                    }<br/>
-                }<br/>
+                program12 oops <br>
+import java.util.Date; <br>
+import java.text.SimpleDateFormat; <br>
+class Airplane { <br>
+    private String flightNumber; <br>
+    private String destination; <br>
+    private String departureTime; <br>
+
+    public Airplane(String flightNumber, String destination, String departureTime) { <br>
+        this.flightNumber = flightNumber; <br>
+        this.destination = destination; <br>
+        this.departureTime = departureTime; <br>
+    } <br>
+
+    public String getFlightStatus() { <br>
+        return "Flight " + flightNumber + " to " + destination + " is scheduled to depart at " + departureTime + ".";
+    } <br>
+
+    public void delay(int delayInMinutes) { <br>
+        departureTime = new SimpleDateFormat("HH:mm").format(new Date(new Date().getTime() + delayInMinutes * 60000));
+    } <br>
+
+    public static void main(String[] args) { <br>
+        Airplane flight1 = new Airplane("AA1234", "New York", "10:30"); <br>
+        System.out.println(flight1.getFlightStatus()); <br>
+
+        flight1.delay(30); <br>
+        System.out.println("Flight status after delay: " + flight1.getFlightStatus()); <br>
+    } <br>
+} <br>
                 
             </p>
         </div>
         <h3>Output :- </h3>
-        <img src="oops_output/Screenshot (119).png" alt="">
+        <img src="oops_output/program12.png" alt="">
 
 
 
