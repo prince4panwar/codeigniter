@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2dArray</title>
+    <title>Multi Threading</title>
     <link rel="stylesheet" href="comman.css">
 </head>
 
@@ -382,79 +382,88 @@
         <hr>
         <h3>6 :-Write a Java program to implement a concurrent web crawler that crawls multiple websites simultaneously using threads.  </h3>
         <div id="bp6" class="source_code">
-            class program7 { <br>
-                private double balance; <br>
-             <br>
-                public program7(double initialBalance) { <br>
-                    this.balance = initialBalance; <br>
-                } <br>
-             <br>
-                public synchronized void deposit(double amount) { <br>
-                    System.out.println("Depositing: " + amount); <br>
-                    balance += amount; <br>
-                    System.out.println("New Balance after deposit: " + balance); <br>
-                } <br>
-             <br>
-                public synchronized void withdraw(double amount) { <br>
-                    if (balance >= amount) { <br>
-                        System.out.println("Withdrawing: " + amount); <br>
-                        balance -= amount; <br>
-                        System.out.println("New Balance after withdrawal: " + balance); <br>
-                    } else { <br>
-                        System.out.println("Insufficient balance for withdrawal."); <br>
-                    } <br>
-                } <br>
-            
-                public static void main(String[] args) { <br>
-                    program7 account = new program7(1000); // Starting balance <br>
-             <br>
-                    // Create multiple threads for deposits and withdrawals <br>
-                    Thread depositThread = new Thread(new DepositTask(account)); <br>
-                    Thread withdrawThread = new Thread(new WithdrawTask(account)); <br>
-            
-                    depositThread.start(); <br>
-                    withdrawThread.start(); <br>
-                } <br>
+            // Write a Java program to implement a concurrent web crawler that crawls multiple websites simultaneously using threads. <br>
+
+import java.util.HashSet; <br>
+import java.util.Set; <br>
+import java.util.concurrent.ExecutorService; <br>
+import java.util.concurrent.Executors; <br>
+
+class Main { <br>
+    private static final int MAX_DEPTH = 2; // Maximum depth for crawling <br>
+    private static final int THREAD_POOL_SIZE = 5; // Number of threads <br>
+
+    private Set<String> visitedUrls = new HashSet<String>(); <br>
+    private ExecutorService executorService = Executors.newFixedThreadPool(THREAD_POOL_SIZE); <br>
+
+    public void startCrawling(String startUrl, int currentDepth) { <br>
+        if (currentDepth > MAX_DEPTH || visitedUrls.contains(startUrl)) { <br>
+            return; <br>
+        } <br>
+
+        visitedUrls.add(startUrl);
+        executorService.execute(new WebPageCrawler(startUrl, currentDepth)); <br>
+    } <br>
+
+    public void shutdown() { <br>
+        executorService.shutdown(); <br>
+    } <br>
+
+    private class WebPageCrawler implements Runnable { <br>
+        private String url; <br>
+        private int depth; <br>
+
+        public WebPageCrawler(String url, int depth) { <br>
+            this.url = url; <br>
+            this.depth = depth; <br>
+        } <br>
+
+        @Override <br>
+        public void run() { <br>
+            System.out.println("Crawling " + url + " at depth " + depth); <br>
+            // Implement your web crawling logic here <br>
+
+            // For demonstration purposes, let's assume a simple delay <br>
+            try { <br>
+                Thread.sleep(1000); <br>
+            } catch (InterruptedException e) { <br>
+                e.printStackTrace(); <br>
             } <br>
-            
-            class DepositTask implements Runnable { <br>
-                private final program7 account; <br>
-            
-                public DepositTask(program7 account) { <br>
-                    this.account = account; <br>
-                } <br>
-            
-                public void run() { <br>
-                    for (int i = 0; i < 5; i++) { <br>
-                        account.deposit(100); <br>
-                        try { <br>
-                            Thread.sleep(100); // Adding a delay for demonstration purposes <br>
-                        } catch (InterruptedException e) { <br>
-                            e.printStackTrace(); <br>
-                        } <br>
-                    } <br>
-                } <br>
+
+            // Fetch links from the web page and start crawling each link <br>
+            Set<String> links = getLinksFromPage(url); <br>
+            for (String link : links) { <br>
+                startCrawling(link, depth + 1); <br>
             } <br>
-            
-            class WithdrawTask implements Runnable { <br>
-                private final program7 account; <br>
-            
-                public WithdrawTask(program7 account) { <br>
-                    this.account = account; <br>
-                } <br>
-             <br>
-                public void run() { <br>
-                    for (int i = 0; i < 5; i++) { <br>
-                        account.withdraw(150); <br>
-                        try { <br>
-                            Thread.sleep(100); // Adding a delay for demonstration purposes <br>
-                        } catch (InterruptedException e) { <br>
-                            e.printStackTrace(); <br>
-                        } <br>
-                    } <br>
-                } <br>
-            } <br>
- <br>            
+        } <br>
+
+        private Set<String> getLinksFromPage(String url) { <br>
+            // Implement logic to fetch links from the web page <br>
+            // This could involve using a library like Jsoup or HttpClient <br>
+
+            // For demonstration purposes, returning a dummy set of links <br>
+            Set<String> dummyLinks = new HashSet<String>(); <br>
+            dummyLinks.add("https://google.com/link1"); <br>
+            dummyLinks.add("https://google.com/link2"); <br>
+            return dummyLinks;
+        }
+    } <br>
+
+    public static void main(String[] args) { <br>
+        Main webCrawler = new Main(); <br>
+        webCrawler.startCrawling("https://google.com", 0); <br>
+
+        // Allow some time for crawling <br>
+        try { <br>
+            Thread.sleep(5000); <br>
+        } catch (InterruptedException e) { <br>
+            e.printStackTrace(); <br>
+        } <br>
+ <br>
+        webCrawler.shutdown(); <br>
+    } <br>
+} <br>
+ <br>
         </div>
         <h3>Output :- </h3>
         <img src="multithreading_Output/pro6.png" alt="">
