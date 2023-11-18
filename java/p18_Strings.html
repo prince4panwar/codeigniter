@@ -683,30 +683,37 @@ class SubsetToString <br>
         <hr>
         <h3>18 :- How to convert double to int.</h3>
         <div id="bp18" class="source_code">
-            class SubsetToString <br>
-            { <br>
-              static void subString(String str, int n)  <br>
-              { <br>
-                for (int i = 0; i < n; i++) //starting index <br>
-                { <br>
-                  for (int j = i + 1; j <= n; j++) //ending index <br>
-                  { <br>
-                    System.out.println(str.substring(i, j)); <br>
-                  } <br>
-                } <br>
-              } <br>
-              public static void main(String[] args)  <br>
-              { <br>
-                System.out.println("\npro Find all the Subset of a string.\n"); <br>
-                java.util.Scanner sc = new java.util.Scanner(System.in); <br>
-                System.out.print("Enter a String :  "); <br>
-                String str = sc.nextLine(); <br>
-                System.out.println("\nOrginal String is :  " + str); <br>
-                System.out.println("subsets of a given string are :  "); <br>
-                SubsetToString s = new SubsetToString(); <br>
-                s.subString(str, str.length()); <br>
-              } <br>
-            } <br>
+            18
+// Program to determine whether one string is a rotation of another <br>
+import java.util.*;  <br>
+class rotateString <br>
+{ <br>
+    static boolean checkForRotation (String str1, String str2) <br>
+    { <br>
+        return (str1.length() == str2.length()) && ((str1 + str1).indexOf(str2) != -1); <br>
+    } <br>
+    public static void main (String[] args) <br>
+    { <br>
+        Scanner input = new Scanner(System.in); <br>
+        System.out.println("Enter string 1: "); <br>
+        String str1 = input.nextLine(); <br>
+        System.out.println("Enter string 2: "); <br>
+        String str2 = input.nextLine();
+		    System.out.println("The given strings are: "+str1+"  and  "+str2); <br>
+		    System.out.println("\nThe concatination of 1st string twice is: "+str1+str1); <br>
+ <br>
+        if (checkForRotation(str1, str2)) <br>
+        { <br>
+		        System.out.println("The 2nd string "+str2+"  exists in the new string.");	 <br>
+            System.out.println("\nStrings are rotations of each other"); <br>
+        } <br>
+        else <br>
+        { <br>
+          	System.out.println("The 2nd string "+str2+"  not exists in the new string."); <br>	
+            System.out.printf("\nStrings are not rotations of each other"); <br>
+        } <br>
+    } <br>
+} <br>
             
         </div>
         <h3>Output :- </h3>

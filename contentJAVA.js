@@ -18,7 +18,7 @@ menu2.addEventListener("click",()=>{
 });
 
 document.querySelector(".intro").addEventListener("click", ()=>{
-    frame.src = "java/p0_introduction.html";
+    frame.src = "https://www.javatpoint.com/java-tutorial";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";

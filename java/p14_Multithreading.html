@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2dArray</title>
+    <link rel="stylesheet" href="comman.css">
+</head>
+
+<body>
+        <div id="home">
+                <h1>Exception Handling</h1>
+                <ul>
+                        <li><a href="#bp1">1. Write a Java program to create a basic Java thread that prints "Hello, World!" when executed.</a></li>
+                        <li><a href="#bp2">2.  Write a Java program that creates two threads to find and print even and odd numbers from 1 to 20.
+
+                        </a></li>
+                        <li><a href="#bp3">3. Write a Java program that sorts an array of integers using multiple threads.</a>
+                        </li>
+                        <li><a href="#bp4">4. Write a Java program that performs matrix multiplication using multiple threads.
+
+                        </a></li>
+                        <li><a href="#bp5">5. Write a Java program that calculates the sum of all prime numbers up to a given limit using multiple threads.</a></li>
+                        <li><a href="#bp6">6. Write a Java program to implement a concurrent web crawler that crawls multiple websites simultaneously using threads.</a></li>
+                        <li><a href="#bp7">7.  Write a Java program that creates a bank account with concurrent deposits and withdrawals using threads.     </a></li>
+                        <li><a href="#bp8">8.  Create the program to create multiple threads by using Runnbale interface</a></li>
+                        <li><a href="#bp9">9.  Create the program to create multiple threads by using Thread class</a></li>
+                        <li><a href="#bp10">10.Create the program to create multiple threads, set its name and its priority.</a>
+                        </li>
+                        <li><a href="#bp11">11.Create the program to create multiple threads, show an example of synchronization keyword.
+                            .</a></li>
+                        <li><a href="#bp12">12.  Create the program to create multiple threads, show an example of notify, notifyall, wait, resume, sleep methods.</a></li>
+                        <li><a href="#bp13">13. Create the program to create multiple threads, show an example of join and yield methods.</a></li>
+                       
+                    </ul>
+                </div>
+
+        <br><br><br>
+        <hr>
+        <h3>1 :- Write a Java program to create a basic Java thread that prints "Hello, World!" when executed.</h3>
+        <div id="bp1" class="source_code">
+            class sampleThread extends Thread{ <br>
+                public void run(){ <br>
+                    System.out.println("hello world"); <br>
+                } <br>
+            } <br>
+            
+            
+            
+            public class program1{ <br>
+              public static void main(String[] args) { <br>
+                sampleThread foo = new sampleThread(); <br>
+                foo.run(); <br>
+                
+              } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+ 
+                <img src="multithreading_Output/pro1.png" alt="">
+       
+        <br><br><br>
+        <hr>
+        <h3>2 :- Write a Java program that creates two threads to find and print even and odd numbers from 1 to 20.</h3>
+        <div id="bp2" class="source_code">
+            class program2 { <br>
+                public static void main(String[] args) { <br>
+                    Thread evenThread = new Thread(new EvenPrinter()); <br>
+                    Thread oddThread = new Thread(new OddPrinter()); <br>
+            
+                    evenThread.start(); <br>
+                    oddThread.start(); <br>
+                } <br>
+            } <br>
+            
+            class EvenPrinter implements Runnable { <br>
+                public void run() { <br>
+                    for (int i = 2; i <= 20; i += 2) { <br>
+                        System.out.println("Even: " + i); <br>
+                        try { <br>
+                            Thread.sleep(500); // Add delay for better readability <br>
+                        } catch (InterruptedException e) { <br>
+                            e.printStackTrace(); <br>
+                        } <br>
+                    } <br>
+                } <br>
+            } <br>
+            
+            class OddPrinter implements Runnable { <br>
+                public void run() { <br>
+                    for (int i = 1; i <= 20; i += 2) { <br>
+                        System.out.println("Odd: " + i); <br>
+                        try { <br>
+                            Thread.sleep(500); // Add delay for better readability <br>
+                        } catch (InterruptedException e) { <br>
+                            e.printStackTrace(); <br>
+                        } <br>
+                    } <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro2.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>3 :-  Write a Java program that sorts an array of integers using multiple threads.         .</h3>
+        <div id="bp3" class="source_code">
+            import java.util.Arrays; <br>
+
+            class program3 { <br>
+              private static final int ARRAY_SIZE = 400; <br>
+              private static final int NUM_THREADS = 4; <br>
+            
+              public static void main(String[] args) { <br>
+                int[] array = createArray(); <br>
+                System.out.println("Before sorting: " + Arrays.toString(array)); <br>
+            
+                Thread[] threads = new Thread[NUM_THREADS]; <br>
+                int segmentSize = ARRAY_SIZE / NUM_THREADS; <br>
+            
+                for (int i = 0; i < NUM_THREADS; i++) { <br>
+                  int startIndex = i * segmentSize; <br>
+                  int endIndex = (i == NUM_THREADS - 1) ? ARRAY_SIZE - 1 : (startIndex + segmentSize - 1); <br>
+                  threads[i] = new Thread(new SortTask(array, startIndex, endIndex)); <br>
+                  threads[i].start(); <br>
+                } <br>
+            
+                for (Thread thread: threads) { <br>
+                  try { <br>
+                    thread.join(); <br>
+                  } catch (InterruptedException e) { <br>
+                    e.printStackTrace(); <br>
+                  } <br>
+                } <br>
+            
+                mergeSort(array, 0, ARRAY_SIZE - 1); <br>
+            
+                System.out.println("After sorting: " + Arrays.toString(array)); <br>
+              } <br>
+            
+              private static int[] createArray() { <br>
+                int[] array = new int[ARRAY_SIZE]; <br>
+                for (int i = 0; i < ARRAY_SIZE; i++) { <br>
+                  array[i] = (int)(Math.random() * 400); // Generate random numbers between 0 and 400 <br>
+                } <br>
+                return array; <br>
+              } <br>
+            
+              private static void mergeSort(int[] array, int left, int right) { <br>
+                if (left < right) { <br>
+                  int mid = (left + right) / 2; <br>
+                  mergeSort(array, left, mid); <br>
+                  mergeSort(array, mid + 1, right); <br>
+                  merge(array, left, mid, right); <br>
+                } <br>
+              } <br>
+            
+              private static void merge(int[] array, int left, int mid, int right) { <br>
+                int[] temp = new int[right - left + 1]; <br>
+                int i = left, j = mid + 1, k = 0; <br>
+            
+                while (i <= mid && j <= right) { <br>
+                  if (array[i] <= array[j]) { <br>
+                    temp[k++] = array[i++]; <br>
+                  } else { <br>
+                    temp[k++] = array[j++]; <br>
+                  } <br>
+                } <br>
+            
+                while (i <= mid) { <br>
+                  temp[k++] = array[i++]; <br>
+                } <br>
+            
+                while (j <= right) { <br>
+                  temp[k++] = array[j++]; <br>
+                } <br>
+            
+                System.arraycopy(temp, 0, array, left, temp.length); <br>
+              } <br>
+            
+              static class SortTask implements Runnable { <br>
+                private int[] array; <br>
+                private int startIndex; <br>
+                private int endIndex; <br>
+            
+                public SortTask(int[] array, int startIndex, int endIndex) { <br>
+                  this.array = array; <br>
+                  this.startIndex = startIndex; <br>
+                  this.endIndex = endIndex; <br>
+                } <br>
+            
+                @Override <br>
+                public void run() { <br>
+                  Arrays.sort(array, startIndex, endIndex + 1); <br>
+                } <br>
+              } <br>
+            } <br>
+ <br>            
+
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro3.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>4 :- Write a Java program that performs matrix multiplication using multiple threads.</h3>
+        <div id="bp4" class="source_code">
+            class program4 { <br>
+                public static void main(String[] args) { <br>
+                    int[][] matrixA = { <br>
+                        {1, 2, 3}, <br>
+                        {4, 5, 6}, <br>
+                        {7, 8, 9} <br>
+                    }; <br>
+            
+                    int[][] matrixB = { <br>
+                        {9, 8, 7}, <br>
+                        {6, 5, 4}, <br>
+                        {3, 2, 1} <br>
+                    }; <br>
+            
+                    int[][] result = multiplyMatrices(matrixA, matrixB); <br>
+            
+                    // Display the result matrix <br>
+                    System.out.println("Resultant Matrix:"); <br>
+                    displayMatrix(result); <br>
+                } <br>
+            
+                public static int[][] multiplyMatrices(int[][] matrixA, int[][] matrixB) { <br>
+                    int rowsA = matrixA.length; <br>
+                    int columnsA = matrixA[0].length; <br>
+                    int columnsB = matrixB[0].length; <br>
+            
+                    int[][] result = new int[rowsA][columnsB]; <br>
+            
+                    // Create threads to perform multiplication <br>
+                    Thread[][] threads = new Thread[rowsA][columnsB]; <br>
+            
+                    for (int i = 0; i < rowsA; i++) { <br>
+                        for (int j = 0; j < columnsB; j++) { <br>
+                            threads[i][j] = new Thread(new MultiplicationTask(matrixA, matrixB, result, i, j, <br> columnsA)); <br>
+                            threads[i][j].start(); <br>
+                        } <br>
+                    } <br>
+            
+                    // Wait for all threads to complete <br>
+                    for (int i = 0; i < rowsA; i++) { <br>
+                        for (int j = 0; j < columnsB; j++) { <br>
+                            try { <br>
+                                threads[i][j].join(); <br>
+                            } catch (InterruptedException e) { <br>
+                                e.printStackTrace(); <br>
+                            } <br>
+                        } <br>
+                    } <br>
+            
+                    return result; <br>
+                } <br>
+            
+                public static void displayMatrix(int[][] matrix) { <br>
+                    for (int[] row : matrix) { <br>
+                        for (int element : row) { <br>
+                            System.out.print(element + " "); <br>
+                        } <br>
+                        System.out.println(); <br>
+                    } <br>
+                } <br>
+            } <br>
+            
+            class MultiplicationTask implements Runnable { <br>
+                private final int[][] matrixA; <br>
+                private final int[][] matrixB; <br>
+                private final int[][] result; <br>
+                private final int row; <br>
+                private final int column; <br>
+                private final int columnsA; <br>
+            
+                public MultiplicationTask(int[][] matrixA, int[][] matrixB, int[][] result, int row, int column, <br> int columnsA) { <br>
+                    this.matrixA = matrixA; <br>
+                    this.matrixB = matrixB; <br>
+                    this.result = result; <br>
+                    this.row = row; <br>
+                    this.column = column; <br>
+                    this.columnsA = columnsA; <br>
+                } <br>
+            
+                public void run() { <br>
+                    int columnsB = matrixB[0].length; <br>
+                    int sum = 0; <br>
+                    for (int i = 0; i < columnsA; i++) { <br>
+                        sum += matrixA[row][i] * matrixB[i][column]; <br>
+                    } <br>
+                    result[row][column] = sum; <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro4.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>5 :- Write a Java program that calculates the sum of all prime numbers up to a given limit using multiple threads.</h3>
+        <div id="bp5" class="source_code">
+            // Calculate sum of prime numbers up to a given limit using multiple threads <br>
+            class MyThread extends Thread { <br>
+                private int start, end; <br>
+                private int sum = 0; <br>
+            
+                MyThread(int start, int end) { <br>
+                    this.start = start; <br>
+                    this.end = end; <br>
+                } <br>
+            
+                public void run() { <br>
+                    System.out.println("My thread is running"); <br>
+                    for (int i = start; i <= end; i++) { <br>
+                        if (isPrime(i)) <br>
+                            sum += i; <br>
+                    } <br>
+                } <br>
+            
+                boolean isPrime(int n) { <br>
+                    if (n == 0 || n == 1) <br>
+                        return false; <br>
+                    for (int i = 2; i <= Math.sqrt(n); ++i) { <br>
+                        if (n % i == 0) <br>
+                            return false; <br>
+                    } <br>
+                    return true; <br>
+                } <br>
+            
+                public int getSum() { <br>
+                    return sum; <br>
+                } <br>
+            } <br>
+            
+            class program5 { <br>
+                MyThread[] myThreads; <br>
+                private int sum = 0; <br>
+                private int limit = 20; <br>
+                private static int threadCount = 4; <br>
+             <br>
+                // Constructor to initialize the array of threads <br>
+                public program5(int n) throws InterruptedException { <br>
+                    this.myThreads = new MyThread[n]; <br>
+                    for (int i = 0; i < n; i++) { <br>
+                        int start = ((limit * i) / n); <br>
+                        int end = (i == n-1) ? limit : ((limit * (i+1))/n) - 1; <br>
+                        myThreads[i] = new MyThread(start, end); <br>
+                    } <br>
+                } <br>
+            
+                // Function to start all threads <br>
+                public void startAll() throws InterruptedException { <br>
+                    for (int i = 0; i < myThreads.length; i++) { <br>
+                        myThreads[i].start(); <br>
+                        myThreads[i].join(); <br>
+                    } <br>
+                } <br>
+            
+                public void getSum() { <br>
+                    for (int i = 0; i < myThreads.length; i++) { <br>
+                        this.sum += myThreads[i].getSum(); <br>
+                    } <br>
+                } <br>
+                
+                public static void main(String[] args) { <br>
+                    try { <br>
+                        program5 mt = new program5(threadCount); <br>
+                        mt.startAll(); <br>
+                        mt.getSum(); <br>
+                        System.out.println("Sum of prime numbers is " + mt.sum); <br>
+                    } catch (InterruptedException e) { <br>
+                        System.err.print("Error: " + e); <br>
+                    } <br>
+                } <br>
+            } <br>
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro5.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>6 :-Write a Java program to implement a concurrent web crawler that crawls multiple websites simultaneously using threads.  </h3>
+        <div id="bp6" class="source_code">
+            class program7 { <br>
+                private double balance; <br>
+             <br>
+                public program7(double initialBalance) { <br>
+                    this.balance = initialBalance; <br>
+                } <br>
+             <br>
+                public synchronized void deposit(double amount) { <br>
+                    System.out.println("Depositing: " + amount); <br>
+                    balance += amount; <br>
+                    System.out.println("New Balance after deposit: " + balance); <br>
+                } <br>
+             <br>
+                public synchronized void withdraw(double amount) { <br>
+                    if (balance >= amount) { <br>
+                        System.out.println("Withdrawing: " + amount); <br>
+                        balance -= amount; <br>
+                        System.out.println("New Balance after withdrawal: " + balance); <br>
+                    } else { <br>
+                        System.out.println("Insufficient balance for withdrawal."); <br>
+                    } <br>
+                } <br>
+            
+                public static void main(String[] args) { <br>
+                    program7 account = new program7(1000); // Starting balance <br>
+             <br>
+                    // Create multiple threads for deposits and withdrawals <br>
+                    Thread depositThread = new Thread(new DepositTask(account)); <br>
+                    Thread withdrawThread = new Thread(new WithdrawTask(account)); <br>
+            
+                    depositThread.start(); <br>
+                    withdrawThread.start(); <br>
+                } <br>
+            } <br>
+            
+            class DepositTask implements Runnable { <br>
+                private final program7 account; <br>
+            
+                public DepositTask(program7 account) { <br>
+                    this.account = account; <br>
+                } <br>
+            
+                public void run() { <br>
+                    for (int i = 0; i < 5; i++) { <br>
+                        account.deposit(100); <br>
+                        try { <br>
+                            Thread.sleep(100); // Adding a delay for demonstration purposes <br>
+                        } catch (InterruptedException e) { <br>
+                            e.printStackTrace(); <br>
+                        } <br>
+                    } <br>
+                } <br>
+            } <br>
+            
+            class WithdrawTask implements Runnable { <br>
+                private final program7 account; <br>
+            
+                public WithdrawTask(program7 account) { <br>
+                    this.account = account; <br>
+                } <br>
+             <br>
+                public void run() { <br>
+                    for (int i = 0; i < 5; i++) { <br>
+                        account.withdraw(150); <br>
+                        try { <br>
+                            Thread.sleep(100); // Adding a delay for demonstration purposes <br>
+                        } catch (InterruptedException e) { <br>
+                            e.printStackTrace(); <br>
+                        } <br>
+                    } <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro6.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>7 :-  Write a Java program that creates a bank account with concurrent deposits and withdrawals using threads.</h3>
+        <div id="bp7" class="source_code">
+    
+            class program7 { <br>
+                private double balance; <br>
+             <br>
+                public program7(double initialBalance) { <br>
+                    this.balance = initialBalance; <br>
+                } <br>
+             <br>
+                public synchronized void deposit(double amount) { <br>
+                    System.out.println("Depositing: " + amount); <br>
+                    balance += amount; <br>
+                    System.out.println("New Balance after deposit: " + balance); <br>
+                } <br>
+             <br>
+                public synchronized void withdraw(double amount) { <br>
+                    if (balance >= amount) { <br>
+                        System.out.println("Withdrawing: " + amount); <br>
+                        balance -= amount; <br>
+                        System.out.println("New Balance after withdrawal: " + balance); <br>
+                    } else { <br>
+                        System.out.println("Insufficient balance for withdrawal."); <br>
+                    } <br>
+                } <br>
+            
+                public static void main(String[] args) { <br>
+                    program7 account = new program7(1000); // Starting balance <br>
+             <br>
+                    // Create multiple threads for deposits and withdrawals <br>
+                    Thread depositThread = new Thread(new DepositTask(account)); <br>
+                    Thread withdrawThread = new Thread(new WithdrawTask(account)); <br>
+            
+                    depositThread.start(); <br>
+                    withdrawThread.start(); <br>
+                } <br>
+            } <br>
+            
+            class DepositTask implements Runnable { <br>
+                private final program7 account; <br>
+            
+                public DepositTask(program7 account) { <br>
+                    this.account = account; <br>
+                } <br>
+            
+                public void run() { <br>
+                    for (int i = 0; i < 5; i++) { <br>
+                        account.deposit(100); <br>
+                        try { <br>
+                            Thread.sleep(100); // Adding a delay for demonstration purposes <br>
+                        } catch (InterruptedException e) { <br>
+                            e.printStackTrace(); <br>
+                        } <br>
+                    } <br>
+                } <br>
+            } <br>
+            
+            class WithdrawTask implements Runnable { <br>
+                private final program7 account; <br>
+            
+                public WithdrawTask(program7 account) { <br>
+                    this.account = account; <br>
+                } <br>
+             <br>
+                public void run() { <br>
+                    for (int i = 0; i < 5; i++) { <br>
+                        account.withdraw(150); <br>
+                        try { <br>
+                            Thread.sleep(100); // Adding a delay for demonstration purposes <br>
+                        } catch (InterruptedException e) { <br>
+                            e.printStackTrace(); <br>
+                        } <br>
+                    } <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro7.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>8 :-  Create the program to create multiple threads by using Runnbale interface</h3>
+        <div id="bp8" class="source_code">
+            class prog8 { <br>
+
+                public static void main(String[] args) throws java.lang.ClassNotFoundException { <br>
+            
+                    Runnable r1 = new MyRun("This is Thread 1"); <br>
+                    Runnable r2 = new MyRun("This isThread 2"); <br>
+                    Runnable r3 = new MyRun("This isThread 3"); <br>
+            
+                    Thread t1 = new Thread(r1); <br>
+                    Thread t2 = new Thread(r2); <br>
+                    Thread t3 = new Thread(r3); <br>
+            
+                    t1.start(); <br>
+                    t2.start(); <br>
+                    t3.start(); <br>
+                } <br>
+             <br>
+                @Override <br>
+                public String toString() { <br>
+                    return "prog1 []"; <br>
+                } <br>
+            } <br>
+            
+            class MyRun implements Runnable { <br>
+                private String tn; <br>
+             <br>
+                public MyRun(String name) { <br>
+                    this.tn = name; <br>
+                } <br>
+            
+                @Override <br>
+                public void run() { <br>
+                    for (int i = 1; i <= 5; i++) { <br>
+                        System.out.println(tn + " - Count is start: " + i); <br>
+                        try { <br>
+                            Thread.sleep(1000); <br>
+                        } catch (InterruptedException e) { <br>
+                            Thread.currentThread().interrupt(); <br>
+                        } <br>
+                    } <br>
+                    System.out.println(tn + " now running  has finished."); <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro8.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>9 :-  Create the program to create multiple threads by using Thread class
+
+        </h3>
+        <div id="bp9" class="source_code">
+            class program9 extends Thread { <br>
+                private final int threadId; <br>
+            
+                public program9(int id) { <br>
+                    this.threadId = id; <br>
+                } <br>
+            
+                public void run() { <br>
+                    System.out.println("Thread " + threadId + " is running."); <br>
+                } <br>
+            
+                public static void main(String[] args) { <br>
+                    int numThreads = 5; // Number of threads to create <br>
+            
+                    // Create and start multiple threads <br>
+                    for (int i = 1; i <= numThreads; i++) { <br>
+                        program9 thread = new program9(i); <br>
+                        thread.start(); <br>
+                    } <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro9.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>10 :- Create the program to create multiple threads, set its name and its priority.
+
+        </h3>
+        <div id="bp10" class="source_code">
+            class program10 implements Runnable { <br>
+                private final int threadId; <br>
+            
+                public program10(int id) { <br>
+                    this.threadId = id; <br>
+                } <br>
+            
+                public void run() { <br>
+                    System.out.println("Thread " + threadId + " is running."); <br>
+                } <br>
+            
+                public static void main(String[] args) { <br>
+                    int numThreads = 5; // Number of threads to create <br>
+            
+                    // Create and start multiple threads <br>
+                    for (int i = 1; i <= numThreads; i++) { <br>
+                        program10 example = new program10(i); <br>
+                        Thread thread = new Thread(example); <br>
+            
+                        // Set the thread name <br>
+                        thread.setName("MyThread-" + i); <br>
+            
+                        // Set the thread priority (1 to 10, 1 being the lowest priority and 10 being the highest) <br>
+                        thread.setPriority(Thread.MIN_PRIORITY + i); <br>
+            
+                        thread.start(); <br>
+                    } <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro10.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>11 :- Create the program to create multiple threads, show an example of synchronization keyword.
+
+        </h3>
+        <div id="bp11" class="source_code">
+            class program11 { <br>
+                private int counter = 0; <br>
+            
+                public synchronized void increment() { <br>
+                    counter++; <br>
+                    System.out.println("Counter: " + counter + " | Thread ID: " + Thread.currentThread().getId()); <br>
+                } <br>
+             <br>
+                public static void main(String[] args) { <br>
+                    final program11 syncExample = new program11(); <br>
+            
+                    // Creating multiple threads to increment the counter <br>
+                    Thread thread1 = new Thread(new Runnable() { <br>
+                        @Override <br>
+                        public void run() { <br>
+                            for (int i = 0; i < 5; i++) { <br>
+                                syncExample.increment(); <br>
+                            } <br>
+                        } <br>
+                    }); <br>
+            
+                    Thread thread2 = new Thread(new Runnable() { <br>
+                        @Override <br>
+                        public void run() { <br>
+                            for (int i = 0; i < 5; i++) { <br>
+                                syncExample.increment(); <br>
+                            } <br>
+                        } <br>
+                    }); <br>
+            
+                    // Start the threads <br>
+                    thread1.start(); <br>
+                    thread2.start(); <br>
+                } <br>
+            } <br>
+ <br>            
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro11.png" alt="">
+        <br><br><br>
+        <hr>
+        <h3>12 :-  Create the program to create multiple threads, show an example of notify, notifyall, wait, resume, sleep methods.</h3>
+        <div id="bp12" class="source_code">
+  
+            class ShareResources { <br>
+                /*Topic :Multithreds  <br>
+                prog.no 12. Create the program to create multiple threads, show an example of notify, notifyall, wait, resume, sleep <br> methods. <br>
+                    */  <br>
+                    
+                    private int value; <br>
+                    private boolean isP; <br>
+                
+                    public synchronized void P(int newV) { <br>
+                        while (isP) { <br>
+                            try { <br>
+                                wait(); <br>
+                            } catch (InterruptedException e) { <br>
+                                Thread.currentThread().interrupt(); <br>
+                            } <br>
+                        } <br>
+                        value = newV; <br>
+                        System.out.println("Your thread is processing: " + value);
+                        isP = true;
+                        notify();
+                    }
+                
+                    public synchronized void C(int newV) {
+                        while (!isP) { // Change isP to !isP
+                            try {
+                                wait();
+                            } catch (InterruptedException e) {
+                                Thread.currentThread().interrupt();
+                            }
+                        }
+                        value = newV;
+                        System.out.println("Your thread is processing: " + value); <br>
+                        isP = false; <br>
+                        notify(); <br>
+                    } <br>
+                } <br>
+                
+                class P implements Runnable { <br>
+                    private ShareResources sR; <br>
+                
+                    public P(ShareResources sR) { <br>
+                        this.sR = sR; <br>
+                    } <br>
+                
+                    @Override <br>
+                    public void run() { <br>
+                        for (int i = 1; i <= 5; i++) { <br>
+                            sR.P(i); <br>
+                            try { <br>
+                                Thread.sleep(1000); <br>
+                            } catch (InterruptedException e) { <br>
+                                Thread.currentThread().interrupt(); <br>
+                            } <br>
+                        } <br>
+                    } <br>
+                } <br>
+                
+                class C implements Runnable { <br>
+                    private ShareResources sR; <br>
+                 <br>
+                    public C(ShareResources sR) { <br>
+                        this.sR = sR; <br>
+                    } <br>
+                
+                    @Override <br>
+                    public void run() { <br>
+                        for (int i = 1; i <= 5; i++) { <br>
+                            sR.C(i); // Change sR.P(i) to sR.C(i) <br>
+                            try { <br>
+                                Thread.sleep(1000); <br>
+                            } catch (InterruptedException e) { <br>
+                                Thread.currentThread().interrupt(); <br>
+                            } <br>
+                        } <br>
+                    } <br>
+                } <br>
+                
+                class program12 { <br>
+                    public static void main(String[] args) { <br>
+                        ShareResources sR = new ShareResources(); <br>
+                
+                        Thread proc = new Thread(new P(sR)); <br>
+                        Thread cons = new Thread(new C(sR)); <br>
+                
+                        proc.start(); <br>
+                        cons.start(); <br>
+                    } <br>
+                } <br>
+ <br>                
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro12.png" alt="">
+
+
+
+        
+        <br><br><br>
+        <hr>
+        <h3>13 :-Create the program to create multiple threads, show an example of join and yield methods.</h3>
+        <div id="bp13" class="source_code">
+            class program13 { <br>
+                public static void main(String[] args) { <br>
+                    Thread thread1 = new Thread(new MyRunnable("Thread 1")); <br>
+                    Thread thread2 = new Thread(new MyRunnable("Thread 2")); <br>
+            
+                    thread1.start(); <br>
+                    thread2.start(); <br>
+            
+                    try { <br>
+                        thread1.join(); // Wait for thread1 to complete <br>
+                    } catch (InterruptedException e) { <br>
+                        e.printStackTrace(); <br>
+                    } <br>
+            
+                    System.out.println("Thread 1 completed its execution."); <br>
+            
+                    // Yield control to other threads <br>
+                    Thread.yield(); <br>
+            
+                    System.out.println("Main thread continues..."); <br>
+                } <br>
+            } <br>
+             <br>
+            class MyRunnable implements Runnable { <br>
+                private final String name; <br>
+             <br>
+                public MyRunnable(String name) { <br>
+                    this.name = name; <br>
+                } <br>
+            
+                public void run() { <br>
+                    for (int i = 0; i < 5; i++) { <br>
+                        System.out.println(name + ": " + i); <br>
+                        try { <br>
+                            Thread.sleep(500); <br>
+                        } catch (InterruptedException e) { <br>
+                            e.printStackTrace(); <br>
+                        } <br>
+                    } <br>
+                } <br>
+            } <br>
+ <br>             <br>
+               
+        </div>
+        <h3>Output :- </h3>
+        <img src="multithreading_Output/pro13.png" alt="">
+                 
+</body>
+</html>
