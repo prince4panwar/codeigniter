@@ -376,133 +376,49 @@ class SavingsAccount extends BankAccount <br>
         <hr>
         <h3>8 :-   Write a Java pro to create a class called Shape with methods called getPerimeter() and getArea(). Create a subclass called Circle that overrides the getPerimeter() and getArea() methods to calculate the area and perimeter of a circle.</h3>
         <div id="bp8" class="source_code">
-            class Vehicle {
-                private String make; <br>
-                private String model; <br>
-                private int year; <br>
-                private String fuelType; <br>
-             <br>
-                public Vehicle(String make, String model, int year, String fuelType) { <br>
-                    this.make = make; <br>
-                    this.model = model; <br>
-                    this.year = year; <br>
-                    this.fuelType = fuelType; <br>
-                }
-            
-                public double calculateFuelEfficiency() {
-                    return 0.0;  // Default implementation, to be ove <br>rridden in subclasses <br>
-                } <br>
-            
-                public double calculateDistanceTraveled(double fuelAmount) { <br>
-                    return 0.0;  // Default implementation, to be overridden in subclasses <br>
-                } <br>
-            
-                public int getMaxSpeed() { <br>
-                    return 0;  // Default implementation, to be overridden in subclasses <br>
-                } <br>
-            } <br>
-            
-            class Truck extends Vehicle { <br>
-                private int cargoCapacity; <br>
-            
-                public Truck(String make, String model, int year, String fuelType, int cargoCapacity) { <br>
-                    super(make, model, year, fuelType); <br>
-                    this.cargoCapacity = cargoCapacity; <br>
-                }
-            
-                @Override <br>
-                public double calculateFuelEfficiency() { <br>
-                    // Implement the calculation for fuel efficiency specific to trucks <br>
-                    return 10.0;  // Example value in miles per gallon (MPG) <br>
-                } <br>
-            
-                @Override <br>
-                public double calculateDistanceTraveled(double fuelAmount) { <br>
-                    // Implement the calculation for distance traveled specific to trucks <br>
-                    return fuelAmount * calculateFuelEfficiency(); <br>
-                } <br>
-            
-                @Override <br>
-                public int getMaxSpeed() { <br>
-                    return 70;  // Example maximum speed for a truck in mph <br>
-                } <br>
-            } <br>
-            
-            class Car extends Vehicle { <br>
-                private int passengerCapacity; <br>
-             <br>
-                public Car(String make, String model, int year, String fuelType, int passengerCapacity) { <br>
-                    super(make, model, year, fuelType); <br>
-                    this.passengerCapacity = passengerCapacity; <br>
-                }
-            
-                @Override <br>
-                public double calculateFuelEfficiency() { <br>
-                    // Implement the calculation for fuel efficiency specific to cars <br>
-                    return 25.0;  // Example value in miles per gallon (MPG) <br>
-                } <br>
-             <br>
-                @Override <br>
-                public double calculateDistanceTraveled(double fuelAmount) { <br>
-                    // Implement the calculation for distance traveled specific to cars <br>
-                    return fuelAmount * calculateFuelEfficiency(); <br>
-                }
-            
-                @Override <br>
-                public int getMaxSpeed() { <br>
-                    return 120;  // Example maximum speed for a car in mph <br>
-                } <br>
-            } <br>
-            
-            class Motorcycle extends Vehicle { <br>
-                public Motorcycle(String make, String model, int year, String fuelType) { <br>
-                    super(make, model, year, fuelType); <br>
-                }
-            
-                @Override <br>
-                public double calculateFuelEfficiency() { <br>
-                    // Implement the calculation for fuel efficiency specific to motorcycles <br>
-                    return 50.0;  // Example value in miles per gallon (MPG) <br>
-                } <br>
-            
-                @Override <br>
-                public double calculateDistanceTraveled(double fuelAmount) {
-                    // Implement the calculation for distance traveled specific to motorcycles
-                    return fuelAmount * calculateFuelEfficiency();
-                }
-            
-                @Override
-                public int getMaxSpeed() { <br>
-                    return 150;  // Example maximum speed for a motorcycle in mph <br>
-                } <br>
-            } <br>
-            
-            class VehicleHierarchyExample { <br>
-                public static void main(String[] args) { <br>
-                    // Example usage of the vehicle classes <br>
-                    Truck myTruck = new Truck("Ford", "F-150", 2022, "Gasoline", 2000); <br>
-                    Car myCar = new Car("Toyota", "Camry", 2022, "Gasoline", 5); <br>
-                    Motorcycle myMotorcycle = new Motorcycle("Harley-Davidson", "Sportster", 2022, "Gasoline"); <br>
-            
-                    double fuelAmount = 20.0;  // Example fuel amount in gallons <br>
-            
-                    System.out.println("Truck:"); <br>
-                    System.out.println("Fuel Efficiency: " + myTruck.calculateFuelEfficiency() + " MPG"); <br>
-                    System.out.println("Distance Traveled: " + myTruck.calculateDistanceTraveled(fuelAmount) + " miles"); <br>
-                    System.out.println("Max Speed: " + myTruck.getMaxSpeed() + " mph"); <br>
-            
-                    System.out.println("\nCar:"); <br>
-                    System.out.println("Fuel Efficiency: " + myCar.calculateFuelEfficiency() + " MPG"); <br>
-                    System.out.println("Distance Traveled: " + myCar.calculateDistanceTraveled(fuelAmount) + " miles"); <br>
-                    System.out.println("Max Speed: " + myCar.getMaxSpeed() + " mph"); <br>
-            
-                    System.out.println("\nMotorcycle:"); <br>
-                    System.out.println("Fuel Efficiency: " + myMotorcycle.calculateFuelEfficiency() + " MPG"); <br>
-                    System.out.println("Distance Traveled: " + myMotorcycle.calculateDistanceTraveled(fuelAmount) + " miles"); <br>
-                    System.out.println("Max Speed: " + myMotorcycle.getMaxSpeed() + " mph"); <br>
-                } <br>
-            } <br>
- <br>            
+           
+//Write a Java program to create a class called Shape with methods called getPerimeter() and getArea(). Create a subclass called Circle that overrides the getPerimeter() and getArea() methods to calculate the area and perimeter of a circle.
+
+import java.util.Scanner; <br>
+class Shape { <br>
+    public Shape() { <br>
+    } <br>
+    public double getPerimeter() { <br>
+        System.out.println("Perimeter calculation for generic shape."); <br>
+        return 0.0; <br>
+    } <br>
+    public double getArea() { <br>
+        System.out.println("Area calculation for generic shape."); <br>
+        return 0.0; <br>
+    } <br>
+} <br>
+class Circle extends Shape { <br>
+    private double radius; <br>
+    public Circle(double radius) { <br>
+        this.radius = radius; <br>
+    } <br>
+    @Override <br>
+    public double getPerimeter() { <br>
+        return 2 * Math.PI * radius; <br>
+    } <br>
+    @Override <br>
+    public double getArea() { <br>
+        return Math.PI * radius * radius; <br>
+    } <br>
+} <br>
+class Shapetest { <br>
+    public static void main(String[] args) { <br>
+        Scanner scanner = new Scanner(System.in); <br>
+        System.out.print("Enter the radius of the circle: "); <br>
+        double radius = scanner.nextDouble(); <br>
+        Circle circle = new Circle(radius); <br>
+        System.out.println("Perimeter of the circle: " + circle.getPerimeter()); <br>
+        System.out.println("Area of the circle: " + circle.getArea()); <br>
+
+        scanner.close(); <br>
+    } <br>
+} <br>
+ <br>
         </div>
         <h3>Output :- </h3>
         <img src="Inheritance_output/pro8.png" alt="">
@@ -981,50 +897,63 @@ class MainA  <br>
         <hr>
         <h3>16:- Write a Java pro to create an abstract class Shape with abstract methods calculateArea() and calculatePerimeter(). Create subclasses Circle and Triangle that extend the Shape class and implement the respective methods to calculate the area and perimeter of each shape.</h3>
         <div id="bp16" class="source_code">
-            class Animal { <br>
-                public void eat() <br>
-                { <br>
-                    System.out.println("eat method"); <br>
-            
-                } <br>
-                public void sleep() <br>
-                { <br>
-                    System.out.println("sleep method"); <br>
-            
-                } <br>
-            
-            } <br>
-            class Bird extends Animal{ <br>
-            
-                public void eat() { <br>
-                    super.eat(); <br>
-                    System.out.println("overide eat"); <br>
-                } <br>
-            
-            
-                public void sleep() { <br>
-                    super.sleep(); <br>
-                    System.out.println("override sleep"); <br>
-                } <br>
-            
-                public void fly() <br>
-                { <br>
-                    System.out.println("in fly method"); <br>
-             <br>
-                } <br>
-            } <br>
-            class Animals1{ <br>
-                public static void main(String[] args) { <br>
-                    Animal a =new Animal(); <br>
-                    Bird b = new Bird(); <br>
-                    a.eat(); <br>
-                    a.sleep(); <br>
-                    b.eat(); <br>
-                    b.sleep(); <br>
-                    b.fly(); <br>
-                } <br>
-            } <br>
- <br>            
+           
+// Write a Java program to create an abstract class Shape with abstract methods calculateArea() and calculatePerimeter(). Create subclasses Circle and Triangle that extend the Shape class and implement the respective methods to calculate the area and perimeter of each shape. <br>
+abstract class Shape { <br>
+    public abstract double calculateArea(); <br>
+    public abstract double calculatePerimeter(); <br>
+} <br>
+ <br>
+class Circle extends Shape { <br>
+    private double radius; <br>
+ <br>
+    public Circle(double radius) { <br>
+        this.radius = radius; <br>
+    } <br>
+ <br>
+    public double calculateArea() { <br>
+        return Math.PI * Math.pow(radius, 2); <br>
+    } <br>
+ <br>
+    public double calculatePerimeter() { <br>
+        return 2 * Math.PI * radius; <br>
+    } <br>
+} <br>
+ <br>
+class Triangle extends Shape { <br>
+    private double base; <br>
+    private double height; <br>
+    private double sideA; <br>
+    private double sideB; <br>
+ <br>
+    public Triangle(double base, double height, double sideA, double sideB) { <br>
+        this.base = base; <br>
+        this.height = height; <br>
+        this.sideA = sideA; <br>
+        this.sideB = sideB; <br>
+    } <br>
+ <br>
+    public double calculateArea() { <br>
+        return 0.5 * base * height; <br>
+    } <br>
+ <br>
+    public double calculatePerimeter() { <br>
+        return base + sideA + sideB; <br>
+    } <br>
+} <br>
+ <br>
+ class area_perimeter{ <br>
+    public static void main(String[] args) { <br>
+        Shape circle = new Circle(5.0); <br>
+        System.out.println("Circle Area: " + circle.calculateArea()); <br>
+        System.out.println("Circle Perimeter: " + circle.calculatePerimeter()); <br>
+ <br>
+        Shape triangle = new Triangle(5.0, 10.0, 3.0, 4.0); <br>
+        System.out.println("Triangle Area: " + triangle.calculateArea()); <br>
+        System.out.println("Triangle Perimeter: " + triangle.calculatePerimeter()); <br>
+    } <br>
+} <br>
+ <br> 
             
         </div>
         <h3>Output :- </h3>
@@ -1038,50 +967,59 @@ class MainA  <br>
         <h3>17:- Write a Java pro to create an abstract class BankAccount with abstract methods deposit() and withdraw(). Create subclasses: SavingsAccount and CurrentAccount that extend the BankAccount class and implement the respective methods to handle deposits and withdrawals for each account type.</h3>
         <div id="bp17" class="source_code">
            
-            class Animal { <br>
-                public void eat() <br>
-                { <br>
-                    System.out.println("eat method"); <br>
-            
-                } <br>
-                public void sleep() <br>
-                { <br>
-                    System.out.println("sleep method"); <br>
-            
-                } <br>
-            
-            } <br>
-            class Bird extends Animal{ <br>
-            
-                public void eat() { <br>
-                    super.eat(); <br>
-                    System.out.println("overide eat"); <br>
-                } <br>
-            
-            
-                public void sleep() { <br>
-                    super.sleep(); <br>
-                    System.out.println("override sleep"); <br>
-                } <br>
-            
-                public void fly() <br>
-                { <br>
-                    System.out.println("in fly method"); <br>
-             <br>
-                } <br>
-            } <br>
-            class Animals1{ <br>
-                public static void main(String[] args) { <br>
-                    Animal a =new Animal(); <br>
-                    Bird b = new Bird(); <br>
-                    a.eat(); <br>
-                    a.sleep(); <br>
-                    b.eat(); <br>
-                    b.sleep(); <br>
-                    b.fly(); <br>
-                } <br>
-            } <br>
- <br>         
+           
+// Write a Java program to create an abstract class BankAccount with abstract methods deposit() and withdraw(). Create subclasses: SavingsAccount and CurrentAccount that extend the BankAccount class and implement the respective methods to handle deposits and withdrawals for each account type. <br>
+abstract class BankAccount { <br>
+    protected double balance; <br>
+
+    public abstract void deposit(double amount); <br>
+    public abstract void withdraw(double amount); <br>
+} <br>
+
+class SavingsAccount extends BankAccount { <br>
+    public void deposit(double amount) { <br>
+        balance += amount; <br>
+        System.out.println("Deposited " + amount + " to savings account. New balance: " + balance); <br>
+    } <br>
+
+    public void withdraw(double amount) { <br>
+        if (balance >= amount) { <br>
+            balance -= amount; <br>
+            System.out.println("Withdrew " + amount + " from savings account. New balance: " + balance); <br>
+        } else { <br>
+            System.out.println("Insufficient balance in savings account."); <br>
+        } <br>
+    } <br>
+} <br>
+
+ class CurrentAccount extends BankAccount { <br>
+    public void deposit(double amount) { <br>
+        balance += amount; <br>
+        System.out.println("Deposited " + amount + " to current account. New balance: " + balance); <br>
+    } <br>
+ <br>
+    public void withdraw(double amount) { <br>
+        if (balance >= amount) { <br>
+            balance -= amount; <br>
+            System.out.println("Withdrew " + amount + " from current account. New balance: " + balance); <br>
+        } else { <br>
+            System.out.println("Insufficient balance in current account."); <br>
+        } <br>
+    } <br>
+} <br>
+
+class myaccount { <br>
+    public static void main(String[] args) { <br>
+        SavingsAccount savingsAccount = new SavingsAccount(); <br>
+        savingsAccount.deposit(500.0); <br>
+        savingsAccount.withdraw(200.0); <br>
+
+        CurrentAccount currentAccount = new CurrentAccount(); <br>
+        currentAccount.deposit(1000.0); <br>
+        currentAccount.withdraw(500.0); <br>
+    } <br>
+} <br>
+ <br>
         </div>
         <h3>Output :- </h3>
         <img src="Inheritance_output/pro17.png" alt="">
