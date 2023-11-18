@@ -261,28 +261,40 @@ class CheckEmptyFile { <br>
         <h3>7 :-  Write a Java pro to create a method that takes a string as input and throws an exception if the string does not contain vowels.</h3>
         <div id="bp7" class="source_code">
     
-
-            //Write a Java pro to connect the Java API to Database, if connection not successful then throw an exception <br>
-
-
-            import java.sql.*; <br>
-            class ExceptionHandle <br>
+            import java.util.Scanner; <br>
+ <br>
+            class vowelchecker <br>
             { <br>
-            public static void main(String st[])  <br>
+            public static void main(String args[]) <br>
             { <br>
             try <br>
             { <br>
-                    Class.forName("com.mysql.jdbc.Driver"); <br>
-                    Connection c=DriverManager.getConnection("jdbc:mysql://localhost:3306/bharat?useSSL=false","root", <br>"god123456"); <br>
-                            System.out.println("Connect to database successfully"); <br>
-                    c.close(); <br>
-            
-                    
-            
-                    }catch(ClassNotFoundException e){System.out.println("Unable to find class");} <br>
-                    catch(SQLException e){System.out.println("Fail to connect!");} <br>
-                    
+            System.out.println("\nWrite a java program to create a method that takes a string as input and throws an exception if the string does not contains vowels.");  <br>
+            Scanner sc = new Scanner(System.in); <br>
+            System.out.print("Enter a String : "); <br>
+            String str = sc.nextLine(); <br>
+            checkForVowels(str); <br>
+            System.out.println("String Contains Vowels."); <br>
             } <br>
+            catch(NoVowelsException e) <br>
+            { <br>
+            System.out.println("Exception : "+e.getMessage()); <br>
+            } <br>
+            } <br>
+            static void checkForVowels(String input) throws NoVowelsException <br>
+            { <br>
+            if(!input.matches(".*[AEIOUaeiou].*")) <br>
+            { <br>
+            throw new NoVowelsException("The Input string does not contains any vowels."); <br>
+            } <br>
+            } <br>
+            } <br>
+            class NoVowelsException extends Exception <br>
+            { <br>
+            public NoVowelsException(String message) <br>
+            { <br>
+               super(message); <br>
+            }
             } <br>
         </div>
         <h3>Output :- </h3>
