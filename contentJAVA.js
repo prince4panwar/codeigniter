@@ -17,7 +17,7 @@ menu2.addEventListener("click",()=>{
     // console.log("hello");
 });
 
-// document.querySelector(".intro").addEventListener("click", ()=>{
+// document.querySelector(".program3").addEventListener("click", ()=>{
 //     frame.src = "https://www.javatpoint.com/java-tutorial";
 //     document.querySelector(".program1").style.color = "#020A43";
 //     document.querySelector(".program1").style.backgroundColor = "gainsboro";
@@ -57,14 +57,15 @@ menu2.addEventListener("click",()=>{
 //     document.querySelector(".program18").style.backgroundColor = "gainsboro";
     
 
-//     document.querySelector(".intro").style.color = "white";
-//     document.querySelector(".intro").style.backgroundColor = "#020A43";
+//     document.querySelector(".program3").style.color = "white";
+//     document.querySelector(".program3").style.backgroundColor = "#020A43";
 
 // });
 document.querySelector(".program1").addEventListener("click", ()=>{
     frame.src = "java/p1_2dArray.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
+
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -108,8 +109,8 @@ document.querySelector(".program1").addEventListener("click", ()=>{
 });
 document.querySelector(".program2").addEventListener("click", ()=>{
     frame.src = "java/p2_Applets.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -153,8 +154,8 @@ document.querySelector(".program2").addEventListener("click", ()=>{
 });
 document.querySelector(".program3").addEventListener("click", ()=>{
     frame.src = "java/p3_Basic_Programming_construct.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -198,8 +199,8 @@ document.querySelector(".program3").addEventListener("click", ()=>{
 });
 document.querySelector(".program4").addEventListener("click", ()=>{
     frame.src = "java/p4_Data_Conversion.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -242,8 +243,8 @@ document.querySelector(".program4").addEventListener("click", ()=>{
 });
 document.querySelector(".program5").addEventListener("click", ()=>{
     frame.src = "java/p5_Delegation_event_model.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -287,8 +288,8 @@ document.querySelector(".program5").addEventListener("click", ()=>{
 });
 document.querySelector(".program6").addEventListener("click", ()=>{
     frame.src = "java/p6_Exception_handling.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -332,8 +333,8 @@ document.querySelector(".program6").addEventListener("click", ()=>{
 });
 document.querySelector(".program7").addEventListener("click", ()=>{
     frame.src = "java/p7_Functions.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
         document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -377,8 +378,8 @@ document.querySelector(".program7").addEventListener("click", ()=>{
 });
 document.querySelector(".program8").addEventListener("click", ()=>{
     frame.src = "java/p8_AWT.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
         document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -422,8 +423,8 @@ document.querySelector(".program8").addEventListener("click", ()=>{
 });
 document.querySelector(".program9").addEventListener("click", ()=>{
     frame.src = "java/p9_SWINGS.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -467,8 +468,8 @@ document.querySelector(".program9").addEventListener("click", ()=>{
 });
 document.querySelector(".program10").addEventListener("click", ()=>{
     frame.src = "java/p10_Inheritance.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -512,10 +513,10 @@ document.querySelector(".program10").addEventListener("click", ()=>{
 });
 document.querySelector(".program11").addEventListener("click", ()=>{
     frame.src = "java/p11_Input_Output.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -559,10 +560,10 @@ document.querySelector(".program11").addEventListener("click", ()=>{
 });
 document.querySelector(".program12").addEventListener("click", ()=>{
     frame.src = "java/p12_Interfaces.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -606,8 +607,8 @@ document.querySelector(".program12").addEventListener("click", ()=>{
 });
 document.querySelector(".program13").addEventListener("click", ()=>{
     frame.src = "java/p13_JDBC.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
     document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -651,8 +652,8 @@ document.querySelector(".program13").addEventListener("click", ()=>{
 });
 document.querySelector(".program14").addEventListener("click", ()=>{
     frame.src = "java/p14_Multithreading.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
         document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -696,8 +697,8 @@ document.querySelector(".program14").addEventListener("click", ()=>{
 });
 document.querySelector(".program15").addEventListener("click", ()=>{
     frame.src = "java/p15_OOPs.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
         document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -741,8 +742,8 @@ document.querySelector(".program15").addEventListener("click", ()=>{
 });
 document.querySelector(".program16").addEventListener("click", ()=>{
     frame.src = "java/p16_Packages.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
         document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -786,8 +787,8 @@ document.querySelector(".program16").addEventListener("click", ()=>{
 });
 document.querySelector(".program17").addEventListener("click", ()=>{
     frame.src = "java/p17_1dArray.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
         document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
@@ -831,8 +832,8 @@ document.querySelector(".program17").addEventListener("click", ()=>{
 });
 document.querySelector(".program18").addEventListener("click", ()=>{
     frame.src = "java/p18_Strings.html";
-    document.querySelector(".intro").style.color = "#020A43";
-    document.querySelector(".intro").style.backgroundColor = "gainsboro";
+    document.querySelector(".program3").style.color = "#020A43";
+    document.querySelector(".program3").style.backgroundColor = "gainsboro";
         document.querySelector(".program1").style.color = "#020A43";
     document.querySelector(".program1").style.backgroundColor = "gainsboro";
     document.querySelector(".program2").style.color = "#020A43";
