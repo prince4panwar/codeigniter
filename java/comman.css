@@ -4,7 +4,7 @@
     scroll-behavior: smooth;
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
 }
-li{
+/* li{
     height: 4vw;
     display: flex;
     align-items: center;
@@ -21,7 +21,6 @@ a{
     padding: 1vw 0;
     padding-left: 0.5vw;
     align-items: center;
-    /* justify-content: ; */
     border: 2px solid black;
     border-radius: 0.5vw;
     text-decoration: none;
@@ -29,8 +28,33 @@ a{
     color: #020A43;
     transition: all 0.4s ease-in-out;
     
+} */
+
+li{
+    /* height: 3.5vw; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw 0;
+    color: #020A43;
 }
 
+a{
+    width: 97%;
+    height: 90%;
+    display: flex;
+    padding: 1.5vw 0;
+    padding-left: 0.5vw;
+    align-items: center;
+    /* justify-content: ; */
+    border: 2px solid black;
+    border-radius: 0.5vw;
+    text-decoration: none;
+    font-size: 2vw;
+    color: #020A43;
+    transition: all 0.4s ease-in-out;
+    
+}
 a:hover{
     background-color: #f1f2fb;
     width: 100%;
